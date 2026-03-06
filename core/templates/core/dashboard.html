@@ -611,17 +611,4 @@ window.debugProjects = function(category) {
     console.log('Dados de projetos para', category, ':', projectsData[category]);
 };
 </script>
-
-// Função para limpar filtros
-function clearFilters() {
-    document.getElementById('margemFilter').value = '';
-    document.getElementById('marketFilter').value = '';
-    applyClientFilters();
-}
-
-// Função global para debug
-window.debugProjects = function(category) {
-    console.log('Dados de projetos para', category, ':', projectsData[category]);
-};
-</script>
 {% endblock %}

@@ -9,4 +9,4 @@ __pycache__/
 *.pyzw
 *.pyzwz
 media/
-venv/
+venv/*
