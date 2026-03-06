@@ -10,3 +10,6 @@ __pycache__/
 *.pyzwz
 media/
 venv/*
+*.xls*
+*.xlsx*
+*.csv*
