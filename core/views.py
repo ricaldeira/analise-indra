@@ -156,6 +156,10 @@ def get_projetos_detalhes(category, ultimo_processamento):
         # Calcula margem percentual
         margen_percentual = (margen_ytd / ingresos_ytd * 100) if ingresos_ytd > 0 else 0
 
+        # Formatar números com pontos como separadores
+        def format_number(value):
+            return f"{value:,.0f}".replace(",", ".")
+
         projetos_data.append({
             'codigo': projeto.codigo,
             'descricao': projeto.descricao,
@@ -166,6 +170,9 @@ def get_projetos_detalhes(category, ultimo_processamento):
             'ingresos_ytd': ingresos_ytd,
             'margen_ytd': margen_ytd,
             'margen_percentual': margen_percentual,
+            'contratacion_ytd_formatted': format_number(contratacion_ytd),
+            'ingresos_ytd_formatted': format_number(ingresos_ytd),
+            'margen_ytd_formatted': format_number(margen_ytd),
         })
 
     # Ordena por margem percentual (decrescente) por padrão

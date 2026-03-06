@@ -172,7 +172,7 @@
                         <option value="AAPP">AAPP</option>
                         <option value="Sanidad">Sanidad</option>
                     </select>
-                    <button class="btn btn-sm btn-outline-secondary" onclick="applyFilters()">
+                    <button class="btn btn-sm btn-outline-secondary" onclick="applyClientFilters()">
                         <i class="bi bi-funnel"></i> Filtrar
                     </button>
                     <button class="btn btn-sm btn-outline-secondary" onclick="clearFilters()">
@@ -207,10 +207,10 @@
                                 <td><span class="badge bg-secondary">{{ projeto.mercado }}</span></td>
                                 <td>{{ projeto.regiao|default:'-' }}</td>
                                 <td>{{ projeto.tipo_solucao|default:'-' }}</td>
-                                <td class="text-end fw-bold">R$ {{ projeto.contratacion_ytd|floatformat:0 }}</td>
-                                <td class="text-end fw-bold text-success">R$ {{ projeto.ingresos_ytd|floatformat:0 }}</td>
+                                <td class="text-end fw-bold"> {{ projeto.contratacion_ytd_formatted }}</td>
+                                <td class="text-end fw-bold text-success"> {{ projeto.ingresos_ytd_formatted }}</td>
                                 <td class="text-end fw-bold {% if projeto.margen_ytd >= 0 %}text-success{% else %}text-danger{% endif %}">
-                                    R$ {{ projeto.margen_ytd|floatformat:0 }}
+                                    {{ projeto.margen_ytd_formatted }}
                                 </td>
                                 <td class="text-end">
                                     <span class="badge {% if projeto.margen_percentual >= 20 %}bg-success{% elif projeto.margen_percentual >= 10 %}bg-warning{% elif projeto.margen_percentual >= 0 %}bg-secondary{% else %}bg-danger{% endif %}">
@@ -265,7 +265,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="p-3">
-                            <h4 class="text-warning mb-1">R$ 4.2M</h4>
+                            <h4 class="text-warning mb-1">4.2M</h4>
                             <p class="text-muted mb-0">Receita Total</p>
                         </div>
                     </div>
@@ -424,19 +424,130 @@ document.addEventListener('DOMContentLoaded', function() {
     updateProjectCount();
 });
 
-async function loadCategoryData(category) {
-    console.log('Loading data for category:', category);
-    try {
-        const response = await fetch(`/api/dashboard/${category}/`);
-        console.log('Response status:', response.status);
-        const data = await response.json();
-        console.log('Data loaded:', data.projetos ? data.projetos.length : 0, 'projects');
-        projectsData[category] = data.projetos;
-        if (currentCategory === category) {
-            updateTable(category);
+function applyClientFilters() {
+    const margemFilter = document.getElementById('margemFilter').value.trim();
+    const marketFilter = document.getElementById('marketFilter').value;
+
+    const rows = document.querySelectorAll('#tableBody tr');
+    let visibleCount = 0;
+
+    rows.forEach(row => {
+        if (row.cells.length < 9) return; // Pular linhas de "nenhum resultado"
+
+        const margemCell = row.cells[8]; // Coluna Margem %
+        const marketBadge = row.cells[2].querySelector('.badge'); // Badge do mercado
+
+        let margemValue = 0;
+        if (margemCell && margemCell.textContent) {
+            const match = margemCell.textContent.match(/(\d+\.?\d*)%/);
+            if (match) margemValue = parseFloat(match[1]);
         }
-    } catch (error) {
-        console.error('Erro ao carregar dados:', error);
+
+        const marketValue = marketBadge ? marketBadge.textContent.trim() : '';
+
+        // Aplicar filtros
+        let showRow = true;
+
+        // Filtro de margem
+        if (margemFilter) {
+            if (margemFilter.startsWith('>=')) {
+                showRow = showRow && (margemValue >= parseFloat(margemFilter.substring(2)));
+            } else if (margemFilter.startsWith('<=')) {
+                showRow = showRow && (margemValue <= parseFloat(margemFilter.substring(2)));
+            } else if (margemFilter.startsWith('>')) {
+                showRow = showRow && (margemValue > parseFloat(margemFilter.substring(1)));
+            } else if (margemFilter.startsWith('<')) {
+                showRow = showRow && (margemValue < parseFloat(margemFilter.substring(1)));
+            } else {
+                showRow = showRow && (margemValue === parseFloat(margemFilter));
+            }
+        }
+
+        // Filtro de mercado
+        if (marketFilter && marketValue !== marketFilter) {
+            showRow = false;
+        }
+
+        row.style.display = showRow ? '' : 'none';
+        if (showRow) visibleCount++;
+    });
+
+    updateProjectCount(visibleCount);
+}
+
+function setupTableFunctionality() {
+    // Configurar filtros
+    const margemFilter = document.getElementById('margemFilter');
+    const marketFilter = document.getElementById('marketFilter');
+
+    margemFilter.addEventListener('input', function() {
+        applyClientFilters();
+    });
+
+    marketFilter.addEventListener('change', function() {
+        applyClientFilters();
+    });
+
+    // Configurar ordenação nas colunas
+    setupSorting();
+}
+
+function setupSorting() {
+    const headers = document.querySelectorAll('#projectsTable th');
+    headers.forEach((header, index) => {
+        header.style.cursor = 'pointer';
+        header.addEventListener('click', () => {
+            sortTableByColumn(index);
+        });
+    });
+}
+
+function sortTableByColumn(columnIndex) {
+    const tbody = document.getElementById('tableBody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+
+    // Não ordenar linhas de "nenhum resultado"
+    const dataRows = rows.filter(row => row.cells.length >= 9);
+
+    dataRows.sort((a, b) => {
+        const aValue = getCellValue(a.cells[columnIndex]);
+        const bValue = getCellValue(b.cells[columnIndex]);
+
+        if (columnIndex >= 5 && columnIndex <= 7) { // Colunas numéricas (Contratação, Ingresso, Margem)
+            return parseFloat(aValue.replace(/[^\d.-]/g, '')) - parseFloat(bValue.replace(/[^\d.-]/g, ''));
+        } else if (columnIndex === 8) { // Margem %
+            const aPercent = parseFloat(aValue.replace('%', '').replace(',', '.'));
+            const bPercent = parseFloat(bValue.replace('%', '').replace(',', '.'));
+            return aPercent - bPercent;
+        } else {
+            return aValue.localeCompare(bValue);
+        }
+    });
+
+    // Reordenar as linhas
+    dataRows.forEach(row => tbody.appendChild(row));
+}
+
+function getCellValue(cell) {
+    if (cell.querySelector('code')) {
+        return cell.querySelector('code').textContent.trim();
+    }
+    if (cell.querySelector('.badge')) {
+        return cell.querySelector('.badge').textContent.trim();
+    }
+    return cell.textContent.trim();
+}
+
+function updateProjectCount(count) {
+    const badge = document.getElementById('projectCount');
+    if (badge) {
+        if (count !== undefined) {
+            badge.textContent = count;
+        } else {
+            const visibleRows = document.querySelectorAll('#tableBody tr:not([style*="display: none"])');
+            const dataRows = Array.from(visibleRows).filter(row => row.cells.length >= 9);
+            badge.textContent = dataRows.length;
+        }
     }
 }
 
@@ -488,154 +599,24 @@ function renderLoadingTable() {
     `;
 }
 
-function applyFilters(data) {
-    if (!currentFilter) return data;
-
-    const filter = currentFilter.toLowerCase();
-
-    return data.filter(project => {
-        const margemPercentual = project.margen_percentual;
-
-        // Suporte para operadores: >10, <20, =15, >=10, <=20
-        if (filter.startsWith('>=')) {
-            return margemPercentual >= parseFloat(filter.substring(2));
-        } else if (filter.startsWith('<=')) {
-            return margemPercentual <= parseFloat(filter.substring(2));
-        } else if (filter.startsWith('>')) {
-            return margemPercentual > parseFloat(filter.substring(1));
-        } else if (filter.startsWith('<')) {
-            return margemPercentual < parseFloat(filter.substring(1));
-        } else if (filter.startsWith('=')) {
-            return margemPercentual === parseFloat(filter.substring(1));
-        } else {
-            // Sem operador, busca por valor exato
-            return margemPercentual === parseFloat(filter);
-        }
-    });
-}
-
-function sortData(data) {
-    return data.sort((a, b) => {
-        let aValue = a[currentSort.column];
-        let bValue = b[currentSort.column];
-
-        // Tratamento especial para strings
-        if (typeof aValue === 'string') {
-            aValue = aValue.toLowerCase();
-            bValue = bValue.toLowerCase();
-        }
-
-        if (currentSort.direction === 'asc') {
-            return aValue > bValue ? 1 : aValue < bValue ? -1 : 0;
-        } else {
-            return aValue < bValue ? 1 : aValue > bValue ? -1 : 0;
-        }
-    });
-}
-
-function renderTable(data) {
-    const tbody = document.getElementById('tableBody');
-
-    if (data.length === 0) {
-        tbody.innerHTML = `
-            <tr>
-                <td colspan="9" class="text-center text-muted py-4">
-                    <i class="bi bi-info-circle me-2"></i>
-                    Nenhum projeto encontrado com os filtros aplicados.
-                </td>
-            </tr>
-        `;
-        return;
-    }
-
-    tbody.innerHTML = data.map(project => `
-        <tr>
-            <td><code class="text-primary">${project.codigo}</code></td>
-            <td class="text-truncate" style="max-width: 300px;" title="${project.descricao}">
-                ${project.descricao}
-            </td>
-            <td><span class="badge bg-secondary">${project.mercado}</span></td>
-            <td>${project.regiao || '-'}</td>
-            <td>${project.tipo_solucao || '-'}</td>
-            <td class="text-end fw-bold">${formatCurrency(project.contratacion_ytd)}</td>
-            <td class="text-end fw-bold text-success">${formatCurrency(project.ingresos_ytd)}</td>
-            <td class="text-end fw-bold ${project.margen_ytd >= 0 ? 'text-success' : 'text-danger'}">
-                ${formatCurrency(project.margen_ytd)}
-            </td>
-            <td class="text-end">
-                <span class="badge ${getMargemBadgeClass(project.margen_percentual)}">
-                    ${project.margen_percentual.toFixed(1)}%
-                </span>
-            </td>
-        </tr>
-    `).join('');
-
-    // Adicionar event listeners para ordenação
-    setupSorting();
-}
-
-function setupSorting() {
-    document.querySelectorAll('#projectsTable th').forEach((th, index) => {
-        th.style.cursor = 'pointer';
-        th.addEventListener('click', () => {
-            const columns = ['codigo', 'descricao', 'mercado', 'regiao', 'tipo_solucao',
-                           'contratacion_ytd', 'ingresos_ytd', 'margen_ytd', 'margen_percentual'];
-
-            if (index < columns.length) {
-                const column = columns[index];
-
-                if (currentSort.column === column) {
-                    currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
-                } else {
-                    currentSort.column = column;
-                    currentSort.direction = 'desc'; // Default para descendente
-                }
-
-                updateTable(currentCategory);
-
-                // Atualizar indicadores visuais de ordenação
-                updateSortIndicators(th, currentSort.direction);
-            }
-        });
-    });
-}
-
-function updateSortIndicators(activeTh, direction) {
-    // Limpar indicadores anteriores
-    document.querySelectorAll('#projectsTable th').forEach(th => {
-        th.classList.remove('table-active');
-        const icon = th.querySelector('.sort-icon');
-        if (icon) icon.remove();
-    });
-
-    // Adicionar indicador ao header ativo
-    activeTh.classList.add('table-active');
-    const icon = document.createElement('i');
-    icon.className = `sort-icon bi bi-chevron-${direction === 'asc' ? 'up' : 'down'} ms-1`;
-    activeTh.appendChild(icon);
-}
-
-function getMargemBadgeClass(margem) {
-    if (margem >= 20) return 'bg-success';
-    if (margem >= 10) return 'bg-warning';
-    if (margem >= 0) return 'bg-secondary';
-    return 'bg-danger';
-}
-
-function formatCurrency(value) {
-    if (Math.abs(value) >= 1000000) {
-        return `R$ ${(value / 1000000).toFixed(1)}M`;
-    } else if (Math.abs(value) >= 1000) {
-        return `R$ ${(value / 1000).toFixed(0)}K`;
-    } else {
-        return `R$ ${value.toFixed(0)}`;
-    }
-}
-
+// Função para limpar filtros
 function clearFilters() {
     document.getElementById('margemFilter').value = '';
-    currentFilter = '';
-    updateTable(currentCategory);
+    document.getElementById('marketFilter').value = '';
+    applyClientFilters();
+}
+
+// Função global para debug
+window.debugProjects = function(category) {
+    console.log('Dados de projetos para', category, ':', projectsData[category]);
+};
+</script>
+
+// Função para limpar filtros
+function clearFilters() {
+    document.getElementById('margemFilter').value = '';
+    document.getElementById('marketFilter').value = '';
+    applyClientFilters();
 }
 
 // Função global para debug

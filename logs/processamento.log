@@ -1602,3 +1602,421 @@ INFO 2026-03-06 10:08:35,194 log 519623 139987409069760 "GET /dashboard/ HTTP/1.
 INFO 2026-03-06 10:09:24,716 log 519623 139987409069760 "GET /dashboard/ HTTP/1.1" 200 31736
 INFO 2026-03-06 10:13:19,025 log 519623 139987409069760 "GET /dashboard/ HTTP/1.1" 200 31736
 INFO 2026-03-06 10:14:39,520 log 519623 139987409069760 "GET /dashboard/ HTTP/1.1" 200 56508
+INFO 2026-03-06 10:23:11,981 log 519623 139987409069760 "GET /dashboard/ HTTP/1.1" 200 57100
+INFO 2026-03-06 10:23:41,512 log 519623 139987409069760 "GET /dashboard/ HTTP/1.1" 200 57100
+INFO 2026-03-06 10:25:12,171 log 519623 139987409069760 "GET /dashboard/ HTTP/1.1" 200 57100
+WARNING 2026-03-06 10:28:27,097 log 519623 139987409069760 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-06 10:28:27,098 log 519623 139987409069760 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+ERROR 2026-03-06 10:29:09,804 log 519623 139987389142720 Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/core/views.py", line 49, in dashboard
+    return render(request, 'core/dashboard.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 307, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 235, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 894, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 556, in parse
+    raise self.error(token, e)
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 554, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 676, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 771, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 682, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Template: /opt/analise-indra/core/templates/core/dashboard.html, Invalid filter: 'intcomma'
+ERROR 2026-03-06 10:29:09,808 log 519623 139987389142720 "GET /dashboard/ HTTP/1.1" 500 292271
+ERROR 2026-03-06 10:29:44,535 log 519623 139987389142720 Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/core/views.py", line 49, in dashboard
+    return render(request, 'core/dashboard.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 307, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 235, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 894, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 556, in parse
+    raise self.error(token, e)
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 554, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 676, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 771, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 682, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Template: /opt/analise-indra/core/templates/core/dashboard.html, Invalid filter: 'intcomma'
+ERROR 2026-03-06 10:29:44,538 log 519623 139987389142720 "GET /dashboard/ HTTP/1.1" 500 292271
+INFO 2026-03-06 10:30:43,822 autoreload 519623 139987973357696 /opt/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-06 10:30:44,415 autoreload 542510 136572016156800 Watching for file changes with StatReloader
+INFO 2026-03-06 10:32:15,176 log 542510 136571451926208 "GET /dashboard/ HTTP/1.1" 200 57149
+INFO 2026-03-06 10:32:43,933 log 542510 136571451926208 "GET /dashboard/ HTTP/1.1" 200 57149
+INFO 2026-03-06 10:33:12,884 log 542510 136571451926208 "GET /dashboard/ HTTP/1.1" 200 57149
+INFO 2026-03-06 10:33:44,020 log 542510 136571451926208 "GET /dashboard/ HTTP/1.1" 200 57149
+INFO 2026-03-06 10:35:09,659 log 542510 136571451926208 "GET /dashboard/ HTTP/1.1" 200 57149
+INFO 2026-03-06 10:35:39,243 log 542510 136571451926208 "GET /dashboard/ HTTP/1.1" 200 57149
+INFO 2026-03-06 10:36:18,392 log 542510 136571451926208 "GET /dashboard/ HTTP/1.1" 200 57149
+INFO 2026-03-06 10:36:49,661 log 542510 136571451926208 "GET /dashboard/ HTTP/1.1" 200 57149
+INFO 2026-03-06 10:37:25,781 log 542510 136571451926208 "GET /dashboard/ HTTP/1.1" 200 57149
+INFO 2026-03-06 10:40:28,639 log 542510 136571451926208 "GET /dashboard/ HTTP/1.1" 200 57149
+INFO 2026-03-06 10:41:09,137 log 542510 136571451926208 "GET /dashboard/ HTTP/1.1" 200 57149
+INFO 2026-03-06 10:41:47,730 log 542510 136571451926208 "GET /dashboard/ HTTP/1.1" 200 57006
+INFO 2026-03-06 10:45:46,740 autoreload 542510 136572016156800 /opt/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-06 10:45:47,431 autoreload 593701 133339510190208 Watching for file changes with StatReloader
+INFO 2026-03-06 10:49:33,701 log 593701 133338945984192 "GET /dashboard/ HTTP/1.1" 200 57007
+INFO 2026-03-06 10:50:14,218 log 593701 133338945984192 "GET /dashboard/ HTTP/1.1" 200 57007
+INFO 2026-03-06 10:52:09,112 log 593701 133338945984192 "GET /dashboard/ HTTP/1.1" 200 57007
+INFO 2026-03-06 10:53:11,463 log 593701 133338945984192 "GET /dashboard/ HTTP/1.1" 200 94516
+INFO 2026-03-06 10:54:16,882 log 593701 133338945984192 "GET /dashboard/ HTTP/1.1" 200 269477
+INFO 2026-03-06 10:54:49,298 log 593701 133338945984192 "GET /dashboard/ HTTP/1.1" 200 269477
+INFO 2026-03-06 10:55:20,942 log 593701 133338945984192 "GET /dashboard/ HTTP/1.1" 200 269477
+INFO 2026-03-06 10:55:52,612 log 593701 133338945984192 "GET /dashboard/ HTTP/1.1" 200 269477
+INFO 2026-03-06 10:56:25,871 log 593701 133338945984192 "GET /dashboard/ HTTP/1.1" 200 269477
+INFO 2026-03-06 10:56:38,996 log 593701 133338945984192 "GET /dashboard/ HTTP/1.1" 200 269477
+WARNING 2026-03-06 11:00:47,364 log 593701 133338945984192 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-06 11:00:47,365 log 593701 133338945984192 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+ERROR 2026-03-06 11:11:15,534 log 593701 133338945984192 Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 577, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/core/views.py", line 49, in dashboard
+    return render(request, 'core/dashboard.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 307, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 579, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 644, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Template: /opt/analise-indra/core/templates/core/dashboard.html, Invalid block tag on line 628: 'endblock'. Did you forget to register or load this tag?
+ERROR 2026-03-06 11:11:15,537 log 593701 133338945984192 "GET /dashboard/ HTTP/1.1" 500 209526
+ERROR 2026-03-06 11:13:10,175 log 593701 133338945984192 Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 577, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/core/views.py", line 49, in dashboard
+    return render(request, 'core/dashboard.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 307, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 579, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 644, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Template: /opt/analise-indra/core/templates/core/dashboard.html, Invalid block tag on line 628: 'endblock'. Did you forget to register or load this tag?
+ERROR 2026-03-06 11:13:10,178 log 593701 133338945984192 "GET /dashboard/ HTTP/1.1" 500 209526
+ERROR 2026-03-06 11:13:45,656 log 593701 133338945984192 Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 577, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/core/views.py", line 49, in dashboard
+    return render(request, 'core/dashboard.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 307, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 579, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/opt/analise-indra/venv/lib/python3.12/site-packages/django/template/base.py", line 644, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Template: /opt/analise-indra/core/templates/core/dashboard.html, Invalid block tag on line 628: 'endblock'. Did you forget to register or load this tag?
+ERROR 2026-03-06 11:13:45,658 log 593701 133338945984192 "GET /dashboard/ HTTP/1.1" 500 209526
+INFO 2026-03-06 11:19:03,058 log 593701 133338945984192 "GET /dashboard/ HTTP/1.1" 200 57013
+INFO 2026-03-06 11:19:38,185 log 593701 133338945984192 "GET /dashboard/ HTTP/1.1" 200 57013
+INFO 2026-03-06 11:29:10,720 log 593701 133338945984192 "GET /dashboard/ HTTP/1.1" 200 57013
+WARNING 2026-03-06 11:30:04,724 log 593701 133338945984192 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-06 11:30:04,725 log 593701 133338945984192 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-06 11:30:53,674 log 593701 133338945984192 "GET /dashboard/ HTTP/1.1" 200 57013
+WARNING 2026-03-06 11:30:53,781 log 593701 133338945984192 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-06 11:30:53,781 log 593701 133338945984192 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+WARNING 2026-03-06 11:31:07,694 log 593701 133338945984192 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-06 11:31:07,696 log 593701 133338945984192 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-06 11:32:24,346 autoreload 747826 136462153412736 Watching for file changes with StatReloader
+INFO 2026-03-06 11:32:30,475 log 747826 136461589157568 "GET /dashboard/ HTTP/1.1" 200 57013
+WARNING 2026-03-06 11:32:30,525 log 747826 136461589157568 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-06 11:32:30,526 log 747826 136461589157568 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-06 11:55:04,769 log 747826 136461589157568 "GET /dashboard/ HTTP/1.1" 200 57013
+WARNING 2026-03-06 11:55:04,883 log 747826 136461589157568 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2026-03-06 11:55:04,897 log 747826 136461569226432 "GET /static/js/main.js HTTP/1.1" 304 0
+INFO 2026-03-06 11:55:04,897 log 747826 136461577619136 "GET /static/css/style.css HTTP/1.1" 304 0
+WARNING 2026-03-06 11:55:04,898 log 747826 136461589157568 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-06 12:00:35,395 log 747826 136461589157568 "GET /dashboard/ HTTP/1.1" 200 57013
+INFO 2026-03-06 12:01:29,827 log 747826 136461589157568 "GET /dashboard/ HTTP/1.1" 200 57013
+INFO 2026-03-06 12:02:06,089 log 747826 136461589157568 "GET /dashboard/ HTTP/1.1" 200 57013
+INFO 2026-03-06 12:02:42,581 log 747826 136461589157568 "GET /dashboard/ HTTP/1.1" 200 57013
+INFO 2026-03-06 12:25:36,111 log 747826 136461589157568 "GET /dashboard/ HTTP/1.1" 200 57013
+WARNING 2026-03-06 12:25:36,173 log 747826 136461589157568 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-06 12:25:36,175 log 747826 136461589157568 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-06 12:36:18,979 autoreload 943779 138059313344640 Watching for file changes with StatReloader
+INFO 2026-03-06 12:36:32,407 log 943779 138058750138048 "GET / HTTP/1.1" 200 13270
+WARNING 2026-03-06 12:36:33,047 log 943779 138058750138048 Not Found: /favicon.ico
+WARNING 2026-03-06 12:36:33,048 log 943779 138058750138048 "GET /favicon.ico HTTP/1.1" 404 3456
+INFO 2026-03-06 12:36:38,764 log 943779 138058750138048 "GET /dashboard/ HTTP/1.1" 200 57013
+WARNING 2026-03-06 12:36:47,304 log 943779 138058750138048 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-06 12:36:47,304 log 943779 138058750138048 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-06 12:37:44,055 log 943779 138058750138048 "GET /dashboard/ HTTP/1.1" 200 57013
+WARNING 2026-03-06 12:37:44,165 log 943779 138058750138048 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-06 12:37:44,166 log 943779 138058750138048 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
