@@ -1,0 +1,646 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Dashboard - Análise Indra{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h2 class="mb-1">
+                    <i class="bi bi-bar-chart-line"></i> Dashboard Analítico
+                </h2>
+                <p class="text-muted mb-0">Visão geral dos projetos e indicadores</p>
+            </div>
+            <div>
+                <a href="{% url 'core:upload_page' %}" class="btn btn-primary">
+                    <i class="bi bi-upload"></i> Upload XLS
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Informações do Processamento -->
+{% if ultimo_processamento %}
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card border-info">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h6 class="card-title mb-1">
+                            <i class="bi bi-file-earmark-spreadsheet text-info"></i>
+                            Último Processamento
+                        </h6>
+                        <p class="card-text mb-0">
+                            <strong>Arquivo:</strong> {{ ultimo_processamento.arquivo_nome }}<br>
+                            <strong>Data:</strong> {{ ultimo_processamento.data_processamento|date:"d/m/Y H:i" }}<br>
+                            <strong>Mês Fechado:</strong> {{ ultimo_processamento.get_mes_fechado_display }}/{{ ultimo_processamento.ano }}
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-end">
+                        <span class="badge bg-success">
+                            <i class="bi bi-check-circle"></i> Dados Atualizados
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Dashboard Tabs -->
+<div class="card shadow-lg border-0">
+    <div class="card-header bg-white border-bottom-0">
+        <ul class="nav nav-tabs card-header-tabs" id="dashboardTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="aapp-tab" data-bs-toggle="tab"
+                        data-bs-target="#aapp" type="button" role="tab">
+                    <i class="bi bi-building"></i> AAPP
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="sanidad-tab" data-bs-toggle="tab"
+                        data-bs-target="#sanidad" type="button" role="tab">
+                    <i class="bi bi-heart-pulse"></i> Sanidad
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="consolidado-tab" data-bs-toggle="tab"
+                        data-bs-target="#consolidado" type="button" role="tab">
+                    <i class="bi bi-collection"></i> Consolidado
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="card-body">
+        <div class="tab-content" id="dashboardTabContent">
+            <!-- AAPP Tab -->
+            <div class="tab-pane fade show active" id="aapp" role="tabpanel">
+                <div class="row g-4">
+                    {% for card in aapp_data.cards %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <div class="icon-circle bg-primary bg-opacity-10 text-primary mx-auto">
+                                        <i class="bi {{ card.icon|default:'bi-graph-up' }} fs-2"></i>
+                                    </div>
+                                </div>
+                                <h5 class="card-title text-muted mb-2">{{ card.title }}</h5>
+                                <h3 class="card-value mb-2 {{ card.change_type }}">{{ card.value }}</h3>
+                                <span class="badge {% if card.change_type == 'positive' %}bg-success{% else %}bg-danger{% endif %} rounded-pill">
+                                    <i class="bi {% if card.change_type == 'positive' %}bi-arrow-up{% else %}bi-arrow-down{% endif %}"></i>
+                                    {{ card.change }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Sanidad Tab -->
+            <div class="tab-pane fade" id="sanidad" role="tabpanel">
+                <div class="row g-4">
+                    {% for card in sanidad_data.cards %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <div class="icon-circle bg-success bg-opacity-10 text-success mx-auto">
+                                        <i class="bi {{ card.icon|default:'bi-activity' }} fs-2"></i>
+                                    </div>
+                                </div>
+                                <h5 class="card-title text-muted mb-2">{{ card.title }}</h5>
+                                <h3 class="card-value mb-2 {{ card.change_type }}">{{ card.value }}</h3>
+                                <span class="badge {% if card.change_type == 'positive' %}bg-success{% else %}bg-danger{% endif %} rounded-pill">
+                                    <i class="bi {% if card.change_type == 'positive' %}bi-arrow-up{% else %}bi-arrow-down{% endif %}"></i>
+                                    {{ card.change }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Consolidado Tab -->
+            <div class="tab-pane fade" id="consolidado" role="tabpanel">
+                <div class="row g-4">
+                    {% for card in consolidado_data.cards %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <div class="icon-circle bg-info bg-opacity-10 text-info mx-auto">
+                                        <i class="bi {{ card.icon|default:'bi-pie-chart' }} fs-2"></i>
+                                    </div>
+                                </div>
+                                <h5 class="card-title text-muted mb-2">{{ card.title }}</h5>
+                                <h3 class="card-value mb-2 {{ card.change_type }}">{{ card.value }}</h3>
+                                <span class="badge {% if card.change_type == 'positive' %}bg-success{% else %}bg-danger{% endif %} rounded-pill">
+                                    <i class="bi {% if card.change_type == 'positive' %}bi-arrow-up{% else %}bi-arrow-down{% endif %}"></i>
+                                    {{ card.change }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Projects Table -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">
+                    <i class="bi bi-table"></i> Detalhamento de Projetos
+                    <span class="badge bg-primary ms-2" id="projectCount">0</span>
+                </h5>
+                <div class="d-flex gap-2">
+                    <input type="text" id="margemFilter" class="form-control form-control-sm" placeholder="Filtrar margem % (ex: >10, <20, 15)" style="width: 200px;">
+                    <select id="marketFilter" class="form-select form-select-sm" style="width: 120px;">
+                        <option value="">Todos Mercados</option>
+                        <option value="AAPP">AAPP</option>
+                        <option value="Sanidad">Sanidad</option>
+                    </select>
+                    <button class="btn btn-sm btn-outline-secondary" onclick="applyFilters()">
+                        <i class="bi bi-funnel"></i> Filtrar
+                    </button>
+                    <button class="btn btn-sm btn-outline-secondary" onclick="clearFilters()">
+                        <i class="bi bi-x-circle"></i> Limpar
+                    </button>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table id="projectsTable" class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col" class="border-0 fw-bold">Código</th>
+                                <th scope="col" class="border-0 fw-bold">Descrição</th>
+                                <th scope="col" class="border-0 fw-bold">Mercado</th>
+                                <th scope="col" class="border-0 fw-bold">Região</th>
+                                <th scope="col" class="border-0 fw-bold">Tipo Solução</th>
+                                <th scope="col" class="border-0 fw-bold text-end">Contratação YTD</th>
+                                <th scope="col" class="border-0 fw-bold text-end">Ingresso YTD</th>
+                                <th scope="col" class="border-0 fw-bold text-end">Margem YTD</th>
+                                <th scope="col" class="border-0 fw-bold text-end">Margem %</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- Renderizar dados diretamente no servidor -->
+                            {% for projeto in consolidado_data.projetos|slice:":20" %} <!-- Limitar a 20 primeiros para performance -->
+                            <tr>
+                                <td><code class="text-primary">{{ projeto.codigo }}</code></td>
+                                <td class="text-truncate" style="max-width: 300px;" title="{{ projeto.descricao }}">
+                                    {{ projeto.descricao }}
+                                </td>
+                                <td><span class="badge bg-secondary">{{ projeto.mercado }}</span></td>
+                                <td>{{ projeto.regiao|default:'-' }}</td>
+                                <td>{{ projeto.tipo_solucao|default:'-' }}</td>
+                                <td class="text-end fw-bold">R$ {{ projeto.contratacion_ytd|floatformat:0 }}</td>
+                                <td class="text-end fw-bold text-success">R$ {{ projeto.ingresos_ytd|floatformat:0 }}</td>
+                                <td class="text-end fw-bold {% if projeto.margen_ytd >= 0 %}text-success{% else %}text-danger{% endif %}">
+                                    R$ {{ projeto.margen_ytd|floatformat:0 }}
+                                </td>
+                                <td class="text-end">
+                                    <span class="badge {% if projeto.margen_percentual >= 20 %}bg-success{% elif projeto.margen_percentual >= 10 %}bg-warning{% elif projeto.margen_percentual >= 0 %}bg-secondary{% else %}bg-danger{% endif %}">
+                                        {{ projeto.margen_percentual|floatformat:1 }}%
+                                    </span>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="9" class="text-center text-muted py-4">
+                                    <i class="bi bi-info-circle me-2"></i>
+                                    Nenhum projeto encontrado.
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Summary Cards -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-light">
+                <h5 class="card-title mb-0">
+                    <i class="bi bi-info-circle"></i> Resumo Geral
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <div class="p-3">
+                            <h4 class="text-primary mb-1">{% for card in aapp_data %}{% if forloop.first %}{{ card.value }}{% endif %}{% endfor %}</h4>
+                            <p class="text-muted mb-0">Projetos AAPP</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-3">
+                            <h4 class="text-success mb-1">{% for card in sanidad_data %}{% if forloop.first %}{{ card.value }}{% endif %}{% endfor %}</h4>
+                            <p class="text-muted mb-0">Projetos Sanidad</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-3">
+                            <h4 class="text-info mb-1">{% for card in consolidado_data %}{% if forloop.first %}{{ card.value }}{% endif %}{% endfor %}</h4>
+                            <p class="text-muted mb-0">Total Projetos</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-3">
+                            <h4 class="text-warning mb-1">R$ 4.2M</h4>
+                            <p class="text-muted mb-0">Receita Total</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Activity -->
+<div class="row mt-4">
+    <div class="col-lg-8">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-light">
+                <h5 class="card-title mb-0">
+                    <i class="bi bi-clock-history"></i> Atividade Recente
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker bg-primary"></div>
+                        <div class="timeline-content">
+                            <h6 class="mb-1">Arquivo XLS processado com sucesso</h6>
+                            <p class="text-muted small mb-0">24 projetos atualizados • há 2 horas</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker bg-success"></div>
+                        <div class="timeline-content">
+                            <h6 class="mb-1">Dashboard atualizado</h6>
+                            <p class="text-muted small mb-0">Dados consolidados • há 2 horas</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker bg-info"></div>
+                        <div class="timeline-content">
+                            <h6 class="mb-1">Sistema inicializado</h6>
+                            <p class="text-muted small mb-0">Aplicação pronta para uso • hoje</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-light">
+                <h5 class="card-title mb-0">
+                    <i class="bi bi-trophy"></i> Destaques
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="flex-shrink-0">
+                        <i class="bi bi-award text-warning fs-3"></i>
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h6 class="mb-1">Melhor Margem</h6>
+                        <p class="text-muted small mb-0">Projeto XYZ - 25.4%</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <div class="flex-shrink-0">
+                        <i class="bi bi-rocket text-success fs-3"></i>
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h6 class="mb-1">Maior Crescimento</h6>
+                        <p class="text-muted small mb-0">Sanidad +25%</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                        <i class="bi bi-star text-primary fs-3"></i>
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h6 class="mb-1">Top Performance</h6>
+                        <p class="text-muted small mb-0">ROI Médio 23.7%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.hover-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-value.positive {
+    color: #198754;
+}
+
+.card-value.negative {
+    color: #dc3545;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #e9ecef;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -22px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.timeline-content h6 {
+    color: #495057;
+    font-weight: 600;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Dashboard JavaScript loaded');
+    setupTabListeners();
+    setupTableFunctionality();
+    updateProjectCount();
+});
+
+async function loadCategoryData(category) {
+    console.log('Loading data for category:', category);
+    try {
+        const response = await fetch(`/api/dashboard/${category}/`);
+        console.log('Response status:', response.status);
+        const data = await response.json();
+        console.log('Data loaded:', data.projetos ? data.projetos.length : 0, 'projects');
+        projectsData[category] = data.projetos;
+        if (currentCategory === category) {
+            updateTable(category);
+        }
+    } catch (error) {
+        console.error('Erro ao carregar dados:', error);
+    }
+}
+
+function setupTabListeners() {
+    document.querySelectorAll('#dashboardTabs .nav-link').forEach(tab => {
+        tab.addEventListener('click', function() {
+            const target = this.getAttribute('data-bs-target').substring(1); // Remove o #
+            currentCategory = target;
+
+            // Carregar dados se ainda não foram carregados
+            if (!projectsData[target]) {
+                loadCategoryData(target);
+            } else {
+                updateTable(target);
+            }
+        });
+    });
+}
+
+function setupFilterListener() {
+    const filterInput = document.getElementById('margemFilter');
+    filterInput.addEventListener('input', function() {
+        currentFilter = this.value.trim();
+        updateTable(currentCategory);
+    });
+}
+
+function updateTable(category) {
+    const data = projectsData[category] || [];
+    if (data.length === 0) {
+        // Dados ainda não carregados, mostrar loading
+        renderLoadingTable();
+        return;
+    }
+    const filteredData = applyFilters(data);
+    const sortedData = sortData(filteredData);
+    renderTable(sortedData);
+}
+
+function renderLoadingTable() {
+    const tbody = document.getElementById('tableBody');
+    tbody.innerHTML = `
+        <tr>
+            <td colspan="9" class="text-center py-4">
+                <div class="spinner-border spinner-border-sm text-primary me-2" role="status"></div>
+                Carregando dados...
+            </td>
+        </tr>
+    `;
+}
+
+function applyFilters(data) {
+    if (!currentFilter) return data;
+
+    const filter = currentFilter.toLowerCase();
+
+    return data.filter(project => {
+        const margemPercentual = project.margen_percentual;
+
+        // Suporte para operadores: >10, <20, =15, >=10, <=20
+        if (filter.startsWith('>=')) {
+            return margemPercentual >= parseFloat(filter.substring(2));
+        } else if (filter.startsWith('<=')) {
+            return margemPercentual <= parseFloat(filter.substring(2));
+        } else if (filter.startsWith('>')) {
+            return margemPercentual > parseFloat(filter.substring(1));
+        } else if (filter.startsWith('<')) {
+            return margemPercentual < parseFloat(filter.substring(1));
+        } else if (filter.startsWith('=')) {
+            return margemPercentual === parseFloat(filter.substring(1));
+        } else {
+            // Sem operador, busca por valor exato
+            return margemPercentual === parseFloat(filter);
+        }
+    });
+}
+
+function sortData(data) {
+    return data.sort((a, b) => {
+        let aValue = a[currentSort.column];
+        let bValue = b[currentSort.column];
+
+        // Tratamento especial para strings
+        if (typeof aValue === 'string') {
+            aValue = aValue.toLowerCase();
+            bValue = bValue.toLowerCase();
+        }
+
+        if (currentSort.direction === 'asc') {
+            return aValue > bValue ? 1 : aValue < bValue ? -1 : 0;
+        } else {
+            return aValue < bValue ? 1 : aValue > bValue ? -1 : 0;
+        }
+    });
+}
+
+function renderTable(data) {
+    const tbody = document.getElementById('tableBody');
+
+    if (data.length === 0) {
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="9" class="text-center text-muted py-4">
+                    <i class="bi bi-info-circle me-2"></i>
+                    Nenhum projeto encontrado com os filtros aplicados.
+                </td>
+            </tr>
+        `;
+        return;
+    }
+
+    tbody.innerHTML = data.map(project => `
+        <tr>
+            <td><code class="text-primary">${project.codigo}</code></td>
+            <td class="text-truncate" style="max-width: 300px;" title="${project.descricao}">
+                ${project.descricao}
+            </td>
+            <td><span class="badge bg-secondary">${project.mercado}</span></td>
+            <td>${project.regiao || '-'}</td>
+            <td>${project.tipo_solucao || '-'}</td>
+            <td class="text-end fw-bold">${formatCurrency(project.contratacion_ytd)}</td>
+            <td class="text-end fw-bold text-success">${formatCurrency(project.ingresos_ytd)}</td>
+            <td class="text-end fw-bold ${project.margen_ytd >= 0 ? 'text-success' : 'text-danger'}">
+                ${formatCurrency(project.margen_ytd)}
+            </td>
+            <td class="text-end">
+                <span class="badge ${getMargemBadgeClass(project.margen_percentual)}">
+                    ${project.margen_percentual.toFixed(1)}%
+                </span>
+            </td>
+        </tr>
+    `).join('');
+
+    // Adicionar event listeners para ordenação
+    setupSorting();
+}
+
+function setupSorting() {
+    document.querySelectorAll('#projectsTable th').forEach((th, index) => {
+        th.style.cursor = 'pointer';
+        th.addEventListener('click', () => {
+            const columns = ['codigo', 'descricao', 'mercado', 'regiao', 'tipo_solucao',
+                           'contratacion_ytd', 'ingresos_ytd', 'margen_ytd', 'margen_percentual'];
+
+            if (index < columns.length) {
+                const column = columns[index];
+
+                if (currentSort.column === column) {
+                    currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+                } else {
+                    currentSort.column = column;
+                    currentSort.direction = 'desc'; // Default para descendente
+                }
+
+                updateTable(currentCategory);
+
+                // Atualizar indicadores visuais de ordenação
+                updateSortIndicators(th, currentSort.direction);
+            }
+        });
+    });
+}
+
+function updateSortIndicators(activeTh, direction) {
+    // Limpar indicadores anteriores
+    document.querySelectorAll('#projectsTable th').forEach(th => {
+        th.classList.remove('table-active');
+        const icon = th.querySelector('.sort-icon');
+        if (icon) icon.remove();
+    });
+
+    // Adicionar indicador ao header ativo
+    activeTh.classList.add('table-active');
+    const icon = document.createElement('i');
+    icon.className = `sort-icon bi bi-chevron-${direction === 'asc' ? 'up' : 'down'} ms-1`;
+    activeTh.appendChild(icon);
+}
+
+function getMargemBadgeClass(margem) {
+    if (margem >= 20) return 'bg-success';
+    if (margem >= 10) return 'bg-warning';
+    if (margem >= 0) return 'bg-secondary';
+    return 'bg-danger';
+}
+
+function formatCurrency(value) {
+    if (Math.abs(value) >= 1000000) {
+        return `R$ ${(value / 1000000).toFixed(1)}M`;
+    } else if (Math.abs(value) >= 1000) {
+        return `R$ ${(value / 1000).toFixed(0)}K`;
+    } else {
+        return `R$ ${value.toFixed(0)}`;
+    }
+}
+
+function clearFilters() {
+    document.getElementById('margemFilter').value = '';
+    currentFilter = '';
+    updateTable(currentCategory);
+}
+
+// Função global para debug
+window.debugProjects = function(category) {
+    console.log('Dados de projetos para', category, ':', projectsData[category]);
+};
+</script>
+{% endblock %}

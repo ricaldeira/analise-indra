@@ -1,0 +1,11 @@
+codigo,descricao,mercado,contratacao,venda,margem,margem_percentual
+PRJ001,Sistema de Gestão AAPP,AAPP,150000,180000,30000,16.67
+PRJ002,Plataforma Sanidad Digital,Sanidad,120000,142000,22000,15.49
+PRJ003,Portal Corporativo AAPP,AAPP,80000,96000,16000,16.67
+PRJ004,Aplicativo Mobile Sanidad,Sanidad,95000,112000,17000,15.18
+PRJ005,ERP Empresarial,AAPP,200000,240000,40000,16.67
+PRJ006,Sistema de Telemedicina,Sanidad,110000,130000,20000,15.38
+PRJ007,Banco de Dados Cloud,AAPP,60000,72000,12000,16.67
+PRJ008,API de Integração,Sanidad,75000,88500,13500,15.25
+PRJ009,Relatórios Analytics,AAPP,45000,54000,9000,16.67
+PRJ010,Dashboard Médico,Sanidad,55000,65000,10000,15.38

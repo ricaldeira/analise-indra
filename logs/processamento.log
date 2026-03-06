@@ -1,0 +1,1604 @@
+INFO 2026-03-05 17:18:54,522 autoreload 449167 133071757922432 Watching for file changes with StatReloader
+INFO 2026-03-05 17:19:53,222 views 449167 133071193663168 === INÍCIO DO PROCESSAMENTO DE UPLOAD ===
+INFO 2026-03-05 17:19:53,247 views 449167 133071193663168 Arquivo recebido: Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (tamanho: 12295366 bytes)
+INFO 2026-03-05 17:19:53,247 views 449167 133071193663168 Tipo de arquivo validado com sucesso
+INFO 2026-03-05 17:19:53,247 views 449167 133071193663168 Salvando arquivo temporariamente em: /opt/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx
+INFO 2026-03-05 17:19:53,256 views 449167 133071193663168 Arquivo salvo temporariamente. Tamanho final: 12295366 bytes
+INFO 2026-03-05 17:19:53,256 views 449167 133071193663168 Iniciando processamento do arquivo XLS...
+INFO 2026-03-05 17:19:53,257 views 449167 133071193663168 === INÍCIO DO PROCESSAMENTO XLS: /opt/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx ===
+INFO 2026-03-05 17:19:53,257 views 449167 133071193663168 Lendo aba FC do arquivo Excel...
+INFO 2026-03-05 17:20:00,893 views 449167 133071193663168 Arquivo lido com sucesso. Dimensões: 7380 linhas x 136 colunas
+INFO 2026-03-05 17:20:00,893 views 449167 133071193663168 Mapeamento de conceitos configurado: 21 conceitos
+INFO 2026-03-05 17:20:00,893 views 449167 133071193663168 Limpando dados anteriores...
+INFO 2026-03-05 17:20:00,996 views 449167 133071193663168 Dados anteriores removidos: 1 processamentos, 124 projetos, 19344 conceitos
+INFO 2026-03-05 17:20:00,996 views 449167 133071193663168 Criando registro de processamento...
+INFO 2026-03-05 17:20:00,999 views 449167 133071193663168 Registro de processamento criado: ID 5, arquivo: temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx
+INFO 2026-03-05 17:20:00,999 views 449167 133071193663168 Iniciando processamento das linhas do arquivo (a partir da linha 35)...
+INFO 2026-03-05 17:20:01,015 views 449167 133071193663168 Salvando projeto: 19AP03 - 13 conceitos
+INFO 2026-03-05 17:20:01,442 views 449167 133071193663168 Salvando projeto: 19AP04 - 13 conceitos
+INFO 2026-03-05 17:20:01,910 views 449167 133071193663168 Salvando projeto: 25AP38 - 13 conceitos
+INFO 2026-03-05 17:20:02,351 views 449167 133071193663168 Salvando projeto: 20AP04 - 13 conceitos
+INFO 2026-03-05 17:20:02,807 views 449167 133071193663168 Salvando projeto: 25AP02 - 13 conceitos
+INFO 2026-03-05 17:20:03,324 views 449167 133071193663168 Salvando projeto: 20AP09 - 13 conceitos
+INFO 2026-03-05 17:20:03,785 views 449167 133071193663168 Salvando projeto: 20AP10 - 13 conceitos
+INFO 2026-03-05 17:20:04,244 views 449167 133071193663168 Processadas 100 linhas...
+INFO 2026-03-05 17:20:04,245 views 449167 133071193663168 Salvando projeto: 20AP14 - 13 conceitos
+INFO 2026-03-05 17:20:04,687 views 449167 133071193663168 Salvando projeto: 25APBR - 13 conceitos
+INFO 2026-03-05 17:20:05,154 views 449167 133071193663168 Salvando projeto: 21AP12 - 13 conceitos
+INFO 2026-03-05 17:20:05,601 views 449167 133071193663168 Salvando projeto: 21AP13 - 13 conceitos
+INFO 2026-03-05 17:20:06,087 views 449167 133071193663168 Salvando projeto: 25APMB - 13 conceitos
+INFO 2026-03-05 17:20:06,555 views 449167 133071193663168 Salvando projeto: 21AP15 - 13 conceitos
+INFO 2026-03-05 17:20:07,000 views 449167 133071193663168 Salvando projeto: 21AP16 - 13 conceitos
+INFO 2026-03-05 17:20:07,462 views 449167 133071193663168 Salvando projeto: 21AP17 - 13 conceitos
+INFO 2026-03-05 17:20:07,893 views 449167 133071193663168 Processadas 200 linhas...
+INFO 2026-03-05 17:20:07,896 views 449167 133071193663168 Salvando projeto: 22AP02 - 13 conceitos
+INFO 2026-03-05 17:20:08,356 views 449167 133071193663168 Salvando projeto: 22AP03 - 13 conceitos
+INFO 2026-03-05 17:20:08,812 views 449167 133071193663168 Salvando projeto: 22AP04 - 13 conceitos
+INFO 2026-03-05 17:20:09,288 views 449167 133071193663168 Salvando projeto: 22AP05 - 13 conceitos
+INFO 2026-03-05 17:20:09,745 views 449167 133071193663168 Salvando projeto: 22AP07 - 13 conceitos
+INFO 2026-03-05 17:20:10,209 views 449167 133071193663168 Salvando projeto: 22AP08 - 13 conceitos
+INFO 2026-03-05 17:20:10,669 views 449167 133071193663168 Salvando projeto: 22AP09 - 13 conceitos
+INFO 2026-03-05 17:20:11,101 views 449167 133071193663168 Processadas 300 linhas...
+INFO 2026-03-05 17:20:11,102 views 449167 133071193663168 Salvando projeto: 22AP10 - 13 conceitos
+INFO 2026-03-05 17:20:11,587 views 449167 133071193663168 Salvando projeto: 22AP11 - 13 conceitos
+INFO 2026-03-05 17:20:12,033 views 449167 133071193663168 Salvando projeto: 22AP15 - 13 conceitos
+INFO 2026-03-05 17:20:12,505 views 449167 133071193663168 Salvando projeto: 22AP16 - 13 conceitos
+INFO 2026-03-05 17:20:12,961 views 449167 133071193663168 Salvando projeto: 22AP18 - 13 conceitos
+INFO 2026-03-05 17:20:13,417 views 449167 133071193663168 Salvando projeto: 22AP20 - 13 conceitos
+INFO 2026-03-05 17:20:13,908 views 449167 133071193663168 Salvando projeto: 22AP21 - 13 conceitos
+INFO 2026-03-05 17:20:14,395 views 449167 133071193663168 Salvando projeto: 22AP22 - 13 conceitos
+INFO 2026-03-05 17:20:14,852 views 449167 133071193663168 Processadas 400 linhas...
+INFO 2026-03-05 17:20:14,853 views 449167 133071193663168 Salvando projeto: 22AP24 - 13 conceitos
+INFO 2026-03-05 17:20:15,300 views 449167 133071193663168 Salvando projeto: 25AP03 - 13 conceitos
+INFO 2026-03-05 17:20:15,764 views 449167 133071193663168 Salvando projeto: 22AP26 - 13 conceitos
+INFO 2026-03-05 17:20:16,214 views 449167 133071193663168 Salvando projeto: 23AP03 - 13 conceitos
+INFO 2026-03-05 17:20:16,690 views 449167 133071193663168 Salvando projeto: 23AP06 - 13 conceitos
+INFO 2026-03-05 17:20:17,148 views 449167 133071193663168 Salvando projeto: 23AP08 - 13 conceitos
+INFO 2026-03-05 17:20:17,608 views 449167 133071193663168 Salvando projeto: 23AP09 - 13 conceitos
+INFO 2026-03-05 17:20:18,070 views 449167 133071193663168 Salvando projeto: P26A13 - 13 conceitos
+INFO 2026-03-05 17:20:18,513 views 449167 133071193663168 Processadas 500 linhas...
+INFO 2026-03-05 17:20:18,514 views 449167 133071193663168 Salvando projeto: 23AP11 - 13 conceitos
+INFO 2026-03-05 17:20:18,993 views 449167 133071193663168 Salvando projeto: P26A14 - 13 conceitos
+INFO 2026-03-05 17:20:19,605 views 449167 133071193663168 Salvando projeto: 23AP13 - 13 conceitos
+INFO 2026-03-05 17:20:20,052 views 449167 133071193663168 Salvando projeto: 23AP14 - 13 conceitos
+INFO 2026-03-05 17:20:20,505 views 449167 133071193663168 Salvando projeto: 23AP17 - 13 conceitos
+INFO 2026-03-05 17:20:20,960 views 449167 133071193663168 Salvando projeto: 25AP18 - 13 conceitos
+INFO 2026-03-05 17:20:21,475 views 449167 133071193663168 Salvando projeto: 23AP19 - 13 conceitos
+INFO 2026-03-05 17:20:21,970 views 449167 133071193663168 Salvando projeto: 23AP28 - 13 conceitos
+INFO 2026-03-05 17:20:22,455 views 449167 133071193663168 Processadas 600 linhas...
+INFO 2026-03-05 17:20:22,457 views 449167 133071193663168 Salvando projeto: 23AP29 - 13 conceitos
+INFO 2026-03-05 17:20:22,901 views 449167 133071193663168 Salvando projeto: 23AP30 - 13 conceitos
+INFO 2026-03-05 17:20:23,750 views 449167 133071193663168 Salvando projeto: 23AP32 - 13 conceitos
+INFO 2026-03-05 17:20:25,912 views 449167 133071193663168 Salvando projeto: 23AP33 - 13 conceitos
+INFO 2026-03-05 17:20:26,384 views 449167 133071193663168 Salvando projeto: 23AP34 - 13 conceitos
+INFO 2026-03-05 17:20:26,841 views 449167 133071193663168 Salvando projeto: 23AP35 - 13 conceitos
+INFO 2026-03-05 17:20:27,526 views 449167 133071193663168 Salvando projeto: 23AP36 - 13 conceitos
+INFO 2026-03-05 17:20:28,012 views 449167 133071193663168 Processadas 700 linhas...
+INFO 2026-03-05 17:20:28,013 views 449167 133071193663168 Salvando projeto: 23AP37 - 13 conceitos
+INFO 2026-03-05 17:20:28,547 views 449167 133071193663168 Salvando projeto: 23AP38 - 13 conceitos
+INFO 2026-03-05 17:20:29,051 views 449167 133071193663168 Salvando projeto: 23AP39 - 13 conceitos
+INFO 2026-03-05 17:20:29,623 views 449167 133071193663168 Salvando projeto: 23CEDX - 13 conceitos
+INFO 2026-03-05 17:20:30,167 views 449167 133071193663168 Salvando projeto: 24AP01 - 13 conceitos
+INFO 2026-03-05 17:20:30,624 views 449167 133071193663168 Salvando projeto: 24AP02 - 13 conceitos
+INFO 2026-03-05 17:20:31,107 views 449167 133071193663168 Salvando projeto: 24AP03 - 13 conceitos
+INFO 2026-03-05 17:20:31,566 views 449167 133071193663168 Salvando projeto: 24AP04 - 13 conceitos
+INFO 2026-03-05 17:20:33,171 views 449167 133071193663168 Processadas 800 linhas...
+INFO 2026-03-05 17:20:33,175 views 449167 133071193663168 Salvando projeto: 24AP05 - 13 conceitos
+INFO 2026-03-05 17:20:34,779 views 449167 133071193663168 Salvando projeto: 24AP06 - 13 conceitos
+INFO 2026-03-05 17:20:35,312 views 449167 133071193663168 Salvando projeto: 24AP07 - 13 conceitos
+INFO 2026-03-05 17:20:35,813 views 449167 133071193663168 Salvando projeto: 24AP10 - 13 conceitos
+INFO 2026-03-05 17:20:36,315 views 449167 133071193663168 Salvando projeto: 24AP11 - 13 conceitos
+INFO 2026-03-05 17:20:36,805 views 449167 133071193663168 Salvando projeto: 24AP14 - 13 conceitos
+INFO 2026-03-05 17:20:37,270 views 449167 133071193663168 Salvando projeto: 24AP15 - 13 conceitos
+INFO 2026-03-05 17:20:37,749 views 449167 133071193663168 Salvando projeto: 24AP16 - 13 conceitos
+INFO 2026-03-05 17:20:38,295 views 449167 133071193663168 Processadas 900 linhas...
+INFO 2026-03-05 17:20:38,298 views 449167 133071193663168 Salvando projeto: 24AP18 - 13 conceitos
+INFO 2026-03-05 17:20:38,793 views 449167 133071193663168 Salvando projeto: 24AP19 - 13 conceitos
+INFO 2026-03-05 17:20:39,241 views 449167 133071193663168 Salvando projeto: 24AP20 - 13 conceitos
+INFO 2026-03-05 17:20:39,713 views 449167 133071193663168 Salvando projeto: 24AP21 - 13 conceitos
+INFO 2026-03-05 17:20:40,189 views 449167 133071193663168 Salvando projeto: 24AP22 - 13 conceitos
+INFO 2026-03-05 17:20:40,641 views 449167 133071193663168 Salvando projeto: 24AP23 - 13 conceitos
+INFO 2026-03-05 17:20:42,366 views 449167 133071193663168 Salvando projeto: 24AP24 - 13 conceitos
+INFO 2026-03-05 17:20:43,636 views 449167 133071193663168 Processadas 1000 linhas...
+INFO 2026-03-05 17:20:43,637 views 449167 133071193663168 Salvando projeto: 24AP25 - 13 conceitos
+INFO 2026-03-05 17:20:44,151 views 449167 133071193663168 Salvando projeto: 24AP26 - 13 conceitos
+INFO 2026-03-05 17:20:44,619 views 449167 133071193663168 Salvando projeto: 24AP27 - 13 conceitos
+INFO 2026-03-05 17:20:45,099 views 449167 133071193663168 Salvando projeto: 24AP28 - 13 conceitos
+INFO 2026-03-05 17:20:45,572 views 449167 133071193663168 Salvando projeto: 24AP30 - 13 conceitos
+INFO 2026-03-05 17:20:46,040 views 449167 133071193663168 Salvando projeto: 24AP31 - 13 conceitos
+INFO 2026-03-05 17:20:46,505 views 449167 133071193663168 Salvando projeto: 24AP32 - 13 conceitos
+INFO 2026-03-05 17:20:46,974 views 449167 133071193663168 Salvando projeto: 24AP33 - 13 conceitos
+INFO 2026-03-05 17:20:47,466 views 449167 133071193663168 Processadas 1100 linhas...
+INFO 2026-03-05 17:20:47,467 views 449167 133071193663168 Salvando projeto: 24AP34 - 13 conceitos
+INFO 2026-03-05 17:20:47,928 views 449167 133071193663168 Salvando projeto: 24AP35 - 13 conceitos
+INFO 2026-03-05 17:20:48,415 views 449167 133071193663168 Salvando projeto: 24AP36 - 13 conceitos
+INFO 2026-03-05 17:20:48,881 views 449167 133071193663168 Salvando projeto: 25AP04 - 13 conceitos
+INFO 2026-03-05 17:20:49,473 views 449167 133071193663168 Salvando projeto: 25AP01 - 13 conceitos
+INFO 2026-03-05 17:20:51,759 views 449167 133071193663168 Salvando projeto: 5AP001 - 13 conceitos
+INFO 2026-03-05 17:20:52,500 views 449167 133071193663168 Salvando projeto: 25AP11 - 13 conceitos
+INFO 2026-03-05 17:20:53,017 views 449167 133071193663168 Salvando projeto: 5AP019 - 13 conceitos
+INFO 2026-03-05 17:20:53,549 views 449167 133071193663168 Processadas 1200 linhas...
+INFO 2026-03-05 17:20:53,552 views 449167 133071193663168 Salvando projeto: 25AP05 - 13 conceitos
+INFO 2026-03-05 17:20:54,155 views 449167 133071193663168 Salvando projeto: 5AP082 - 13 conceitos
+INFO 2026-03-05 17:20:54,693 views 449167 133071193663168 Salvando projeto: 25AP09 - 13 conceitos
+INFO 2026-03-05 17:20:55,203 views 449167 133071193663168 Salvando projeto: 25AP07 - 13 conceitos
+INFO 2026-03-05 17:20:55,691 views 449167 133071193663168 Salvando projeto: 25AP10 - 13 conceitos
+INFO 2026-03-05 17:20:56,184 views 449167 133071193663168 Salvando projeto: P26S10 - 13 conceitos
+INFO 2026-03-05 17:20:56,690 views 449167 133071193663168 Salvando projeto: 25AP23 - 13 conceitos
+INFO 2026-03-05 17:20:57,165 views 449167 133071193663168 Processadas 1300 linhas...
+INFO 2026-03-05 17:20:57,166 views 449167 133071193663168 Salvando projeto: 8AP006 - 13 conceitos
+INFO 2026-03-05 17:20:57,637 views 449167 133071193663168 Salvando projeto: 25AP35 - 13 conceitos
+INFO 2026-03-05 17:20:58,092 views 449167 133071193663168 Salvando projeto: 25AP19 - 13 conceitos
+INFO 2026-03-05 17:20:58,571 views 449167 133071193663168 Salvando projeto: 25AP20 - 13 conceitos
+INFO 2026-03-05 17:21:01,295 views 449167 133071193663168 Salvando projeto: 8AP016 - 13 conceitos
+INFO 2026-03-05 17:21:01,801 views 449167 133071193663168 Salvando projeto: 25AP21 - 13 conceitos
+INFO 2026-03-05 17:21:02,286 views 449167 133071193663168 Salvando projeto: 8AP019 - 13 conceitos
+INFO 2026-03-05 17:21:02,750 views 449167 133071193663168 Salvando projeto: 8ASIND - 13 conceitos
+INFO 2026-03-05 17:21:03,235 views 449167 133071193663168 Processadas 1400 linhas...
+INFO 2026-03-05 17:21:03,236 views 449167 133071193663168 Salvando projeto: 25AP22 - 13 conceitos
+INFO 2026-03-05 17:21:03,693 views 449167 133071193663168 Salvando projeto: EYPAPP - 13 conceitos
+INFO 2026-03-05 17:21:04,171 views 449167 133071193663168 Salvando projeto: 26AP01 - 13 conceitos
+INFO 2026-03-05 17:21:04,633 views 449167 133071193663168 Salvando projeto: 26AP02 - 13 conceitos
+INFO 2026-03-05 17:21:05,124 views 449167 133071193663168 Salvando projeto: 26AP03 - 13 conceitos
+INFO 2026-03-05 17:21:05,631 views 449167 133071193663168 Salvando projeto: 26AP04 - 13 conceitos
+INFO 2026-03-05 17:21:06,087 views 449167 133071193663168 Salvando projeto: 26AP05 - 13 conceitos
+INFO 2026-03-05 17:21:06,578 views 449167 133071193663168 Processadas 1500 linhas...
+INFO 2026-03-05 17:21:06,606 views 449167 133071193663168 Processadas 1600 linhas...
+INFO 2026-03-05 17:21:06,609 views 449167 133071193663168 Salvando projeto: P26S11 - 13 conceitos
+INFO 2026-03-05 17:21:07,093 views 449167 133071193663168 Processadas 1700 linhas...
+INFO 2026-03-05 17:21:07,094 views 449167 133071193663168 Salvando projeto: 25AP31 - 13 conceitos
+INFO 2026-03-05 17:21:07,656 views 449167 133071193663168 Salvando projeto: 25AP17 - 13 conceitos
+INFO 2026-03-05 17:21:10,233 views 449167 133071193663168 Processadas 1800 linhas...
+INFO 2026-03-05 17:21:10,238 views 449167 133071193663168 Salvando projeto: 25AP33 - 13 conceitos
+INFO 2026-03-05 17:21:10,748 views 449167 133071193663168 Salvando projeto: 21AP00 - 13 conceitos
+INFO 2026-03-05 17:21:11,259 views 449167 133071193663168 Salvando projeto: 22AP14 - 13 conceitos
+INFO 2026-03-05 17:21:11,734 views 449167 133071193663168 Salvando projeto: 22AP17 - 13 conceitos
+INFO 2026-03-05 17:21:12,215 views 449167 133071193663168 Salvando projeto: 22AP19 - 13 conceitos
+INFO 2026-03-05 17:21:12,666 views 449167 133071193663168 Salvando projeto: 22AP27 - 13 conceitos
+INFO 2026-03-05 17:21:13,150 views 449167 133071193663168 Salvando projeto: 24AP17 - 13 conceitos
+INFO 2026-03-05 17:21:13,616 views 449167 133071193663168 Processadas 1900 linhas...
+INFO 2026-03-05 17:21:13,619 views 449167 133071193663168 Salvando projeto: EYPAPP - 13 conceitos
+ERROR 2026-03-05 17:21:13,625 views 449167 133071193663168 Erro ao processar linha 1947: UNIQUE constraint failed: core_conceitomensal.projeto_id, core_conceitomensal.processamento_id, core_conceitomensal.conceito, core_conceitomensal.mes
+INFO 2026-03-05 17:21:13,636 views 449167 133071193663168 Arquivo temporário removido com sucesso
+ERROR 2026-03-05 17:21:13,636 views 449167 133071193663168 Processamento falhou: Erro ao processar linha 1947: UNIQUE constraint failed: core_conceitomensal.projeto_id, core_conceitomensal.processamento_id, core_conceitomensal.conceito, core_conceitomensal.mes
+INFO 2026-03-05 17:21:13,639 log 449167 133071193663168 "POST /upload/ HTTP/1.1" 200 210
+INFO 2026-03-05 17:21:20,842 log 449167 133071193663168 "GET / HTTP/1.1" 200 10241
+INFO 2026-03-05 17:23:16,705 autoreload 449809 133109872406656 Watching for file changes with StatReloader
+INFO 2026-03-05 17:24:06,334 autoreload 449960 138814021529728 Watching for file changes with StatReloader
+INFO 2026-03-05 17:24:09,802 log 449960 138813458409152 "GET / HTTP/1.1" 200 10241
+INFO 2026-03-05 17:24:14,932 views 449960 138813458409152 === INÍCIO DO PROCESSAMENTO DE UPLOAD ===
+INFO 2026-03-05 17:24:14,992 views 449960 138813458409152 Arquivo recebido: Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (tamanho: 12295366 bytes)
+INFO 2026-03-05 17:24:14,992 views 449960 138813458409152 Tipo de arquivo validado com sucesso
+INFO 2026-03-05 17:24:14,992 views 449960 138813458409152 Salvando arquivo temporariamente em: /opt/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx
+INFO 2026-03-05 17:24:15,007 views 449960 138813458409152 Arquivo salvo temporariamente. Tamanho final: 12295366 bytes
+INFO 2026-03-05 17:24:15,007 views 449960 138813458409152 Iniciando processamento do arquivo XLS...
+INFO 2026-03-05 17:24:15,007 views 449960 138813458409152 === INÍCIO DO PROCESSAMENTO XLS: /opt/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx ===
+INFO 2026-03-05 17:24:15,007 views 449960 138813458409152 Lendo aba FC do arquivo Excel...
+INFO 2026-03-05 17:24:23,327 views 449960 138813458409152 Arquivo lido com sucesso. Dimensões: 7380 linhas x 136 colunas
+INFO 2026-03-05 17:24:23,327 views 449960 138813458409152 Mapeamento de conceitos configurado: 21 conceitos
+INFO 2026-03-05 17:24:23,327 views 449960 138813458409152 Limpando dados anteriores...
+INFO 2026-03-05 17:24:23,399 views 449960 138813458409152 Dados anteriores removidos: 1 processamentos, 124 projetos, 19344 conceitos
+INFO 2026-03-05 17:24:23,400 views 449960 138813458409152 Criando registro de processamento...
+INFO 2026-03-05 17:24:23,403 views 449960 138813458409152 Registro de processamento criado: ID 6, arquivo: temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx
+INFO 2026-03-05 17:24:23,403 views 449960 138813458409152 Iniciando processamento das linhas do arquivo (a partir da linha 35)...
+INFO 2026-03-05 17:24:23,422 views 449960 138813458409152 Salvando projeto: 19AP03 - 13 conceitos
+INFO 2026-03-05 17:24:23,902 views 449960 138813458409152 Salvando projeto: 19AP04 - 13 conceitos
+INFO 2026-03-05 17:24:24,438 views 449960 138813458409152 Salvando projeto: 25AP38 - 13 conceitos
+INFO 2026-03-05 17:24:26,871 views 449960 138813458409152 Salvando projeto: 20AP04 - 13 conceitos
+INFO 2026-03-05 17:24:27,709 views 449960 138813458409152 Salvando projeto: 25AP02 - 13 conceitos
+INFO 2026-03-05 17:24:28,207 views 449960 138813458409152 Salvando projeto: 20AP09 - 13 conceitos
+INFO 2026-03-05 17:24:28,714 views 449960 138813458409152 Salvando projeto: 20AP10 - 13 conceitos
+INFO 2026-03-05 17:24:29,214 views 449960 138813458409152 Processadas 100 linhas...
+INFO 2026-03-05 17:24:29,216 views 449960 138813458409152 Salvando projeto: 20AP14 - 13 conceitos
+INFO 2026-03-05 17:24:29,680 views 449960 138813458409152 Salvando projeto: 25APBR - 13 conceitos
+INFO 2026-03-05 17:24:30,145 views 449960 138813458409152 Salvando projeto: 21AP12 - 13 conceitos
+INFO 2026-03-05 17:24:30,620 views 449960 138813458409152 Salvando projeto: 21AP13 - 13 conceitos
+INFO 2026-03-05 17:24:31,088 views 449960 138813458409152 Salvando projeto: 25APMB - 13 conceitos
+INFO 2026-03-05 17:24:31,578 views 449960 138813458409152 Salvando projeto: 21AP15 - 13 conceitos
+INFO 2026-03-05 17:24:32,041 views 449960 138813458409152 Salvando projeto: 21AP16 - 13 conceitos
+INFO 2026-03-05 17:24:32,519 views 449960 138813458409152 Salvando projeto: 21AP17 - 13 conceitos
+INFO 2026-03-05 17:24:32,988 views 449960 138813458409152 Processadas 200 linhas...
+INFO 2026-03-05 17:24:32,991 views 449960 138813458409152 Salvando projeto: 22AP02 - 13 conceitos
+INFO 2026-03-05 17:24:33,467 views 449960 138813458409152 Salvando projeto: 22AP03 - 13 conceitos
+INFO 2026-03-05 17:24:33,938 views 449960 138813458409152 Salvando projeto: 22AP04 - 13 conceitos
+INFO 2026-03-05 17:24:34,406 views 449960 138813458409152 Salvando projeto: 22AP05 - 13 conceitos
+INFO 2026-03-05 17:24:34,896 views 449960 138813458409152 Salvando projeto: 22AP07 - 13 conceitos
+INFO 2026-03-05 17:24:35,383 views 449960 138813458409152 Salvando projeto: 22AP08 - 13 conceitos
+INFO 2026-03-05 17:24:35,879 views 449960 138813458409152 Salvando projeto: 22AP09 - 13 conceitos
+INFO 2026-03-05 17:24:36,336 views 449960 138813458409152 Processadas 300 linhas...
+INFO 2026-03-05 17:24:36,337 views 449960 138813458409152 Salvando projeto: 22AP10 - 13 conceitos
+INFO 2026-03-05 17:24:36,799 views 449960 138813458409152 Salvando projeto: 22AP11 - 13 conceitos
+INFO 2026-03-05 17:24:37,275 views 449960 138813458409152 Salvando projeto: 22AP15 - 13 conceitos
+INFO 2026-03-05 17:24:37,738 views 449960 138813458409152 Salvando projeto: 22AP16 - 13 conceitos
+INFO 2026-03-05 17:24:38,247 views 449960 138813458409152 Salvando projeto: 22AP18 - 13 conceitos
+INFO 2026-03-05 17:24:38,697 views 449960 138813458409152 Salvando projeto: 22AP20 - 13 conceitos
+INFO 2026-03-05 17:24:39,174 views 449960 138813458409152 Salvando projeto: 22AP21 - 13 conceitos
+INFO 2026-03-05 17:24:39,623 views 449960 138813458409152 Salvando projeto: 22AP22 - 13 conceitos
+INFO 2026-03-05 17:24:40,105 views 449960 138813458409152 Processadas 400 linhas...
+INFO 2026-03-05 17:24:40,106 views 449960 138813458409152 Salvando projeto: 22AP24 - 13 conceitos
+INFO 2026-03-05 17:24:40,582 views 449960 138813458409152 Salvando projeto: 25AP03 - 13 conceitos
+INFO 2026-03-05 17:24:41,049 views 449960 138813458409152 Salvando projeto: 22AP26 - 13 conceitos
+INFO 2026-03-05 17:24:41,537 views 449960 138813458409152 Salvando projeto: 23AP03 - 13 conceitos
+INFO 2026-03-05 17:24:42,008 views 449960 138813458409152 Salvando projeto: 23AP06 - 13 conceitos
+INFO 2026-03-05 17:24:42,791 views 449960 138813458409152 Salvando projeto: 23AP08 - 13 conceitos
+INFO 2026-03-05 17:24:45,026 views 449960 138813458409152 Salvando projeto: 23AP09 - 13 conceitos
+INFO 2026-03-05 17:24:45,550 views 449960 138813458409152 Salvando projeto: P26A13 - 13 conceitos
+INFO 2026-03-05 17:24:46,238 views 449960 138813458409152 Processadas 500 linhas...
+INFO 2026-03-05 17:24:46,240 views 449960 138813458409152 Salvando projeto: 23AP11 - 13 conceitos
+INFO 2026-03-05 17:24:46,750 views 449960 138813458409152 Salvando projeto: P26A14 - 13 conceitos
+INFO 2026-03-05 17:24:47,253 views 449960 138813458409152 Salvando projeto: 23AP13 - 13 conceitos
+INFO 2026-03-05 17:24:47,775 views 449960 138813458409152 Salvando projeto: 23AP14 - 13 conceitos
+INFO 2026-03-05 17:24:48,256 views 449960 138813458409152 Salvando projeto: 23AP17 - 13 conceitos
+INFO 2026-03-05 17:24:48,764 views 449960 138813458409152 Salvando projeto: 25AP18 - 13 conceitos
+INFO 2026-03-05 17:24:49,224 views 449960 138813458409152 Salvando projeto: 23AP19 - 13 conceitos
+INFO 2026-03-05 17:24:49,710 views 449960 138813458409152 Salvando projeto: 23AP28 - 13 conceitos
+INFO 2026-03-05 17:24:50,160 views 449960 138813458409152 Processadas 600 linhas...
+INFO 2026-03-05 17:24:50,163 views 449960 138813458409152 Salvando projeto: 23AP29 - 13 conceitos
+INFO 2026-03-05 17:24:50,655 views 449960 138813458409152 Salvando projeto: 23AP30 - 13 conceitos
+INFO 2026-03-05 17:24:52,452 views 449960 138813458409152 Salvando projeto: 23AP32 - 13 conceitos
+INFO 2026-03-05 17:24:53,838 views 449960 138813458409152 Salvando projeto: 23AP33 - 13 conceitos
+INFO 2026-03-05 17:24:54,359 views 449960 138813458409152 Salvando projeto: 23AP34 - 13 conceitos
+INFO 2026-03-05 17:24:54,849 views 449960 138813458409152 Salvando projeto: 23AP35 - 13 conceitos
+INFO 2026-03-05 17:24:55,352 views 449960 138813458409152 Salvando projeto: 23AP36 - 13 conceitos
+INFO 2026-03-05 17:24:55,855 views 449960 138813458409152 Processadas 700 linhas...
+INFO 2026-03-05 17:24:55,856 views 449960 138813458409152 Salvando projeto: 23AP37 - 13 conceitos
+INFO 2026-03-05 17:24:56,320 views 449960 138813458409152 Salvando projeto: 23AP38 - 13 conceitos
+INFO 2026-03-05 17:24:56,794 views 449960 138813458409152 Salvando projeto: 23AP39 - 13 conceitos
+INFO 2026-03-05 17:24:57,255 views 449960 138813458409152 Salvando projeto: 23CEDX - 13 conceitos
+INFO 2026-03-05 17:24:57,732 views 449960 138813458409152 Salvando projeto: 24AP01 - 13 conceitos
+INFO 2026-03-05 17:24:58,194 views 449960 138813458409152 Salvando projeto: 24AP02 - 13 conceitos
+INFO 2026-03-05 17:24:58,685 views 449960 138813458409152 Salvando projeto: 24AP03 - 13 conceitos
+INFO 2026-03-05 17:24:59,210 views 449960 138813458409152 Salvando projeto: 24AP04 - 13 conceitos
+INFO 2026-03-05 17:24:59,682 views 449960 138813458409152 Processadas 800 linhas...
+INFO 2026-03-05 17:24:59,683 views 449960 138813458409152 Salvando projeto: 24AP05 - 13 conceitos
+INFO 2026-03-05 17:25:00,156 views 449960 138813458409152 Salvando projeto: 24AP06 - 13 conceitos
+INFO 2026-03-05 17:25:00,617 views 449960 138813458409152 Salvando projeto: 24AP07 - 13 conceitos
+INFO 2026-03-05 17:25:01,096 views 449960 138813458409152 Salvando projeto: 24AP10 - 13 conceitos
+INFO 2026-03-05 17:25:01,556 views 449960 138813458409152 Salvando projeto: 24AP11 - 13 conceitos
+INFO 2026-03-05 17:25:02,054 views 449960 138813458409152 Salvando projeto: 24AP14 - 13 conceitos
+INFO 2026-03-05 17:25:05,013 views 449960 138813458409152 Salvando projeto: 24AP15 - 13 conceitos
+INFO 2026-03-05 17:25:05,497 views 449960 138813458409152 Salvando projeto: 24AP16 - 13 conceitos
+INFO 2026-03-05 17:25:05,974 views 449960 138813458409152 Processadas 900 linhas...
+INFO 2026-03-05 17:25:05,978 views 449960 138813458409152 Salvando projeto: 24AP18 - 13 conceitos
+INFO 2026-03-05 17:25:06,459 views 449960 138813458409152 Salvando projeto: 24AP19 - 13 conceitos
+INFO 2026-03-05 17:25:06,941 views 449960 138813458409152 Salvando projeto: 24AP20 - 13 conceitos
+INFO 2026-03-05 17:25:07,410 views 449960 138813458409152 Salvando projeto: 24AP21 - 13 conceitos
+INFO 2026-03-05 17:25:07,874 views 449960 138813458409152 Salvando projeto: 24AP22 - 13 conceitos
+INFO 2026-03-05 17:25:08,335 views 449960 138813458409152 Salvando projeto: 24AP23 - 13 conceitos
+INFO 2026-03-05 17:25:08,821 views 449960 138813458409152 Salvando projeto: 24AP24 - 13 conceitos
+INFO 2026-03-05 17:25:09,287 views 449960 138813458409152 Processadas 1000 linhas...
+INFO 2026-03-05 17:25:09,288 views 449960 138813458409152 Salvando projeto: 24AP25 - 13 conceitos
+INFO 2026-03-05 17:25:09,761 views 449960 138813458409152 Salvando projeto: 24AP26 - 13 conceitos
+INFO 2026-03-05 17:25:10,225 views 449960 138813458409152 Salvando projeto: 24AP27 - 13 conceitos
+INFO 2026-03-05 17:25:10,695 views 449960 138813458409152 Salvando projeto: 24AP28 - 13 conceitos
+INFO 2026-03-05 17:25:11,628 views 449960 138813458409152 Salvando projeto: 24AP30 - 13 conceitos
+INFO 2026-03-05 17:25:13,780 views 449960 138813458409152 Salvando projeto: 24AP31 - 13 conceitos
+INFO 2026-03-05 17:25:14,299 views 449960 138813458409152 Salvando projeto: 24AP32 - 13 conceitos
+INFO 2026-03-05 17:25:14,759 views 449960 138813458409152 Salvando projeto: 24AP33 - 13 conceitos
+INFO 2026-03-05 17:25:15,238 views 449960 138813458409152 Processadas 1100 linhas...
+INFO 2026-03-05 17:25:15,239 views 449960 138813458409152 Salvando projeto: 24AP34 - 13 conceitos
+INFO 2026-03-05 17:25:15,718 views 449960 138813458409152 Salvando projeto: 24AP35 - 13 conceitos
+INFO 2026-03-05 17:25:16,181 views 449960 138813458409152 Salvando projeto: 24AP36 - 13 conceitos
+INFO 2026-03-05 17:25:16,666 views 449960 138813458409152 Salvando projeto: 25AP04 - 13 conceitos
+INFO 2026-03-05 17:25:17,138 views 449960 138813458409152 Salvando projeto: 25AP01 - 13 conceitos
+INFO 2026-03-05 17:25:17,617 views 449960 138813458409152 Salvando projeto: 5AP001 - 13 conceitos
+INFO 2026-03-05 17:25:18,089 views 449960 138813458409152 Salvando projeto: 25AP11 - 13 conceitos
+INFO 2026-03-05 17:25:18,572 views 449960 138813458409152 Salvando projeto: 5AP019 - 13 conceitos
+INFO 2026-03-05 17:25:19,025 views 449960 138813458409152 Processadas 1200 linhas...
+INFO 2026-03-05 17:25:19,027 views 449960 138813458409152 Salvando projeto: 25AP05 - 13 conceitos
+INFO 2026-03-05 17:25:19,504 views 449960 138813458409152 Salvando projeto: 5AP082 - 13 conceitos
+INFO 2026-03-05 17:25:20,927 views 449960 138813458409152 Salvando projeto: 25AP09 - 13 conceitos
+INFO 2026-03-05 17:25:22,906 views 449960 138813458409152 Salvando projeto: 25AP07 - 13 conceitos
+INFO 2026-03-05 17:25:23,430 views 449960 138813458409152 Salvando projeto: 25AP10 - 13 conceitos
+INFO 2026-03-05 17:25:23,955 views 449960 138813458409152 Salvando projeto: P26S10 - 13 conceitos
+INFO 2026-03-05 17:25:24,490 views 449960 138813458409152 Salvando projeto: 25AP23 - 13 conceitos
+INFO 2026-03-05 17:25:25,002 views 449960 138813458409152 Processadas 1300 linhas...
+INFO 2026-03-05 17:25:25,002 views 449960 138813458409152 Salvando projeto: 8AP006 - 13 conceitos
+INFO 2026-03-05 17:25:25,499 views 449960 138813458409152 Salvando projeto: 25AP35 - 13 conceitos
+INFO 2026-03-05 17:25:25,977 views 449960 138813458409152 Salvando projeto: 25AP19 - 13 conceitos
+INFO 2026-03-05 17:25:26,551 views 449960 138813458409152 Salvando projeto: 25AP20 - 13 conceitos
+INFO 2026-03-05 17:25:27,036 views 449960 138813458409152 Salvando projeto: 8AP016 - 13 conceitos
+INFO 2026-03-05 17:25:27,500 views 449960 138813458409152 Salvando projeto: 25AP21 - 13 conceitos
+INFO 2026-03-05 17:25:27,971 views 449960 138813458409152 Salvando projeto: 8AP019 - 13 conceitos
+INFO 2026-03-05 17:25:28,463 views 449960 138813458409152 Salvando projeto: 8ASIND - 13 conceitos
+INFO 2026-03-05 17:25:28,940 views 449960 138813458409152 Processadas 1400 linhas...
+INFO 2026-03-05 17:25:28,943 views 449960 138813458409152 Salvando projeto: 25AP22 - 13 conceitos
+INFO 2026-03-05 17:25:32,939 views 449960 138813458409152 Salvando projeto: EYPAPP - 13 conceitos
+INFO 2026-03-05 17:25:34,694 views 449960 138813458409152 Salvando projeto: 26AP01 - 13 conceitos
+INFO 2026-03-05 17:25:35,213 views 449960 138813458409152 Salvando projeto: 26AP02 - 13 conceitos
+INFO 2026-03-05 17:25:35,726 views 449960 138813458409152 Salvando projeto: 26AP03 - 13 conceitos
+INFO 2026-03-05 17:25:36,226 views 449960 138813458409152 Salvando projeto: 26AP04 - 13 conceitos
+INFO 2026-03-05 17:25:36,720 views 449960 138813458409152 Salvando projeto: 26AP05 - 13 conceitos
+INFO 2026-03-05 17:25:37,204 views 449960 138813458409152 Processadas 1500 linhas...
+INFO 2026-03-05 17:25:37,220 views 449960 138813458409152 Processadas 1600 linhas...
+INFO 2026-03-05 17:25:37,222 views 449960 138813458409152 Salvando projeto: P26S11 - 13 conceitos
+INFO 2026-03-05 17:25:37,748 views 449960 138813458409152 Processadas 1700 linhas...
+INFO 2026-03-05 17:25:37,749 views 449960 138813458409152 Salvando projeto: 25AP31 - 13 conceitos
+INFO 2026-03-05 17:25:38,249 views 449960 138813458409152 Salvando projeto: 25AP17 - 13 conceitos
+INFO 2026-03-05 17:25:38,733 views 449960 138813458409152 Processadas 1800 linhas...
+INFO 2026-03-05 17:25:38,737 views 449960 138813458409152 Salvando projeto: 25AP33 - 13 conceitos
+INFO 2026-03-05 17:25:39,199 views 449960 138813458409152 Salvando projeto: 21AP00 - 13 conceitos
+INFO 2026-03-05 17:25:39,679 views 449960 138813458409152 Salvando projeto: 22AP14 - 13 conceitos
+INFO 2026-03-05 17:25:40,150 views 449960 138813458409152 Salvando projeto: 22AP17 - 13 conceitos
+INFO 2026-03-05 17:25:40,644 views 449960 138813458409152 Salvando projeto: 22AP19 - 13 conceitos
+INFO 2026-03-05 17:25:41,100 views 449960 138813458409152 Salvando projeto: 22AP27 - 13 conceitos
+INFO 2026-03-05 17:25:41,601 views 449960 138813458409152 Salvando projeto: 24AP17 - 13 conceitos
+INFO 2026-03-05 17:25:42,060 views 449960 138813458409152 Processadas 1900 linhas...
+INFO 2026-03-05 17:25:42,062 views 449960 138813458409152 Salvando projeto: EYPAPP - 13 conceitos
+ERROR 2026-03-05 17:25:42,068 views 449960 138813458409152 Erro ao processar linha 1947: UNIQUE constraint failed: core_conceitomensal.projeto_id, core_conceitomensal.processamento_id, core_conceitomensal.conceito, core_conceitomensal.mes
+INFO 2026-03-05 17:25:42,073 views 449960 138813458409152 Arquivo temporário removido com sucesso
+ERROR 2026-03-05 17:25:42,073 views 449960 138813458409152 Processamento falhou: Erro ao processar linha 1947: UNIQUE constraint failed: core_conceitomensal.projeto_id, core_conceitomensal.processamento_id, core_conceitomensal.conceito, core_conceitomensal.mes
+INFO 2026-03-05 17:25:42,074 log 449960 138813458409152 "POST /upload/ HTTP/1.1" 200 210
+INFO 2026-03-05 17:28:16,317 views 450435 134562310480000 === INÍCIO DO PROCESSAMENTO XLS: Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx ===
+INFO 2026-03-05 17:28:16,318 views 450435 134562310480000 Lendo aba FC do arquivo Excel...
+INFO 2026-03-05 17:28:23,932 views 450435 134562310480000 Arquivo lido com sucesso. Dimensões: 7380 linhas x 136 colunas
+INFO 2026-03-05 17:28:23,932 views 450435 134562310480000 Mapeamento de conceitos configurado: 21 conceitos
+INFO 2026-03-05 17:28:23,933 views 450435 134562310480000 Limpando dados anteriores...
+INFO 2026-03-05 17:28:23,937 views 450435 134562310480000 Dados anteriores removidos: 0 processamentos, 0 projetos, 0 conceitos
+INFO 2026-03-05 17:28:23,937 views 450435 134562310480000 Criando registro de processamento...
+INFO 2026-03-05 17:28:23,941 views 450435 134562310480000 Registro de processamento criado: ID 7, arquivo: Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx
+INFO 2026-03-05 17:28:23,941 views 450435 134562310480000 Iniciando processamento das linhas do arquivo (a partir da linha 35)...
+INFO 2026-03-05 17:28:23,957 views 450435 134562310480000 Salvando projeto: 19AP03 - 13 conceitos
+INFO 2026-03-05 17:28:24,404 views 450435 134562310480000 Salvando projeto: 19AP04 - 13 conceitos
+INFO 2026-03-05 17:28:24,982 views 450435 134562310480000 Salvando projeto: 25AP38 - 13 conceitos
+INFO 2026-03-05 17:28:25,465 views 450435 134562310480000 Salvando projeto: 20AP04 - 13 conceitos
+INFO 2026-03-05 17:28:25,919 views 450435 134562310480000 Salvando projeto: 25AP02 - 13 conceitos
+INFO 2026-03-05 17:28:26,396 views 450435 134562310480000 Salvando projeto: 20AP09 - 13 conceitos
+INFO 2026-03-05 17:28:26,855 views 450435 134562310480000 Salvando projeto: 20AP10 - 13 conceitos
+INFO 2026-03-05 17:28:27,336 views 450435 134562310480000 Processadas 100 linhas...
+INFO 2026-03-05 17:28:27,337 views 450435 134562310480000 Salvando projeto: 20AP14 - 13 conceitos
+INFO 2026-03-05 17:28:27,809 views 450435 134562310480000 Salvando projeto: 25APBR - 13 conceitos
+INFO 2026-03-05 17:28:28,269 views 450435 134562310480000 Salvando projeto: 21AP12 - 13 conceitos
+INFO 2026-03-05 17:28:28,745 views 450435 134562310480000 Salvando projeto: 21AP13 - 13 conceitos
+INFO 2026-03-05 17:28:29,212 views 450435 134562310480000 Salvando projeto: 25APMB - 13 conceitos
+INFO 2026-03-05 17:28:29,724 views 450435 134562310480000 Salvando projeto: 21AP15 - 13 conceitos
+INFO 2026-03-05 17:28:30,177 views 450435 134562310480000 Salvando projeto: 21AP16 - 13 conceitos
+INFO 2026-03-05 17:28:30,658 views 450435 134562310480000 Salvando projeto: 21AP17 - 13 conceitos
+INFO 2026-03-05 17:28:31,120 views 450435 134562310480000 Processadas 200 linhas...
+INFO 2026-03-05 17:28:31,122 views 450435 134562310480000 Salvando projeto: 22AP02 - 13 conceitos
+INFO 2026-03-05 17:28:31,606 views 450435 134562310480000 Salvando projeto: 22AP03 - 13 conceitos
+INFO 2026-03-05 17:28:33,463 views 450435 134562310480000 Salvando projeto: 22AP04 - 13 conceitos
+INFO 2026-03-05 17:28:34,630 views 450435 134562310480000 Salvando projeto: 22AP05 - 13 conceitos
+INFO 2026-03-05 17:28:35,098 views 450435 134562310480000 Salvando projeto: 22AP07 - 13 conceitos
+INFO 2026-03-05 17:28:35,552 views 450435 134562310480000 Salvando projeto: 22AP08 - 13 conceitos
+INFO 2026-03-05 17:28:36,031 views 450435 134562310480000 Salvando projeto: 22AP09 - 13 conceitos
+INFO 2026-03-05 17:28:36,503 views 450435 134562310480000 Processadas 300 linhas...
+INFO 2026-03-05 17:28:36,503 views 450435 134562310480000 Salvando projeto: 22AP10 - 13 conceitos
+INFO 2026-03-05 17:28:36,955 views 450435 134562310480000 Salvando projeto: 22AP11 - 13 conceitos
+INFO 2026-03-05 17:28:37,432 views 450435 134562310480000 Salvando projeto: 22AP15 - 13 conceitos
+INFO 2026-03-05 17:28:37,894 views 450435 134562310480000 Salvando projeto: 22AP16 - 13 conceitos
+INFO 2026-03-05 17:28:38,398 views 450435 134562310480000 Salvando projeto: 22AP18 - 13 conceitos
+INFO 2026-03-05 17:28:38,852 views 450435 134562310480000 Salvando projeto: 22AP20 - 13 conceitos
+INFO 2026-03-05 17:28:39,335 views 450435 134562310480000 Salvando projeto: 22AP21 - 13 conceitos
+INFO 2026-03-05 17:28:39,802 views 450435 134562310480000 Salvando projeto: 22AP22 - 13 conceitos
+INFO 2026-03-05 17:28:40,273 views 450435 134562310480000 Processadas 400 linhas...
+INFO 2026-03-05 17:28:40,274 views 450435 134562310480000 Salvando projeto: 22AP24 - 13 conceitos
+INFO 2026-03-05 17:28:42,597 views 450435 134562310480000 Salvando projeto: 25AP03 - 13 conceitos
+INFO 2026-03-05 17:28:46,154 views 450435 134562310480000 Salvando projeto: 22AP26 - 13 conceitos
+INFO 2026-03-05 17:28:46,609 views 450435 134562310480000 Salvando projeto: 23AP03 - 13 conceitos
+INFO 2026-03-05 17:28:47,103 views 450435 134562310480000 Salvando projeto: 23AP06 - 13 conceitos
+INFO 2026-03-05 17:28:47,596 views 450435 134562310480000 Salvando projeto: 23AP08 - 13 conceitos
+INFO 2026-03-05 17:28:48,098 views 450435 134562310480000 Salvando projeto: 23AP09 - 13 conceitos
+INFO 2026-03-05 17:28:48,614 views 450435 134562310480000 Salvando projeto: P26A13 - 13 conceitos
+INFO 2026-03-05 17:28:49,095 views 450435 134562310480000 Processadas 500 linhas...
+INFO 2026-03-05 17:28:49,096 views 450435 134562310480000 Salvando projeto: 23AP11 - 13 conceitos
+INFO 2026-03-05 17:28:49,596 views 450435 134562310480000 Salvando projeto: P26A14 - 13 conceitos
+INFO 2026-03-05 17:28:50,094 views 450435 134562310480000 Salvando projeto: 23AP13 - 13 conceitos
+INFO 2026-03-05 17:28:50,561 views 450435 134562310480000 Salvando projeto: 23AP14 - 13 conceitos
+INFO 2026-03-05 17:28:51,040 views 450435 134562310480000 Salvando projeto: 23AP17 - 13 conceitos
+INFO 2026-03-05 17:28:51,525 views 450435 134562310480000 Salvando projeto: 25AP18 - 13 conceitos
+INFO 2026-03-05 17:28:52,069 views 450435 134562310480000 Salvando projeto: 23AP19 - 13 conceitos
+INFO 2026-03-05 17:28:52,553 views 450435 134562310480000 Salvando projeto: 23AP28 - 13 conceitos
+INFO 2026-03-05 17:28:53,027 views 450435 134562310480000 Processadas 600 linhas...
+INFO 2026-03-05 17:28:53,029 views 450435 134562310480000 Salvando projeto: 23AP29 - 13 conceitos
+INFO 2026-03-05 17:28:53,512 views 450435 134562310480000 Salvando projeto: 23AP30 - 13 conceitos
+INFO 2026-03-05 17:28:53,976 views 450435 134562310480000 Salvando projeto: 23AP32 - 13 conceitos
+INFO 2026-03-05 17:28:54,472 views 450435 134562310480000 Salvando projeto: 23AP33 - 13 conceitos
+INFO 2026-03-05 17:28:54,939 views 450435 134562310480000 Salvando projeto: 23AP34 - 13 conceitos
+INFO 2026-03-05 17:28:55,424 views 450435 134562310480000 Salvando projeto: 23AP35 - 13 conceitos
+INFO 2026-03-05 17:28:55,895 views 450435 134562310480000 Salvando projeto: 23AP36 - 13 conceitos
+INFO 2026-03-05 17:28:56,385 views 450435 134562310480000 Processadas 700 linhas...
+INFO 2026-03-05 17:28:56,386 views 450435 134562310480000 Salvando projeto: 23AP37 - 13 conceitos
+INFO 2026-03-05 17:28:58,598 views 450435 134562310480000 Salvando projeto: 23AP38 - 13 conceitos
+INFO 2026-03-05 17:28:59,438 views 450435 134562310480000 Salvando projeto: 23AP39 - 13 conceitos
+INFO 2026-03-05 17:28:59,961 views 450435 134562310480000 Salvando projeto: 23CEDX - 13 conceitos
+INFO 2026-03-05 17:29:00,431 views 450435 134562310480000 Salvando projeto: 24AP01 - 13 conceitos
+INFO 2026-03-05 17:29:00,930 views 450435 134562310480000 Salvando projeto: 24AP02 - 13 conceitos
+INFO 2026-03-05 17:29:01,420 views 450435 134562310480000 Salvando projeto: 24AP03 - 13 conceitos
+INFO 2026-03-05 17:29:01,897 views 450435 134562310480000 Salvando projeto: 24AP04 - 13 conceitos
+INFO 2026-03-05 17:29:02,394 views 450435 134562310480000 Processadas 800 linhas...
+INFO 2026-03-05 17:29:02,396 views 450435 134562310480000 Salvando projeto: 24AP05 - 13 conceitos
+INFO 2026-03-05 17:29:02,912 views 450435 134562310480000 Salvando projeto: 24AP06 - 13 conceitos
+INFO 2026-03-05 17:29:03,518 views 450435 134562310480000 Salvando projeto: 24AP07 - 13 conceitos
+INFO 2026-03-05 17:29:03,981 views 450435 134562310480000 Salvando projeto: 24AP10 - 13 conceitos
+INFO 2026-03-05 17:29:04,490 views 450435 134562310480000 Salvando projeto: 24AP11 - 13 conceitos
+INFO 2026-03-05 17:29:04,986 views 450435 134562310480000 Salvando projeto: 24AP14 - 13 conceitos
+INFO 2026-03-05 17:29:05,526 views 450435 134562310480000 Salvando projeto: 24AP15 - 13 conceitos
+INFO 2026-03-05 17:29:08,808 views 450435 134562310480000 Salvando projeto: 24AP16 - 13 conceitos
+INFO 2026-03-05 17:29:09,305 views 450435 134562310480000 Processadas 900 linhas...
+INFO 2026-03-05 17:29:09,307 views 450435 134562310480000 Salvando projeto: 24AP18 - 13 conceitos
+INFO 2026-03-05 17:29:09,828 views 450435 134562310480000 Salvando projeto: 24AP19 - 13 conceitos
+INFO 2026-03-05 17:29:10,318 views 450435 134562310480000 Salvando projeto: 24AP20 - 13 conceitos
+INFO 2026-03-05 17:29:10,851 views 450435 134562310480000 Salvando projeto: 24AP21 - 13 conceitos
+INFO 2026-03-05 17:29:11,315 views 450435 134562310480000 Salvando projeto: 24AP22 - 13 conceitos
+INFO 2026-03-05 17:29:11,846 views 450435 134562310480000 Salvando projeto: 24AP23 - 13 conceitos
+INFO 2026-03-05 17:29:12,328 views 450435 134562310480000 Salvando projeto: 24AP24 - 13 conceitos
+INFO 2026-03-05 17:29:12,818 views 450435 134562310480000 Processadas 1000 linhas...
+INFO 2026-03-05 17:29:12,818 views 450435 134562310480000 Salvando projeto: 24AP25 - 13 conceitos
+INFO 2026-03-05 17:29:13,306 views 450435 134562310480000 Salvando projeto: 24AP26 - 13 conceitos
+INFO 2026-03-05 17:29:13,774 views 450435 134562310480000 Salvando projeto: 24AP27 - 13 conceitos
+INFO 2026-03-05 17:29:14,258 views 450435 134562310480000 Salvando projeto: 24AP28 - 13 conceitos
+INFO 2026-03-05 17:29:14,723 views 450435 134562310480000 Salvando projeto: 24AP30 - 13 conceitos
+INFO 2026-03-05 17:29:15,680 views 450435 134562310480000 Salvando projeto: 24AP31 - 13 conceitos
+INFO 2026-03-05 17:29:19,823 views 450435 134562310480000 Salvando projeto: 24AP32 - 13 conceitos
+INFO 2026-03-05 17:29:21,667 views 450435 134562310480000 Salvando projeto: 24AP33 - 13 conceitos
+INFO 2026-03-05 17:29:22,175 views 450435 134562310480000 Processadas 1100 linhas...
+INFO 2026-03-05 17:29:22,176 views 450435 134562310480000 Salvando projeto: 24AP34 - 13 conceitos
+INFO 2026-03-05 17:29:22,702 views 450435 134562310480000 Salvando projeto: 24AP35 - 13 conceitos
+INFO 2026-03-05 17:29:23,220 views 450435 134562310480000 Salvando projeto: 24AP36 - 13 conceitos
+INFO 2026-03-05 17:29:23,714 views 450435 134562310480000 Salvando projeto: 25AP04 - 13 conceitos
+INFO 2026-03-05 17:29:24,199 views 450435 134562310480000 Salvando projeto: 25AP01 - 13 conceitos
+INFO 2026-03-05 17:29:24,660 views 450435 134562310480000 Salvando projeto: 5AP001 - 13 conceitos
+INFO 2026-03-05 17:29:25,158 views 450435 134562310480000 Salvando projeto: 25AP11 - 13 conceitos
+INFO 2026-03-05 17:29:25,629 views 450435 134562310480000 Salvando projeto: 5AP019 - 13 conceitos
+INFO 2026-03-05 17:29:26,125 views 450435 134562310480000 Processadas 1200 linhas...
+INFO 2026-03-05 17:29:26,129 views 450435 134562310480000 Salvando projeto: 25AP05 - 13 conceitos
+INFO 2026-03-05 17:29:26,603 views 450435 134562310480000 Salvando projeto: 5AP082 - 13 conceitos
+INFO 2026-03-05 17:29:27,084 views 450435 134562310480000 Salvando projeto: 25AP09 - 13 conceitos
+INFO 2026-03-05 17:29:27,572 views 450435 134562310480000 Salvando projeto: 25AP07 - 13 conceitos
+INFO 2026-03-05 17:29:28,038 views 450435 134562310480000 Salvando projeto: 25AP10 - 13 conceitos
+INFO 2026-03-05 17:29:28,535 views 450435 134562310480000 Salvando projeto: P26S10 - 13 conceitos
+INFO 2026-03-05 17:29:29,005 views 450435 134562310480000 Salvando projeto: 25AP23 - 13 conceitos
+INFO 2026-03-05 17:29:29,490 views 450435 134562310480000 Processadas 1300 linhas...
+INFO 2026-03-05 17:29:29,491 views 450435 134562310480000 Salvando projeto: 8AP006 - 13 conceitos
+INFO 2026-03-05 17:29:29,966 views 450435 134562310480000 Salvando projeto: 25AP35 - 13 conceitos
+INFO 2026-03-05 17:29:30,429 views 450435 134562310480000 Salvando projeto: 25AP19 - 13 conceitos
+INFO 2026-03-05 17:29:30,928 views 450435 134562310480000 Salvando projeto: 25AP20 - 13 conceitos
+INFO 2026-03-05 17:29:31,396 views 450435 134562310480000 Salvando projeto: 8AP016 - 13 conceitos
+INFO 2026-03-05 17:29:32,126 views 450435 134562310480000 Salvando projeto: 25AP21 - 13 conceitos
+INFO 2026-03-05 17:29:34,395 views 450435 134562310480000 Salvando projeto: 8AP019 - 13 conceitos
+INFO 2026-03-05 17:29:34,908 views 450435 134562310480000 Salvando projeto: 8ASIND - 13 conceitos
+INFO 2026-03-05 17:29:35,376 views 450435 134562310480000 Processadas 1400 linhas...
+INFO 2026-03-05 17:29:35,378 views 450435 134562310480000 Salvando projeto: 25AP22 - 13 conceitos
+INFO 2026-03-05 17:29:35,895 views 450435 134562310480000 Salvando projeto: EYPAPP - 13 conceitos
+INFO 2026-03-05 17:29:36,383 views 450435 134562310480000 Salvando projeto: 26AP01 - 13 conceitos
+INFO 2026-03-05 17:29:36,855 views 450435 134562310480000 Salvando projeto: 26AP02 - 13 conceitos
+INFO 2026-03-05 17:29:37,342 views 450435 134562310480000 Salvando projeto: 26AP03 - 13 conceitos
+INFO 2026-03-05 17:29:37,814 views 450435 134562310480000 Salvando projeto: 26AP04 - 13 conceitos
+INFO 2026-03-05 17:29:38,325 views 450435 134562310480000 Salvando projeto: 26AP05 - 13 conceitos
+INFO 2026-03-05 17:29:38,883 views 450435 134562310480000 Processadas 1500 linhas...
+INFO 2026-03-05 17:29:38,899 views 450435 134562310480000 Processadas 1600 linhas...
+INFO 2026-03-05 17:29:38,901 views 450435 134562310480000 Salvando projeto: P26S11 - 13 conceitos
+INFO 2026-03-05 17:29:39,385 views 450435 134562310480000 Processadas 1700 linhas...
+INFO 2026-03-05 17:29:39,385 views 450435 134562310480000 Salvando projeto: 25AP31 - 13 conceitos
+INFO 2026-03-05 17:29:39,892 views 450435 134562310480000 Salvando projeto: 25AP17 - 13 conceitos
+INFO 2026-03-05 17:29:40,368 views 450435 134562310480000 Processadas 1800 linhas...
+INFO 2026-03-05 17:29:40,372 views 450435 134562310480000 Salvando projeto: 25AP33 - 13 conceitos
+INFO 2026-03-05 17:29:41,877 views 450435 134562310480000 Salvando projeto: 21AP00 - 13 conceitos
+INFO 2026-03-05 17:29:43,396 views 450435 134562310480000 Salvando projeto: 22AP14 - 13 conceitos
+INFO 2026-03-05 17:29:43,926 views 450435 134562310480000 Salvando projeto: 22AP17 - 13 conceitos
+INFO 2026-03-05 17:29:44,455 views 450435 134562310480000 Salvando projeto: 22AP19 - 13 conceitos
+INFO 2026-03-05 17:29:44,954 views 450435 134562310480000 Salvando projeto: 22AP27 - 13 conceitos
+WARNING 2026-03-05 17:29:45,453 views 450435 134562310480000 Projeto EYPAPP já foi processado neste arquivo (linha 1934). Pulando próximas 12 linhas para evitar duplicatas.
+INFO 2026-03-05 17:29:45,454 views 450435 134562310480000 Processadas 1900 linhas...
+INFO 2026-03-05 17:29:45,457 views 450435 134562310480000 Salvando projeto: 24AP17 - 13 conceitos
+INFO 2026-03-05 17:29:45,938 views 450435 134562310480000 Salvando projeto: 25AP06 - 13 conceitos
+INFO 2026-03-05 17:29:46,451 views 450435 134562310480000 Salvando projeto: 21AP09 - 13 conceitos
+INFO 2026-03-05 17:29:46,941 views 450435 134562310480000 Salvando projeto: 22AP13 - 13 conceitos
+INFO 2026-03-05 17:29:47,433 views 450435 134562310480000 Salvando projeto: 25AP25 - 13 conceitos
+INFO 2026-03-05 17:29:47,900 views 450435 134562310480000 Salvando projeto: 23AP04 - 13 conceitos
+INFO 2026-03-05 17:29:48,391 views 450435 134562310480000 Processadas 2000 linhas...
+INFO 2026-03-05 17:29:48,392 views 450435 134562310480000 Salvando projeto: 23AP05 - 13 conceitos
+INFO 2026-03-05 17:29:48,861 views 450435 134562310480000 Salvando projeto: 23AP07 - 13 conceitos
+INFO 2026-03-05 17:29:49,359 views 450435 134562310480000 Salvando projeto: 25AP29 - 13 conceitos
+INFO 2026-03-05 17:29:52,808 views 450435 134562310480000 Salvando projeto: 23AP31 - 13 conceitos
+INFO 2026-03-05 17:29:54,604 views 450435 134562310480000 Salvando projeto: 24AP08 - 13 conceitos
+INFO 2026-03-05 17:29:55,118 views 450435 134562310480000 Salvando projeto: 24AP09 - 13 conceitos
+INFO 2026-03-05 17:29:55,661 views 450435 134562310480000 Salvando projeto: 24AP12 - 13 conceitos
+INFO 2026-03-05 17:29:56,162 views 450435 134562310480000 Salvando projeto: 24AP13 - 13 conceitos
+INFO 2026-03-05 17:29:56,689 views 450435 134562310480000 Processadas 2100 linhas...
+INFO 2026-03-05 17:29:56,691 views 450435 134562310480000 Salvando projeto: 25S001 - 13 conceitos
+INFO 2026-03-05 17:29:57,185 views 450435 134562310480000 Processadas 2200 linhas...
+INFO 2026-03-05 17:29:57,195 views 450435 134562310480000 Salvando projeto: 25AP26 - 13 conceitos
+INFO 2026-03-05 17:29:57,678 views 450435 134562310480000 Salvando projeto: 24AP29 - 13 conceitos
+INFO 2026-03-05 17:29:58,165 views 450435 134562310480000 Salvando projeto: 21AP03 - 13 conceitos
+INFO 2026-03-05 17:29:58,671 views 450435 134562310480000 Processadas 2300 linhas...
+INFO 2026-03-05 17:29:58,672 views 450435 134562310480000 Salvando projeto: 21AP14 - 13 conceitos
+INFO 2026-03-05 17:29:59,135 views 450435 134562310480000 Salvando projeto: 22AP25 - 13 conceitos
+INFO 2026-03-05 17:29:59,641 views 450435 134562310480000 Salvando projeto: 23AP10 - 13 conceitos
+INFO 2026-03-05 17:30:00,105 views 450435 134562310480000 Salvando projeto: 23AP12 - 13 conceitos
+INFO 2026-03-05 17:30:00,608 views 450435 134562310480000 Salvando projeto: 23AP18 - 13 conceitos
+INFO 2026-03-05 17:30:01,089 views 450435 134562310480000 Salvando projeto: 24APAP - 13 conceitos
+INFO 2026-03-05 17:30:01,562 views 450435 134562310480000 Salvando projeto: 5AP015 - 13 conceitos
+INFO 2026-03-05 17:30:02,052 views 450435 134562310480000 Processadas 2400 linhas...
+INFO 2026-03-05 17:30:02,054 views 450435 134562310480000 Salvando projeto: 5AP035 - 13 conceitos
+INFO 2026-03-05 17:30:02,548 views 450435 134562310480000 Salvando projeto: 6AP001 - 13 conceitos
+INFO 2026-03-05 17:30:03,135 views 450435 134562310480000 Salvando projeto: 7AP001 - 13 conceitos
+INFO 2026-03-05 17:30:03,705 views 450435 134562310480000 Salvando projeto: 7AP002 - 13 conceitos
+INFO 2026-03-05 17:30:04,201 views 450435 134562310480000 Salvando projeto: 8AP003 - 13 conceitos
+INFO 2026-03-05 17:30:04,678 views 450435 134562310480000 Salvando projeto: 8AP008 - 13 conceitos
+INFO 2026-03-05 17:30:05,170 views 450435 134562310480000 Processadas 2500 linhas...
+INFO 2026-03-05 17:30:05,172 views 450435 134562310480000 Salvando projeto: 8AP012 - 13 conceitos
+INFO 2026-03-05 17:30:07,688 views 450435 134562310480000 Salvando projeto: 8AP017 - 13 conceitos
+INFO 2026-03-05 17:30:08,199 views 450435 134562310480000 Salvando projeto: AP0004 - 13 conceitos
+INFO 2026-03-05 17:30:08,711 views 450435 134562310480000 Salvando projeto: 25AP27 - 13 conceitos
+INFO 2026-03-05 17:30:09,205 views 450435 134562310480000 Processadas 2600 linhas...
+INFO 2026-03-05 17:30:09,210 views 450435 134562310480000 Salvando projeto: 23AP01 - 13 conceitos
+INFO 2026-03-05 17:30:09,704 views 450435 134562310480000 Salvando projeto: 25AP28 - 13 conceitos
+INFO 2026-03-05 17:30:10,180 views 450435 134562310480000 Salvando projeto: 25AP24 - 13 conceitos
+INFO 2026-03-05 17:30:10,679 views 450435 134562310480000 Salvando projeto: 25AP30 - 13 conceitos
+INFO 2026-03-05 17:30:11,174 views 450435 134562310480000 Salvando projeto: P26S01 - 13 conceitos
+INFO 2026-03-05 17:30:11,674 views 450435 134562310480000 Salvando projeto: P26S02 - 13 conceitos
+INFO 2026-03-05 17:30:12,163 views 450435 134562310480000 Processadas 2700 linhas...
+INFO 2026-03-05 17:30:12,165 views 450435 134562310480000 Salvando projeto: P26S03 - 13 conceitos
+INFO 2026-03-05 17:30:12,637 views 450435 134562310480000 Salvando projeto: P26S04 - 13 conceitos
+INFO 2026-03-05 17:30:13,124 views 450435 134562310480000 Salvando projeto: P26S05 - 13 conceitos
+INFO 2026-03-05 17:30:13,618 views 450435 134562310480000 Salvando projeto: P26S06 - 13 conceitos
+INFO 2026-03-05 17:30:14,766 views 450435 134562310480000 Salvando projeto: P26S07 - 13 conceitos
+INFO 2026-03-05 17:30:17,143 views 450435 134562310480000 Salvando projeto: P26S08 - 13 conceitos
+INFO 2026-03-05 17:30:17,645 views 450435 134562310480000 Salvando projeto: P26A01 - 13 conceitos
+INFO 2026-03-05 17:30:18,167 views 450435 134562310480000 Salvando projeto: P26A02 - 13 conceitos
+INFO 2026-03-05 17:30:18,673 views 450435 134562310480000 Processadas 2800 linhas...
+INFO 2026-03-05 17:30:18,675 views 450435 134562310480000 Salvando projeto: P26A03 - 13 conceitos
+INFO 2026-03-05 17:30:19,184 views 450435 134562310480000 Salvando projeto: P26A04 - 13 conceitos
+INFO 2026-03-05 17:30:19,651 views 450435 134562310480000 Salvando projeto: P26A05 - 13 conceitos
+INFO 2026-03-05 17:30:20,134 views 450435 134562310480000 Salvando projeto: P26A06 - 13 conceitos
+INFO 2026-03-05 17:30:20,638 views 450435 134562310480000 Salvando projeto: P26S09 - 13 conceitos
+INFO 2026-03-05 17:30:21,115 views 450435 134562310480000 Salvando projeto: P26A08 - 13 conceitos
+INFO 2026-03-05 17:30:21,607 views 450435 134562310480000 Salvando projeto: P26A09 - 13 conceitos
+INFO 2026-03-05 17:30:22,119 views 450435 134562310480000 Processadas 2900 linhas...
+INFO 2026-03-05 17:30:22,119 views 450435 134562310480000 Salvando projeto: P26A10 - 13 conceitos
+INFO 2026-03-05 17:30:22,591 views 450435 134562310480000 Salvando projeto: P26A11 - 13 conceitos
+INFO 2026-03-05 17:30:23,077 views 450435 134562310480000 Salvando projeto: 25AP32 - 13 conceitos
+INFO 2026-03-05 17:30:25,138 views 450435 134562310480000 Salvando projeto: 25AP34 - 13 conceitos
+INFO 2026-03-05 17:30:26,245 views 450435 134562310480000 Salvando projeto: P26A12 - 13 conceitos
+INFO 2026-03-05 17:30:26,770 views 450435 134562310480000 Salvando projeto: 25AP36 - 13 conceitos
+INFO 2026-03-05 17:30:27,276 views 450435 134562310480000 Salvando projeto: 25AP37 - 13 conceitos
+INFO 2026-03-05 17:30:27,796 views 450435 134562310480000 Processadas 3000 linhas...
+INFO 2026-03-05 17:30:27,797 views 450435 134562310480000 Salvando projeto: 25AP39 - 13 conceitos
+INFO 2026-03-05 17:30:28,270 views 450435 134562310480000 Salvando projeto: 25AP40 - 13 conceitos
+INFO 2026-03-05 17:30:28,749 views 450435 134562310480000 Salvando projeto: 8AP004 - 13 conceitos
+INFO 2026-03-05 17:30:29,226 views 450435 134562310480000 Salvando projeto: AP0073 - 13 conceitos
+INFO 2026-03-05 17:30:29,698 views 450435 134562310480000 Salvando projeto: IP0162 - 13 conceitos
+INFO 2026-03-05 17:30:30,198 views 450435 134562310480000 Processadas 3100 linhas...
+INFO 2026-03-05 17:30:30,199 views 450435 134562310480000 Salvando projeto: IP0261 - 13 conceitos
+INFO 2026-03-05 17:30:30,654 views 450435 134562310480000 Salvando projeto: AJUAAP - 13 conceitos
+INFO 2026-03-05 17:30:31,140 views 450435 134562310480000 Processadas 3200 linhas...
+INFO 2026-03-05 17:30:31,155 views 450435 134562310480000 Salvando projeto: AJSNBR - 13 conceitos
+INFO 2026-03-05 17:30:31,611 views 450435 134562310480000 Processadas 3300 linhas...
+INFO 2026-03-05 17:30:31,636 views 450435 134562310480000 Processadas 3400 linhas...
+INFO 2026-03-05 17:30:31,651 views 450435 134562310480000 Processadas 3500 linhas...
+INFO 2026-03-05 17:30:31,667 views 450435 134562310480000 Processadas 3600 linhas...
+INFO 2026-03-05 17:30:31,683 views 450435 134562310480000 Processadas 3700 linhas...
+INFO 2026-03-05 17:30:31,698 views 450435 134562310480000 Processadas 3800 linhas...
+INFO 2026-03-05 17:30:31,714 views 450435 134562310480000 Processadas 3900 linhas...
+INFO 2026-03-05 17:30:31,732 views 450435 134562310480000 Processadas 4000 linhas...
+INFO 2026-03-05 17:30:31,751 views 450435 134562310480000 Processadas 4100 linhas...
+INFO 2026-03-05 17:30:31,767 views 450435 134562310480000 Processadas 4200 linhas...
+INFO 2026-03-05 17:30:31,782 views 450435 134562310480000 Processadas 4300 linhas...
+INFO 2026-03-05 17:30:31,799 views 450435 134562310480000 Processadas 4400 linhas...
+INFO 2026-03-05 17:30:31,815 views 450435 134562310480000 Processadas 4500 linhas...
+INFO 2026-03-05 17:30:31,830 views 450435 134562310480000 Processadas 4600 linhas...
+INFO 2026-03-05 17:30:31,846 views 450435 134562310480000 Processadas 4700 linhas...
+INFO 2026-03-05 17:30:31,864 views 450435 134562310480000 Processadas 4800 linhas...
+INFO 2026-03-05 17:30:31,879 views 450435 134562310480000 Processadas 4900 linhas...
+INFO 2026-03-05 17:30:31,895 views 450435 134562310480000 Processadas 5000 linhas...
+INFO 2026-03-05 17:30:31,911 views 450435 134562310480000 Processadas 5100 linhas...
+INFO 2026-03-05 17:30:31,926 views 450435 134562310480000 Processadas 5200 linhas...
+INFO 2026-03-05 17:30:31,942 views 450435 134562310480000 Processadas 5300 linhas...
+INFO 2026-03-05 17:30:31,958 views 450435 134562310480000 Processadas 5400 linhas...
+INFO 2026-03-05 17:30:31,973 views 450435 134562310480000 Processadas 5500 linhas...
+INFO 2026-03-05 17:30:31,989 views 450435 134562310480000 Processadas 5600 linhas...
+INFO 2026-03-05 17:30:32,004 views 450435 134562310480000 Processadas 5700 linhas...
+INFO 2026-03-05 17:30:32,019 views 450435 134562310480000 Processadas 5800 linhas...
+INFO 2026-03-05 17:30:32,034 views 450435 134562310480000 Processadas 5900 linhas...
+INFO 2026-03-05 17:30:32,050 views 450435 134562310480000 Processadas 6000 linhas...
+INFO 2026-03-05 17:30:32,065 views 450435 134562310480000 Processadas 6100 linhas...
+INFO 2026-03-05 17:30:32,080 views 450435 134562310480000 Processadas 6200 linhas...
+INFO 2026-03-05 17:30:32,095 views 450435 134562310480000 Processadas 6300 linhas...
+INFO 2026-03-05 17:30:32,110 views 450435 134562310480000 Processadas 6400 linhas...
+INFO 2026-03-05 17:30:32,126 views 450435 134562310480000 Processadas 6500 linhas...
+INFO 2026-03-05 17:30:32,143 views 450435 134562310480000 Processadas 6600 linhas...
+INFO 2026-03-05 17:30:32,160 views 450435 134562310480000 Processadas 6700 linhas...
+INFO 2026-03-05 17:30:32,177 views 450435 134562310480000 Processadas 6800 linhas...
+INFO 2026-03-05 17:30:32,192 views 450435 134562310480000 Processadas 6900 linhas...
+INFO 2026-03-05 17:30:32,209 views 450435 134562310480000 Processadas 7000 linhas...
+INFO 2026-03-05 17:30:32,225 views 450435 134562310480000 Processadas 7100 linhas...
+INFO 2026-03-05 17:30:32,240 views 450435 134562310480000 Processadas 7200 linhas...
+INFO 2026-03-05 17:30:32,255 views 450435 134562310480000 Processadas 7300 linhas...
+INFO 2026-03-05 17:30:32,265 views 450435 134562310480000 Salvando último projeto: AJSABR - 13 conceitos
+INFO 2026-03-05 17:30:32,742 views 450435 134562310480000 === PROCESSAMENTO XLS CONCLUÍDO COM SUCESSO ===
+INFO 2026-03-05 17:30:32,742 views 450435 134562310480000 Total de linhas processadas: 7345
+INFO 2026-03-05 17:30:32,742 views 450435 134562310480000 Projetos processados: 195
+INFO 2026-03-05 17:30:32,742 views 450435 134562310480000 Projetos únicos encontrados: 194
+INFO 2026-03-05 17:30:32,742 views 450435 134562310480000 Conceitos mensais criados: 30420
+WARNING 2026-03-05 17:30:32,742 views 450435 134562310480000 Projetos com duplicatas pulados: 1
+INFO 2026-03-05 17:30:32,742 views 450435 134562310480000 Arquivo processado com sucesso! 195 projetos e 30420 registros de conceitos processados.
+INFO 2026-03-05 17:31:41,415 autoreload 451094 132316105928832 Watching for file changes with StatReloader
+ERROR 2026-03-05 17:32:25,924 views 451094 132315541673664 Erro ao calcular dados do dashboard para categoria AAPP: name 'models' is not defined
+Traceback (most recent call last):
+  File "/opt/analise-indra/core/views.py", line 131, in get_dashboard_data
+    ).aggregate(total=models.Sum('valor_realizado'))['total'] or 0
+                      ^^^^^^
+NameError: name 'models' is not defined
+ERROR 2026-03-05 17:32:25,928 views 451094 132315541673664 Erro ao calcular dados do dashboard para categoria Sanidad: name 'models' is not defined
+Traceback (most recent call last):
+  File "/opt/analise-indra/core/views.py", line 131, in get_dashboard_data
+    ).aggregate(total=models.Sum('valor_realizado'))['total'] or 0
+                      ^^^^^^
+NameError: name 'models' is not defined
+ERROR 2026-03-05 17:32:25,932 views 451094 132315541673664 Erro ao calcular dados do dashboard para categoria Consolidado: name 'models' is not defined
+Traceback (most recent call last):
+  File "/opt/analise-indra/core/views.py", line 131, in get_dashboard_data
+    ).aggregate(total=models.Sum('valor_realizado'))['total'] or 0
+                      ^^^^^^
+NameError: name 'models' is not defined
+INFO 2026-03-05 17:32:25,943 log 451094 132315541673664 "GET /dashboard/ HTTP/1.1" 200 28261
+INFO 2026-03-06 07:36:06,825 log 451094 132315541673664 "GET / HTTP/1.1" 200 10241
+INFO 2026-03-06 07:36:06,869 log 451094 132315460138688 "GET /static/js/main.js HTTP/1.1" 304 0
+INFO 2026-03-06 07:36:06,869 log 451094 132315541673664 "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-06 07:36:15,527 views 451094 132315541673664 === INÍCIO DO PROCESSAMENTO DE UPLOAD ===
+INFO 2026-03-06 07:36:15,584 views 451094 132315541673664 Arquivo recebido: Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (tamanho: 12295366 bytes)
+INFO 2026-03-06 07:36:15,584 views 451094 132315541673664 Tipo de arquivo validado com sucesso
+INFO 2026-03-06 07:36:15,584 views 451094 132315541673664 Salvando arquivo temporariamente em: /opt/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx
+INFO 2026-03-06 07:36:15,595 views 451094 132315541673664 Arquivo salvo temporariamente. Tamanho final: 12295366 bytes
+INFO 2026-03-06 07:36:15,595 views 451094 132315541673664 Iniciando processamento do arquivo XLS...
+INFO 2026-03-06 07:36:15,596 views 451094 132315541673664 === INÍCIO DO PROCESSAMENTO XLS: /opt/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx ===
+INFO 2026-03-06 07:36:15,596 views 451094 132315541673664 Lendo aba FC do arquivo Excel...
+INFO 2026-03-06 07:36:24,009 views 451094 132315541673664 Arquivo lido com sucesso. Dimensões: 7380 linhas x 136 colunas
+INFO 2026-03-06 07:36:24,009 views 451094 132315541673664 Mapeamento de conceitos configurado: 21 conceitos
+INFO 2026-03-06 07:36:24,009 views 451094 132315541673664 Limpando dados anteriores...
+INFO 2026-03-06 07:36:24,128 views 451094 132315541673664 Dados anteriores removidos: 1 processamentos, 195 projetos, 30420 conceitos
+INFO 2026-03-06 07:36:24,129 views 451094 132315541673664 Criando registro de processamento...
+INFO 2026-03-06 07:36:24,132 views 451094 132315541673664 Registro de processamento criado: ID 8, arquivo: temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx
+INFO 2026-03-06 07:36:24,132 views 451094 132315541673664 Iniciando processamento das linhas do arquivo (a partir da linha 35)...
+INFO 2026-03-06 07:36:24,147 views 451094 132315541673664 Salvando projeto: 19AP03 - 13 conceitos
+INFO 2026-03-06 07:36:24,609 views 451094 132315541673664 Salvando projeto: 19AP04 - 13 conceitos
+INFO 2026-03-06 07:36:25,169 views 451094 132315541673664 Salvando projeto: 25AP38 - 13 conceitos
+INFO 2026-03-06 07:36:25,654 views 451094 132315541673664 Salvando projeto: 20AP04 - 13 conceitos
+INFO 2026-03-06 07:36:26,127 views 451094 132315541673664 Salvando projeto: 25AP02 - 13 conceitos
+INFO 2026-03-06 07:36:26,573 views 451094 132315541673664 Salvando projeto: 20AP09 - 13 conceitos
+INFO 2026-03-06 07:36:27,058 views 451094 132315541673664 Salvando projeto: 20AP10 - 13 conceitos
+INFO 2026-03-06 07:36:27,517 views 451094 132315541673664 Processadas 100 linhas...
+INFO 2026-03-06 07:36:27,518 views 451094 132315541673664 Salvando projeto: 20AP14 - 13 conceitos
+INFO 2026-03-06 07:36:27,995 views 451094 132315541673664 Salvando projeto: 25APBR - 13 conceitos
+INFO 2026-03-06 07:36:28,436 views 451094 132315541673664 Salvando projeto: 21AP12 - 13 conceitos
+INFO 2026-03-06 07:36:28,876 views 451094 132315541673664 Salvando projeto: 21AP13 - 13 conceitos
+INFO 2026-03-06 07:36:29,339 views 451094 132315541673664 Salvando projeto: 25APMB - 13 conceitos
+INFO 2026-03-06 07:36:29,785 views 451094 132315541673664 Salvando projeto: 21AP15 - 13 conceitos
+INFO 2026-03-06 07:36:30,275 views 451094 132315541673664 Salvando projeto: 21AP16 - 13 conceitos
+INFO 2026-03-06 07:36:30,757 views 451094 132315541673664 Salvando projeto: 21AP17 - 13 conceitos
+INFO 2026-03-06 07:36:31,222 views 451094 132315541673664 Processadas 200 linhas...
+INFO 2026-03-06 07:36:31,224 views 451094 132315541673664 Salvando projeto: 22AP02 - 13 conceitos
+INFO 2026-03-06 07:36:31,729 views 451094 132315541673664 Salvando projeto: 22AP03 - 13 conceitos
+INFO 2026-03-06 07:36:32,207 views 451094 132315541673664 Salvando projeto: 22AP04 - 13 conceitos
+INFO 2026-03-06 07:36:32,756 views 451094 132315541673664 Salvando projeto: 22AP05 - 13 conceitos
+INFO 2026-03-06 07:36:33,345 views 451094 132315541673664 Salvando projeto: 22AP07 - 13 conceitos
+INFO 2026-03-06 07:36:33,860 views 451094 132315541673664 Salvando projeto: 22AP08 - 13 conceitos
+INFO 2026-03-06 07:36:34,307 views 451094 132315541673664 Salvando projeto: 22AP09 - 13 conceitos
+INFO 2026-03-06 07:36:34,779 views 451094 132315541673664 Processadas 300 linhas...
+INFO 2026-03-06 07:36:34,779 views 451094 132315541673664 Salvando projeto: 22AP10 - 13 conceitos
+INFO 2026-03-06 07:36:35,244 views 451094 132315541673664 Salvando projeto: 22AP11 - 13 conceitos
+INFO 2026-03-06 07:36:35,714 views 451094 132315541673664 Salvando projeto: 22AP15 - 13 conceitos
+INFO 2026-03-06 07:36:36,167 views 451094 132315541673664 Salvando projeto: 22AP16 - 13 conceitos
+INFO 2026-03-06 07:36:36,664 views 451094 132315541673664 Salvando projeto: 22AP18 - 13 conceitos
+INFO 2026-03-06 07:36:37,128 views 451094 132315541673664 Salvando projeto: 22AP20 - 13 conceitos
+INFO 2026-03-06 07:36:37,618 views 451094 132315541673664 Salvando projeto: 22AP21 - 13 conceitos
+INFO 2026-03-06 07:36:38,121 views 451094 132315541673664 Salvando projeto: 22AP22 - 13 conceitos
+INFO 2026-03-06 07:36:38,599 views 451094 132315541673664 Processadas 400 linhas...
+INFO 2026-03-06 07:36:38,600 views 451094 132315541673664 Salvando projeto: 22AP24 - 13 conceitos
+INFO 2026-03-06 07:36:39,075 views 451094 132315541673664 Salvando projeto: 25AP03 - 13 conceitos
+INFO 2026-03-06 07:36:39,550 views 451094 132315541673664 Salvando projeto: 22AP26 - 13 conceitos
+INFO 2026-03-06 07:36:40,045 views 451094 132315541673664 Salvando projeto: 23AP03 - 13 conceitos
+INFO 2026-03-06 07:36:40,519 views 451094 132315541673664 Salvando projeto: 23AP06 - 13 conceitos
+INFO 2026-03-06 07:36:41,009 views 451094 132315541673664 Salvando projeto: 23AP08 - 13 conceitos
+INFO 2026-03-06 07:36:41,493 views 451094 132315541673664 Salvando projeto: 23AP09 - 13 conceitos
+INFO 2026-03-06 07:36:42,032 views 451094 132315541673664 Salvando projeto: P26A13 - 13 conceitos
+INFO 2026-03-06 07:36:42,491 views 451094 132315541673664 Processadas 500 linhas...
+INFO 2026-03-06 07:36:42,492 views 451094 132315541673664 Salvando projeto: 23AP11 - 13 conceitos
+INFO 2026-03-06 07:36:42,933 views 451094 132315541673664 Salvando projeto: P26A14 - 13 conceitos
+INFO 2026-03-06 07:36:43,414 views 451094 132315541673664 Salvando projeto: 23AP13 - 13 conceitos
+INFO 2026-03-06 07:36:43,888 views 451094 132315541673664 Salvando projeto: 23AP14 - 13 conceitos
+INFO 2026-03-06 07:36:44,395 views 451094 132315541673664 Salvando projeto: 23AP17 - 13 conceitos
+INFO 2026-03-06 07:36:44,888 views 451094 132315541673664 Salvando projeto: 25AP18 - 13 conceitos
+INFO 2026-03-06 07:36:45,376 views 451094 132315541673664 Salvando projeto: 23AP19 - 13 conceitos
+INFO 2026-03-06 07:36:45,879 views 451094 132315541673664 Salvando projeto: 23AP28 - 13 conceitos
+INFO 2026-03-06 07:36:46,349 views 451094 132315541673664 Processadas 600 linhas...
+INFO 2026-03-06 07:36:46,351 views 451094 132315541673664 Salvando projeto: 23AP29 - 13 conceitos
+INFO 2026-03-06 07:36:46,845 views 451094 132315541673664 Salvando projeto: 23AP30 - 13 conceitos
+INFO 2026-03-06 07:36:47,311 views 451094 132315541673664 Salvando projeto: 23AP32 - 13 conceitos
+INFO 2026-03-06 07:36:47,839 views 451094 132315541673664 Salvando projeto: 23AP33 - 13 conceitos
+INFO 2026-03-06 07:36:48,301 views 451094 132315541673664 Salvando projeto: 23AP34 - 13 conceitos
+INFO 2026-03-06 07:36:48,778 views 451094 132315541673664 Salvando projeto: 23AP35 - 13 conceitos
+INFO 2026-03-06 07:36:49,226 views 451094 132315541673664 Salvando projeto: 23AP36 - 13 conceitos
+INFO 2026-03-06 07:36:49,708 views 451094 132315541673664 Processadas 700 linhas...
+INFO 2026-03-06 07:36:49,709 views 451094 132315541673664 Salvando projeto: 23AP37 - 13 conceitos
+INFO 2026-03-06 07:36:50,160 views 451094 132315541673664 Salvando projeto: 23AP38 - 13 conceitos
+INFO 2026-03-06 07:36:50,631 views 451094 132315541673664 Salvando projeto: 23AP39 - 13 conceitos
+INFO 2026-03-06 07:36:51,104 views 451094 132315541673664 Salvando projeto: 23CEDX - 13 conceitos
+INFO 2026-03-06 07:36:51,598 views 451094 132315541673664 Salvando projeto: 24AP01 - 13 conceitos
+INFO 2026-03-06 07:36:52,067 views 451094 132315541673664 Salvando projeto: 24AP02 - 13 conceitos
+INFO 2026-03-06 07:36:52,526 views 451094 132315541673664 Salvando projeto: 24AP03 - 13 conceitos
+INFO 2026-03-06 07:36:52,996 views 451094 132315541673664 Salvando projeto: 24AP04 - 13 conceitos
+INFO 2026-03-06 07:36:53,455 views 451094 132315541673664 Processadas 800 linhas...
+INFO 2026-03-06 07:36:53,457 views 451094 132315541673664 Salvando projeto: 24AP05 - 13 conceitos
+INFO 2026-03-06 07:36:53,941 views 451094 132315541673664 Salvando projeto: 24AP06 - 13 conceitos
+INFO 2026-03-06 07:36:54,451 views 451094 132315541673664 Salvando projeto: 24AP07 - 13 conceitos
+INFO 2026-03-06 07:36:54,937 views 451094 132315541673664 Salvando projeto: 24AP10 - 13 conceitos
+INFO 2026-03-06 07:36:55,425 views 451094 132315541673664 Salvando projeto: 24AP11 - 13 conceitos
+INFO 2026-03-06 07:36:55,954 views 451094 132315541673664 Salvando projeto: 24AP14 - 13 conceitos
+INFO 2026-03-06 07:36:56,413 views 451094 132315541673664 Salvando projeto: 24AP15 - 13 conceitos
+INFO 2026-03-06 07:36:56,896 views 451094 132315541673664 Salvando projeto: 24AP16 - 13 conceitos
+INFO 2026-03-06 07:36:57,349 views 451094 132315541673664 Processadas 900 linhas...
+INFO 2026-03-06 07:36:57,351 views 451094 132315541673664 Salvando projeto: 24AP18 - 13 conceitos
+INFO 2026-03-06 07:36:57,834 views 451094 132315541673664 Salvando projeto: 24AP19 - 13 conceitos
+INFO 2026-03-06 07:36:58,308 views 451094 132315541673664 Salvando projeto: 24AP20 - 13 conceitos
+INFO 2026-03-06 07:36:58,768 views 451094 132315541673664 Salvando projeto: 24AP21 - 13 conceitos
+INFO 2026-03-06 07:36:59,237 views 451094 132315541673664 Salvando projeto: 24AP22 - 13 conceitos
+INFO 2026-03-06 07:36:59,686 views 451094 132315541673664 Salvando projeto: 24AP23 - 13 conceitos
+INFO 2026-03-06 07:37:00,167 views 451094 132315541673664 Salvando projeto: 24AP24 - 13 conceitos
+INFO 2026-03-06 07:37:00,631 views 451094 132315541673664 Processadas 1000 linhas...
+INFO 2026-03-06 07:37:00,632 views 451094 132315541673664 Salvando projeto: 24AP25 - 13 conceitos
+INFO 2026-03-06 07:37:01,089 views 451094 132315541673664 Salvando projeto: 24AP26 - 13 conceitos
+INFO 2026-03-06 07:37:01,628 views 451094 132315541673664 Salvando projeto: 24AP27 - 13 conceitos
+INFO 2026-03-06 07:37:02,095 views 451094 132315541673664 Salvando projeto: 24AP28 - 13 conceitos
+INFO 2026-03-06 07:37:02,586 views 451094 132315541673664 Salvando projeto: 24AP30 - 13 conceitos
+INFO 2026-03-06 07:37:03,043 views 451094 132315541673664 Salvando projeto: 24AP31 - 13 conceitos
+INFO 2026-03-06 07:37:03,522 views 451094 132315541673664 Salvando projeto: 24AP32 - 13 conceitos
+INFO 2026-03-06 07:37:03,981 views 451094 132315541673664 Salvando projeto: 24AP33 - 13 conceitos
+INFO 2026-03-06 07:37:04,451 views 451094 132315541673664 Processadas 1100 linhas...
+INFO 2026-03-06 07:37:04,453 views 451094 132315541673664 Salvando projeto: 24AP34 - 13 conceitos
+INFO 2026-03-06 07:37:04,917 views 451094 132315541673664 Salvando projeto: 24AP35 - 13 conceitos
+INFO 2026-03-06 07:37:05,380 views 451094 132315541673664 Salvando projeto: 24AP36 - 13 conceitos
+INFO 2026-03-06 07:37:05,858 views 451094 132315541673664 Salvando projeto: 25AP04 - 13 conceitos
+INFO 2026-03-06 07:37:06,328 views 451094 132315541673664 Salvando projeto: 25AP01 - 13 conceitos
+INFO 2026-03-06 07:37:06,804 views 451094 132315541673664 Salvando projeto: 5AP001 - 13 conceitos
+INFO 2026-03-06 07:37:07,261 views 451094 132315541673664 Salvando projeto: 25AP11 - 13 conceitos
+INFO 2026-03-06 07:37:07,714 views 451094 132315541673664 Salvando projeto: 5AP019 - 13 conceitos
+INFO 2026-03-06 07:37:08,185 views 451094 132315541673664 Processadas 1200 linhas...
+INFO 2026-03-06 07:37:08,187 views 451094 132315541673664 Salvando projeto: 25AP05 - 13 conceitos
+INFO 2026-03-06 07:37:08,640 views 451094 132315541673664 Salvando projeto: 5AP082 - 13 conceitos
+INFO 2026-03-06 07:37:09,131 views 451094 132315541673664 Salvando projeto: 25AP09 - 13 conceitos
+INFO 2026-03-06 07:37:09,590 views 451094 132315541673664 Salvando projeto: 25AP07 - 13 conceitos
+INFO 2026-03-06 07:37:10,063 views 451094 132315541673664 Salvando projeto: 25AP10 - 13 conceitos
+INFO 2026-03-06 07:37:10,510 views 451094 132315541673664 Salvando projeto: P26S10 - 13 conceitos
+INFO 2026-03-06 07:37:10,986 views 451094 132315541673664 Salvando projeto: 25AP23 - 13 conceitos
+INFO 2026-03-06 07:37:11,450 views 451094 132315541673664 Processadas 1300 linhas...
+INFO 2026-03-06 07:37:11,451 views 451094 132315541673664 Salvando projeto: 8AP006 - 13 conceitos
+INFO 2026-03-06 07:37:11,912 views 451094 132315541673664 Salvando projeto: 25AP35 - 13 conceitos
+INFO 2026-03-06 07:37:12,382 views 451094 132315541673664 Salvando projeto: 25AP19 - 13 conceitos
+INFO 2026-03-06 07:37:12,844 views 451094 132315541673664 Salvando projeto: 25AP20 - 13 conceitos
+INFO 2026-03-06 07:37:13,307 views 451094 132315541673664 Salvando projeto: 8AP016 - 13 conceitos
+INFO 2026-03-06 07:37:13,796 views 451094 132315541673664 Salvando projeto: 25AP21 - 13 conceitos
+INFO 2026-03-06 07:37:14,262 views 451094 132315541673664 Salvando projeto: 8AP019 - 13 conceitos
+INFO 2026-03-06 07:37:14,743 views 451094 132315541673664 Salvando projeto: 8ASIND - 13 conceitos
+INFO 2026-03-06 07:37:15,213 views 451094 132315541673664 Processadas 1400 linhas...
+INFO 2026-03-06 07:37:15,214 views 451094 132315541673664 Salvando projeto: 25AP22 - 13 conceitos
+INFO 2026-03-06 07:37:15,702 views 451094 132315541673664 Salvando projeto: EYPAPP - 13 conceitos
+INFO 2026-03-06 07:37:16,159 views 451094 132315541673664 Salvando projeto: 26AP01 - 13 conceitos
+INFO 2026-03-06 07:37:16,646 views 451094 132315541673664 Salvando projeto: 26AP02 - 13 conceitos
+INFO 2026-03-06 07:37:17,104 views 451094 132315541673664 Salvando projeto: 26AP03 - 13 conceitos
+INFO 2026-03-06 07:37:17,600 views 451094 132315541673664 Salvando projeto: 26AP04 - 13 conceitos
+INFO 2026-03-06 07:37:18,065 views 451094 132315541673664 Salvando projeto: 26AP05 - 13 conceitos
+INFO 2026-03-06 07:37:18,529 views 451094 132315541673664 Processadas 1500 linhas...
+INFO 2026-03-06 07:37:18,550 views 451094 132315541673664 Processadas 1600 linhas...
+INFO 2026-03-06 07:37:18,553 views 451094 132315541673664 Salvando projeto: P26S11 - 13 conceitos
+INFO 2026-03-06 07:37:19,056 views 451094 132315541673664 Processadas 1700 linhas...
+INFO 2026-03-06 07:37:19,057 views 451094 132315541673664 Salvando projeto: 25AP31 - 13 conceitos
+INFO 2026-03-06 07:37:19,532 views 451094 132315541673664 Salvando projeto: 25AP17 - 13 conceitos
+INFO 2026-03-06 07:37:20,078 views 451094 132315541673664 Processadas 1800 linhas...
+INFO 2026-03-06 07:37:20,082 views 451094 132315541673664 Salvando projeto: 25AP33 - 13 conceitos
+INFO 2026-03-06 07:37:20,546 views 451094 132315541673664 Salvando projeto: 21AP00 - 13 conceitos
+INFO 2026-03-06 07:37:21,024 views 451094 132315541673664 Salvando projeto: 22AP14 - 13 conceitos
+INFO 2026-03-06 07:37:21,482 views 451094 132315541673664 Salvando projeto: 22AP17 - 13 conceitos
+INFO 2026-03-06 07:37:21,963 views 451094 132315541673664 Salvando projeto: 22AP19 - 13 conceitos
+INFO 2026-03-06 07:37:22,420 views 451094 132315541673664 Salvando projeto: 22AP27 - 13 conceitos
+WARNING 2026-03-06 07:37:22,887 views 451094 132315541673664 Projeto EYPAPP já foi processado neste arquivo (linha 1934). Pulando próximas 12 linhas para evitar duplicatas.
+INFO 2026-03-06 07:37:22,887 views 451094 132315541673664 Processadas 1900 linhas...
+INFO 2026-03-06 07:37:22,890 views 451094 132315541673664 Salvando projeto: 24AP17 - 13 conceitos
+INFO 2026-03-06 07:37:23,381 views 451094 132315541673664 Salvando projeto: 25AP06 - 13 conceitos
+INFO 2026-03-06 07:37:23,848 views 451094 132315541673664 Salvando projeto: 21AP09 - 13 conceitos
+INFO 2026-03-06 07:37:24,331 views 451094 132315541673664 Salvando projeto: 22AP13 - 13 conceitos
+INFO 2026-03-06 07:37:24,797 views 451094 132315541673664 Salvando projeto: 25AP25 - 13 conceitos
+INFO 2026-03-06 07:37:25,288 views 451094 132315541673664 Salvando projeto: 23AP04 - 13 conceitos
+INFO 2026-03-06 07:37:25,752 views 451094 132315541673664 Processadas 2000 linhas...
+INFO 2026-03-06 07:37:25,753 views 451094 132315541673664 Salvando projeto: 23AP05 - 13 conceitos
+INFO 2026-03-06 07:37:26,245 views 451094 132315541673664 Salvando projeto: 23AP07 - 13 conceitos
+INFO 2026-03-06 07:37:26,708 views 451094 132315541673664 Salvando projeto: 25AP29 - 13 conceitos
+INFO 2026-03-06 07:37:27,169 views 451094 132315541673664 Salvando projeto: 23AP31 - 13 conceitos
+INFO 2026-03-06 07:37:27,644 views 451094 132315541673664 Salvando projeto: 24AP08 - 13 conceitos
+INFO 2026-03-06 07:37:28,098 views 451094 132315541673664 Salvando projeto: 24AP09 - 13 conceitos
+INFO 2026-03-06 07:37:28,582 views 451094 132315541673664 Salvando projeto: 24AP12 - 13 conceitos
+INFO 2026-03-06 07:37:29,047 views 451094 132315541673664 Salvando projeto: 24AP13 - 13 conceitos
+INFO 2026-03-06 07:37:29,510 views 451094 132315541673664 Processadas 2100 linhas...
+INFO 2026-03-06 07:37:29,512 views 451094 132315541673664 Salvando projeto: 25S001 - 13 conceitos
+INFO 2026-03-06 07:37:29,995 views 451094 132315541673664 Processadas 2200 linhas...
+INFO 2026-03-06 07:37:30,005 views 451094 132315541673664 Salvando projeto: 25AP26 - 13 conceitos
+INFO 2026-03-06 07:37:30,466 views 451094 132315541673664 Salvando projeto: 24AP29 - 13 conceitos
+INFO 2026-03-06 07:37:30,952 views 451094 132315541673664 Salvando projeto: 21AP03 - 13 conceitos
+INFO 2026-03-06 07:37:31,410 views 451094 132315541673664 Processadas 2300 linhas...
+INFO 2026-03-06 07:37:31,411 views 451094 132315541673664 Salvando projeto: 21AP14 - 13 conceitos
+INFO 2026-03-06 07:37:31,891 views 451094 132315541673664 Salvando projeto: 22AP25 - 13 conceitos
+INFO 2026-03-06 07:37:32,362 views 451094 132315541673664 Salvando projeto: 23AP10 - 13 conceitos
+INFO 2026-03-06 07:37:32,838 views 451094 132315541673664 Salvando projeto: 23AP12 - 13 conceitos
+INFO 2026-03-06 07:37:33,321 views 451094 132315541673664 Salvando projeto: 23AP18 - 13 conceitos
+INFO 2026-03-06 07:37:33,782 views 451094 132315541673664 Salvando projeto: 24APAP - 13 conceitos
+INFO 2026-03-06 07:37:34,264 views 451094 132315541673664 Salvando projeto: 5AP015 - 13 conceitos
+INFO 2026-03-06 07:37:34,728 views 451094 132315541673664 Processadas 2400 linhas...
+INFO 2026-03-06 07:37:34,729 views 451094 132315541673664 Salvando projeto: 5AP035 - 13 conceitos
+INFO 2026-03-06 07:37:35,223 views 451094 132315541673664 Salvando projeto: 6AP001 - 13 conceitos
+INFO 2026-03-06 07:37:35,691 views 451094 132315541673664 Salvando projeto: 7AP001 - 13 conceitos
+INFO 2026-03-06 07:37:36,170 views 451094 132315541673664 Salvando projeto: 7AP002 - 13 conceitos
+INFO 2026-03-06 07:37:36,623 views 451094 132315541673664 Salvando projeto: 8AP003 - 13 conceitos
+INFO 2026-03-06 07:37:37,107 views 451094 132315541673664 Salvando projeto: 8AP008 - 13 conceitos
+INFO 2026-03-06 07:37:37,580 views 451094 132315541673664 Processadas 2500 linhas...
+INFO 2026-03-06 07:37:37,583 views 451094 132315541673664 Salvando projeto: 8AP012 - 13 conceitos
+INFO 2026-03-06 07:37:38,042 views 451094 132315541673664 Salvando projeto: 8AP017 - 13 conceitos
+INFO 2026-03-06 07:37:38,789 views 451094 132315541673664 Salvando projeto: AP0004 - 13 conceitos
+INFO 2026-03-06 07:37:39,252 views 451094 132315541673664 Salvando projeto: 25AP27 - 13 conceitos
+INFO 2026-03-06 07:37:39,748 views 451094 132315541673664 Processadas 2600 linhas...
+INFO 2026-03-06 07:37:39,753 views 451094 132315541673664 Salvando projeto: 23AP01 - 13 conceitos
+INFO 2026-03-06 07:37:40,264 views 451094 132315541673664 Salvando projeto: 25AP28 - 13 conceitos
+INFO 2026-03-06 07:37:40,746 views 451094 132315541673664 Salvando projeto: 25AP24 - 13 conceitos
+INFO 2026-03-06 07:37:41,219 views 451094 132315541673664 Salvando projeto: 25AP30 - 13 conceitos
+INFO 2026-03-06 07:37:41,698 views 451094 132315541673664 Salvando projeto: P26S01 - 13 conceitos
+INFO 2026-03-06 07:37:42,170 views 451094 132315541673664 Salvando projeto: P26S02 - 13 conceitos
+INFO 2026-03-06 07:37:42,638 views 451094 132315541673664 Processadas 2700 linhas...
+INFO 2026-03-06 07:37:42,639 views 451094 132315541673664 Salvando projeto: P26S03 - 13 conceitos
+INFO 2026-03-06 07:37:43,113 views 451094 132315541673664 Salvando projeto: P26S04 - 13 conceitos
+INFO 2026-03-06 07:37:43,586 views 451094 132315541673664 Salvando projeto: P26S05 - 13 conceitos
+INFO 2026-03-06 07:37:44,071 views 451094 132315541673664 Salvando projeto: P26S06 - 13 conceitos
+INFO 2026-03-06 07:37:44,530 views 451094 132315541673664 Salvando projeto: P26S07 - 13 conceitos
+INFO 2026-03-06 07:37:45,011 views 451094 132315541673664 Salvando projeto: P26S08 - 13 conceitos
+INFO 2026-03-06 07:37:45,470 views 451094 132315541673664 Salvando projeto: P26A01 - 13 conceitos
+INFO 2026-03-06 07:37:45,964 views 451094 132315541673664 Salvando projeto: P26A02 - 13 conceitos
+INFO 2026-03-06 07:37:46,430 views 451094 132315541673664 Processadas 2800 linhas...
+INFO 2026-03-06 07:37:46,431 views 451094 132315541673664 Salvando projeto: P26A03 - 13 conceitos
+INFO 2026-03-06 07:37:46,902 views 451094 132315541673664 Salvando projeto: P26A04 - 13 conceitos
+INFO 2026-03-06 07:37:47,401 views 451094 132315541673664 Salvando projeto: P26A05 - 13 conceitos
+INFO 2026-03-06 07:37:47,858 views 451094 132315541673664 Salvando projeto: P26A06 - 13 conceitos
+INFO 2026-03-06 07:37:48,343 views 451094 132315541673664 Salvando projeto: P26S09 - 13 conceitos
+INFO 2026-03-06 07:37:48,821 views 451094 132315541673664 Salvando projeto: P26A08 - 13 conceitos
+INFO 2026-03-06 07:37:49,312 views 451094 132315541673664 Salvando projeto: P26A09 - 13 conceitos
+INFO 2026-03-06 07:37:49,782 views 451094 132315541673664 Processadas 2900 linhas...
+INFO 2026-03-06 07:37:49,783 views 451094 132315541673664 Salvando projeto: P26A10 - 13 conceitos
+INFO 2026-03-06 07:37:50,270 views 451094 132315541673664 Salvando projeto: P26A11 - 13 conceitos
+INFO 2026-03-06 07:37:50,740 views 451094 132315541673664 Salvando projeto: 25AP32 - 13 conceitos
+INFO 2026-03-06 07:37:51,205 views 451094 132315541673664 Salvando projeto: 25AP34 - 13 conceitos
+INFO 2026-03-06 07:37:51,699 views 451094 132315541673664 Salvando projeto: P26A12 - 13 conceitos
+INFO 2026-03-06 07:37:52,161 views 451094 132315541673664 Salvando projeto: 25AP36 - 13 conceitos
+INFO 2026-03-06 07:37:52,651 views 451094 132315541673664 Salvando projeto: 25AP37 - 13 conceitos
+INFO 2026-03-06 07:37:53,115 views 451094 132315541673664 Processadas 3000 linhas...
+INFO 2026-03-06 07:37:53,116 views 451094 132315541673664 Salvando projeto: 25AP39 - 13 conceitos
+INFO 2026-03-06 07:37:53,637 views 451094 132315541673664 Salvando projeto: 25AP40 - 13 conceitos
+INFO 2026-03-06 07:37:54,129 views 451094 132315541673664 Salvando projeto: 8AP004 - 13 conceitos
+INFO 2026-03-06 07:37:54,655 views 451094 132315541673664 Salvando projeto: AP0073 - 13 conceitos
+INFO 2026-03-06 07:37:55,146 views 451094 132315541673664 Salvando projeto: IP0162 - 13 conceitos
+INFO 2026-03-06 07:37:55,609 views 451094 132315541673664 Processadas 3100 linhas...
+INFO 2026-03-06 07:37:55,611 views 451094 132315541673664 Salvando projeto: IP0261 - 13 conceitos
+INFO 2026-03-06 07:37:56,097 views 451094 132315541673664 Salvando projeto: AJUAAP - 13 conceitos
+INFO 2026-03-06 07:37:56,570 views 451094 132315541673664 Processadas 3200 linhas...
+INFO 2026-03-06 07:37:56,586 views 451094 132315541673664 Salvando projeto: AJSNBR - 13 conceitos
+INFO 2026-03-06 07:37:57,055 views 451094 132315541673664 Processadas 3300 linhas...
+INFO 2026-03-06 07:37:57,073 views 451094 132315541673664 Processadas 3400 linhas...
+INFO 2026-03-06 07:37:57,093 views 451094 132315541673664 Processadas 3500 linhas...
+INFO 2026-03-06 07:37:57,126 views 451094 132315541673664 Processadas 3600 linhas...
+INFO 2026-03-06 07:37:57,155 views 451094 132315541673664 Processadas 3700 linhas...
+INFO 2026-03-06 07:37:57,178 views 451094 132315541673664 Processadas 3800 linhas...
+INFO 2026-03-06 07:37:57,196 views 451094 132315541673664 Processadas 3900 linhas...
+INFO 2026-03-06 07:37:57,214 views 451094 132315541673664 Processadas 4000 linhas...
+INFO 2026-03-06 07:37:57,232 views 451094 132315541673664 Processadas 4100 linhas...
+INFO 2026-03-06 07:37:57,249 views 451094 132315541673664 Processadas 4200 linhas...
+INFO 2026-03-06 07:37:57,266 views 451094 132315541673664 Processadas 4300 linhas...
+INFO 2026-03-06 07:37:57,282 views 451094 132315541673664 Processadas 4400 linhas...
+INFO 2026-03-06 07:37:57,298 views 451094 132315541673664 Processadas 4500 linhas...
+INFO 2026-03-06 07:37:57,314 views 451094 132315541673664 Processadas 4600 linhas...
+INFO 2026-03-06 07:37:57,331 views 451094 132315541673664 Processadas 4700 linhas...
+INFO 2026-03-06 07:37:57,347 views 451094 132315541673664 Processadas 4800 linhas...
+INFO 2026-03-06 07:37:57,364 views 451094 132315541673664 Processadas 4900 linhas...
+INFO 2026-03-06 07:37:57,381 views 451094 132315541673664 Processadas 5000 linhas...
+INFO 2026-03-06 07:37:57,398 views 451094 132315541673664 Processadas 5100 linhas...
+INFO 2026-03-06 07:37:57,415 views 451094 132315541673664 Processadas 5200 linhas...
+INFO 2026-03-06 07:37:57,432 views 451094 132315541673664 Processadas 5300 linhas...
+INFO 2026-03-06 07:37:57,450 views 451094 132315541673664 Processadas 5400 linhas...
+INFO 2026-03-06 07:37:57,468 views 451094 132315541673664 Processadas 5500 linhas...
+INFO 2026-03-06 07:37:57,486 views 451094 132315541673664 Processadas 5600 linhas...
+INFO 2026-03-06 07:37:57,504 views 451094 132315541673664 Processadas 5700 linhas...
+INFO 2026-03-06 07:37:57,522 views 451094 132315541673664 Processadas 5800 linhas...
+INFO 2026-03-06 07:37:57,539 views 451094 132315541673664 Processadas 5900 linhas...
+INFO 2026-03-06 07:37:57,556 views 451094 132315541673664 Processadas 6000 linhas...
+INFO 2026-03-06 07:37:57,574 views 451094 132315541673664 Processadas 6100 linhas...
+INFO 2026-03-06 07:37:57,594 views 451094 132315541673664 Processadas 6200 linhas...
+INFO 2026-03-06 07:37:57,611 views 451094 132315541673664 Processadas 6300 linhas...
+INFO 2026-03-06 07:37:57,627 views 451094 132315541673664 Processadas 6400 linhas...
+INFO 2026-03-06 07:37:57,644 views 451094 132315541673664 Processadas 6500 linhas...
+INFO 2026-03-06 07:37:57,664 views 451094 132315541673664 Processadas 6600 linhas...
+INFO 2026-03-06 07:37:57,684 views 451094 132315541673664 Processadas 6700 linhas...
+INFO 2026-03-06 07:37:57,702 views 451094 132315541673664 Processadas 6800 linhas...
+INFO 2026-03-06 07:37:57,721 views 451094 132315541673664 Processadas 6900 linhas...
+INFO 2026-03-06 07:37:57,738 views 451094 132315541673664 Processadas 7000 linhas...
+INFO 2026-03-06 07:37:57,756 views 451094 132315541673664 Processadas 7100 linhas...
+INFO 2026-03-06 07:37:57,773 views 451094 132315541673664 Processadas 7200 linhas...
+INFO 2026-03-06 07:37:57,792 views 451094 132315541673664 Processadas 7300 linhas...
+INFO 2026-03-06 07:37:57,807 views 451094 132315541673664 Salvando último projeto: AJSABR - 13 conceitos
+INFO 2026-03-06 07:37:58,329 views 451094 132315541673664 === PROCESSAMENTO XLS CONCLUÍDO COM SUCESSO ===
+INFO 2026-03-06 07:37:58,329 views 451094 132315541673664 Total de linhas processadas: 7345
+INFO 2026-03-06 07:37:58,329 views 451094 132315541673664 Projetos processados: 195
+INFO 2026-03-06 07:37:58,329 views 451094 132315541673664 Projetos únicos encontrados: 194
+INFO 2026-03-06 07:37:58,329 views 451094 132315541673664 Conceitos mensais criados: 30420
+WARNING 2026-03-06 07:37:58,329 views 451094 132315541673664 Projetos com duplicatas pulados: 1
+INFO 2026-03-06 07:37:58,329 views 451094 132315541673664 Arquivo processado com sucesso! 195 projetos e 30420 registros de conceitos processados.
+INFO 2026-03-06 07:37:58,335 views 451094 132315541673664 Arquivo temporário removido com sucesso
+INFO 2026-03-06 07:37:58,336 views 451094 132315541673664 Processamento concluído com sucesso: Arquivo processado com sucesso! 195 projetos e 30420 registros de conceitos processados.
+INFO 2026-03-06 07:37:58,336 log 451094 132315541673664 "POST /upload/ HTTP/1.1" 200 120
+ERROR 2026-03-06 07:38:00,909 views 451094 132315541673664 Erro ao calcular dados do dashboard para categoria AAPP: name 'models' is not defined
+Traceback (most recent call last):
+  File "/opt/analise-indra/core/views.py", line 131, in get_dashboard_data
+    ).aggregate(total=models.Sum('valor_realizado'))['total'] or 0
+                      ^^^^^^
+NameError: name 'models' is not defined
+ERROR 2026-03-06 07:38:00,919 views 451094 132315541673664 Erro ao calcular dados do dashboard para categoria Sanidad: name 'models' is not defined
+Traceback (most recent call last):
+  File "/opt/analise-indra/core/views.py", line 131, in get_dashboard_data
+    ).aggregate(total=models.Sum('valor_realizado'))['total'] or 0
+                      ^^^^^^
+NameError: name 'models' is not defined
+ERROR 2026-03-06 07:38:00,930 views 451094 132315541673664 Erro ao calcular dados do dashboard para categoria Consolidado: name 'models' is not defined
+Traceback (most recent call last):
+  File "/opt/analise-indra/core/views.py", line 131, in get_dashboard_data
+    ).aggregate(total=models.Sum('valor_realizado'))['total'] or 0
+                      ^^^^^^
+NameError: name 'models' is not defined
+INFO 2026-03-06 07:38:00,941 log 451094 132315541673664 "GET /dashboard/ HTTP/1.1" 200 28261
+INFO 2026-03-06 07:39:41,834 autoreload 451094 132316105928832 /opt/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-06 07:39:42,434 autoreload 505555 136355219124352 Watching for file changes with StatReloader
+INFO 2026-03-06 07:40:13,547 autoreload 505555 136355219124352 /opt/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-06 07:40:14,032 autoreload 505650 129680080945280 Watching for file changes with StatReloader
+INFO 2026-03-06 07:40:30,359 log 505650 129679517456064 "GET /dashboard/ HTTP/1.1" 200 28349
+INFO 2026-03-06 07:41:17,154 log 505650 129679517456064 "GET /dashboard/ HTTP/1.1" 200 28349
+INFO 2026-03-06 07:41:37,827 log 505650 129679517456064 "GET /dashboard/ HTTP/1.1" 200 28349
+INFO 2026-03-06 09:04:50,105 log 505650 129679517456064 "GET /dashboard/ HTTP/1.1" 200 28349
+INFO 2026-03-06 09:27:25,503 autoreload 505650 129680080945280 /opt/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-06 09:27:26,087 autoreload 512602 135354156888192 Watching for file changes with StatReloader
+INFO 2026-03-06 09:27:42,849 autoreload 512602 135354156888192 /opt/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-06 09:27:43,564 autoreload 512676 130325764927616 Watching for file changes with StatReloader
+INFO 2026-03-06 09:28:38,926 autoreload 512676 130325764927616 /opt/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-06 09:28:39,401 autoreload 512767 131356751466624 Watching for file changes with StatReloader
+INFO 2026-03-06 09:28:57,087 autoreload 512767 131356751466624 /opt/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-06 09:28:57,572 autoreload 512796 126274264666240 Watching for file changes with StatReloader
+INFO 2026-03-06 09:29:20,417 autoreload 512796 126274264666240 /opt/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-06 09:29:20,876 autoreload 512832 129592551800960 Watching for file changes with StatReloader
+INFO 2026-03-06 09:29:37,599 autoreload 512832 129592551800960 /opt/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-06 09:29:38,192 autoreload 512852 139089388019840 Watching for file changes with StatReloader
+INFO 2026-03-06 09:29:56,150 autoreload 512852 139089388019840 /opt/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-06 09:29:56,611 autoreload 512885 139134271692928 Watching for file changes with StatReloader
+INFO 2026-03-06 09:31:58,376 autoreload 513076 133890518663296 Watching for file changes with StatReloader
+INFO 2026-03-06 09:32:53,661 log 513076 133889954420416 "GET / HTTP/1.1" 200 13270
+INFO 2026-03-06 09:33:17,872 log 513076 133889954420416 "GET / HTTP/1.1" 200 13270
+INFO 2026-03-06 09:33:42,983 log 513076 133889954420416 "GET /dashboard/ HTTP/1.1" 200 29520
+INFO 2026-03-06 09:34:22,357 autoreload 513076 133890518663296 /opt/analise-indra/core/models.py changed, reloading.
+INFO 2026-03-06 09:34:22,763 autoreload 513396 134014624440448 Watching for file changes with StatReloader
+INFO 2026-03-06 09:35:20,643 log 513396 134014060107456 "GET /dashboard/ HTTP/1.1" 200 29529
+INFO 2026-03-06 09:35:45,452 views 513396 134014060107456 === INÍCIO DO PROCESSAMENTO DE UPLOAD ===
+INFO 2026-03-06 09:35:45,478 views 513396 134014060107456 Arquivo recebido: Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (tamanho: 12295366 bytes, mês fechamento: 3)
+INFO 2026-03-06 09:35:45,478 views 513396 134014060107456 Tipo de arquivo validado com sucesso
+INFO 2026-03-06 09:35:45,478 views 513396 134014060107456 Salvando arquivo temporariamente em: /opt/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx
+INFO 2026-03-06 09:35:45,488 views 513396 134014060107456 Arquivo salvo temporariamente. Tamanho final: 12295366 bytes
+INFO 2026-03-06 09:35:45,488 views 513396 134014060107456 Iniciando processamento do arquivo XLS...
+INFO 2026-03-06 09:35:45,488 views 513396 134014060107456 === INÍCIO DO PROCESSAMENTO XLS: /opt/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (mês fechamento: 3) ===
+INFO 2026-03-06 09:35:45,488 views 513396 134014060107456 Lendo aba FC do arquivo Excel...
+INFO 2026-03-06 09:35:54,097 views 513396 134014060107456 Arquivo lido com sucesso. Dimensões: 7380 linhas x 136 colunas
+INFO 2026-03-06 09:35:54,098 views 513396 134014060107456 Mapeamento de conceitos configurado: 21 conceitos
+INFO 2026-03-06 09:35:54,098 views 513396 134014060107456 Limpando dados anteriores...
+INFO 2026-03-06 09:35:54,207 views 513396 134014060107456 Dados anteriores removidos: 1 processamentos, 195 projetos, 30420 conceitos
+INFO 2026-03-06 09:35:54,207 views 513396 134014060107456 Criando registro de processamento...
+INFO 2026-03-06 09:35:54,211 views 513396 134014060107456 Registro de processamento criado: ID 9, arquivo: temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx
+INFO 2026-03-06 09:35:54,211 views 513396 134014060107456 Iniciando processamento das linhas do arquivo (a partir da linha 35)...
+INFO 2026-03-06 09:35:54,226 views 513396 134014060107456 Salvando projeto: 19AP03 - 13 conceitos
+INFO 2026-03-06 09:35:54,682 views 513396 134014060107456 Salvando projeto: 19AP04 - 13 conceitos
+INFO 2026-03-06 09:35:55,174 views 513396 134014060107456 Salvando projeto: 25AP38 - 13 conceitos
+INFO 2026-03-06 09:35:55,648 views 513396 134014060107456 Salvando projeto: 20AP04 - 13 conceitos
+INFO 2026-03-06 09:35:56,166 views 513396 134014060107456 Salvando projeto: 25AP02 - 13 conceitos
+INFO 2026-03-06 09:35:56,624 views 513396 134014060107456 Salvando projeto: 20AP09 - 13 conceitos
+INFO 2026-03-06 09:35:57,100 views 513396 134014060107456 Salvando projeto: 20AP10 - 13 conceitos
+INFO 2026-03-06 09:35:57,574 views 513396 134014060107456 Processadas 100 linhas...
+INFO 2026-03-06 09:35:57,575 views 513396 134014060107456 Salvando projeto: 20AP14 - 13 conceitos
+INFO 2026-03-06 09:35:58,142 views 513396 134014060107456 Salvando projeto: 25APBR - 13 conceitos
+INFO 2026-03-06 09:35:58,611 views 513396 134014060107456 Salvando projeto: 21AP12 - 13 conceitos
+INFO 2026-03-06 09:35:59,075 views 513396 134014060107456 Salvando projeto: 21AP13 - 13 conceitos
+INFO 2026-03-06 09:35:59,555 views 513396 134014060107456 Salvando projeto: 25APMB - 13 conceitos
+INFO 2026-03-06 09:36:00,028 views 513396 134014060107456 Salvando projeto: 21AP15 - 13 conceitos
+INFO 2026-03-06 09:36:00,502 views 513396 134014060107456 Salvando projeto: 21AP16 - 13 conceitos
+INFO 2026-03-06 09:36:00,961 views 513396 134014060107456 Salvando projeto: 21AP17 - 13 conceitos
+INFO 2026-03-06 09:36:01,414 views 513396 134014060107456 Processadas 200 linhas...
+INFO 2026-03-06 09:36:01,415 views 513396 134014060107456 Salvando projeto: 22AP02 - 13 conceitos
+INFO 2026-03-06 09:36:01,888 views 513396 134014060107456 Salvando projeto: 22AP03 - 13 conceitos
+INFO 2026-03-06 09:36:02,348 views 513396 134014060107456 Salvando projeto: 22AP04 - 13 conceitos
+INFO 2026-03-06 09:36:02,828 views 513396 134014060107456 Salvando projeto: 22AP05 - 13 conceitos
+INFO 2026-03-06 09:36:03,306 views 513396 134014060107456 Salvando projeto: 22AP07 - 13 conceitos
+INFO 2026-03-06 09:36:03,759 views 513396 134014060107456 Salvando projeto: 22AP08 - 13 conceitos
+INFO 2026-03-06 09:36:04,234 views 513396 134014060107456 Salvando projeto: 22AP09 - 13 conceitos
+INFO 2026-03-06 09:36:04,693 views 513396 134014060107456 Processadas 300 linhas...
+INFO 2026-03-06 09:36:04,693 views 513396 134014060107456 Salvando projeto: 22AP10 - 13 conceitos
+INFO 2026-03-06 09:36:05,217 views 513396 134014060107456 Salvando projeto: 22AP11 - 13 conceitos
+INFO 2026-03-06 09:36:05,673 views 513396 134014060107456 Salvando projeto: 22AP15 - 13 conceitos
+INFO 2026-03-06 09:36:06,145 views 513396 134014060107456 Salvando projeto: 22AP16 - 13 conceitos
+INFO 2026-03-06 09:36:06,607 views 513396 134014060107456 Salvando projeto: 22AP18 - 13 conceitos
+INFO 2026-03-06 09:36:07,075 views 513396 134014060107456 Salvando projeto: 22AP20 - 13 conceitos
+INFO 2026-03-06 09:36:07,550 views 513396 134014060107456 Salvando projeto: 22AP21 - 13 conceitos
+INFO 2026-03-06 09:36:08,006 views 513396 134014060107456 Salvando projeto: 22AP22 - 13 conceitos
+INFO 2026-03-06 09:36:08,536 views 513396 134014060107456 Processadas 400 linhas...
+INFO 2026-03-06 09:36:08,536 views 513396 134014060107456 Salvando projeto: 22AP24 - 13 conceitos
+INFO 2026-03-06 09:36:08,992 views 513396 134014060107456 Salvando projeto: 25AP03 - 13 conceitos
+INFO 2026-03-06 09:36:09,474 views 513396 134014060107456 Salvando projeto: 22AP26 - 13 conceitos
+INFO 2026-03-06 09:36:09,943 views 513396 134014060107456 Salvando projeto: 23AP03 - 13 conceitos
+INFO 2026-03-06 09:36:10,409 views 513396 134014060107456 Salvando projeto: 23AP06 - 13 conceitos
+INFO 2026-03-06 09:36:10,884 views 513396 134014060107456 Salvando projeto: 23AP08 - 13 conceitos
+INFO 2026-03-06 09:36:11,347 views 513396 134014060107456 Salvando projeto: 23AP09 - 13 conceitos
+INFO 2026-03-06 09:36:11,822 views 513396 134014060107456 Salvando projeto: P26A13 - 13 conceitos
+INFO 2026-03-06 09:36:12,270 views 513396 134014060107456 Processadas 500 linhas...
+INFO 2026-03-06 09:36:12,271 views 513396 134014060107456 Salvando projeto: 23AP11 - 13 conceitos
+INFO 2026-03-06 09:36:12,754 views 513396 134014060107456 Salvando projeto: P26A14 - 13 conceitos
+INFO 2026-03-06 09:36:13,228 views 513396 134014060107456 Salvando projeto: 23AP13 - 13 conceitos
+INFO 2026-03-06 09:36:13,707 views 513396 134014060107456 Salvando projeto: 23AP14 - 13 conceitos
+INFO 2026-03-06 09:36:14,174 views 513396 134014060107456 Salvando projeto: 23AP17 - 13 conceitos
+INFO 2026-03-06 09:36:14,645 views 513396 134014060107456 Salvando projeto: 25AP18 - 13 conceitos
+INFO 2026-03-06 09:36:15,110 views 513396 134014060107456 Salvando projeto: 23AP19 - 13 conceitos
+INFO 2026-03-06 09:36:15,594 views 513396 134014060107456 Salvando projeto: 23AP28 - 13 conceitos
+INFO 2026-03-06 09:36:16,066 views 513396 134014060107456 Processadas 600 linhas...
+INFO 2026-03-06 09:36:16,071 views 513396 134014060107456 Salvando projeto: 23AP29 - 13 conceitos
+INFO 2026-03-06 09:36:16,563 views 513396 134014060107456 Salvando projeto: 23AP30 - 13 conceitos
+INFO 2026-03-06 09:36:17,022 views 513396 134014060107456 Salvando projeto: 23AP32 - 13 conceitos
+INFO 2026-03-06 09:36:17,568 views 513396 134014060107456 Salvando projeto: 23AP33 - 13 conceitos
+INFO 2026-03-06 09:36:18,212 views 513396 134014060107456 Salvando projeto: 23AP34 - 13 conceitos
+INFO 2026-03-06 09:36:18,696 views 513396 134014060107456 Salvando projeto: 23AP35 - 13 conceitos
+INFO 2026-03-06 09:36:19,179 views 513396 134014060107456 Salvando projeto: 23AP36 - 13 conceitos
+INFO 2026-03-06 09:36:19,655 views 513396 134014060107456 Processadas 700 linhas...
+INFO 2026-03-06 09:36:19,656 views 513396 134014060107456 Salvando projeto: 23AP37 - 13 conceitos
+INFO 2026-03-06 09:36:20,143 views 513396 134014060107456 Salvando projeto: 23AP38 - 13 conceitos
+INFO 2026-03-06 09:36:20,625 views 513396 134014060107456 Salvando projeto: 23AP39 - 13 conceitos
+INFO 2026-03-06 09:36:21,101 views 513396 134014060107456 Salvando projeto: 23CEDX - 13 conceitos
+INFO 2026-03-06 09:36:21,592 views 513396 134014060107456 Salvando projeto: 24AP01 - 13 conceitos
+INFO 2026-03-06 09:36:22,066 views 513396 134014060107456 Salvando projeto: 24AP02 - 13 conceitos
+INFO 2026-03-06 09:36:22,575 views 513396 134014060107456 Salvando projeto: 24AP03 - 13 conceitos
+INFO 2026-03-06 09:36:23,053 views 513396 134014060107456 Salvando projeto: 24AP04 - 13 conceitos
+INFO 2026-03-06 09:36:23,584 views 513396 134014060107456 Processadas 800 linhas...
+INFO 2026-03-06 09:36:23,588 views 513396 134014060107456 Salvando projeto: 24AP05 - 13 conceitos
+INFO 2026-03-06 09:36:24,253 views 513396 134014060107456 Salvando projeto: 24AP06 - 13 conceitos
+INFO 2026-03-06 09:36:24,745 views 513396 134014060107456 Salvando projeto: 24AP07 - 13 conceitos
+INFO 2026-03-06 09:36:25,225 views 513396 134014060107456 Salvando projeto: 24AP10 - 13 conceitos
+INFO 2026-03-06 09:36:25,687 views 513396 134014060107456 Salvando projeto: 24AP11 - 13 conceitos
+INFO 2026-03-06 09:36:26,170 views 513396 134014060107456 Salvando projeto: 24AP14 - 13 conceitos
+INFO 2026-03-06 09:36:26,626 views 513396 134014060107456 Salvando projeto: 24AP15 - 13 conceitos
+INFO 2026-03-06 09:36:27,131 views 513396 134014060107456 Salvando projeto: 24AP16 - 13 conceitos
+INFO 2026-03-06 09:36:27,599 views 513396 134014060107456 Processadas 900 linhas...
+INFO 2026-03-06 09:36:27,601 views 513396 134014060107456 Salvando projeto: 24AP18 - 13 conceitos
+INFO 2026-03-06 09:36:28,094 views 513396 134014060107456 Salvando projeto: 24AP19 - 13 conceitos
+INFO 2026-03-06 09:36:28,576 views 513396 134014060107456 Salvando projeto: 24AP20 - 13 conceitos
+INFO 2026-03-06 09:36:29,076 views 513396 134014060107456 Salvando projeto: 24AP21 - 13 conceitos
+INFO 2026-03-06 09:36:29,553 views 513396 134014060107456 Salvando projeto: 24AP22 - 13 conceitos
+INFO 2026-03-06 09:36:30,024 views 513396 134014060107456 Salvando projeto: 24AP23 - 13 conceitos
+INFO 2026-03-06 09:36:30,516 views 513396 134014060107456 Salvando projeto: 24AP24 - 13 conceitos
+INFO 2026-03-06 09:36:30,979 views 513396 134014060107456 Processadas 1000 linhas...
+INFO 2026-03-06 09:36:30,979 views 513396 134014060107456 Salvando projeto: 24AP25 - 13 conceitos
+INFO 2026-03-06 09:36:31,475 views 513396 134014060107456 Salvando projeto: 24AP26 - 13 conceitos
+INFO 2026-03-06 09:36:31,967 views 513396 134014060107456 Salvando projeto: 24AP27 - 13 conceitos
+INFO 2026-03-06 09:36:32,447 views 513396 134014060107456 Salvando projeto: 24AP28 - 13 conceitos
+INFO 2026-03-06 09:36:32,946 views 513396 134014060107456 Salvando projeto: 24AP30 - 13 conceitos
+INFO 2026-03-06 09:36:33,443 views 513396 134014060107456 Salvando projeto: 24AP31 - 13 conceitos
+INFO 2026-03-06 09:36:33,975 views 513396 134014060107456 Salvando projeto: 24AP32 - 13 conceitos
+INFO 2026-03-06 09:36:34,479 views 513396 134014060107456 Salvando projeto: 24AP33 - 13 conceitos
+INFO 2026-03-06 09:36:35,051 views 513396 134014060107456 Processadas 1100 linhas...
+INFO 2026-03-06 09:36:35,053 views 513396 134014060107456 Salvando projeto: 24AP34 - 13 conceitos
+INFO 2026-03-06 09:36:35,514 views 513396 134014060107456 Salvando projeto: 24AP35 - 13 conceitos
+INFO 2026-03-06 09:36:35,986 views 513396 134014060107456 Salvando projeto: 24AP36 - 13 conceitos
+INFO 2026-03-06 09:36:36,489 views 513396 134014060107456 Salvando projeto: 25AP04 - 13 conceitos
+INFO 2026-03-06 09:36:36,967 views 513396 134014060107456 Salvando projeto: 25AP01 - 13 conceitos
+INFO 2026-03-06 09:36:37,451 views 513396 134014060107456 Salvando projeto: 5AP001 - 13 conceitos
+INFO 2026-03-06 09:36:37,934 views 513396 134014060107456 Salvando projeto: 25AP11 - 13 conceitos
+INFO 2026-03-06 09:36:38,436 views 513396 134014060107456 Salvando projeto: 5AP019 - 13 conceitos
+INFO 2026-03-06 09:36:39,025 views 513396 134014060107456 Processadas 1200 linhas...
+INFO 2026-03-06 09:36:39,027 views 513396 134014060107456 Salvando projeto: 25AP05 - 13 conceitos
+INFO 2026-03-06 09:36:39,509 views 513396 134014060107456 Salvando projeto: 5AP082 - 13 conceitos
+INFO 2026-03-06 09:36:39,971 views 513396 134014060107456 Salvando projeto: 25AP09 - 13 conceitos
+INFO 2026-03-06 09:36:40,446 views 513396 134014060107456 Salvando projeto: 25AP07 - 13 conceitos
+INFO 2026-03-06 09:36:40,926 views 513396 134014060107456 Salvando projeto: 25AP10 - 13 conceitos
+INFO 2026-03-06 09:36:41,405 views 513396 134014060107456 Salvando projeto: P26S10 - 13 conceitos
+INFO 2026-03-06 09:36:41,889 views 513396 134014060107456 Salvando projeto: 25AP23 - 13 conceitos
+INFO 2026-03-06 09:36:42,350 views 513396 134014060107456 Processadas 1300 linhas...
+INFO 2026-03-06 09:36:42,350 views 513396 134014060107456 Salvando projeto: 8AP006 - 13 conceitos
+INFO 2026-03-06 09:36:42,845 views 513396 134014060107456 Salvando projeto: 25AP35 - 13 conceitos
+INFO 2026-03-06 09:36:43,307 views 513396 134014060107456 Salvando projeto: 25AP19 - 13 conceitos
+INFO 2026-03-06 09:36:43,790 views 513396 134014060107456 Salvando projeto: 25AP20 - 13 conceitos
+INFO 2026-03-06 09:36:44,314 views 513396 134014060107456 Salvando projeto: 8AP016 - 13 conceitos
+INFO 2026-03-06 09:36:44,806 views 513396 134014060107456 Salvando projeto: 25AP21 - 13 conceitos
+INFO 2026-03-06 09:36:45,306 views 513396 134014060107456 Salvando projeto: 8AP019 - 13 conceitos
+INFO 2026-03-06 09:36:45,787 views 513396 134014060107456 Salvando projeto: 8ASIND - 13 conceitos
+INFO 2026-03-06 09:36:46,268 views 513396 134014060107456 Processadas 1400 linhas...
+INFO 2026-03-06 09:36:46,269 views 513396 134014060107456 Salvando projeto: 25AP22 - 13 conceitos
+INFO 2026-03-06 09:36:46,762 views 513396 134014060107456 Salvando projeto: EYPAPP - 13 conceitos
+INFO 2026-03-06 09:36:47,240 views 513396 134014060107456 Salvando projeto: 26AP01 - 13 conceitos
+INFO 2026-03-06 09:36:47,711 views 513396 134014060107456 Salvando projeto: 26AP02 - 13 conceitos
+INFO 2026-03-06 09:36:48,208 views 513396 134014060107456 Salvando projeto: 26AP03 - 13 conceitos
+INFO 2026-03-06 09:36:48,664 views 513396 134014060107456 Salvando projeto: 26AP04 - 13 conceitos
+INFO 2026-03-06 09:36:49,168 views 513396 134014060107456 Salvando projeto: 26AP05 - 13 conceitos
+INFO 2026-03-06 09:36:49,650 views 513396 134014060107456 Processadas 1500 linhas...
+INFO 2026-03-06 09:36:49,672 views 513396 134014060107456 Processadas 1600 linhas...
+INFO 2026-03-06 09:36:49,674 views 513396 134014060107456 Salvando projeto: P26S11 - 13 conceitos
+INFO 2026-03-06 09:36:50,200 views 513396 134014060107456 Processadas 1700 linhas...
+INFO 2026-03-06 09:36:50,201 views 513396 134014060107456 Salvando projeto: 25AP31 - 13 conceitos
+INFO 2026-03-06 09:36:50,717 views 513396 134014060107456 Salvando projeto: 25AP17 - 13 conceitos
+INFO 2026-03-06 09:36:51,201 views 513396 134014060107456 Processadas 1800 linhas...
+INFO 2026-03-06 09:36:51,205 views 513396 134014060107456 Salvando projeto: 25AP33 - 13 conceitos
+INFO 2026-03-06 09:36:51,717 views 513396 134014060107456 Salvando projeto: 21AP00 - 13 conceitos
+INFO 2026-03-06 09:36:52,191 views 513396 134014060107456 Salvando projeto: 22AP14 - 13 conceitos
+INFO 2026-03-06 09:36:52,763 views 513396 134014060107456 Salvando projeto: 22AP17 - 13 conceitos
+INFO 2026-03-06 09:36:53,299 views 513396 134014060107456 Salvando projeto: 22AP19 - 13 conceitos
+INFO 2026-03-06 09:36:53,869 views 513396 134014060107456 Salvando projeto: 22AP27 - 13 conceitos
+WARNING 2026-03-06 09:36:54,405 views 513396 134014060107456 Projeto EYPAPP já foi processado neste arquivo (linha 1934). Pulando próximas 12 linhas para evitar duplicatas.
+INFO 2026-03-06 09:36:54,405 views 513396 134014060107456 Processadas 1900 linhas...
+INFO 2026-03-06 09:36:54,408 views 513396 134014060107456 Salvando projeto: 24AP17 - 13 conceitos
+INFO 2026-03-06 09:36:54,893 views 513396 134014060107456 Salvando projeto: 25AP06 - 13 conceitos
+INFO 2026-03-06 09:36:55,390 views 513396 134014060107456 Salvando projeto: 21AP09 - 13 conceitos
+INFO 2026-03-06 09:36:55,860 views 513396 134014060107456 Salvando projeto: 22AP13 - 13 conceitos
+INFO 2026-03-06 09:36:56,428 views 513396 134014060107456 Salvando projeto: 25AP25 - 13 conceitos
+INFO 2026-03-06 09:36:56,953 views 513396 134014060107456 Salvando projeto: 23AP04 - 13 conceitos
+INFO 2026-03-06 09:36:57,454 views 513396 134014060107456 Processadas 2000 linhas...
+INFO 2026-03-06 09:36:57,455 views 513396 134014060107456 Salvando projeto: 23AP05 - 13 conceitos
+INFO 2026-03-06 09:36:57,929 views 513396 134014060107456 Salvando projeto: 23AP07 - 13 conceitos
+INFO 2026-03-06 09:36:58,425 views 513396 134014060107456 Salvando projeto: 25AP29 - 13 conceitos
+INFO 2026-03-06 09:36:58,900 views 513396 134014060107456 Salvando projeto: 23AP31 - 13 conceitos
+INFO 2026-03-06 09:36:59,382 views 513396 134014060107456 Salvando projeto: 24AP08 - 13 conceitos
+INFO 2026-03-06 09:36:59,879 views 513396 134014060107456 Salvando projeto: 24AP09 - 13 conceitos
+INFO 2026-03-06 09:37:00,362 views 513396 134014060107456 Salvando projeto: 24AP12 - 13 conceitos
+INFO 2026-03-06 09:37:00,862 views 513396 134014060107456 Salvando projeto: 24AP13 - 13 conceitos
+INFO 2026-03-06 09:37:01,341 views 513396 134014060107456 Processadas 2100 linhas...
+INFO 2026-03-06 09:37:01,343 views 513396 134014060107456 Salvando projeto: 25S001 - 13 conceitos
+INFO 2026-03-06 09:37:01,847 views 513396 134014060107456 Processadas 2200 linhas...
+INFO 2026-03-06 09:37:01,857 views 513396 134014060107456 Salvando projeto: 25AP26 - 13 conceitos
+INFO 2026-03-06 09:37:02,334 views 513396 134014060107456 Salvando projeto: 24AP29 - 13 conceitos
+INFO 2026-03-06 09:37:02,828 views 513396 134014060107456 Salvando projeto: 21AP03 - 13 conceitos
+INFO 2026-03-06 09:37:03,426 views 513396 134014060107456 Processadas 2300 linhas...
+INFO 2026-03-06 09:37:03,426 views 513396 134014060107456 Salvando projeto: 21AP14 - 13 conceitos
+INFO 2026-03-06 09:37:03,918 views 513396 134014060107456 Salvando projeto: 22AP25 - 13 conceitos
+INFO 2026-03-06 09:37:04,437 views 513396 134014060107456 Salvando projeto: 23AP10 - 13 conceitos
+INFO 2026-03-06 09:37:04,910 views 513396 134014060107456 Salvando projeto: 23AP12 - 13 conceitos
+INFO 2026-03-06 09:37:05,419 views 513396 134014060107456 Salvando projeto: 23AP18 - 13 conceitos
+INFO 2026-03-06 09:37:05,894 views 513396 134014060107456 Salvando projeto: 24APAP - 13 conceitos
+INFO 2026-03-06 09:37:06,394 views 513396 134014060107456 Salvando projeto: 5AP015 - 13 conceitos
+INFO 2026-03-06 09:37:06,872 views 513396 134014060107456 Processadas 2400 linhas...
+INFO 2026-03-06 09:37:06,873 views 513396 134014060107456 Salvando projeto: 5AP035 - 13 conceitos
+INFO 2026-03-06 09:37:07,368 views 513396 134014060107456 Salvando projeto: 6AP001 - 13 conceitos
+INFO 2026-03-06 09:37:07,841 views 513396 134014060107456 Salvando projeto: 7AP001 - 13 conceitos
+INFO 2026-03-06 09:37:08,326 views 513396 134014060107456 Salvando projeto: 7AP002 - 13 conceitos
+INFO 2026-03-06 09:37:08,834 views 513396 134014060107456 Salvando projeto: 8AP003 - 13 conceitos
+INFO 2026-03-06 09:37:09,343 views 513396 134014060107456 Salvando projeto: 8AP008 - 13 conceitos
+INFO 2026-03-06 09:37:09,857 views 513396 134014060107456 Processadas 2500 linhas...
+INFO 2026-03-06 09:37:09,859 views 513396 134014060107456 Salvando projeto: 8AP012 - 13 conceitos
+INFO 2026-03-06 09:37:10,334 views 513396 134014060107456 Salvando projeto: 8AP017 - 13 conceitos
+INFO 2026-03-06 09:37:10,859 views 513396 134014060107456 Salvando projeto: AP0004 - 13 conceitos
+INFO 2026-03-06 09:37:11,552 views 513396 134014060107456 Salvando projeto: 25AP27 - 13 conceitos
+INFO 2026-03-06 09:37:12,114 views 513396 134014060107456 Processadas 2600 linhas...
+INFO 2026-03-06 09:37:12,123 views 513396 134014060107456 Salvando projeto: 23AP01 - 13 conceitos
+INFO 2026-03-06 09:37:12,654 views 513396 134014060107456 Salvando projeto: 25AP28 - 13 conceitos
+INFO 2026-03-06 09:37:13,157 views 513396 134014060107456 Salvando projeto: 25AP24 - 13 conceitos
+INFO 2026-03-06 09:37:13,689 views 513396 134014060107456 Salvando projeto: 25AP30 - 13 conceitos
+INFO 2026-03-06 09:37:14,171 views 513396 134014060107456 Salvando projeto: P26S01 - 13 conceitos
+INFO 2026-03-06 09:37:14,680 views 513396 134014060107456 Salvando projeto: P26S02 - 13 conceitos
+INFO 2026-03-06 09:37:15,190 views 513396 134014060107456 Processadas 2700 linhas...
+INFO 2026-03-06 09:37:15,192 views 513396 134014060107456 Salvando projeto: P26S03 - 13 conceitos
+INFO 2026-03-06 09:37:15,764 views 513396 134014060107456 Salvando projeto: P26S04 - 13 conceitos
+INFO 2026-03-06 09:37:16,289 views 513396 134014060107456 Salvando projeto: P26S05 - 13 conceitos
+INFO 2026-03-06 09:37:16,855 views 513396 134014060107456 Salvando projeto: P26S06 - 13 conceitos
+INFO 2026-03-06 09:37:17,375 views 513396 134014060107456 Salvando projeto: P26S07 - 13 conceitos
+INFO 2026-03-06 09:37:17,913 views 513396 134014060107456 Salvando projeto: P26S08 - 13 conceitos
+INFO 2026-03-06 09:37:18,446 views 513396 134014060107456 Salvando projeto: P26A01 - 13 conceitos
+INFO 2026-03-06 09:37:19,003 views 513396 134014060107456 Salvando projeto: P26A02 - 13 conceitos
+INFO 2026-03-06 09:37:19,537 views 513396 134014060107456 Processadas 2800 linhas...
+INFO 2026-03-06 09:37:19,540 views 513396 134014060107456 Salvando projeto: P26A03 - 13 conceitos
+INFO 2026-03-06 09:37:20,134 views 513396 134014060107456 Salvando projeto: P26A04 - 13 conceitos
+INFO 2026-03-06 09:37:20,647 views 513396 134014060107456 Salvando projeto: P26A05 - 13 conceitos
+INFO 2026-03-06 09:37:21,122 views 513396 134014060107456 Salvando projeto: P26A06 - 13 conceitos
+INFO 2026-03-06 09:37:21,662 views 513396 134014060107456 Salvando projeto: P26S09 - 13 conceitos
+INFO 2026-03-06 09:37:22,205 views 513396 134014060107456 Salvando projeto: P26A08 - 13 conceitos
+INFO 2026-03-06 09:37:22,799 views 513396 134014060107456 Salvando projeto: P26A09 - 13 conceitos
+INFO 2026-03-06 09:37:23,276 views 513396 134014060107456 Processadas 2900 linhas...
+INFO 2026-03-06 09:37:23,277 views 513396 134014060107456 Salvando projeto: P26A10 - 13 conceitos
+INFO 2026-03-06 09:37:23,864 views 513396 134014060107456 Salvando projeto: P26A11 - 13 conceitos
+INFO 2026-03-06 09:37:24,410 views 513396 134014060107456 Salvando projeto: 25AP32 - 13 conceitos
+INFO 2026-03-06 09:37:24,895 views 513396 134014060107456 Salvando projeto: 25AP34 - 13 conceitos
+INFO 2026-03-06 09:37:25,500 views 513396 134014060107456 Salvando projeto: P26A12 - 13 conceitos
+INFO 2026-03-06 09:37:26,011 views 513396 134014060107456 Salvando projeto: 25AP36 - 13 conceitos
+INFO 2026-03-06 09:37:26,576 views 513396 134014060107456 Salvando projeto: 25AP37 - 13 conceitos
+INFO 2026-03-06 09:37:27,101 views 513396 134014060107456 Processadas 3000 linhas...
+INFO 2026-03-06 09:37:27,102 views 513396 134014060107456 Salvando projeto: 25AP39 - 13 conceitos
+INFO 2026-03-06 09:37:27,620 views 513396 134014060107456 Salvando projeto: 25AP40 - 13 conceitos
+INFO 2026-03-06 09:37:28,110 views 513396 134014060107456 Salvando projeto: 8AP004 - 13 conceitos
+INFO 2026-03-06 09:37:28,619 views 513396 134014060107456 Salvando projeto: AP0073 - 13 conceitos
+INFO 2026-03-06 09:37:29,119 views 513396 134014060107456 Salvando projeto: IP0162 - 13 conceitos
+INFO 2026-03-06 09:37:29,646 views 513396 134014060107456 Processadas 3100 linhas...
+INFO 2026-03-06 09:37:29,647 views 513396 134014060107456 Salvando projeto: IP0261 - 13 conceitos
+INFO 2026-03-06 09:37:30,180 views 513396 134014060107456 Salvando projeto: AJUAAP - 13 conceitos
+INFO 2026-03-06 09:37:30,673 views 513396 134014060107456 Processadas 3200 linhas...
+INFO 2026-03-06 09:37:30,687 views 513396 134014060107456 Salvando projeto: AJSNBR - 13 conceitos
+INFO 2026-03-06 09:37:31,246 views 513396 134014060107456 Processadas 3300 linhas...
+INFO 2026-03-06 09:37:31,264 views 513396 134014060107456 Processadas 3400 linhas...
+INFO 2026-03-06 09:37:31,279 views 513396 134014060107456 Processadas 3500 linhas...
+INFO 2026-03-06 09:37:31,298 views 513396 134014060107456 Processadas 3600 linhas...
+INFO 2026-03-06 09:37:31,319 views 513396 134014060107456 Processadas 3700 linhas...
+INFO 2026-03-06 09:37:31,339 views 513396 134014060107456 Processadas 3800 linhas...
+INFO 2026-03-06 09:37:31,356 views 513396 134014060107456 Processadas 3900 linhas...
+INFO 2026-03-06 09:37:31,373 views 513396 134014060107456 Processadas 4000 linhas...
+INFO 2026-03-06 09:37:31,389 views 513396 134014060107456 Processadas 4100 linhas...
+INFO 2026-03-06 09:37:31,407 views 513396 134014060107456 Processadas 4200 linhas...
+INFO 2026-03-06 09:37:31,429 views 513396 134014060107456 Processadas 4300 linhas...
+INFO 2026-03-06 09:37:31,448 views 513396 134014060107456 Processadas 4400 linhas...
+INFO 2026-03-06 09:37:31,465 views 513396 134014060107456 Processadas 4500 linhas...
+INFO 2026-03-06 09:37:31,482 views 513396 134014060107456 Processadas 4600 linhas...
+INFO 2026-03-06 09:37:31,499 views 513396 134014060107456 Processadas 4700 linhas...
+INFO 2026-03-06 09:37:31,516 views 513396 134014060107456 Processadas 4800 linhas...
+INFO 2026-03-06 09:37:31,532 views 513396 134014060107456 Processadas 4900 linhas...
+INFO 2026-03-06 09:37:31,549 views 513396 134014060107456 Processadas 5000 linhas...
+INFO 2026-03-06 09:37:31,566 views 513396 134014060107456 Processadas 5100 linhas...
+INFO 2026-03-06 09:37:31,584 views 513396 134014060107456 Processadas 5200 linhas...
+INFO 2026-03-06 09:37:31,604 views 513396 134014060107456 Processadas 5300 linhas...
+INFO 2026-03-06 09:37:31,619 views 513396 134014060107456 Processadas 5400 linhas...
+INFO 2026-03-06 09:37:31,637 views 513396 134014060107456 Processadas 5500 linhas...
+INFO 2026-03-06 09:37:31,656 views 513396 134014060107456 Processadas 5600 linhas...
+INFO 2026-03-06 09:37:31,674 views 513396 134014060107456 Processadas 5700 linhas...
+INFO 2026-03-06 09:37:31,692 views 513396 134014060107456 Processadas 5800 linhas...
+INFO 2026-03-06 09:37:31,709 views 513396 134014060107456 Processadas 5900 linhas...
+INFO 2026-03-06 09:37:31,727 views 513396 134014060107456 Processadas 6000 linhas...
+INFO 2026-03-06 09:37:31,744 views 513396 134014060107456 Processadas 6100 linhas...
+INFO 2026-03-06 09:37:31,761 views 513396 134014060107456 Processadas 6200 linhas...
+INFO 2026-03-06 09:37:31,779 views 513396 134014060107456 Processadas 6300 linhas...
+INFO 2026-03-06 09:37:31,795 views 513396 134014060107456 Processadas 6400 linhas...
+INFO 2026-03-06 09:37:31,810 views 513396 134014060107456 Processadas 6500 linhas...
+INFO 2026-03-06 09:37:31,829 views 513396 134014060107456 Processadas 6600 linhas...
+INFO 2026-03-06 09:37:31,847 views 513396 134014060107456 Processadas 6700 linhas...
+INFO 2026-03-06 09:37:31,866 views 513396 134014060107456 Processadas 6800 linhas...
+INFO 2026-03-06 09:37:31,883 views 513396 134014060107456 Processadas 6900 linhas...
+INFO 2026-03-06 09:37:31,901 views 513396 134014060107456 Processadas 7000 linhas...
+INFO 2026-03-06 09:37:31,920 views 513396 134014060107456 Processadas 7100 linhas...
+INFO 2026-03-06 09:37:31,939 views 513396 134014060107456 Processadas 7200 linhas...
+INFO 2026-03-06 09:37:31,959 views 513396 134014060107456 Processadas 7300 linhas...
+INFO 2026-03-06 09:37:31,969 views 513396 134014060107456 Salvando último projeto: AJSABR - 13 conceitos
+INFO 2026-03-06 09:37:32,512 views 513396 134014060107456 === PROCESSAMENTO XLS CONCLUÍDO COM SUCESSO ===
+INFO 2026-03-06 09:37:32,512 views 513396 134014060107456 Total de linhas processadas: 7345
+INFO 2026-03-06 09:37:32,512 views 513396 134014060107456 Projetos processados: 195
+INFO 2026-03-06 09:37:32,512 views 513396 134014060107456 Projetos únicos encontrados: 194
+INFO 2026-03-06 09:37:32,512 views 513396 134014060107456 Conceitos mensais criados: 30420
+WARNING 2026-03-06 09:37:32,512 views 513396 134014060107456 Projetos com duplicatas pulados: 1
+INFO 2026-03-06 09:37:32,512 views 513396 134014060107456 Arquivo processado com sucesso! 195 projetos e 30420 registros de conceitos processados.
+INFO 2026-03-06 09:37:32,518 views 513396 134014060107456 Arquivo temporário removido com sucesso
+INFO 2026-03-06 09:37:32,518 views 513396 134014060107456 Processamento concluído com sucesso: Arquivo processado com sucesso! 195 projetos e 30420 registros de conceitos processados.
+INFO 2026-03-06 09:37:32,519 log 513396 134014060107456 "POST /upload/ HTTP/1.1" 200 120
+INFO 2026-03-06 09:37:32,658 log 513396 134014018873024 "GET /dashboard/ HTTP/1.1" 200 29527
+INFO 2026-03-06 09:39:14,052 log 513396 134014018873024 "GET / HTTP/1.1" 200 13270
+INFO 2026-03-06 09:39:14,097 log 513396 134014018873024 "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-06 09:39:14,103 log 513396 134014018873024 "GET /static/js/main.js HTTP/1.1" 304 0
+INFO 2026-03-06 09:39:16,728 log 513396 134014018873024 "GET / HTTP/1.1" 200 13270
+INFO 2026-03-06 09:39:27,566 views 513396 134014018873024 === INÍCIO DO PROCESSAMENTO DE UPLOAD ===
+INFO 2026-03-06 09:39:27,609 views 513396 134014018873024 Arquivo recebido: Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (tamanho: 12295366 bytes, mês fechamento: 2)
+INFO 2026-03-06 09:39:27,609 views 513396 134014018873024 Tipo de arquivo validado com sucesso
+INFO 2026-03-06 09:39:27,609 views 513396 134014018873024 Salvando arquivo temporariamente em: /opt/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx
+INFO 2026-03-06 09:39:27,622 views 513396 134014018873024 Arquivo salvo temporariamente. Tamanho final: 12295366 bytes
+INFO 2026-03-06 09:39:27,622 views 513396 134014018873024 Iniciando processamento do arquivo XLS...
+INFO 2026-03-06 09:39:27,622 views 513396 134014018873024 === INÍCIO DO PROCESSAMENTO XLS: /opt/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (mês fechamento: 2) ===
+INFO 2026-03-06 09:39:27,622 views 513396 134014018873024 Lendo aba FC do arquivo Excel...
+INFO 2026-03-06 09:39:37,935 views 513396 134014018873024 Arquivo lido com sucesso. Dimensões: 7380 linhas x 136 colunas
+INFO 2026-03-06 09:39:37,935 views 513396 134014018873024 Mapeamento de conceitos configurado: 21 conceitos
+INFO 2026-03-06 09:39:37,935 views 513396 134014018873024 Limpando dados anteriores...
+INFO 2026-03-06 09:39:38,060 views 513396 134014018873024 Dados anteriores removidos: 1 processamentos, 195 projetos, 30420 conceitos
+INFO 2026-03-06 09:39:38,060 views 513396 134014018873024 Criando registro de processamento...
+INFO 2026-03-06 09:39:38,063 views 513396 134014018873024 Registro de processamento criado: ID 10, arquivo: temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx
+INFO 2026-03-06 09:39:38,064 views 513396 134014018873024 Iniciando processamento das linhas do arquivo (a partir da linha 35)...
+INFO 2026-03-06 09:39:38,086 views 513396 134014018873024 Salvando projeto: 19AP03 - 13 conceitos
+INFO 2026-03-06 09:39:38,669 views 513396 134014018873024 Salvando projeto: 19AP04 - 13 conceitos
+INFO 2026-03-06 09:39:39,266 views 513396 134014018873024 Salvando projeto: 25AP38 - 13 conceitos
+INFO 2026-03-06 09:39:39,855 views 513396 134014018873024 Salvando projeto: 20AP04 - 13 conceitos
+INFO 2026-03-06 09:39:40,461 views 513396 134014018873024 Salvando projeto: 25AP02 - 13 conceitos
+INFO 2026-03-06 09:39:41,059 views 513396 134014018873024 Salvando projeto: 20AP09 - 13 conceitos
+INFO 2026-03-06 09:39:41,682 views 513396 134014018873024 Salvando projeto: 20AP10 - 13 conceitos
+INFO 2026-03-06 09:39:43,409 views 513396 134014018873024 Processadas 100 linhas...
+INFO 2026-03-06 09:39:43,411 views 513396 134014018873024 Salvando projeto: 20AP14 - 13 conceitos
+INFO 2026-03-06 09:39:44,124 views 513396 134014018873024 Salvando projeto: 25APBR - 13 conceitos
+INFO 2026-03-06 09:39:44,782 views 513396 134014018873024 Salvando projeto: 21AP12 - 13 conceitos
+INFO 2026-03-06 09:39:45,412 views 513396 134014018873024 Salvando projeto: 21AP13 - 13 conceitos
+INFO 2026-03-06 09:39:46,036 views 513396 134014018873024 Salvando projeto: 25APMB - 13 conceitos
+INFO 2026-03-06 09:39:46,519 views 513396 134014018873024 Salvando projeto: 21AP15 - 13 conceitos
+INFO 2026-03-06 09:39:47,093 views 513396 134014018873024 Salvando projeto: 21AP16 - 13 conceitos
+INFO 2026-03-06 09:39:47,580 views 513396 134014018873024 Salvando projeto: 21AP17 - 13 conceitos
+INFO 2026-03-06 09:39:48,132 views 513396 134014018873024 Processadas 200 linhas...
+INFO 2026-03-06 09:39:48,134 views 513396 134014018873024 Salvando projeto: 22AP02 - 13 conceitos
+INFO 2026-03-06 09:39:48,620 views 513396 134014018873024 Salvando projeto: 22AP03 - 13 conceitos
+INFO 2026-03-06 09:39:49,137 views 513396 134014018873024 Salvando projeto: 22AP04 - 13 conceitos
+INFO 2026-03-06 09:39:49,695 views 513396 134014018873024 Salvando projeto: 22AP05 - 13 conceitos
+INFO 2026-03-06 09:39:50,174 views 513396 134014018873024 Salvando projeto: 22AP07 - 13 conceitos
+INFO 2026-03-06 09:39:50,631 views 513396 134014018873024 Salvando projeto: 22AP08 - 13 conceitos
+INFO 2026-03-06 09:39:51,157 views 513396 134014018873024 Salvando projeto: 22AP09 - 13 conceitos
+INFO 2026-03-06 09:39:51,701 views 513396 134014018873024 Processadas 300 linhas...
+INFO 2026-03-06 09:39:51,701 views 513396 134014018873024 Salvando projeto: 22AP10 - 13 conceitos
+INFO 2026-03-06 09:39:52,271 views 513396 134014018873024 Salvando projeto: 22AP11 - 13 conceitos
+INFO 2026-03-06 09:39:53,135 views 513396 134014018873024 Salvando projeto: 22AP15 - 13 conceitos
+INFO 2026-03-06 09:39:53,739 views 513396 134014018873024 Salvando projeto: 22AP16 - 13 conceitos
+INFO 2026-03-06 09:39:54,326 views 513396 134014018873024 Salvando projeto: 22AP18 - 13 conceitos
+INFO 2026-03-06 09:39:54,776 views 513396 134014018873024 Salvando projeto: 22AP20 - 13 conceitos
+INFO 2026-03-06 09:39:55,251 views 513396 134014018873024 Salvando projeto: 22AP21 - 13 conceitos
+INFO 2026-03-06 09:39:55,685 views 513396 134014018873024 Salvando projeto: 22AP22 - 13 conceitos
+INFO 2026-03-06 09:39:56,152 views 513396 134014018873024 Processadas 400 linhas...
+INFO 2026-03-06 09:39:56,153 views 513396 134014018873024 Salvando projeto: 22AP24 - 13 conceitos
+INFO 2026-03-06 09:39:56,592 views 513396 134014018873024 Salvando projeto: 25AP03 - 13 conceitos
+INFO 2026-03-06 09:39:57,058 views 513396 134014018873024 Salvando projeto: 22AP26 - 13 conceitos
+INFO 2026-03-06 09:39:57,503 views 513396 134014018873024 Salvando projeto: 23AP03 - 13 conceitos
+INFO 2026-03-06 09:39:57,961 views 513396 134014018873024 Salvando projeto: 23AP06 - 13 conceitos
+INFO 2026-03-06 09:39:58,438 views 513396 134014018873024 Salvando projeto: 23AP08 - 13 conceitos
+INFO 2026-03-06 09:39:58,933 views 513396 134014018873024 Salvando projeto: 23AP09 - 13 conceitos
+INFO 2026-03-06 09:39:59,408 views 513396 134014018873024 Salvando projeto: P26A13 - 13 conceitos
+INFO 2026-03-06 09:39:59,875 views 513396 134014018873024 Processadas 500 linhas...
+INFO 2026-03-06 09:39:59,879 views 513396 134014018873024 Salvando projeto: 23AP11 - 13 conceitos
+INFO 2026-03-06 09:40:00,378 views 513396 134014018873024 Salvando projeto: P26A14 - 13 conceitos
+INFO 2026-03-06 09:40:00,828 views 513396 134014018873024 Salvando projeto: 23AP13 - 13 conceitos
+INFO 2026-03-06 09:40:01,316 views 513396 134014018873024 Salvando projeto: 23AP14 - 13 conceitos
+INFO 2026-03-06 09:40:01,767 views 513396 134014018873024 Salvando projeto: 23AP17 - 13 conceitos
+INFO 2026-03-06 09:40:02,237 views 513396 134014018873024 Salvando projeto: 25AP18 - 13 conceitos
+INFO 2026-03-06 09:40:02,688 views 513396 134014018873024 Salvando projeto: 23AP19 - 13 conceitos
+INFO 2026-03-06 09:40:03,160 views 513396 134014018873024 Salvando projeto: 23AP28 - 13 conceitos
+INFO 2026-03-06 09:40:03,627 views 513396 134014018873024 Processadas 600 linhas...
+INFO 2026-03-06 09:40:03,630 views 513396 134014018873024 Salvando projeto: 23AP29 - 13 conceitos
+INFO 2026-03-06 09:40:04,195 views 513396 134014018873024 Salvando projeto: 23AP30 - 13 conceitos
+INFO 2026-03-06 09:40:04,666 views 513396 134014018873024 Salvando projeto: 23AP32 - 13 conceitos
+INFO 2026-03-06 09:40:05,224 views 513396 134014018873024 Salvando projeto: 23AP33 - 13 conceitos
+INFO 2026-03-06 09:40:05,798 views 513396 134014018873024 Salvando projeto: 23AP34 - 13 conceitos
+INFO 2026-03-06 09:40:06,302 views 513396 134014018873024 Salvando projeto: 23AP35 - 13 conceitos
+INFO 2026-03-06 09:40:06,802 views 513396 134014018873024 Salvando projeto: 23AP36 - 13 conceitos
+INFO 2026-03-06 09:40:07,284 views 513396 134014018873024 Processadas 700 linhas...
+INFO 2026-03-06 09:40:07,285 views 513396 134014018873024 Salvando projeto: 23AP37 - 13 conceitos
+INFO 2026-03-06 09:40:07,802 views 513396 134014018873024 Salvando projeto: 23AP38 - 13 conceitos
+INFO 2026-03-06 09:40:08,356 views 513396 134014018873024 Salvando projeto: 23AP39 - 13 conceitos
+INFO 2026-03-06 09:40:08,875 views 513396 134014018873024 Salvando projeto: 23CEDX - 13 conceitos
+INFO 2026-03-06 09:40:09,396 views 513396 134014018873024 Salvando projeto: 24AP01 - 13 conceitos
+INFO 2026-03-06 09:40:09,905 views 513396 134014018873024 Salvando projeto: 24AP02 - 13 conceitos
+INFO 2026-03-06 09:40:10,437 views 513396 134014018873024 Salvando projeto: 24AP03 - 13 conceitos
+INFO 2026-03-06 09:40:10,941 views 513396 134014018873024 Salvando projeto: 24AP04 - 13 conceitos
+INFO 2026-03-06 09:40:11,470 views 513396 134014018873024 Processadas 800 linhas...
+INFO 2026-03-06 09:40:11,472 views 513396 134014018873024 Salvando projeto: 24AP05 - 13 conceitos
+INFO 2026-03-06 09:40:12,013 views 513396 134014018873024 Salvando projeto: 24AP06 - 13 conceitos
+INFO 2026-03-06 09:40:12,570 views 513396 134014018873024 Salvando projeto: 24AP07 - 13 conceitos
+INFO 2026-03-06 09:40:13,092 views 513396 134014018873024 Salvando projeto: 24AP10 - 13 conceitos
+INFO 2026-03-06 09:40:13,576 views 513396 134014018873024 Salvando projeto: 24AP11 - 13 conceitos
+INFO 2026-03-06 09:40:14,106 views 513396 134014018873024 Salvando projeto: 24AP14 - 13 conceitos
+INFO 2026-03-06 09:40:14,598 views 513396 134014018873024 Salvando projeto: 24AP15 - 13 conceitos
+INFO 2026-03-06 09:40:15,094 views 513396 134014018873024 Salvando projeto: 24AP16 - 13 conceitos
+INFO 2026-03-06 09:40:15,597 views 513396 134014018873024 Processadas 900 linhas...
+INFO 2026-03-06 09:40:15,600 views 513396 134014018873024 Salvando projeto: 24AP18 - 13 conceitos
+INFO 2026-03-06 09:40:16,116 views 513396 134014018873024 Salvando projeto: 24AP19 - 13 conceitos
+INFO 2026-03-06 09:40:16,592 views 513396 134014018873024 Salvando projeto: 24AP20 - 13 conceitos
+INFO 2026-03-06 09:40:17,075 views 513396 134014018873024 Salvando projeto: 24AP21 - 13 conceitos
+INFO 2026-03-06 09:40:17,523 views 513396 134014018873024 Salvando projeto: 24AP22 - 13 conceitos
+INFO 2026-03-06 09:40:18,003 views 513396 134014018873024 Salvando projeto: 24AP23 - 13 conceitos
+INFO 2026-03-06 09:40:18,527 views 513396 134014018873024 Salvando projeto: 24AP24 - 13 conceitos
+INFO 2026-03-06 09:40:18,980 views 513396 134014018873024 Processadas 1000 linhas...
+INFO 2026-03-06 09:40:18,980 views 513396 134014018873024 Salvando projeto: 24AP25 - 13 conceitos
+INFO 2026-03-06 09:40:19,463 views 513396 134014018873024 Salvando projeto: 24AP26 - 13 conceitos
+INFO 2026-03-06 09:40:19,923 views 513396 134014018873024 Salvando projeto: 24AP27 - 13 conceitos
+INFO 2026-03-06 09:40:20,447 views 513396 134014018873024 Salvando projeto: 24AP28 - 13 conceitos
+INFO 2026-03-06 09:40:20,890 views 513396 134014018873024 Salvando projeto: 24AP30 - 13 conceitos
+INFO 2026-03-06 09:40:21,376 views 513396 134014018873024 Salvando projeto: 24AP31 - 13 conceitos
+INFO 2026-03-06 09:40:21,827 views 513396 134014018873024 Salvando projeto: 24AP32 - 13 conceitos
+INFO 2026-03-06 09:40:22,298 views 513396 134014018873024 Salvando projeto: 24AP33 - 13 conceitos
+INFO 2026-03-06 09:40:22,765 views 513396 134014018873024 Processadas 1100 linhas...
+INFO 2026-03-06 09:40:22,766 views 513396 134014018873024 Salvando projeto: 24AP34 - 13 conceitos
+INFO 2026-03-06 09:40:23,240 views 513396 134014018873024 Salvando projeto: 24AP35 - 13 conceitos
+INFO 2026-03-06 09:40:23,717 views 513396 134014018873024 Salvando projeto: 24AP36 - 13 conceitos
+INFO 2026-03-06 09:40:24,171 views 513396 134014018873024 Salvando projeto: 25AP04 - 13 conceitos
+INFO 2026-03-06 09:40:26,254 views 513396 134014018873024 Salvando projeto: 25AP01 - 13 conceitos
+INFO 2026-03-06 09:40:27,390 views 513396 134014018873024 Salvando projeto: 5AP001 - 13 conceitos
+INFO 2026-03-06 09:40:27,896 views 513396 134014018873024 Salvando projeto: 25AP11 - 13 conceitos
+INFO 2026-03-06 09:40:28,370 views 513396 134014018873024 Salvando projeto: 5AP019 - 13 conceitos
+INFO 2026-03-06 09:40:28,852 views 513396 134014018873024 Processadas 1200 linhas...
+INFO 2026-03-06 09:40:28,854 views 513396 134014018873024 Salvando projeto: 25AP05 - 13 conceitos
+INFO 2026-03-06 09:40:29,325 views 513396 134014018873024 Salvando projeto: 5AP082 - 13 conceitos
+INFO 2026-03-06 09:40:29,794 views 513396 134014018873024 Salvando projeto: 25AP09 - 13 conceitos
+INFO 2026-03-06 09:40:30,252 views 513396 134014018873024 Salvando projeto: 25AP07 - 13 conceitos
+INFO 2026-03-06 09:40:30,732 views 513396 134014018873024 Salvando projeto: 25AP10 - 13 conceitos
+INFO 2026-03-06 09:40:31,195 views 513396 134014018873024 Salvando projeto: P26S10 - 13 conceitos
+INFO 2026-03-06 09:40:31,631 views 513396 134014018873024 Salvando projeto: 25AP23 - 13 conceitos
+INFO 2026-03-06 09:40:32,115 views 513396 134014018873024 Processadas 1300 linhas...
+INFO 2026-03-06 09:40:32,115 views 513396 134014018873024 Salvando projeto: 8AP006 - 13 conceitos
+INFO 2026-03-06 09:40:32,567 views 513396 134014018873024 Salvando projeto: 25AP35 - 13 conceitos
+INFO 2026-03-06 09:40:33,616 views 513396 134014018873024 Salvando projeto: 25AP19 - 13 conceitos
+INFO 2026-03-06 09:40:35,553 views 513396 134014018873024 Salvando projeto: 25AP20 - 13 conceitos
+INFO 2026-03-06 09:40:36,057 views 513396 134014018873024 Salvando projeto: 8AP016 - 13 conceitos
+INFO 2026-03-06 09:40:36,553 views 513396 134014018873024 Salvando projeto: 25AP21 - 13 conceitos
+INFO 2026-03-06 09:40:37,077 views 513396 134014018873024 Salvando projeto: 8AP019 - 13 conceitos
+INFO 2026-03-06 09:40:37,542 views 513396 134014018873024 Salvando projeto: 8ASIND - 13 conceitos
+INFO 2026-03-06 09:40:38,017 views 513396 134014018873024 Processadas 1400 linhas...
+INFO 2026-03-06 09:40:38,018 views 513396 134014018873024 Salvando projeto: 25AP22 - 13 conceitos
+INFO 2026-03-06 09:40:38,479 views 513396 134014018873024 Salvando projeto: EYPAPP - 13 conceitos
+INFO 2026-03-06 09:40:38,958 views 513396 134014018873024 Salvando projeto: 26AP01 - 13 conceitos
+INFO 2026-03-06 09:40:39,419 views 513396 134014018873024 Salvando projeto: 26AP02 - 13 conceitos
+INFO 2026-03-06 09:40:39,872 views 513396 134014018873024 Salvando projeto: 26AP03 - 13 conceitos
+INFO 2026-03-06 09:40:40,361 views 513396 134014018873024 Salvando projeto: 26AP04 - 13 conceitos
+INFO 2026-03-06 09:40:40,819 views 513396 134014018873024 Salvando projeto: 26AP05 - 13 conceitos
+INFO 2026-03-06 09:40:43,264 views 513396 134014018873024 Processadas 1500 linhas...
+INFO 2026-03-06 09:40:43,305 views 513396 134014018873024 Processadas 1600 linhas...
+INFO 2026-03-06 09:40:43,307 views 513396 134014018873024 Salvando projeto: P26S11 - 13 conceitos
+INFO 2026-03-06 09:40:45,137 views 513396 134014018873024 Processadas 1700 linhas...
+INFO 2026-03-06 09:40:45,138 views 513396 134014018873024 Salvando projeto: 25AP31 - 13 conceitos
+INFO 2026-03-06 09:40:45,656 views 513396 134014018873024 Salvando projeto: 25AP17 - 13 conceitos
+INFO 2026-03-06 09:40:46,111 views 513396 134014018873024 Processadas 1800 linhas...
+INFO 2026-03-06 09:40:46,114 views 513396 134014018873024 Salvando projeto: 25AP33 - 13 conceitos
+INFO 2026-03-06 09:40:46,601 views 513396 134014018873024 Salvando projeto: 21AP00 - 13 conceitos
+INFO 2026-03-06 09:40:47,123 views 513396 134014018873024 Salvando projeto: 22AP14 - 13 conceitos
+INFO 2026-03-06 09:40:47,638 views 513396 134014018873024 Salvando projeto: 22AP17 - 13 conceitos
+INFO 2026-03-06 09:40:48,355 views 513396 134014018873024 Salvando projeto: 22AP19 - 13 conceitos
+INFO 2026-03-06 09:40:48,870 views 513396 134014018873024 Salvando projeto: 22AP27 - 13 conceitos
+WARNING 2026-03-06 09:40:49,385 views 513396 134014018873024 Projeto EYPAPP já foi processado neste arquivo (linha 1934). Pulando próximas 12 linhas para evitar duplicatas.
+INFO 2026-03-06 09:40:49,386 views 513396 134014018873024 Processadas 1900 linhas...
+INFO 2026-03-06 09:40:49,389 views 513396 134014018873024 Salvando projeto: 24AP17 - 13 conceitos
+INFO 2026-03-06 09:40:49,872 views 513396 134014018873024 Salvando projeto: 25AP06 - 13 conceitos
+INFO 2026-03-06 09:40:50,385 views 513396 134014018873024 Salvando projeto: 21AP09 - 13 conceitos
+INFO 2026-03-06 09:40:50,907 views 513396 134014018873024 Salvando projeto: 22AP13 - 13 conceitos
+INFO 2026-03-06 09:40:53,157 views 513396 134014018873024 Salvando projeto: 25AP25 - 13 conceitos
+INFO 2026-03-06 09:40:56,120 views 513396 134014018873024 Salvando projeto: 23AP04 - 13 conceitos
+INFO 2026-03-06 09:40:56,630 views 513396 134014018873024 Processadas 2000 linhas...
+INFO 2026-03-06 09:40:56,631 views 513396 134014018873024 Salvando projeto: 23AP05 - 13 conceitos
+INFO 2026-03-06 09:40:57,098 views 513396 134014018873024 Salvando projeto: 23AP07 - 13 conceitos
+INFO 2026-03-06 09:40:57,579 views 513396 134014018873024 Salvando projeto: 25AP29 - 13 conceitos
+INFO 2026-03-06 09:40:58,035 views 513396 134014018873024 Salvando projeto: 23AP31 - 13 conceitos
+INFO 2026-03-06 09:40:58,514 views 513396 134014018873024 Salvando projeto: 24AP08 - 13 conceitos
+INFO 2026-03-06 09:40:58,968 views 513396 134014018873024 Salvando projeto: 24AP09 - 13 conceitos
+INFO 2026-03-06 09:40:59,446 views 513396 134014018873024 Salvando projeto: 24AP12 - 13 conceitos
+INFO 2026-03-06 09:40:59,903 views 513396 134014018873024 Salvando projeto: 24AP13 - 13 conceitos
+INFO 2026-03-06 09:41:00,369 views 513396 134014018873024 Processadas 2100 linhas...
+INFO 2026-03-06 09:41:00,370 views 513396 134014018873024 Salvando projeto: 25S001 - 13 conceitos
+INFO 2026-03-06 09:41:00,861 views 513396 134014018873024 Processadas 2200 linhas...
+INFO 2026-03-06 09:41:00,869 views 513396 134014018873024 Salvando projeto: 25AP26 - 13 conceitos
+INFO 2026-03-06 09:41:01,316 views 513396 134014018873024 Salvando projeto: 24AP29 - 13 conceitos
+INFO 2026-03-06 09:41:01,800 views 513396 134014018873024 Salvando projeto: 21AP03 - 13 conceitos
+INFO 2026-03-06 09:41:02,267 views 513396 134014018873024 Processadas 2300 linhas...
+INFO 2026-03-06 09:41:02,268 views 513396 134014018873024 Salvando projeto: 21AP14 - 13 conceitos
+INFO 2026-03-06 09:41:02,746 views 513396 134014018873024 Salvando projeto: 22AP25 - 13 conceitos
+INFO 2026-03-06 09:41:03,211 views 513396 134014018873024 Salvando projeto: 23AP10 - 13 conceitos
+INFO 2026-03-06 09:41:03,684 views 513396 134014018873024 Salvando projeto: 23AP12 - 13 conceitos
+INFO 2026-03-06 09:41:04,168 views 513396 134014018873024 Salvando projeto: 23AP18 - 13 conceitos
+INFO 2026-03-06 09:41:04,662 views 513396 134014018873024 Salvando projeto: 24APAP - 13 conceitos
+INFO 2026-03-06 09:41:05,167 views 513396 134014018873024 Salvando projeto: 5AP015 - 13 conceitos
+INFO 2026-03-06 09:41:05,678 views 513396 134014018873024 Processadas 2400 linhas...
+INFO 2026-03-06 09:41:05,680 views 513396 134014018873024 Salvando projeto: 5AP035 - 13 conceitos
+INFO 2026-03-06 09:41:07,841 views 513396 134014018873024 Salvando projeto: 6AP001 - 13 conceitos
+INFO 2026-03-06 09:41:08,706 views 513396 134014018873024 Salvando projeto: 7AP001 - 13 conceitos
+INFO 2026-03-06 09:41:09,209 views 513396 134014018873024 Salvando projeto: 7AP002 - 13 conceitos
+INFO 2026-03-06 09:41:09,677 views 513396 134014018873024 Salvando projeto: 8AP003 - 13 conceitos
+INFO 2026-03-06 09:41:10,190 views 513396 134014018873024 Salvando projeto: 8AP008 - 13 conceitos
+INFO 2026-03-06 09:41:10,653 views 513396 134014018873024 Processadas 2500 linhas...
+INFO 2026-03-06 09:41:10,655 views 513396 134014018873024 Salvando projeto: 8AP012 - 13 conceitos
+INFO 2026-03-06 09:41:11,140 views 513396 134014018873024 Salvando projeto: 8AP017 - 13 conceitos
+INFO 2026-03-06 09:41:11,608 views 513396 134014018873024 Salvando projeto: AP0004 - 13 conceitos
+INFO 2026-03-06 09:41:12,084 views 513396 134014018873024 Salvando projeto: 25AP27 - 13 conceitos
+INFO 2026-03-06 09:41:12,555 views 513396 134014018873024 Processadas 2600 linhas...
+INFO 2026-03-06 09:41:12,559 views 513396 134014018873024 Salvando projeto: 23AP01 - 13 conceitos
+INFO 2026-03-06 09:41:13,023 views 513396 134014018873024 Salvando projeto: 25AP28 - 13 conceitos
+INFO 2026-03-06 09:41:13,519 views 513396 134014018873024 Salvando projeto: 25AP24 - 13 conceitos
+INFO 2026-03-06 09:41:14,007 views 513396 134014018873024 Salvando projeto: 25AP30 - 13 conceitos
+INFO 2026-03-06 09:41:16,905 views 513396 134014018873024 Salvando projeto: P26S01 - 13 conceitos
+INFO 2026-03-06 09:41:17,417 views 513396 134014018873024 Salvando projeto: P26S02 - 13 conceitos
+INFO 2026-03-06 09:41:17,956 views 513396 134014018873024 Processadas 2700 linhas...
+INFO 2026-03-06 09:41:17,958 views 513396 134014018873024 Salvando projeto: P26S03 - 13 conceitos
+INFO 2026-03-06 09:41:18,484 views 513396 134014018873024 Salvando projeto: P26S04 - 13 conceitos
+INFO 2026-03-06 09:41:19,037 views 513396 134014018873024 Salvando projeto: P26S05 - 13 conceitos
+INFO 2026-03-06 09:41:19,516 views 513396 134014018873024 Salvando projeto: P26S06 - 13 conceitos
+INFO 2026-03-06 09:41:20,014 views 513396 134014018873024 Salvando projeto: P26S07 - 13 conceitos
+INFO 2026-03-06 09:41:20,491 views 513396 134014018873024 Salvando projeto: P26S08 - 13 conceitos
+INFO 2026-03-06 09:41:21,008 views 513396 134014018873024 Salvando projeto: P26A01 - 13 conceitos
+INFO 2026-03-06 09:41:21,480 views 513396 134014018873024 Salvando projeto: P26A02 - 13 conceitos
+INFO 2026-03-06 09:41:21,994 views 513396 134014018873024 Processadas 2800 linhas...
+INFO 2026-03-06 09:41:21,998 views 513396 134014018873024 Salvando projeto: P26A03 - 13 conceitos
+INFO 2026-03-06 09:41:22,523 views 513396 134014018873024 Salvando projeto: P26A04 - 13 conceitos
+INFO 2026-03-06 09:41:23,039 views 513396 134014018873024 Salvando projeto: P26A05 - 13 conceitos
+INFO 2026-03-06 09:41:26,288 views 513396 134014018873024 Salvando projeto: P26A06 - 13 conceitos
+INFO 2026-03-06 09:41:26,798 views 513396 134014018873024 Salvando projeto: P26S09 - 13 conceitos
+INFO 2026-03-06 09:41:27,345 views 513396 134014018873024 Salvando projeto: P26A08 - 13 conceitos
+INFO 2026-03-06 09:41:27,855 views 513396 134014018873024 Salvando projeto: P26A09 - 13 conceitos
+INFO 2026-03-06 09:41:28,402 views 513396 134014018873024 Processadas 2900 linhas...
+INFO 2026-03-06 09:41:28,402 views 513396 134014018873024 Salvando projeto: P26A10 - 13 conceitos
+INFO 2026-03-06 09:41:28,913 views 513396 134014018873024 Salvando projeto: P26A11 - 13 conceitos
+INFO 2026-03-06 09:41:29,453 views 513396 134014018873024 Salvando projeto: 25AP32 - 13 conceitos
+INFO 2026-03-06 09:41:29,914 views 513396 134014018873024 Salvando projeto: 25AP34 - 13 conceitos
+INFO 2026-03-06 09:41:30,425 views 513396 134014018873024 Salvando projeto: P26A12 - 13 conceitos
+INFO 2026-03-06 09:41:30,912 views 513396 134014018873024 Salvando projeto: 25AP36 - 13 conceitos
+INFO 2026-03-06 09:41:31,412 views 513396 134014018873024 Salvando projeto: 25AP37 - 13 conceitos
+INFO 2026-03-06 09:41:31,879 views 513396 134014018873024 Processadas 3000 linhas...
+INFO 2026-03-06 09:41:31,880 views 513396 134014018873024 Salvando projeto: 25AP39 - 13 conceitos
+INFO 2026-03-06 09:41:32,377 views 513396 134014018873024 Salvando projeto: 25AP40 - 13 conceitos
+INFO 2026-03-06 09:41:34,904 views 513396 134014018873024 Salvando projeto: 8AP004 - 13 conceitos
+INFO 2026-03-06 09:41:35,421 views 513396 134014018873024 Salvando projeto: AP0073 - 13 conceitos
+INFO 2026-03-06 09:41:35,933 views 513396 134014018873024 Salvando projeto: IP0162 - 13 conceitos
+INFO 2026-03-06 09:41:36,470 views 513396 134014018873024 Processadas 3100 linhas...
+INFO 2026-03-06 09:41:36,472 views 513396 134014018873024 Salvando projeto: IP0261 - 13 conceitos
+INFO 2026-03-06 09:41:36,984 views 513396 134014018873024 Salvando projeto: AJUAAP - 13 conceitos
+INFO 2026-03-06 09:41:37,504 views 513396 134014018873024 Processadas 3200 linhas...
+INFO 2026-03-06 09:41:37,524 views 513396 134014018873024 Salvando projeto: AJSNBR - 13 conceitos
+INFO 2026-03-06 09:41:38,009 views 513396 134014018873024 Processadas 3300 linhas...
+INFO 2026-03-06 09:41:38,025 views 513396 134014018873024 Processadas 3400 linhas...
+INFO 2026-03-06 09:41:38,040 views 513396 134014018873024 Processadas 3500 linhas...
+INFO 2026-03-06 09:41:38,057 views 513396 134014018873024 Processadas 3600 linhas...
+INFO 2026-03-06 09:41:38,075 views 513396 134014018873024 Processadas 3700 linhas...
+INFO 2026-03-06 09:41:38,091 views 513396 134014018873024 Processadas 3800 linhas...
+INFO 2026-03-06 09:41:38,108 views 513396 134014018873024 Processadas 3900 linhas...
+INFO 2026-03-06 09:41:38,123 views 513396 134014018873024 Processadas 4000 linhas...
+INFO 2026-03-06 09:41:38,141 views 513396 134014018873024 Processadas 4100 linhas...
+INFO 2026-03-06 09:41:38,158 views 513396 134014018873024 Processadas 4200 linhas...
+INFO 2026-03-06 09:41:38,175 views 513396 134014018873024 Processadas 4300 linhas...
+INFO 2026-03-06 09:41:38,194 views 513396 134014018873024 Processadas 4400 linhas...
+INFO 2026-03-06 09:41:38,217 views 513396 134014018873024 Processadas 4500 linhas...
+INFO 2026-03-06 09:41:38,241 views 513396 134014018873024 Processadas 4600 linhas...
+INFO 2026-03-06 09:41:38,267 views 513396 134014018873024 Processadas 4700 linhas...
+INFO 2026-03-06 09:41:38,288 views 513396 134014018873024 Processadas 4800 linhas...
+INFO 2026-03-06 09:41:38,304 views 513396 134014018873024 Processadas 4900 linhas...
+INFO 2026-03-06 09:41:38,320 views 513396 134014018873024 Processadas 5000 linhas...
+INFO 2026-03-06 09:41:38,337 views 513396 134014018873024 Processadas 5100 linhas...
+INFO 2026-03-06 09:41:38,352 views 513396 134014018873024 Processadas 5200 linhas...
+INFO 2026-03-06 09:41:38,368 views 513396 134014018873024 Processadas 5300 linhas...
+INFO 2026-03-06 09:41:38,383 views 513396 134014018873024 Processadas 5400 linhas...
+INFO 2026-03-06 09:41:38,400 views 513396 134014018873024 Processadas 5500 linhas...
+INFO 2026-03-06 09:41:38,417 views 513396 134014018873024 Processadas 5600 linhas...
+INFO 2026-03-06 09:41:38,432 views 513396 134014018873024 Processadas 5700 linhas...
+INFO 2026-03-06 09:41:38,451 views 513396 134014018873024 Processadas 5800 linhas...
+INFO 2026-03-06 09:41:38,468 views 513396 134014018873024 Processadas 5900 linhas...
+INFO 2026-03-06 09:41:38,486 views 513396 134014018873024 Processadas 6000 linhas...
+INFO 2026-03-06 09:41:38,503 views 513396 134014018873024 Processadas 6100 linhas...
+INFO 2026-03-06 09:41:38,520 views 513396 134014018873024 Processadas 6200 linhas...
+INFO 2026-03-06 09:41:38,537 views 513396 134014018873024 Processadas 6300 linhas...
+INFO 2026-03-06 09:41:38,555 views 513396 134014018873024 Processadas 6400 linhas...
+INFO 2026-03-06 09:41:38,572 views 513396 134014018873024 Processadas 6500 linhas...
+INFO 2026-03-06 09:41:38,589 views 513396 134014018873024 Processadas 6600 linhas...
+INFO 2026-03-06 09:41:38,607 views 513396 134014018873024 Processadas 6700 linhas...
+INFO 2026-03-06 09:41:38,624 views 513396 134014018873024 Processadas 6800 linhas...
+INFO 2026-03-06 09:41:38,641 views 513396 134014018873024 Processadas 6900 linhas...
+INFO 2026-03-06 09:41:38,658 views 513396 134014018873024 Processadas 7000 linhas...
+INFO 2026-03-06 09:41:38,674 views 513396 134014018873024 Processadas 7100 linhas...
+INFO 2026-03-06 09:41:38,690 views 513396 134014018873024 Processadas 7200 linhas...
+INFO 2026-03-06 09:41:38,708 views 513396 134014018873024 Processadas 7300 linhas...
+INFO 2026-03-06 09:41:38,718 views 513396 134014018873024 Salvando último projeto: AJSABR - 13 conceitos
+INFO 2026-03-06 09:41:39,168 views 513396 134014018873024 === PROCESSAMENTO XLS CONCLUÍDO COM SUCESSO ===
+INFO 2026-03-06 09:41:39,168 views 513396 134014018873024 Total de linhas processadas: 7345
+INFO 2026-03-06 09:41:39,169 views 513396 134014018873024 Projetos processados: 195
+INFO 2026-03-06 09:41:39,169 views 513396 134014018873024 Projetos únicos encontrados: 194
+INFO 2026-03-06 09:41:39,169 views 513396 134014018873024 Conceitos mensais criados: 30420
+WARNING 2026-03-06 09:41:39,169 views 513396 134014018873024 Projetos com duplicatas pulados: 1
+INFO 2026-03-06 09:41:39,169 views 513396 134014018873024 Arquivo processado com sucesso! 195 projetos e 30420 registros de conceitos processados.
+INFO 2026-03-06 09:41:39,174 views 513396 134014018873024 Arquivo temporário removido com sucesso
+INFO 2026-03-06 09:41:39,174 views 513396 134014018873024 Processamento concluído com sucesso: Arquivo processado com sucesso! 195 projetos e 30420 registros de conceitos processados.
+INFO 2026-03-06 09:41:39,175 log 513396 134014018873024 "POST /upload/ HTTP/1.1" 200 120
+INFO 2026-03-06 09:41:42,761 log 513396 134014018873024 "GET /dashboard/ HTTP/1.1" 200 29529
+INFO 2026-03-06 09:49:53,449 autoreload 513396 134014624440448 /opt/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-06 09:49:53,991 autoreload 516018 124958127730816 Watching for file changes with StatReloader
+INFO 2026-03-06 09:50:53,439 autoreload 516018 124958127730816 /opt/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-06 09:50:53,911 autoreload 516093 126823129018496 Watching for file changes with StatReloader
+INFO 2026-03-06 09:54:59,927 autoreload 516410 136845264650368 Watching for file changes with StatReloader
+INFO 2026-03-06 09:55:55,499 autoreload 516410 136845264650368 /opt/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-06 09:55:55,608 autoreload 516093 126823129018496 /opt/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-06 09:55:55,889 autoreload 516484 129449513562240 Watching for file changes with StatReloader
+INFO 2026-03-06 09:55:55,976 autoreload 516485 137126381293696 Watching for file changes with StatReloader
+INFO 2026-03-06 09:56:16,827 autoreload 516484 129449513562240 /opt/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-06 09:56:17,423 autoreload 516552 130864991928448 Watching for file changes with StatReloader
+INFO 2026-03-06 10:00:45,936 autoreload 516909 131037262127232 Watching for file changes with StatReloader
+INFO 2026-03-06 10:01:46,291 log 516909 131036698810048 "GET /dashboard/ HTTP/1.1" 200 31736
+INFO 2026-03-06 10:02:11,373 log 516909 131036698810048 "GET /dashboard/ HTTP/1.1" 200 31736
+INFO 2026-03-06 10:02:36,154 log 516909 131036698810048 "GET /dashboard/ HTTP/1.1" 200 31736
+INFO 2026-03-06 10:03:29,033 log 516909 131036698810048 "GET /dashboard/ HTTP/1.1" 200 31736
+INFO 2026-03-06 10:04:15,498 log 516909 131036698810048 "GET /dashboard/ HTTP/1.1" 200 31736
+INFO 2026-03-06 10:04:42,481 log 516909 131036698810048 "GET /dashboard/ HTTP/1.1" 200 31736
+INFO 2026-03-06 10:05:09,676 autoreload 516909 131037262127232 /opt/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-06 10:05:10,282 autoreload 519504 134910919721088 Watching for file changes with StatReloader
+INFO 2026-03-06 10:05:33,325 autoreload 519504 134910919721088 /opt/analise-indra/core/urls.py changed, reloading.
+INFO 2026-03-06 10:05:34,027 autoreload 519623 139987973357696 Watching for file changes with StatReloader
+INFO 2026-03-06 10:05:55,781 log 519623 139987409069760 "GET /api/dashboard/aapp/ HTTP/1.1" 200 45871
+INFO 2026-03-06 10:07:35,250 log 519623 139987409069760 "GET /dashboard/ HTTP/1.1" 200 31736
+INFO 2026-03-06 10:08:07,116 log 519623 139987409069760 "GET /api/dashboard/consolidado/ HTTP/1.1" 200 53337
+INFO 2026-03-06 10:08:35,194 log 519623 139987409069760 "GET /dashboard/ HTTP/1.1" 200 31736
+INFO 2026-03-06 10:09:24,716 log 519623 139987409069760 "GET /dashboard/ HTTP/1.1" 200 31736
+INFO 2026-03-06 10:13:19,025 log 519623 139987409069760 "GET /dashboard/ HTTP/1.1" 200 31736
+INFO 2026-03-06 10:14:39,520 log 519623 139987409069760 "GET /dashboard/ HTTP/1.1" 200 56508

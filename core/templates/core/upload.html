@@ -1,0 +1,203 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Upload de Arquivo - Análise Indra{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8 col-xl-6">
+        <div class="card shadow-lg border-0">
+            <div class="card-header bg-primary text-white">
+                <h4 class="card-title mb-0">
+                    <i class="bi bi-cloud-upload"></i> Upload de Arquivo XLS
+                </h4>
+            </div>
+            <div class="card-body p-4">
+                <div class="text-center mb-4">
+                    <i class="bi bi-file-earmark-spreadsheet display-1 text-primary mb-3"></i>
+                    <p class="text-muted">
+                        Selecione um arquivo XLS ou XLSX contendo os dados dos projetos para processamento.
+                    </p>
+                </div>
+
+                <form id="uploadForm" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-4">
+                        <label for="fileInput" class="form-label fw-bold">
+                            Arquivo XLS/XLSX <span class="text-danger">*</span>
+                        </label>
+                        <input type="file" class="form-control form-control-lg" id="fileInput"
+                               name="file" accept=".xls,.xlsx" required>
+                        <div class="form-text">
+                            Arquivo deve conter as colunas: codigo, descricao, mercado, contratacao, venda, margem, margem_percentual
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="mesFechamento" class="form-label fw-bold">
+                            Mês de Fechamento <span class="text-danger">*</span>
+                        </label>
+                        <select class="form-select form-select-lg" id="mesFechamento"
+                                name="mes_fechamento" required>
+                            {% for mes_num, mes_nome in meses %}
+                            <option value="{{ mes_num }}"
+                                    {% if mes_num == mes_padrao %}selected{% endif %}>
+                                {{ mes_nome }}/{{ ano_padrao }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                        <div class="form-text">
+                            Selecione o mês até o qual os dados estão fechados para cálculos de YTD (ano corrente)
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+                            <i class="bi bi-upload"></i> Processar Arquivo
+                        </button>
+                        <a href="{% url 'core:dashboard' %}" class="btn btn-outline-secondary">
+                            <i class="bi bi-bar-chart"></i> Ver Dashboard
+                        </a>
+                    </div>
+                </form>
+
+                <!-- Loading Spinner -->
+                <div class="text-center mt-4 d-none" id="loadingSpinner">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Processando...</span>
+                    </div>
+                    <p class="mt-2 text-muted">Processando arquivo, aguarde...</p>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress mt-3 d-none" id="progressContainer">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated"
+                         id="progressBar" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions Card -->
+        <div class="card mt-4 border-info">
+            <div class="card-header bg-info text-white">
+                <h5 class="card-title mb-0">
+                    <i class="bi bi-info-circle"></i> Instruções
+                </h5>
+            </div>
+            <div class="card-body">
+                <h6>Formato do Arquivo XLS:</h6>
+                <ul class="mb-3">
+                    <li><strong>codigo:</strong> Código único do projeto</li>
+                    <li><strong>descricao:</strong> Descrição do projeto</li>
+                    <li><strong>mercado:</strong> Mercado do projeto</li>
+                    <li><strong>contratacao:</strong> Valor de contratação</li>
+                    <li><strong>venda:</strong> Valor de venda</li>
+                    <li><strong>margem:</strong> Valor da margem</li>
+                    <li><strong>margem_percentual:</strong> Margem percentual</li>
+                </ul>
+                <div class="alert alert-warning">
+                    <i class="bi bi-exclamation-triangle"></i>
+                    Certifique-se de que todas as colunas estão presentes e preenchidas corretamente.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Success/Error Messages -->
+<div class="toast-container position-fixed top-0 end-0 p-3">
+    <div id="successToast" class="toast align-items-center text-white bg-success border-0" role="alert">
+        <div class="d-flex">
+            <div class="toast-body">
+                <i class="bi bi-check-circle me-2"></i>
+                <span id="successMessage"></span>
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+    </div>
+
+    <div id="errorToast" class="toast align-items-center text-white bg-danger border-0" role="alert">
+        <div class="d-flex">
+            <div class="toast-body">
+                <i class="bi bi-exclamation-triangle me-2"></i>
+                <span id="errorMessage"></span>
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById('uploadForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    const submitBtn = document.getElementById('submitBtn');
+    const loadingSpinner = document.getElementById('loadingSpinner');
+    const progressContainer = document.getElementById('progressContainer');
+    const progressBar = document.getElementById('progressBar');
+
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Processando...';
+    loadingSpinner.classList.remove('d-none');
+    progressContainer.classList.remove('d-none');
+
+    // Simulate progress
+    let progress = 0;
+    const progressInterval = setInterval(() => {
+        progress += Math.random() * 15;
+        if (progress > 90) progress = 90;
+        progressBar.style.width = progress + '%';
+    }, 200);
+
+    fetch('{% url "core:process_upload" %}', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        clearInterval(progressInterval);
+        progressBar.style.width = '100%';
+
+        setTimeout(() => {
+            loadingSpinner.classList.add('d-none');
+            progressContainer.classList.add('d-none');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="bi bi-upload"></i> Processar Arquivo';
+
+            if (data.success) {
+                document.getElementById('successMessage').textContent = data.message;
+                const successToast = new bootstrap.Toast(document.getElementById('successToast'));
+                successToast.show();
+
+                // Redirect to dashboard after success
+                setTimeout(() => {
+                    window.location.href = '{% url "core:dashboard" %}';
+                }, 2000);
+            } else {
+                document.getElementById('errorMessage').textContent = data.error;
+                const errorToast = new bootstrap.Toast(document.getElementById('errorToast'));
+                errorToast.show();
+            }
+        }, 500);
+    })
+    .catch(error => {
+        clearInterval(progressInterval);
+        loadingSpinner.classList.add('d-none');
+        progressContainer.classList.add('d-none');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="bi bi-upload"></i> Processar Arquivo';
+
+        document.getElementById('errorMessage').textContent = 'Erro ao processar arquivo. Tente novamente.';
+        const errorToast = new bootstrap.Toast(document.getElementById('errorToast'));
+        errorToast.show();
+    });
+});
+</script>
+{% endblock %}
