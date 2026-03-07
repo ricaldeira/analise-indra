@@ -1,4 +1,6 @@
 logs/
+venv/
+media/
 __pycache__/
 *.pyc
 *.pyo
@@ -8,8 +10,6 @@ __pycache__/
 *.pywz
 *.pyzw
 *.pyzwz
-media/
-venv/*
 *.xls*
 *.xlsx*
 *.csv*
