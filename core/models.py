@@ -9,10 +9,36 @@ class Projeto(models.Model):
     tipo_solucao = models.CharField(max_length=100, blank=True, verbose_name="Tipo de Solução")
     responsavel_comercial = models.CharField(max_length=100, blank=True, verbose_name="Responsável Comercial")
 
+    # Denormalized YTD aggregates (updated during processing)
+    contratacion_ytd = models.DecimalField(max_digits=15, decimal_places=2, default=0, verbose_name="Contratação YTD")
+    ingresos_ytd = models.DecimalField(max_digits=15, decimal_places=2, default=0, verbose_name="Ingresos YTD")
+    margen_ytd = models.DecimalField(max_digits=15, decimal_places=2, default=0, verbose_name="Margem YTD")
+    margen_percentual_ytd = models.DecimalField(max_digits=5, decimal_places=2, default=0, verbose_name="Margem % YTD")
+
+    # Planned values (POA)
+    contratacion_poa = models.DecimalField(max_digits=15, decimal_places=2, default=0, verbose_name="Contratação POA")
+    ingresos_poa = models.DecimalField(max_digits=15, decimal_places=2, default=0, verbose_name="Ingresos POA")
+    margen_poa = models.DecimalField(max_digits=15, decimal_places=2, default=0, verbose_name="Margem POA")
+
+    # Project status and type
+    is_active = models.BooleanField(default=True, verbose_name="Projeto Ativo")
+    is_pipeline = models.BooleanField(default=False, verbose_name="Projeto Pipeline")
+
+    # Metadata
+    ultimo_processamento = models.ForeignKey('ProcessamentoXLS', null=True, blank=True, on_delete=models.SET_NULL, verbose_name="Último Processamento")
+
     class Meta:
         verbose_name = "Projeto"
         verbose_name_plural = "Projetos"
         ordering = ['codigo']
+        # Database indexes will be created manually due to Django cache issues
+        # indexes = [
+        #     models.Index(fields=['mercado']),
+        #     models.Index(fields=['is_active', 'mercado']),
+        #     models.Index(fields=['is_pipeline']),
+        #     models.Index(fields=['margem_percentual_ytd']),
+        #     models.Index(fields=['ultimo_processamento']),
+        # ]
 
     def __str__(self):
         return f"{self.codigo} - {self.descricao}"
@@ -89,6 +115,13 @@ class ConceitoMensal(models.Model):
         verbose_name_plural = "Conceitos Mensais"
         unique_together = ['projeto', 'processamento', 'conceito', 'mes']
         ordering = ['projeto', 'mes', 'conceito']
+        # Database indexes will be created manually due to Django cache issues
+        # indexes = [
+        #     models.Index(fields=['projeto', 'processamento', 'conceito']),
+        #     models.Index(fields=['processamento', 'mes', 'conceito']),
+        #     models.Index(fields=['projeto', 'conceito', 'mes']),
+        #     models.Index(fields=['conceito', 'mes']),
+        # ]
 
     def __str__(self):
         return f"{self.projeto.codigo} - {self.get_conceito_display()} - {self.get_mes_display()}"
