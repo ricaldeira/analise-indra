@@ -173,10 +173,10 @@ def get_dashboard_data(category):
             # Retorna dados vazios se não há processamento
             return {
                 'cards': [
+                    {'title': 'Contratação', 'value': '0', 'change': '0%', 'change_type': 'neutral', 'icon': 'bi-clipboard-check'},
+                    {'title': 'Ingresso', 'value': 'R$ 0', 'change': '0%', 'change_type': 'neutral', 'icon': 'bi-cash-stack'},
+                    {'title': 'Margem %', 'value': '0%', 'change': '0%', 'change_type': 'neutral', 'icon': 'bi-graph-up'},
                     {'title': 'Total Projetos', 'value': '0', 'change': '0%', 'change_type': 'neutral', 'icon': 'bi-folder'},
-                    {'title': 'Receita Total', 'value': 'R$ 0', 'change': '0%', 'change_type': 'neutral', 'icon': 'bi-cash-stack'},
-                    {'title': 'Margem Média', 'value': '0%', 'change': '0%', 'change_type': 'neutral', 'icon': 'bi-graph-up'},
-                    {'title': 'Contratações', 'value': '0', 'change': '0%', 'change_type': 'neutral', 'icon': 'bi-clipboard-check'},
                     {'title': 'Projetos Ativos', 'value': '0', 'change': '0%', 'change_type': 'neutral', 'icon': 'bi-play-circle'},
                     {'title': 'ROI Médio', 'value': '0%', 'change': '0%', 'change_type': 'neutral', 'icon': 'bi-trophy'},
                 ],
@@ -234,32 +234,32 @@ def get_dashboard_data(category):
 
         result = [
             {
-                'title': 'Total Projetos',
-                'value': str(total_projetos),
-                'change': '+5%',  # Placeholder - seria calculado comparando com processamento anterior
+                'title': 'Contratação',
+                'value': format_currency(contratacoes_total),
+                'change': '+12%',  # Placeholder
                 'change_type': 'positive',
-                'icon': 'bi-folder'
+                'icon': 'bi-clipboard-check'
             },
             {
-                'title': 'Receita Total',
+                'title': 'Ingresso',
                 'value': format_currency(receita_total),
                 'change': '+8%',  # Placeholder
                 'change_type': 'positive',
                 'icon': 'bi-cash-stack'
             },
             {
-                'title': 'Margem Média',
+                'title': 'Margem %',
                 'value': f'{margem_media_percentual:.1f}%',
                 'change': f'{margem_media_percentual > 15 and "+" or "-"}{abs(margem_media_percentual - 15):.1f}%',
                 'change_type': margem_media_percentual > 15 and 'positive' or 'negative',
                 'icon': 'bi-graph-up'
-            },
+            },            
             {
-                'title': 'Contratações',
-                'value': format_currency(contratacoes_total),
-                'change': '+12%',  # Placeholder
+                'title': 'Total Projetos',
+                'value': str(total_projetos),
+                'change': '+5%',  # Placeholder - seria calculado comparando com processamento anterior
                 'change_type': 'positive',
-                'icon': 'bi-clipboard-check'
+                'icon': 'bi-folder'
             },
             {
                 'title': 'Projetos Ativos',

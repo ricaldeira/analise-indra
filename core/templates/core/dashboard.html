@@ -92,10 +92,7 @@
                                 </div>
                                 <h5 class="card-title text-muted mb-2">{{ card.title }}</h5>
                                 <h3 class="card-value mb-2 {{ card.change_type }}">{{ card.value }}</h3>
-                                <span class="badge {% if card.change_type == 'positive' %}bg-success{% else %}bg-danger{% endif %} rounded-pill">
-                                    <i class="bi {% if card.change_type == 'positive' %}bi-arrow-up{% else %}bi-arrow-down{% endif %}"></i>
-                                    {{ card.change }}
-                                </span>
+                                
                             </div>
                         </div>
                     </div>
@@ -434,10 +431,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function applyClientFilters() {
+    console.log('🔍 Aplicando filtros...');
     const margemFilter = document.getElementById('margemFilter').value.trim();
     const marketFilter = document.getElementById('marketFilter').value;
 
+    console.log(`📊 Filtros: margem="${margemFilter}", mercado="${marketFilter}"`);
+
     const rows = document.querySelectorAll('#tableBody tr');
+    console.log(`📋 Encontradas ${rows.length} linhas na tabela`);
     let visibleCount = 0;
 
     rows.forEach(row => {
@@ -448,8 +449,15 @@ function applyClientFilters() {
 
         let margemValue = 0;
         if (margemCell && margemCell.textContent) {
-            const match = margemCell.textContent.match(/(\d+\.?\d*)%/);
-            if (match) margemValue = parseFloat(match[1]);
+            // O valor está dentro de uma span.badge, então pegar o textContent diretamente
+            const text = margemCell.textContent.trim();
+
+            // Remover o símbolo % e converter
+            const percentMatch = text.match(/(-?\d+(?:[.,]\d+)?)%?/);
+            if (percentMatch) {
+                const numStr = percentMatch[1].replace(',', '.');
+                margemValue = parseFloat(numStr);
+            }
         }
 
         const marketValue = marketBadge ? marketBadge.textContent.trim() : '';
@@ -459,16 +467,20 @@ function applyClientFilters() {
 
         // Filtro de margem
         if (margemFilter) {
-            if (margemFilter.startsWith('>=')) {
-                showRow = showRow && (margemValue >= parseFloat(margemFilter.substring(2)));
-            } else if (margemFilter.startsWith('<=')) {
-                showRow = showRow && (margemValue <= parseFloat(margemFilter.substring(2)));
-            } else if (margemFilter.startsWith('>')) {
-                showRow = showRow && (margemValue > parseFloat(margemFilter.substring(1)));
-            } else if (margemFilter.startsWith('<')) {
-                showRow = showRow && (margemValue < parseFloat(margemFilter.substring(1)));
-            } else {
-                showRow = showRow && (margemValue === parseFloat(margemFilter));
+            const filterValue = parseFloat(margemFilter.replace(/^[><=]+/, ''));
+            const operator = margemFilter.replace(/[\d.-]/g, '');
+
+            if (operator === '>=') {
+                showRow = showRow && (margemValue >= filterValue);
+            } else if (operator === '<=') {
+                showRow = showRow && (margemValue <= filterValue);
+            } else if (operator === '>') {
+                showRow = showRow && (margemValue > filterValue);
+            } else if (operator === '<') {
+                showRow = showRow && (margemValue < filterValue);
+            } else if (operator === '') {
+                // Filtro exato
+                showRow = showRow && (Math.abs(margemValue - filterValue) < 0.1);
             }
         }
 
@@ -482,6 +494,8 @@ function applyClientFilters() {
     });
 
     updateProjectCount(visibleCount);
+
+    console.log(`✅ Filtro aplicado: ${visibleCount} projetos visíveis`);
 }
 
 function setupTableFunctionality() {
@@ -489,13 +503,17 @@ function setupTableFunctionality() {
     const margemFilter = document.getElementById('margemFilter');
     const marketFilter = document.getElementById('marketFilter');
 
-    margemFilter.addEventListener('input', function() {
-        applyClientFilters();
-    });
+    if (margemFilter) {
+        margemFilter.addEventListener('input', function() {
+            applyClientFilters();
+        });
+    }
 
-    marketFilter.addEventListener('change', function() {
-        applyClientFilters();
-    });
+    if (marketFilter) {
+        marketFilter.addEventListener('change', function() {
+            applyClientFilters();
+        });
+    }
 
     // Configurar ordenação nas colunas
     setupSorting();
@@ -618,6 +636,23 @@ function clearFilters() {
 // Função global para debug
 window.debugProjects = function(category) {
     console.log('Dados de projetos para', category, ':', projectsData[category]);
+};
+
+// Debug do filtro
+window.debugFilter = function() {
+    console.log('=== DEBUG FILTRO ===');
+    const rows = document.querySelectorAll('#tableBody tr');
+    rows.forEach((row, index) => {
+        if (row.cells.length >= 9) {
+            const margemCell = row.cells[8];
+            const marketBadge = row.cells[2].querySelector('.badge');
+
+            const margemText = margemCell ? margemCell.textContent.trim() : 'N/A';
+            const marketText = marketBadge ? marketBadge.textContent.trim() : 'N/A';
+
+            console.log(`Linha ${index}: Margem="${margemText}", Mercado="${marketText}"`);
+        }
+    });
 };
 </script>
 {% endblock %}
