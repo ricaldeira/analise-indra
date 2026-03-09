@@ -178,59 +178,174 @@
                 </div>
             </div>
             <div class="card-body p-0">
+                <!-- Summary Cards for Filtered Data -->
+                <div id="tableSummary" class="row g-3 mb-3 px-3">
+                    <div class="col-md-3">
+                        <div class="card bg-primary bg-opacity-10 border-primary border-opacity-25 h-100 shadow-sm">
+                            <div class="card-body text-center py-3">
+                                <div class="d-flex align-items-center justify-content-center mb-2">
+                                    <i class="bi bi-currency-dollar text-primary me-2 fs-4"></i>
+                                    <div>
+                                        <h6 class="card-title mb-1 text-primary fw-bold">Total Contratação</h6>
+                                        <h4 id="totalContratacao" class="mb-0 text-primary fw-bold">R$ 0,00</h4>
+                                    </div>
+                                </div>
+                                <hr class="my-2 opacity-25">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <small class="text-muted me-1">POA:</small>
+                                    <span id="totalContratacaoPoa" class="fw-semibold text-primary">R$ 0,00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span id="totalVarContratacaoPoa" class="fw-semibold text-primary">(0,00%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-success bg-opacity-10 border-success border-opacity-25 h-100 shadow-sm">
+                            <div class="card-body text-center py-3">
+                                <div class="d-flex align-items-center justify-content-center mb-2">
+                                    <i class="bi bi-graph-up-arrow text-success me-2 fs-4"></i>
+                                    <div>
+                                        <h6 class="card-title mb-1 text-success fw-bold">Total Ingresso</h6>
+                                        <h4 id="totalIngresso" class="mb-0 text-success fw-bold">R$ 0,00</h4>
+                                    </div>
+                                </div>
+                                <hr class="my-2 opacity-25">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <small class="text-muted me-1">POA:</small>
+                                    <span id="totalIngressoPoa" class="fw-semibold text-success">R$ 0,00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span id="totalVarIngressoPoa" class="fw-semibold text-success">(0,00%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-info bg-opacity-10 border-info border-opacity-25 h-100 shadow-sm">
+                            <div class="card-body text-center py-3">
+                                <div class="d-flex align-items-center justify-content-center mb-2">
+                                    <i class="bi bi-bar-chart-line text-info me-2 fs-4"></i>
+                                    <div>
+                                        <h6 class="card-title mb-1 text-info fw-bold">Total Margem</h6>
+                                        <h4 id="totalMargem" class="mb-0 text-info fw-bold">R$ 0,00</h4>
+                                    </div>
+                                </div>
+                                <hr class="my-2 opacity-25">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <small class="text-muted me-1">POA:</small>
+                                    <span id="totalMargemPoa" class="fw-semibold text-info">R$ 0,00</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span id="totalVarMargemPoa" class="fw-semibold text-info">(0,00%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-secondary bg-opacity-10 border-secondary border-opacity-25 h-100 shadow-sm">
+                            <div class="card-body text-center py-3">
+                                <div class="d-flex align-items-center justify-content-center mb-2">
+                                    <i class="bi bi-percent text-secondary me-2 fs-4"></i>
+                                    <div>
+                                        <h6 class="card-title mb-1 text-secondary fw-bold">Margem %</h6>
+                                        <h4 id="totalMargemPercentual" class="mb-0 text-secondary fw-bold">0.0%</h4>
+                                    </div>
+                                </div>
+                                <hr class="my-2 opacity-25">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <small class="text-muted me-1">POA:</small>
+                                    <span id="totalMargemPercentualPoa" class="fw-semibold text-secondary">0.0%</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span id="totalVarMargemPercentualPoa" class="fw-semibold text-secondary">(0,00%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
                 <div class="table-responsive">
+                    
                     <table id="projectsTable" class="table table-hover mb-0">
                         <thead class="table-light">
                             <tr>
-                                <th scope="col" class="border-0 fw-bold">Código</th>
-                                <th scope="col" class="border-0 fw-bold">Descrição</th>
-                                <th scope="col" class="border-0 fw-bold">Mercado</th>
-                                <th scope="col" class="border-0 fw-bold">Região</th>
-                                <th scope="col" class="border-0 fw-bold">Tipo Solução</th>
-                                <th scope="col" class="border-0 fw-bold text-end">Contratação YTD</th>
-                                <th scope="col" class="border-0 fw-bold text-end">Ingresso YTD</th>
-                                <th scope="col" class="border-0 fw-bold text-end">Margem YTD</th>
-                                <th scope="col" class="border-0 fw-bold text-end">Margem %</th>
+                                <th scope="col" class="border-0 fw-bold text-center align-middle">Mercado</th>
+                                <th scope="col" class="border-0 fw-bold text-center align-middle">Código</th>
+                                <th scope="col" class="border-0 fw-bold text-center align-middle">Descrição</th>
+                                <th scope="col" class="border-0 fw-bold text-center align-middle">Região</th>
+                                <th scope="col" class="border-0 fw-bold text-center align-middle">Tipo<br>Solução</th>
+                                <!-- YTD headers -->
+                                <th scope="col" class="border-0 fw-bold text-center align-middle" style="background-color: rgba(25, 135, 84, 0.1);">Contr.<br>YTD</th>
+                                <th scope="col" class="border-0 fw-bold text-center align-middle" style="background-color: rgba(25, 135, 84, 0.1);">Ingr.<br>YTD</th>
+                                <th scope="col" class="border-0 fw-bold text-center align-middle" style="background-color: rgba(25, 135, 84, 0.1);">Margem<br>YTD</th>
+                                <th scope="col" class="border-0 fw-bold text-center align-middle" style="background-color: rgba(25, 135, 84, 0.1);">%</th>
+                                <!-- POA headers -->
+                                <th scope="col" class="border-0 fw-bold text-center align-middle" style="background-color: rgba(13, 110, 253, 0.1);">Contr.<br>POA</th>
+                                <th scope="col" class="border-0 fw-bold text-center align-middle" style="background-color: rgba(13, 110, 253, 0.1);">Ingr.<br>POA</th>
+                                <th scope="col" class="border-0 fw-bold text-center align-middle" style="background-color: rgba(13, 110, 253, 0.1);">Margem<br>POA</th>
+                                <th scope="col" class="border-0 fw-bold text-center align-middle" style="background-color: rgba(13, 110, 253, 0.1);">Margem %<br>POA</th>
+                                <!-- Comparison headers -->
+                                <th scope="col" class="border-0 fw-bold text-center align-middle" style="background-color: rgba(255, 193, 7, 0.1);">Δ<br>Contr.</th>
+                                <th scope="col" class="border-0 fw-bold text-center align-middle" style="background-color: rgba(255, 193, 7, 0.1);">Δ<br>Ingr.</th>
+                                <th scope="col" class="border-0 fw-bold text-center align-middle" style="background-color: rgba(255, 193, 7, 0.1);">Δ<br>Margem</th>
+                                <th scope="col" class="border-0 fw-bold text-center align-middle" style="background-color: rgba(255, 193, 7, 0.1);">Δ<br>Margem%</th>
                             </tr>
                         </thead>
                         <tbody id="tableBody">
                             <!-- Renderizar dados diretamente no servidor -->
                             {% for projeto in consolidado_data.projetos|slice:":200" %} <!-- Limitar a 20 primeiros para performance -->
                             <tr>
-                                <td><code class="text-primary">{{ projeto.codigo }}</code></td>
-                                <td class="text-truncate" style="max-width: 300px;" title="{{ projeto.descricao }}">
+                                <td class="text-center align-middle"><span class="badge bg-secondary">{{ projeto.mercado }}</span></td>
+                                <td class="text-center align-middle"><code class="text-primary">{{ projeto.codigo }}</code></td>
+                                <td class="text-center align-middle text-truncate" style="max-width: 150px;" title="{{ projeto.descricao }}">
                                     {{ projeto.descricao }}
                                 </td>
-                                <td><span class="badge bg-secondary">{{ projeto.mercado }}</span></td>
-                                <td>{{ projeto.regiao|default:'-' }}</td>
-                                <td>{{ projeto.tipo_solucao|default:'-' }}</td>
-                                <td class="text-end fw-bold"> {{ projeto.contratacion_ytd_formatted }}</td>
-                                <td class="text-end fw-bold text-success"> {{ projeto.ingresos_ytd_formatted }}</td>
-                                <td class="text-end fw-bold {% if projeto.margen_ytd >= 0 %}text-success{% else %}text-danger{% endif %}">
+                                <td class="text-center align-middle">{{ projeto.regiao|default:'-' }}</td>
+                                <td class="text-center align-middle">{{ projeto.tipo_solucao|default:'-' }}</td>
+                                <!-- YTD (Realizado) -->
+                                <td class="text-center fw-bold align-middle" style="background-color: rgba(25, 135, 84, 0.05);"> {{ projeto.contratacion_ytd_formatted }}</td>
+                                <td class="text-center fw-bold text-success align-middle" style="background-color: rgba(25, 135, 84, 0.05);"> {{ projeto.ingresos_ytd_formatted }}</td>
+                                <td class="text-center fw-bold align-middle {% if projeto.margen_ytd >= 0 %}text-success{% else %}text-danger{% endif %}" style="background-color: rgba(25, 135, 84, 0.05);">
                                     {{ projeto.margen_ytd_formatted }}
                                 </td>
-                                <td class="text-end">
+                                <td class="text-center align-middle">
                                     <span class="badge {% if projeto.margen_percentual >= 20 %}bg-success{% elif projeto.margen_percentual >= 10 %}bg-warning{% elif projeto.margen_percentual >= 0 %}bg-secondary{% else %}bg-danger{% endif %}">
                                         {{ projeto.margen_percentual|floatformat:1 }}%
                                     </span>
                                 </td>
+                                <!-- POA (Planejado) -->
+                                <td class="text-center fw-bold text-primary align-middle" style="background-color: rgba(13, 110, 253, 0.05);"> {{ projeto.contratacion_poa_formatted }}</td>
+                                <td class="text-center fw-bold text-primary align-middle" style="background-color: rgba(13, 110, 253, 0.05);"> {{ projeto.ingresos_poa_formatted }}</td>
+                                <td class="text-center fw-bold text-primary align-middle" style="background-color: rgba(13, 110, 253, 0.05);"> {{ projeto.margen_poa_formatted }}</td>
+                                <td class="text-center fw-bold text-primary align-middle" style="background-color: rgba(13, 110, 253, 0.05);"> {{ projeto.margen_percentual_poa_formatted }}%</td>
+
+                                <!-- Comparações -->
+                                <td class="text-center fw-bold align-middle {% if projeto.contratacion_vs_poa >= 0 %}text-success{% else %}text-danger{% endif %}" style="background-color: rgba(255, 193, 7, 0.05);">
+                                    {{ projeto.contratacion_vs_poa_formatted }}
+                                </td>
+                                <td class="text-center fw-bold align-middle {% if projeto.ingresos_vs_poa >= 0 %}text-success{% else %}text-danger{% endif %}" style="background-color: rgba(255, 193, 7, 0.05);">
+                                    {{ projeto.ingresos_vs_poa_formatted }}
+                                </td>
+                                <td class="text-center fw-bold align-middle {% if projeto.margen_vs_poa >= 0 %}text-success{% else %}text-danger{% endif %}" style="background-color: rgba(255, 193, 7, 0.05);">
+                                    {{ projeto.margen_vs_poa_formatted }}
+                                </td>
+                                <td class="text-center fw-bold align-middle {% if projeto.margen_percentual_vs_poa >= 0 %}text-success{% else %}text-danger{% endif %}" style="background-color: rgba(255, 193, 7, 0.05);">
+                                    {{ projeto.margen_percentual_vs_poa_formatted }}%
+                                </td>
                             </tr>
                             {% empty %}
                             <tr>
-                                <td colspan="9" class="text-center text-muted py-4">
+                                <td colspan="15" class="text-center text-muted py-4">
                                     <i class="bi bi-info-circle me-2"></i>
                                     Nenhum projeto encontrado.
                                 </td>
                             </tr>
                             {% endfor %}
                         </tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="9" class="text-end fw-bold">
-                                    Total Contratação: {{ consolidado_data.total_contratacao_ytd }} 
-                                    
-                                </td>
-                            </tr>
                     </table>
                 </div>
             </div>
@@ -458,7 +573,20 @@ document.addEventListener('DOMContentLoaded', function() {
     setupTabListeners();
     setupTableFunctionality();
     updateProjectCount();
+    updateTableSummary();
 });
+
+// Função helper para encontrar o índice de uma coluna pelo nome do cabeçalho
+function getColumnIndex(columnName) {
+    const headers = document.querySelectorAll('#projectsTable thead th');
+    for (let i = 0; i < headers.length; i++) {
+        if (headers[i].textContent.trim() === columnName) {
+            return i;
+        }
+    }
+    console.error(`❌ Coluna "${columnName}" não encontrada. Headers disponíveis:`, Array.from(headers).map(h => h.textContent.trim()));
+    return -1; // Não encontrado
+}
 
 function applyClientFilters() {
     console.log('🔍 Aplicando filtros...');
@@ -471,11 +599,15 @@ function applyClientFilters() {
     console.log(`📋 Encontradas ${rows.length} linhas na tabela`);
     let visibleCount = 0;
 
-    rows.forEach(row => {
-        if (row.cells.length < 9) return; // Pular linhas de "nenhum resultado"
+    // Obter índices das colunas dinamicamente
+    const margemIndex = getColumnIndex('Margem %');
+    const mercadoIndex = getColumnIndex('Mercado');
 
-        const margemCell = row.cells[8]; // Coluna Margem %
-        const marketBadge = row.cells[2].querySelector('.badge'); // Badge do mercado
+    rows.forEach(row => {
+        if (row.cells.length < 15) return; // Pular linhas de "nenhum resultado"
+
+        const margemCell = row.cells[margemIndex];
+        const marketBadge = row.cells[mercadoIndex].querySelector('.badge');
 
         let margemValue = 0;
         if (margemCell && margemCell.textContent) {
@@ -524,6 +656,7 @@ function applyClientFilters() {
     });
 
     updateProjectCount(visibleCount);
+    updateTableSummary();
 
     console.log(`✅ Filtro aplicado: ${visibleCount} projetos visíveis`);
 }
@@ -677,6 +810,16 @@ function updateProjectCount(count) {
     }
 }
 
+// Função para formatar valores monetários
+function formatCurrency(value) {
+    return new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+    }).format(value);
+}
+
 function setupTabListeners() {
     document.querySelectorAll('#dashboardTabs .nav-link').forEach(tab => {
         tab.addEventListener('click', function() {
@@ -717,12 +860,166 @@ function renderLoadingTable() {
     const tbody = document.getElementById('tableBody');
     tbody.innerHTML = `
         <tr>
-            <td colspan="9" class="text-center py-4">
+            <td colspan="15" class="text-center py-4">
                 <div class="spinner-border spinner-border-sm text-primary me-2" role="status"></div>
                 Carregando dados...
             </td>
         </tr>
     `;
+}
+
+// Função para atualizar o resumo da tabela com totais filtrados
+function updateTableSummary() {
+    console.log('📊 Calculando totais da tabela...');
+
+    const rows = document.querySelectorAll('#tableBody tr');
+    //Totais realizados
+    let totalContratacao = 0;
+    let totalIngresso = 0;
+    let totalMargem = 0;
+    let totalMargemPercentual = 0;
+
+    //Totais POA
+    let totalContratacaoPoa = 0;
+    let totalIngressoPoa = 0;
+    let totalMargemPoa = 0;
+    let totalMargemPercentualPoa = 0;
+    //Variações
+    let totalVarContratacaoPoa = 0;
+    let totalVarIngressoPoa = 0;
+    let totalVarMargemPoa = 0;
+    let totalVarMargemPercentualPoa = 0;
+    
+
+    console.log(`Encontradas ${rows.length} linhas na tabela`);
+
+    rows.forEach((row, index) => {
+        // Verificar se a linha é visível e tem dados
+        if (row.style.display !== 'none' && row.cells.length >= 15) {
+
+            // Coluna Contratação YTD (índice 5)
+            const contratacaoCell = row.cells[5];
+            if (contratacaoCell) {
+                const contratacaoText = contratacaoCell.textContent.trim();
+                const contratacaoValue = parseNumericValue(contratacaoText);
+                totalContratacao += contratacaoValue;
+            }
+
+            // Coluna Ingresso YTD (índice 6)
+            const ingressoCell = row.cells[6];
+            if (ingressoCell) {
+                const ingressoText = ingressoCell.textContent.trim();
+                const ingressoValue = parseNumericValue(ingressoText);
+                totalIngresso += ingressoValue;
+            }
+
+            // Coluna Margem YTD (índice 7)
+            const margemCell = row.cells[7];
+            if (margemCell) {
+                const margemText = margemCell.textContent.trim();
+                const margemValue = parseNumericValue(margemText);
+                totalMargem += margemValue;
+            }
+
+            // Coluna Contratação POA (índice 9)
+            const contratacaoPoaCell = row.cells[9];
+            if (contratacaoPoaCell) {
+                const contratacaoPoaValue = parseNumericValue(contratacaoPoaCell.textContent.trim());
+                totalContratacaoPoa += contratacaoPoaValue;
+            }
+
+            // Coluna Ingresso POA (índice 10)
+            const ingressoPoaCell = row.cells[10];
+            if (ingressoPoaCell) {
+                const ingressoPoaValue = parseNumericValue(ingressoPoaCell.textContent.trim());
+                totalIngressoPoa += ingressoPoaValue;
+            }
+
+            // Coluna Margem POA (índice 11)
+            const margemPoaCell = row.cells[11];
+            if (margemPoaCell) {
+                const margemPoaValue = parseNumericValue(margemPoaCell.textContent.trim());
+                totalMargemPoa += margemPoaValue;
+            }
+
+        }
+    });
+    
+    // Calcular margem percentual POA
+    totalMargemPercentualPoa = totalIngressoPoa > 0 ? ((totalMargemPoa/totalIngressoPoa)).toFixed(4) : 0;
+    totalMargemPercentual = totalIngresso > 0 ? ((totalMargem/totalIngresso)).toFixed(4) : 0;
+    //Variações entre POA e realizado
+    totalVarContratacaoPoa = (totalContratacao / totalContratacaoPoa) -1;
+    totalVarIngressoPoa = (totalIngresso / totalIngressoPoa) -1;
+    totalVarMargemPoa = (totalMargem / totalMargemPoa) -1;
+    totalVarMargemPercentualPoa = (totalMargemPercentual - totalMargemPercentualPoa) * 100;
+
+    console.log(`💰 Totais calculados - YTD: ${formatCurrency(totalContratacao)}, POA: ${formatCurrency(totalContratacaoPoa)}`);
+
+    // Formatar e atualizar os elementos HTML - YTD
+    const totalContratacaoEl = document.getElementById('totalContratacao');
+    const totalIngressoEl = document.getElementById('totalIngresso');
+    const totalMargemEl = document.getElementById('totalMargem');
+    const totalMargemPercentualEl = document.getElementById('totalMargemPercentual');
+
+    if (totalContratacaoEl) {
+        totalContratacaoEl.textContent = formatCurrency(totalContratacao);
+    }
+
+    if (totalIngressoEl) {
+        totalIngressoEl.textContent = formatCurrency(totalIngresso);
+    }
+
+    if (totalMargemEl) {
+        totalMargemEl.textContent = formatCurrency(totalMargem);
+    }
+
+    if (totalMargemPercentualEl) {
+        const percentual = totalIngresso > 0 ? ((totalMargem/totalIngresso)*100).toFixed(2) : '0.00';
+        totalMargemPercentualEl.textContent = percentual + '%';
+    }
+
+    // Formatar e atualizar os elementos HTML - POA
+    const totalContratacaoPoaEl = document.getElementById('totalContratacaoPoa');
+    const totalIngressoPoaEl = document.getElementById('totalIngressoPoa');
+    const totalMargemPoaEl = document.getElementById('totalMargemPoa');
+    const totalMargemPercentualPoaEl = document.getElementById('totalMargemPercentualPoa');
+    const totalVarContratacaoPoaEl = document.getElementById('totalVarContratacaoPoa');
+    const totalVarIngressoPoaEl = document.getElementById('totalVarIngressoPoa');
+    const totalVarMargemPoaEl = document.getElementById('totalVarMargemPoa');
+    const totalVarMargemPercentualPoaEl = document.getElementById('totalVarMargemPercentualPoa');
+
+    if (totalContratacaoPoaEl) {
+        totalContratacaoPoaEl.textContent = formatCurrency(totalContratacaoPoa);
+    }
+
+    if (totalIngressoPoaEl) {
+        totalIngressoPoaEl.textContent = formatCurrency(totalIngressoPoa);
+    }
+
+    if (totalMargemPoaEl) {
+        totalMargemPoaEl.textContent = formatCurrency(totalMargemPoa);
+    }
+
+    if (totalMargemPercentualPoaEl) {
+        totalMargemPercentualPoaEl.textContent = (totalMargemPercentualPoa * 100).toFixed(2) + '%';
+    }
+
+    if (totalVarContratacaoPoaEl) {
+        totalVarContratacaoPoaEl.textContent = (totalVarContratacaoPoa * 100).toFixed(2) + '%';
+    }
+
+    if (totalVarIngressoPoaEl) {
+        totalVarIngressoPoaEl.textContent = (totalVarIngressoPoa * 100).toFixed(2) + '%';
+    }
+
+    if (totalVarMargemPoaEl) {
+        totalVarMargemPoaEl.textContent = (totalVarMargemPoa * 100).toFixed(2) + '%';
+    }
+
+    if (totalVarMargemPercentualPoaEl) {
+        totalVarMargemPercentualPoaEl.textContent = totalVarMargemPercentualPoa.toFixed(2) + 'p.p';
+    }
 }
 
 // Função para limpar filtros
@@ -741,10 +1038,15 @@ window.debugProjects = function(category) {
 window.debugFilter = function() {
     console.log('=== DEBUG FILTRO ===');
     const rows = document.querySelectorAll('#tableBody tr');
+
+    // Obter índices das colunas dinamicamente
+    const margemIndex = getColumnIndex('Margem %');
+    const mercadoIndex = getColumnIndex('Mercado');
+
     rows.forEach((row, index) => {
-        if (row.cells.length >= 9) {
-            const margemCell = row.cells[8];
-            const marketBadge = row.cells[2].querySelector('.badge');
+        if (row.cells.length >= 15) {
+            const margemCell = row.cells[margemIndex];
+            const marketBadge = row.cells[mercadoIndex].querySelector('.badge');
 
             const margemText = margemCell ? margemCell.textContent.trim() : 'N/A';
             const marketText = marketBadge ? marketBadge.textContent.trim() : 'N/A';

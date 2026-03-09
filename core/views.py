@@ -132,6 +132,7 @@ def get_projetos_detalhes(category, ultimo_processamento):
     projetos = Projeto.objects.filter(base_filter).values(
         'codigo', 'descricao', 'mercado', 'regiao', 'tipo_solucao',
         'contratacion_ytd', 'ingresos_ytd', 'margen_ytd', 'margen_percentual_ytd',
+        'contratacion_poa', 'ingresos_poa', 'margen_poa',
         'is_active', 'is_pipeline'
     ).order_by('-margen_percentual_ytd')
 
@@ -141,12 +142,22 @@ def get_projetos_detalhes(category, ultimo_processamento):
         def format_number(value):
             return f"{value:,.0f}".replace(",", ".")
 
+        # Calcular comparações Realizado vs Planejado
+        contratacion_vs_poa = projeto['contratacion_ytd'] - projeto['contratacion_poa']
+        ingresos_vs_poa = projeto['ingresos_ytd'] - projeto['ingresos_poa']
+        margen_vs_poa = projeto['margen_ytd'] - projeto['margen_poa']
+        if projeto['ingresos_poa'] > 0 and projeto['margen_poa'] > 0:
+            margen_poa_percentual = projeto['margen_poa']/projeto['ingresos_poa']
+        else:
+            margen_poa_percentual = 0
+
         projetos_data.append({
             'codigo': projeto['codigo'],
             'descricao': projeto['descricao'],
             'mercado': projeto['mercado'],
             'regiao': projeto['regiao'] or '',
             'tipo_solucao': projeto['tipo_solucao'] or '',
+            # YTD (Realizado)
             'contratacion_ytd': projeto['contratacion_ytd'],
             'ingresos_ytd': projeto['ingresos_ytd'],
             'margen_ytd': projeto['margen_ytd'],
@@ -154,6 +165,23 @@ def get_projetos_detalhes(category, ultimo_processamento):
             'contratacion_ytd_formatted': format_number(projeto['contratacion_ytd']),
             'ingresos_ytd_formatted': format_number(projeto['ingresos_ytd']),
             'margen_ytd_formatted': format_number(projeto['margen_ytd']),
+            # POA (Planejado)
+            'contratacion_poa': projeto['contratacion_poa'],
+            'ingresos_poa': projeto['ingresos_poa'],
+            'margen_poa': projeto['margen_poa'],
+            'contratacion_poa_formatted': format_number(projeto['contratacion_poa']),
+            'ingresos_poa_formatted': format_number(projeto['ingresos_poa']),
+            'margen_poa_formatted': format_number(projeto['margen_poa']),
+            'margen_percentual_poa_formatted':  format_number(margen_poa_percentual*100),
+            
+
+            # Comparações
+            'contratacion_vs_poa': contratacion_vs_poa,
+            'ingresos_vs_poa': ingresos_vs_poa,
+            'margen_vs_poa': margen_vs_poa,
+            'contratacion_vs_poa_formatted': format_number(contratacion_vs_poa),
+            'ingresos_vs_poa_formatted': format_number(ingresos_vs_poa),
+            'margen_vs_poa_formatted': format_number(margen_vs_poa),
             'is_active': projeto['is_active'],
             'is_pipeline': projeto['is_pipeline'],
         })
