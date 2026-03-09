@@ -169,7 +169,7 @@
                     <input type="text" id="margemFilter" class="form-control form-control-sm" placeholder="Filtrar margem % (ex: >10, <20, 15)" style="width: 200px;">
                     <select id="marketFilter" class="form-select form-select-sm" style="width: 120px;">
                         <option value="">Todos Mercados</option>
-                        <option value="AAPP">AAPP</option>
+                        <option value="Administraciones Públicas">AAPP</option>
                         <option value="Sanidad">Sanidad</option>
                     </select>
                     <button class="btn btn-sm btn-outline-secondary" onclick="applyClientFilters()">
@@ -198,7 +198,7 @@
                         </thead>
                         <tbody id="tableBody">
                             <!-- Renderizar dados diretamente no servidor -->
-                            {% for projeto in consolidado_data.projetos|slice:":20" %} <!-- Limitar a 20 primeiros para performance -->
+                            {% for projeto in consolidado_data.projetos|slice:":200" %} <!-- Limitar a 20 primeiros para performance -->
                             <tr>
                                 <td><code class="text-primary">{{ projeto.codigo }}</code></td>
                                 <td class="text-truncate" style="max-width: 300px;" title="{{ projeto.descricao }}">
@@ -227,6 +227,13 @@
                             </tr>
                             {% endfor %}
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="9" class="text-end fw-bold">
+                                    Total Contratação: {{ consolidado_data.total_contratacao_ytd }} 
+                                    
+                                </td>
+                            </tr>
                     </table>
                 </div>
             </div>
@@ -415,7 +422,9 @@
     font-weight: 600;
 }
 </style>
+{% endblock %}
 
+{% block extra_js %}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Dashboard JavaScript loaded');

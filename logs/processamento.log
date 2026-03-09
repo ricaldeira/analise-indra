@@ -2039,3 +2039,653 @@ WARNING 2026-03-06 12:45:51,389 log 967576 131268620576448 "GET /favicon.ico HTT
 INFO 2026-03-06 12:45:54,097 log 967576 131268620576448 "GET /dashboard/ HTTP/1.1" 200 57013
 WARNING 2026-03-06 12:45:59,233 log 967576 131268620576448 Not Found: /.well-known/appspecific/com.chrome.devtools.json
 WARNING 2026-03-06 12:45:59,236 log 967576 131268620576448 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-07 07:48:03,420 autoreload 72227 129890990956672 Watching for file changes with StatReloader
+INFO 2026-03-07 07:48:08,039 log 72227 129890465355456 "GET / HTTP/1.1" 200 13270
+INFO 2026-03-07 07:48:08,064 log 72227 129890465355456 "GET /static/css/style.css HTTP/1.1" 200 6120
+INFO 2026-03-07 07:48:08,369 log 72227 129890465355456 "GET /static/js/main.js HTTP/1.1" 200 8064
+WARNING 2026-03-07 07:48:08,968 log 72227 129890465355456 Not Found: /favicon.ico
+WARNING 2026-03-07 07:48:08,993 log 72227 129890465355456 "GET /favicon.ico HTTP/1.1" 404 3456
+INFO 2026-03-07 07:48:12,105 log 72227 129890465355456 "GET /dashboard/ HTTP/1.1" 200 57013
+WARNING 2026-03-07 07:48:33,787 log 72227 129890465355456 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-07 07:48:33,788 log 72227 129890465355456 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-07 07:52:30,830 log 72227 129890465355456 "GET /dashboard/ HTTP/1.1" 200 63532
+INFO 2026-03-07 07:52:30,873 log 72227 129890465355456 "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-07 07:52:30,873 log 72227 129890456962752 "GET /static/js/main.js HTTP/1.1" 304 0
+WARNING 2026-03-07 07:52:35,022 log 72227 129890456962752 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-07 07:52:35,023 log 72227 129890456962752 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-07 07:54:47,421 autoreload 72227 129890990956672 /home/rcaldeira/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-07 07:54:48,109 autoreload 73671 140416344744064 Watching for file changes with StatReloader
+INFO 2026-03-07 07:55:19,379 log 73671 140415819474624 "GET /dashboard/ HTTP/1.1" 200 63514
+INFO 2026-03-07 07:55:19,410 log 73671 140415819474624 "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-07 07:55:19,426 log 73671 140415811081920 "GET /static/js/main.js HTTP/1.1" 304 0
+INFO 2026-03-07 08:00:11,467 log 73671 140415819474624 "GET /dashboard/ HTTP/1.1" 200 63514
+INFO 2026-03-07 08:00:11,582 log 73671 140415819474624 "GET /static/css/style.css HTTP/1.1" 200 6120
+INFO 2026-03-07 08:00:11,586 log 73671 140415811081920 "GET /static/js/main.js HTTP/1.1" 200 8064
+WARNING 2026-03-07 08:00:12,192 log 73671 140415811081920 Not Found: /favicon.ico
+WARNING 2026-03-07 08:00:12,193 log 73671 140415811081920 "GET /favicon.ico HTTP/1.1" 404 3456
+ERROR 2026-03-07 08:02:12,401 log 73671 140415811081920 Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/base.py", line 577, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/core/views.py", line 49, in dashboard
+    return render(request, 'core/dashboard.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 307, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 235, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 894, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/base.py", line 579, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/rcaldeira/analise-indra/.venv/lib/python3.12/site-packages/django/template/base.py", line 634, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Template: /home/rcaldeira/analise-indra/core/templates/core/dashboard.html, Invalid block tag on line 354: 'endblock', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+ERROR 2026-03-07 08:02:12,404 log 73671 140415811081920 "GET /dashboard/ HTTP/1.1" 500 241625
+WARNING 2026-03-07 08:02:12,663 log 73671 140415811081920 Not Found: /favicon.ico
+WARNING 2026-03-07 08:02:12,664 log 73671 140415811081920 "GET /favicon.ico HTTP/1.1" 404 3456
+INFO 2026-03-07 08:03:17,787 log 73671 140415811081920 "GET /dashboard/ HTTP/1.1" 200 278714
+INFO 2026-03-07 08:03:17,831 log 73671 140415819474624 "GET /static/js/main.js HTTP/1.1" 200 8064
+INFO 2026-03-07 08:03:17,832 log 73671 140415811081920 "GET /static/css/style.css HTTP/1.1" 200 6120
+WARNING 2026-03-07 08:03:18,468 log 73671 140415811081920 Not Found: /favicon.ico
+WARNING 2026-03-07 08:03:18,469 log 73671 140415811081920 "GET /favicon.ico HTTP/1.1" 404 3456
+INFO 2026-03-07 08:04:31,990 log 73671 140415811081920 "GET /dashboard/ HTTP/1.1" 200 278736
+INFO 2026-03-07 08:04:32,044 log 73671 140415819474624 "GET /static/js/main.js HTTP/1.1" 200 8064
+INFO 2026-03-07 08:04:32,045 log 73671 140415811081920 "GET /static/css/style.css HTTP/1.1" 200 6120
+WARNING 2026-03-07 08:04:32,779 log 73671 140415819474624 Not Found: /favicon.ico
+WARNING 2026-03-07 08:04:32,780 log 73671 140415819474624 "GET /favicon.ico HTTP/1.1" 404 3456
+INFO 2026-03-07 08:07:48,371 log 73671 140415819474624 "GET /dashboard/ HTTP/1.1" 200 279113
+INFO 2026-03-07 08:07:48,411 log 73671 140415819474624 "GET /static/css/style.css HTTP/1.1" 200 6120
+INFO 2026-03-07 08:07:48,411 log 73671 140415811081920 "GET /static/js/main.js HTTP/1.1" 200 8064
+WARNING 2026-03-07 08:07:48,689 log 73671 140415819474624 Not Found: /favicon.ico
+WARNING 2026-03-07 08:07:48,691 log 73671 140415819474624 "GET /favicon.ico HTTP/1.1" 404 3456
+INFO 2026-03-07 08:09:52,747 autoreload 73671 140416344744064 /home/rcaldeira/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-07 08:09:53,090 autoreload 76867 126942107783296 Watching for file changes with StatReloader
+INFO 2026-03-07 08:27:29,009 autoreload 76867 126942107783296 /home/rcaldeira/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-07 08:27:29,699 autoreload 80269 134705815896192 Watching for file changes with StatReloader
+ERROR 2026-03-07 08:27:59,208 views 80269 134705290417856 Erro ao calcular dados do dashboard para categoria AAPP: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/core/views.py", line 345, in get_dashboard_data
+    projetos_detalhes = get_projetos_detalhes(category, ultimo_processamento)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/core/views.py", line 182, in get_projetos_detalhes
+    'total_contratacao_ytd': format_number(total_contratacao_ytd =+contratacion_ytd),
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+ERROR 2026-03-07 08:27:59,265 views 80269 134705290417856 Erro ao calcular dados do dashboard para categoria Sanidad: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/core/views.py", line 345, in get_dashboard_data
+    projetos_detalhes = get_projetos_detalhes(category, ultimo_processamento)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/core/views.py", line 182, in get_projetos_detalhes
+    'total_contratacao_ytd': format_number(total_contratacao_ytd =+contratacion_ytd),
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+ERROR 2026-03-07 08:27:59,562 views 80269 134705290417856 Erro ao calcular dados do dashboard para categoria Consolidado: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/core/views.py", line 345, in get_dashboard_data
+    projetos_detalhes = get_projetos_detalhes(category, ultimo_processamento)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/core/views.py", line 182, in get_projetos_detalhes
+    'total_contratacao_ytd': format_number(total_contratacao_ytd =+contratacion_ytd),
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+INFO 2026-03-07 08:27:59,584 log 80269 134705290417856 "GET /dashboard/ HTTP/1.1" 200 39551
+INFO 2026-03-07 08:27:59,626 log 80269 134705290417856 "GET /static/css/style.css HTTP/1.1" 200 6120
+INFO 2026-03-07 08:27:59,626 log 80269 134705206785728 "GET /static/js/main.js HTTP/1.1" 200 8064
+WARNING 2026-03-07 08:28:00,110 log 80269 134705290417856 Not Found: /favicon.ico
+WARNING 2026-03-07 08:28:00,111 log 80269 134705290417856 "GET /favicon.ico HTTP/1.1" 404 3456
+WARNING 2026-03-07 08:28:11,713 log 80269 134705290417856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-07 08:28:11,714 log 80269 134705290417856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+ERROR 2026-03-08 08:13:19,693 views 80269 134705290417856 Erro ao calcular dados do dashboard para categoria AAPP: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/core/views.py", line 345, in get_dashboard_data
+    projetos_detalhes = get_projetos_detalhes(category, ultimo_processamento)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/core/views.py", line 182, in get_projetos_detalhes
+    'total_contratacao_ytd': format_number(total_contratacao_ytd =+contratacion_ytd),
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+ERROR 2026-03-08 08:13:19,868 views 80269 134705290417856 Erro ao calcular dados do dashboard para categoria Sanidad: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/core/views.py", line 345, in get_dashboard_data
+    projetos_detalhes = get_projetos_detalhes(category, ultimo_processamento)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/core/views.py", line 182, in get_projetos_detalhes
+    'total_contratacao_ytd': format_number(total_contratacao_ytd =+contratacion_ytd),
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+ERROR 2026-03-08 08:13:20,392 views 80269 134705290417856 Erro ao calcular dados do dashboard para categoria Consolidado: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/core/views.py", line 345, in get_dashboard_data
+    projetos_detalhes = get_projetos_detalhes(category, ultimo_processamento)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/core/views.py", line 182, in get_projetos_detalhes
+    'total_contratacao_ytd': format_number(total_contratacao_ytd =+contratacion_ytd),
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+INFO 2026-03-08 08:13:20,401 log 80269 134705290417856 "GET /dashboard/ HTTP/1.1" 200 40784
+INFO 2026-03-08 08:13:20,481 log 80269 134705206785728 "GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2026-03-08 08:13:20,481 log 80269 134705198393024 "GET /static/js/main.js HTTP/1.1" 304 0
+WARNING 2026-03-08 08:13:20,491 log 80269 134705290417856 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-08 08:13:20,491 log 80269 134705290417856 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-08 08:14:18,897 autoreload 80269 134705815896192 /home/rcaldeira/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-08 08:14:19,551 autoreload 104936 129268237103232 Watching for file changes with StatReloader
+INFO 2026-03-08 08:14:24,779 log 104936 129267703371456 "GET /dashboard/ HTTP/1.1" 200 389116
+WARNING 2026-03-08 08:14:24,814 log 104936 129267711764160 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-08 08:14:24,816 log 104936 129267711764160 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-08 08:17:32,916 autoreload 104936 129268237103232 /home/rcaldeira/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-08 08:17:33,247 autoreload 105590 130329597411456 Watching for file changes with StatReloader
+ERROR 2026-03-08 08:18:07,481 views 105590 130329072113344 Erro ao calcular dados do dashboard para categoria AAPP: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/core/views.py", line 345, in get_dashboard_data
+    projetos_detalhes = get_projetos_detalhes(category, ultimo_processamento)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/core/views.py", line 182, in get_projetos_detalhes
+    'total_contratacao_ytd': format_number(total_contratacao_ytd =+contratacion_ytd),
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+ERROR 2026-03-08 08:18:07,645 views 105590 130329072113344 Erro ao calcular dados do dashboard para categoria Sanidad: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/core/views.py", line 345, in get_dashboard_data
+    projetos_detalhes = get_projetos_detalhes(category, ultimo_processamento)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/core/views.py", line 182, in get_projetos_detalhes
+    'total_contratacao_ytd': format_number(total_contratacao_ytd =+contratacion_ytd),
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+ERROR 2026-03-08 08:18:08,919 views 105590 130329072113344 Erro ao calcular dados do dashboard para categoria Consolidado: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/core/views.py", line 345, in get_dashboard_data
+    projetos_detalhes = get_projetos_detalhes(category, ultimo_processamento)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/core/views.py", line 182, in get_projetos_detalhes
+    'total_contratacao_ytd': format_number(total_contratacao_ytd =+contratacion_ytd),
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_projetos_detalhes.<locals>.format_number() got an unexpected keyword argument 'total_contratacao_ytd'
+INFO 2026-03-08 08:18:08,948 log 105590 130329072113344 "GET /dashboard/ HTTP/1.1" 200 39481
+WARNING 2026-03-08 08:18:09,011 log 105590 130329072113344 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-08 08:18:09,012 log 105590 130329072113344 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-08 08:19:09,158 autoreload 105590 130329597411456 /home/rcaldeira/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-08 08:19:09,684 autoreload 105983 126377746444416 Watching for file changes with StatReloader
+ERROR 2026-03-08 08:19:14,049 views 105983 126377220904640 Erro ao calcular dados do dashboard para categoria AAPP: 'margen_percentual'
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/core/views.py", line 345, in get_dashboard_data
+    projetos_detalhes = get_projetos_detalhes(category, ultimo_processamento)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/core/views.py", line 189, in get_projetos_detalhes
+    projetos_data.sort(key=lambda x: x['margen_percentual'], reverse=True)
+  File "/home/rcaldeira/analise-indra/core/views.py", line 189, in <lambda>
+    projetos_data.sort(key=lambda x: x['margen_percentual'], reverse=True)
+                                     ~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'margen_percentual'
+ERROR 2026-03-08 08:19:14,145 views 105983 126377220904640 Erro ao calcular dados do dashboard para categoria Sanidad: 'margen_percentual'
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/core/views.py", line 345, in get_dashboard_data
+    projetos_detalhes = get_projetos_detalhes(category, ultimo_processamento)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/core/views.py", line 189, in get_projetos_detalhes
+    projetos_data.sort(key=lambda x: x['margen_percentual'], reverse=True)
+  File "/home/rcaldeira/analise-indra/core/views.py", line 189, in <lambda>
+    projetos_data.sort(key=lambda x: x['margen_percentual'], reverse=True)
+                                     ~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'margen_percentual'
+ERROR 2026-03-08 08:19:14,793 views 105983 126377220904640 Erro ao calcular dados do dashboard para categoria Consolidado: 'margen_percentual'
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/core/views.py", line 345, in get_dashboard_data
+    projetos_detalhes = get_projetos_detalhes(category, ultimo_processamento)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/core/views.py", line 189, in get_projetos_detalhes
+    projetos_data.sort(key=lambda x: x['margen_percentual'], reverse=True)
+  File "/home/rcaldeira/analise-indra/core/views.py", line 189, in <lambda>
+    projetos_data.sort(key=lambda x: x['margen_percentual'], reverse=True)
+                                     ~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'margen_percentual'
+INFO 2026-03-08 08:19:14,809 log 105983 126377220904640 "GET /dashboard/ HTTP/1.1" 200 39481
+WARNING 2026-03-08 08:19:14,858 log 105983 126377220904640 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-08 08:19:14,859 log 105983 126377220904640 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-08 08:19:50,247 autoreload 105983 126377746444416 /home/rcaldeira/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-08 08:19:50,581 autoreload 106176 126670240862336 Watching for file changes with StatReloader
+ERROR 2026-03-08 08:20:09,231 views 106176 126669715314368 Erro ao calcular dados do dashboard para categoria AAPP: 'margen_percentual'
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/core/views.py", line 345, in get_dashboard_data
+    projetos_detalhes = get_projetos_detalhes(category, ultimo_processamento)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/core/views.py", line 189, in get_projetos_detalhes
+    projetos_data.sort(key=lambda x: x['margen_percentual'], reverse=True)
+  File "/home/rcaldeira/analise-indra/core/views.py", line 189, in <lambda>
+    projetos_data.sort(key=lambda x: x['margen_percentual'], reverse=True)
+                                     ~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'margen_percentual'
+ERROR 2026-03-08 08:20:09,346 views 106176 126669715314368 Erro ao calcular dados do dashboard para categoria Sanidad: 'margen_percentual'
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/core/views.py", line 345, in get_dashboard_data
+    projetos_detalhes = get_projetos_detalhes(category, ultimo_processamento)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/core/views.py", line 189, in get_projetos_detalhes
+    projetos_data.sort(key=lambda x: x['margen_percentual'], reverse=True)
+  File "/home/rcaldeira/analise-indra/core/views.py", line 189, in <lambda>
+    projetos_data.sort(key=lambda x: x['margen_percentual'], reverse=True)
+                                     ~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'margen_percentual'
+ERROR 2026-03-08 08:20:09,997 views 106176 126669715314368 Erro ao calcular dados do dashboard para categoria Consolidado: 'margen_percentual'
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/core/views.py", line 345, in get_dashboard_data
+    projetos_detalhes = get_projetos_detalhes(category, ultimo_processamento)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rcaldeira/analise-indra/core/views.py", line 189, in get_projetos_detalhes
+    projetos_data.sort(key=lambda x: x['margen_percentual'], reverse=True)
+  File "/home/rcaldeira/analise-indra/core/views.py", line 189, in <lambda>
+    projetos_data.sort(key=lambda x: x['margen_percentual'], reverse=True)
+                                     ~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'margen_percentual'
+INFO 2026-03-08 08:20:10,016 log 106176 126669715314368 "GET /dashboard/ HTTP/1.1" 200 39481
+WARNING 2026-03-08 08:20:10,087 log 106176 126669715314368 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-08 08:20:10,098 log 106176 126669715314368 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-08 08:20:55,537 autoreload 106176 126670240862336 /home/rcaldeira/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-08 08:20:55,915 autoreload 106470 129888165154944 Watching for file changes with StatReloader
+INFO 2026-03-08 08:20:59,773 log 106470 129887639758528 "GET /dashboard/ HTTP/1.1" 200 41673
+WARNING 2026-03-08 08:20:59,821 log 106470 129887639758528 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-08 08:20:59,823 log 106470 129887639758528 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-08 08:22:35,549 autoreload 106470 129888165154944 /home/rcaldeira/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-08 08:22:35,966 autoreload 106839 125416115167360 Watching for file changes with StatReloader
+INFO 2026-03-08 08:22:42,685 log 106839 125415589680832 "GET /dashboard/ HTTP/1.1" 200 41673
+WARNING 2026-03-08 08:22:42,741 log 106839 125415589680832 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-08 08:22:42,743 log 106839 125415589680832 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-08 08:23:21,804 autoreload 107046 139692136394880 Watching for file changes with StatReloader
+INFO 2026-03-08 08:28:21,819 autoreload 109073 126015108415616 Watching for file changes with StatReloader
+INFO 2026-03-08 08:28:32,742 log 109073 126014275024576 "GET /dashboard/ HTTP/1.1" 200 41673
+WARNING 2026-03-08 08:28:32,840 log 109073 126014275024576 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-08 08:28:32,842 log 109073 126014275024576 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-08 08:29:11,057 log 109073 126014275024576 "GET /dashboard/ HTTP/1.1" 200 279043
+WARNING 2026-03-08 08:29:11,157 log 109073 126014275024576 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-03-08 08:29:11,158 log 109073 126014275024576 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3567
+INFO 2026-03-08 08:32:17,242 log 109073 126014275024576 "GET /dashboard/ HTTP/1.1" 200 279043
+INFO 2026-03-08 08:33:03,325 autoreload 109073 126015108415616 /home/rcaldeira/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-08 08:33:04,732 autoreload 110121 140315610058880 Watching for file changes with StatReloader
+INFO 2026-03-08 08:38:41,847 log 110121 140314775484096 "GET /dashboard/ HTTP/1.1" 200 279043
+INFO 2026-03-08 08:39:35,033 autoreload 110121 140315610058880 /home/rcaldeira/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-08 08:39:36,366 autoreload 111381 124071134806144 Watching for file changes with StatReloader
+INFO 2026-03-08 08:39:42,021 log 111381 124070301419200 "GET /dashboard/ HTTP/1.1" 200 279043
+INFO 2026-03-08 08:42:54,637 autoreload 111381 124071134806144 /home/rcaldeira/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-08 08:42:56,063 autoreload 112074 125643073024128 Watching for file changes with StatReloader
+INFO 2026-03-08 08:43:04,425 log 112074 125642238588608 "GET /dashboard/ HTTP/1.1" 200 279043
+INFO 2026-03-08 08:49:14,004 autoreload 112074 125643073024128 /home/rcaldeira/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-08 08:49:16,348 autoreload 113295 129475989143680 Watching for file changes with StatReloader
+INFO 2026-03-08 08:49:19,790 log 113295 129475155687104 "GET /dashboard/ HTTP/1.1" 200 279043
+INFO 2026-03-08 08:49:34,377 log 113295 129475155687104 "GET /dashboard/ HTTP/1.1" 200 279043
+INFO 2026-03-08 08:49:34,418 log 113295 129475155687104 "GET /static/css/style.css HTTP/1.1" 200 6120
+INFO 2026-03-08 08:49:34,569 log 113295 129475155687104 "GET /static/js/main.js HTTP/1.1" 200 8064
+WARNING 2026-03-08 08:49:35,026 log 113295 129475155687104 Not Found: /favicon.ico
+WARNING 2026-03-08 08:49:35,028 log 113295 129475155687104 "GET /favicon.ico HTTP/1.1" 404 3456
+INFO 2026-03-08 09:02:53,348 autoreload 113295 129475989143680 /home/rcaldeira/analise-indra/core/views.py changed, reloading.
+INFO 2026-03-08 09:02:55,287 autoreload 115898 129983171805312 Watching for file changes with StatReloader
+INFO 2026-03-08 09:04:14,060 autoreload 116288 126610541600896 Watching for file changes with StatReloader
+INFO 2026-03-08 09:04:18,441 log 116288 126609697687232 "GET / HTTP/1.1" 200 13270
+INFO 2026-03-08 09:04:46,676 views 116288 126609697687232 === INÍCIO DO PROCESSAMENTO DE UPLOAD ===
+INFO 2026-03-08 09:04:46,793 views 116288 126609697687232 Arquivo recebido: Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (tamanho: 12295366 bytes, mês fechamento: 2)
+INFO 2026-03-08 09:04:46,794 views 116288 126609697687232 Tipo de arquivo validado com sucesso
+INFO 2026-03-08 09:04:46,794 views 116288 126609697687232 Salvando arquivo temporariamente em: /home/rcaldeira/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx
+ERROR 2026-03-08 09:04:46,794 views 116288 126609697687232 Erro inesperado no processamento de upload: Erro ao processar arquivo: [Errno 2] No such file or directory: '/home/rcaldeira/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx'
+Traceback (most recent call last):
+  File "/home/rcaldeira/analise-indra/core/views.py", line 89, in process_upload
+    with open(file_path, 'wb+') as destination:
+         ^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/rcaldeira/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx'
+INFO 2026-03-08 09:04:46,797 log 116288 126609697687232 "POST /upload/ HTTP/1.1" 200 210
+INFO 2026-03-08 09:05:20,546 views 116288 126609697687232 === INÍCIO DO PROCESSAMENTO DE UPLOAD ===
+INFO 2026-03-08 09:05:20,718 views 116288 126609697687232 Arquivo recebido: Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (tamanho: 12295366 bytes, mês fechamento: 2)
+INFO 2026-03-08 09:05:20,719 views 116288 126609697687232 Tipo de arquivo validado com sucesso
+INFO 2026-03-08 09:05:20,719 views 116288 126609697687232 Salvando arquivo temporariamente em: /home/rcaldeira/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx
+INFO 2026-03-08 09:05:20,743 views 116288 126609697687232 Arquivo salvo temporariamente. Tamanho final: 12295366 bytes
+INFO 2026-03-08 09:05:20,743 views 116288 126609697687232 Iniciando processamento do arquivo XLS...
+INFO 2026-03-08 09:05:20,743 views 116288 126609697687232 === INÍCIO DO PROCESSAMENTO XLS: /home/rcaldeira/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (mês fechamento: 2) ===
+INFO 2026-03-08 09:05:20,743 views 116288 126609697687232 Lendo aba FC do arquivo Excel...
+INFO 2026-03-08 09:05:26,456 views 116288 126609697687232 Arquivo lido com sucesso. Dimensões: 7380 linhas x 136 colunas
+INFO 2026-03-08 09:05:26,457 views 116288 126609697687232 Mapeamento de conceitos configurado: 21 conceitos
+INFO 2026-03-08 09:05:26,458 views 116288 126609697687232 Limpando dados anteriores...
+INFO 2026-03-08 09:05:26,638 views 116288 126609697687232 Dados anteriores removidos: 1 processamentos, 195 projetos, 30420 conceitos
+INFO 2026-03-08 09:05:26,638 views 116288 126609697687232 Criando registro de processamento...
+INFO 2026-03-08 09:05:26,649 views 116288 126609697687232 Registro de processamento criado: ID 11, arquivo: temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx
+INFO 2026-03-08 09:05:26,649 views 116288 126609697687232 Iniciando processamento das linhas do arquivo (a partir da linha 35)...
+INFO 2026-03-08 09:05:33,418 views 116288 126609697687232 Salvando projeto: 19AP03 - 13 conceitos
+INFO 2026-03-08 09:05:34,701 views 116288 126609697687232 Salvando projeto: 19AP04 - 13 conceitos
+INFO 2026-03-08 09:05:35,993 views 116288 126609697687232 Salvando projeto: 25AP38 - 13 conceitos
+INFO 2026-03-08 09:05:37,337 views 116288 126609697687232 Salvando projeto: 20AP04 - 13 conceitos
+INFO 2026-03-08 09:05:39,129 views 116288 126609697687232 Salvando projeto: 25AP02 - 13 conceitos
+INFO 2026-03-08 09:05:41,307 views 116288 126609697687232 Salvando projeto: 20AP09 - 13 conceitos
+INFO 2026-03-08 09:05:43,477 views 116288 126609697687232 Salvando projeto: 20AP10 - 13 conceitos
+INFO 2026-03-08 09:05:45,629 views 116288 126609697687232 Processadas 100 linhas...
+INFO 2026-03-08 09:05:45,634 views 116288 126609697687232 Salvando projeto: 20AP14 - 13 conceitos
+INFO 2026-03-08 09:05:47,870 views 116288 126609697687232 Salvando projeto: 25APBR - 13 conceitos
+INFO 2026-03-08 09:05:49,987 views 116288 126609697687232 Salvando projeto: 21AP12 - 13 conceitos
+INFO 2026-03-08 09:05:52,156 views 116288 126609697687232 Salvando projeto: 21AP13 - 13 conceitos
+INFO 2026-03-08 09:05:54,529 views 116288 126609697687232 Salvando projeto: 25APMB - 13 conceitos
+INFO 2026-03-08 09:05:56,578 views 116288 126609697687232 Salvando projeto: 21AP15 - 13 conceitos
+INFO 2026-03-08 09:05:59,291 views 116288 126609697687232 Salvando projeto: 21AP16 - 13 conceitos
+INFO 2026-03-08 09:06:01,941 views 116288 126609697687232 Salvando projeto: 21AP17 - 13 conceitos
+INFO 2026-03-08 09:06:04,546 views 116288 126609697687232 Processadas 200 linhas...
+INFO 2026-03-08 09:06:04,554 views 116288 126609697687232 Salvando projeto: 22AP02 - 13 conceitos
+INFO 2026-03-08 09:06:07,055 views 116288 126609697687232 Salvando projeto: 22AP03 - 13 conceitos
+INFO 2026-03-08 09:06:09,414 views 116288 126609697687232 Salvando projeto: 22AP04 - 13 conceitos
+INFO 2026-03-08 09:06:10,642 views 116288 126609697687232 Salvando projeto: 22AP05 - 13 conceitos
+INFO 2026-03-08 09:06:11,900 views 116288 126609697687232 Salvando projeto: 22AP07 - 13 conceitos
+INFO 2026-03-08 09:06:13,152 views 116288 126609697687232 Salvando projeto: 22AP08 - 13 conceitos
+INFO 2026-03-08 09:06:14,404 views 116288 126609697687232 Salvando projeto: 22AP09 - 13 conceitos
+INFO 2026-03-08 09:06:15,705 views 116288 126609697687232 Processadas 300 linhas...
+INFO 2026-03-08 09:06:15,705 views 116288 126609697687232 Salvando projeto: 22AP10 - 13 conceitos
+INFO 2026-03-08 09:06:16,889 views 116288 126609697687232 Salvando projeto: 22AP11 - 13 conceitos
+INFO 2026-03-08 09:06:18,113 views 116288 126609697687232 Salvando projeto: 22AP15 - 13 conceitos
+INFO 2026-03-08 09:06:19,327 views 116288 126609697687232 Salvando projeto: 22AP16 - 13 conceitos
+INFO 2026-03-08 09:06:20,514 views 116288 126609697687232 Salvando projeto: 22AP18 - 13 conceitos
+INFO 2026-03-08 09:06:21,692 views 116288 126609697687232 Salvando projeto: 22AP20 - 13 conceitos
+INFO 2026-03-08 09:06:22,879 views 116288 126609697687232 Salvando projeto: 22AP21 - 13 conceitos
+INFO 2026-03-08 09:06:24,090 views 116288 126609697687232 Salvando projeto: 22AP22 - 13 conceitos
+INFO 2026-03-08 09:06:25,294 views 116288 126609697687232 Processadas 400 linhas...
+INFO 2026-03-08 09:06:25,298 views 116288 126609697687232 Salvando projeto: 22AP24 - 13 conceitos
+INFO 2026-03-08 09:06:26,515 views 116288 126609697687232 Salvando projeto: 25AP03 - 13 conceitos
+INFO 2026-03-08 09:06:27,692 views 116288 126609697687232 Salvando projeto: 22AP26 - 13 conceitos
+INFO 2026-03-08 09:06:28,909 views 116288 126609697687232 Salvando projeto: 23AP03 - 13 conceitos
+INFO 2026-03-08 09:06:30,110 views 116288 126609697687232 Salvando projeto: 23AP06 - 13 conceitos
+INFO 2026-03-08 09:06:31,337 views 116288 126609697687232 Salvando projeto: 23AP08 - 13 conceitos
+INFO 2026-03-08 09:06:32,570 views 116288 126609697687232 Salvando projeto: 23AP09 - 13 conceitos
+INFO 2026-03-08 09:06:33,771 views 116288 126609697687232 Salvando projeto: P26A13 - 13 conceitos
+INFO 2026-03-08 09:06:34,978 views 116288 126609697687232 Processadas 500 linhas...
+INFO 2026-03-08 09:06:34,986 views 116288 126609697687232 Salvando projeto: 23AP11 - 13 conceitos
+INFO 2026-03-08 09:06:36,206 views 116288 126609697687232 Salvando projeto: P26A14 - 13 conceitos
+INFO 2026-03-08 09:06:37,459 views 116288 126609697687232 Salvando projeto: 23AP13 - 13 conceitos
+INFO 2026-03-08 09:06:38,648 views 116288 126609697687232 Salvando projeto: 23AP14 - 13 conceitos
+INFO 2026-03-08 09:06:39,840 views 116288 126609697687232 Salvando projeto: 23AP17 - 13 conceitos
+INFO 2026-03-08 09:06:41,055 views 116288 126609697687232 Salvando projeto: 25AP18 - 13 conceitos
+INFO 2026-03-08 09:06:42,269 views 116288 126609697687232 Salvando projeto: 23AP19 - 13 conceitos
+INFO 2026-03-08 09:06:43,483 views 116288 126609697687232 Salvando projeto: 23AP28 - 13 conceitos
+INFO 2026-03-08 09:06:44,730 views 116288 126609697687232 Processadas 600 linhas...
+INFO 2026-03-08 09:06:44,742 views 116288 126609697687232 Salvando projeto: 23AP29 - 13 conceitos
+INFO 2026-03-08 09:06:45,951 views 116288 126609697687232 Salvando projeto: 23AP30 - 13 conceitos
+INFO 2026-03-08 09:06:47,126 views 116288 126609697687232 Salvando projeto: 23AP32 - 13 conceitos
+INFO 2026-03-08 09:06:48,317 views 116288 126609697687232 Salvando projeto: 23AP33 - 13 conceitos
+INFO 2026-03-08 09:06:49,514 views 116288 126609697687232 Salvando projeto: 23AP34 - 13 conceitos
+INFO 2026-03-08 09:06:50,738 views 116288 126609697687232 Salvando projeto: 23AP35 - 13 conceitos
+INFO 2026-03-08 09:06:52,012 views 116288 126609697687232 Salvando projeto: 23AP36 - 13 conceitos
+INFO 2026-03-08 09:06:53,911 views 116288 126609697687232 Processadas 700 linhas...
+INFO 2026-03-08 09:06:53,914 views 116288 126609697687232 Salvando projeto: 23AP37 - 13 conceitos
+INFO 2026-03-08 09:06:56,058 views 116288 126609697687232 Salvando projeto: 23AP38 - 13 conceitos
+INFO 2026-03-08 09:06:58,196 views 116288 126609697687232 Salvando projeto: 23AP39 - 13 conceitos
+INFO 2026-03-08 09:07:00,508 views 116288 126609697687232 Salvando projeto: 23CEDX - 13 conceitos
+INFO 2026-03-08 09:07:02,727 views 116288 126609697687232 Salvando projeto: 24AP01 - 13 conceitos
+INFO 2026-03-08 09:07:04,951 views 116288 126609697687232 Salvando projeto: 24AP02 - 13 conceitos
+INFO 2026-03-08 09:07:07,112 views 116288 126609697687232 Salvando projeto: 24AP03 - 13 conceitos
+INFO 2026-03-08 09:07:09,275 views 116288 126609697687232 Salvando projeto: 24AP04 - 13 conceitos
+INFO 2026-03-08 09:07:11,320 views 116288 126609697687232 Processadas 800 linhas...
+INFO 2026-03-08 09:07:11,327 views 116288 126609697687232 Salvando projeto: 24AP05 - 13 conceitos
+INFO 2026-03-08 09:07:13,865 views 116288 126609697687232 Salvando projeto: 24AP06 - 13 conceitos
+INFO 2026-03-08 09:07:16,400 views 116288 126609697687232 Salvando projeto: 24AP07 - 13 conceitos
+INFO 2026-03-08 09:07:18,792 views 116288 126609697687232 Salvando projeto: 24AP10 - 13 conceitos
+INFO 2026-03-08 09:07:21,343 views 116288 126609697687232 Salvando projeto: 24AP11 - 13 conceitos
+INFO 2026-03-08 09:07:23,475 views 116288 126609697687232 Salvando projeto: 24AP14 - 13 conceitos
+INFO 2026-03-08 09:07:24,695 views 116288 126609697687232 Salvando projeto: 24AP15 - 13 conceitos
+INFO 2026-03-08 09:07:25,896 views 116288 126609697687232 Salvando projeto: 24AP16 - 13 conceitos
+INFO 2026-03-08 09:07:27,078 views 116288 126609697687232 Processadas 900 linhas...
+INFO 2026-03-08 09:07:27,089 views 116288 126609697687232 Salvando projeto: 24AP18 - 13 conceitos
+INFO 2026-03-08 09:07:28,309 views 116288 126609697687232 Salvando projeto: 24AP19 - 13 conceitos
+INFO 2026-03-08 09:07:29,484 views 116288 126609697687232 Salvando projeto: 24AP20 - 13 conceitos
+INFO 2026-03-08 09:07:30,687 views 116288 126609697687232 Salvando projeto: 24AP21 - 13 conceitos
+INFO 2026-03-08 09:07:31,895 views 116288 126609697687232 Salvando projeto: 24AP22 - 13 conceitos
+INFO 2026-03-08 09:07:33,151 views 116288 126609697687232 Salvando projeto: 24AP23 - 13 conceitos
+INFO 2026-03-08 09:07:34,428 views 116288 126609697687232 Salvando projeto: 24AP24 - 13 conceitos
+INFO 2026-03-08 09:07:35,630 views 116288 126609697687232 Processadas 1000 linhas...
+INFO 2026-03-08 09:07:35,633 views 116288 126609697687232 Salvando projeto: 24AP25 - 13 conceitos
+INFO 2026-03-08 09:07:36,818 views 116288 126609697687232 Salvando projeto: 24AP26 - 13 conceitos
+INFO 2026-03-08 09:07:38,005 views 116288 126609697687232 Salvando projeto: 24AP27 - 13 conceitos
+INFO 2026-03-08 09:07:39,232 views 116288 126609697687232 Salvando projeto: 24AP28 - 13 conceitos
+INFO 2026-03-08 09:07:40,434 views 116288 126609697687232 Salvando projeto: 24AP30 - 13 conceitos
+INFO 2026-03-08 09:07:41,653 views 116288 126609697687232 Salvando projeto: 24AP31 - 13 conceitos
+INFO 2026-03-08 09:07:42,865 views 116288 126609697687232 Salvando projeto: 24AP32 - 13 conceitos
+INFO 2026-03-08 09:07:44,094 views 116288 126609697687232 Salvando projeto: 24AP33 - 13 conceitos
+INFO 2026-03-08 09:07:45,279 views 116288 126609697687232 Processadas 1100 linhas...
+INFO 2026-03-08 09:07:45,285 views 116288 126609697687232 Salvando projeto: 24AP34 - 13 conceitos
+INFO 2026-03-08 09:07:46,499 views 116288 126609697687232 Salvando projeto: 24AP35 - 13 conceitos
+INFO 2026-03-08 09:07:47,733 views 116288 126609697687232 Salvando projeto: 24AP36 - 13 conceitos
+INFO 2026-03-08 09:07:48,962 views 116288 126609697687232 Salvando projeto: 25AP04 - 13 conceitos
+INFO 2026-03-08 09:07:50,174 views 116288 126609697687232 Salvando projeto: 25AP01 - 13 conceitos
+INFO 2026-03-08 09:07:51,396 views 116288 126609697687232 Salvando projeto: 5AP001 - 13 conceitos
+INFO 2026-03-08 09:07:52,614 views 116288 126609697687232 Salvando projeto: 25AP11 - 13 conceitos
+INFO 2026-03-08 09:07:53,857 views 116288 126609697687232 Salvando projeto: 5AP019 - 13 conceitos
+INFO 2026-03-08 09:07:55,064 views 116288 126609697687232 Processadas 1200 linhas...
+INFO 2026-03-08 09:07:55,075 views 116288 126609697687232 Salvando projeto: 25AP05 - 13 conceitos
+INFO 2026-03-08 09:07:56,281 views 116288 126609697687232 Salvando projeto: 5AP082 - 13 conceitos
+INFO 2026-03-08 09:07:57,475 views 116288 126609697687232 Salvando projeto: 25AP09 - 13 conceitos
+INFO 2026-03-08 09:07:58,688 views 116288 126609697687232 Salvando projeto: 25AP07 - 13 conceitos
+INFO 2026-03-08 09:07:59,892 views 116288 126609697687232 Salvando projeto: 25AP10 - 13 conceitos
+INFO 2026-03-08 09:08:01,121 views 116288 126609697687232 Salvando projeto: P26S10 - 13 conceitos
+INFO 2026-03-08 09:08:02,326 views 116288 126609697687232 Salvando projeto: 25AP23 - 13 conceitos
+INFO 2026-03-08 09:08:03,531 views 116288 126609697687232 Processadas 1300 linhas...
+INFO 2026-03-08 09:08:03,532 views 116288 126609697687232 Salvando projeto: 8AP006 - 13 conceitos
+INFO 2026-03-08 09:08:04,747 views 116288 126609697687232 Salvando projeto: 25AP35 - 13 conceitos
+INFO 2026-03-08 09:08:05,976 views 116288 126609697687232 Salvando projeto: 25AP19 - 13 conceitos
+INFO 2026-03-08 09:08:07,244 views 116288 126609697687232 Salvando projeto: 25AP20 - 13 conceitos
+INFO 2026-03-08 09:08:08,477 views 116288 126609697687232 Salvando projeto: 8AP016 - 13 conceitos
+INFO 2026-03-08 09:08:09,719 views 116288 126609697687232 Salvando projeto: 25AP21 - 13 conceitos
+INFO 2026-03-08 09:08:10,951 views 116288 126609697687232 Salvando projeto: 8AP019 - 13 conceitos
+INFO 2026-03-08 09:08:12,264 views 116288 126609697687232 Salvando projeto: 8ASIND - 13 conceitos
+INFO 2026-03-08 09:08:13,536 views 116288 126609697687232 Processadas 1400 linhas...
+INFO 2026-03-08 09:08:13,542 views 116288 126609697687232 Salvando projeto: 25AP22 - 13 conceitos
+INFO 2026-03-08 09:08:14,792 views 116288 126609697687232 Salvando projeto: EYPAPP - 13 conceitos
+INFO 2026-03-08 09:08:16,452 views 116288 126609697687232 Salvando projeto: 26AP01 - 13 conceitos
+INFO 2026-03-08 09:08:18,420 views 116288 126609697687232 Salvando projeto: 26AP02 - 13 conceitos
+INFO 2026-03-08 09:08:20,495 views 116288 126609697687232 Salvando projeto: 26AP03 - 13 conceitos
+INFO 2026-03-08 09:08:22,703 views 116288 126609697687232 Salvando projeto: 26AP04 - 13 conceitos
+INFO 2026-03-08 09:08:24,741 views 116288 126609697687232 Salvando projeto: 26AP05 - 13 conceitos
+INFO 2026-03-08 09:08:26,878 views 116288 126609697687232 Processadas 1500 linhas...
+INFO 2026-03-08 09:08:26,973 views 116288 126609697687232 Processadas 1600 linhas...
+INFO 2026-03-08 09:08:58,090 views 116288 126609697687232 Salvando projeto: P26S11 - 13 conceitos
+INFO 2026-03-08 09:14:24,479 views 116288 126609697687232 Processadas 1700 linhas...
+INFO 2026-03-08 09:14:24,484 views 116288 126609697687232 Salvando projeto: 25AP31 - 13 conceitos
+INFO 2026-03-08 09:14:26,878 views 116288 126609697687232 Salvando projeto: 25AP17 - 13 conceitos
+INFO 2026-03-08 09:14:29,413 views 116288 126609697687232 Processadas 1800 linhas...
+INFO 2026-03-08 09:14:29,439 views 116288 126609697687232 Salvando projeto: 25AP33 - 13 conceitos
+INFO 2026-03-08 09:14:31,457 views 116288 126609697687232 Salvando projeto: 21AP00 - 13 conceitos
+INFO 2026-03-08 09:14:32,660 views 116288 126609697687232 Salvando projeto: 22AP14 - 13 conceitos
+INFO 2026-03-08 09:14:33,908 views 116288 126609697687232 Salvando projeto: 22AP17 - 13 conceitos
+INFO 2026-03-08 09:15:08,309 views 116288 126609697687232 Salvando projeto: 22AP19 - 13 conceitos
+INFO 2026-03-08 09:15:09,608 views 116288 126609697687232 Salvando projeto: 22AP27 - 13 conceitos
+WARNING 2026-03-08 09:15:10,877 views 116288 126609697687232 Projeto EYPAPP já foi processado neste arquivo (linha 1934). Pulando próximas 12 linhas para evitar duplicatas.
+INFO 2026-03-08 09:15:10,878 views 116288 126609697687232 Processadas 1900 linhas...
+INFO 2026-03-08 09:15:10,891 views 116288 126609697687232 Salvando projeto: 24AP17 - 13 conceitos
+INFO 2026-03-08 09:15:12,177 views 116288 126609697687232 Salvando projeto: 25AP06 - 13 conceitos
+INFO 2026-03-08 09:15:13,483 views 116288 126609697687232 Salvando projeto: 21AP09 - 13 conceitos
+INFO 2026-03-08 09:15:14,733 views 116288 126609697687232 Salvando projeto: 22AP13 - 13 conceitos
+INFO 2026-03-08 09:15:16,025 views 116288 126609697687232 Salvando projeto: 25AP25 - 13 conceitos
+INFO 2026-03-08 09:15:17,315 views 116288 126609697687232 Salvando projeto: 23AP04 - 13 conceitos
+INFO 2026-03-08 09:15:18,527 views 116288 126609697687232 Processadas 2000 linhas...
+INFO 2026-03-08 09:15:18,531 views 116288 126609697687232 Salvando projeto: 23AP05 - 13 conceitos
+INFO 2026-03-08 09:15:19,784 views 116288 126609697687232 Salvando projeto: 23AP07 - 13 conceitos
+INFO 2026-03-08 09:15:21,112 views 116288 126609697687232 Salvando projeto: 25AP29 - 13 conceitos
+INFO 2026-03-08 09:15:22,357 views 116288 126609697687232 Salvando projeto: 23AP31 - 13 conceitos
+INFO 2026-03-08 09:15:23,598 views 116288 126609697687232 Salvando projeto: 24AP08 - 13 conceitos
+INFO 2026-03-08 09:15:25,047 views 116288 126609697687232 Salvando projeto: 24AP09 - 13 conceitos
+INFO 2026-03-08 09:15:26,299 views 116288 126609697687232 Salvando projeto: 24AP12 - 13 conceitos
+INFO 2026-03-08 09:15:27,545 views 116288 126609697687232 Salvando projeto: 24AP13 - 13 conceitos
+INFO 2026-03-08 09:15:28,769 views 116288 126609697687232 Processadas 2100 linhas...
+INFO 2026-03-08 09:15:28,777 views 116288 126609697687232 Salvando projeto: 25S001 - 13 conceitos
+INFO 2026-03-08 09:15:30,080 views 116288 126609697687232 Processadas 2200 linhas...
+INFO 2026-03-08 09:15:30,133 views 116288 126609697687232 Salvando projeto: 25AP26 - 13 conceitos
+INFO 2026-03-08 09:15:31,366 views 116288 126609697687232 Salvando projeto: 24AP29 - 13 conceitos
+INFO 2026-03-08 09:15:32,675 views 116288 126609697687232 Salvando projeto: 21AP03 - 13 conceitos
+INFO 2026-03-08 09:15:33,927 views 116288 126609697687232 Processadas 2300 linhas...
+INFO 2026-03-08 09:15:33,929 views 116288 126609697687232 Salvando projeto: 21AP14 - 13 conceitos
+INFO 2026-03-08 09:15:35,138 views 116288 126609697687232 Salvando projeto: 22AP25 - 13 conceitos
+INFO 2026-03-08 09:15:36,352 views 116288 126609697687232 Salvando projeto: 23AP10 - 13 conceitos
+INFO 2026-03-08 09:15:37,522 views 116288 126609697687232 Salvando projeto: 23AP12 - 13 conceitos
+INFO 2026-03-08 09:15:38,742 views 116288 126609697687232 Salvando projeto: 23AP18 - 13 conceitos
+INFO 2026-03-08 09:15:39,977 views 116288 126609697687232 Salvando projeto: 24APAP - 13 conceitos
+INFO 2026-03-08 09:15:41,262 views 116288 126609697687232 Salvando projeto: 5AP015 - 13 conceitos
+INFO 2026-03-08 09:15:42,543 views 116288 126609697687232 Processadas 2400 linhas...
+INFO 2026-03-08 09:15:42,550 views 116288 126609697687232 Salvando projeto: 5AP035 - 13 conceitos
+INFO 2026-03-08 09:15:43,773 views 116288 126609697687232 Salvando projeto: 6AP001 - 13 conceitos
+INFO 2026-03-08 09:15:44,986 views 116288 126609697687232 Salvando projeto: 7AP001 - 13 conceitos
+INFO 2026-03-08 09:15:46,231 views 116288 126609697687232 Salvando projeto: 7AP002 - 13 conceitos
+INFO 2026-03-08 09:15:47,449 views 116288 126609697687232 Salvando projeto: 8AP003 - 13 conceitos
+INFO 2026-03-08 09:15:48,690 views 116288 126609697687232 Salvando projeto: 8AP008 - 13 conceitos
+INFO 2026-03-08 09:15:49,935 views 116288 126609697687232 Processadas 2500 linhas...
+INFO 2026-03-08 09:15:49,945 views 116288 126609697687232 Salvando projeto: 8AP012 - 13 conceitos
+INFO 2026-03-08 09:15:51,184 views 116288 126609697687232 Salvando projeto: 8AP017 - 13 conceitos
+INFO 2026-03-08 09:15:52,387 views 116288 126609697687232 Salvando projeto: AP0004 - 13 conceitos
+INFO 2026-03-08 09:15:53,649 views 116288 126609697687232 Salvando projeto: 25AP27 - 13 conceitos
+INFO 2026-03-08 09:15:54,868 views 116288 126609697687232 Processadas 2600 linhas...
+INFO 2026-03-08 09:15:54,899 views 116288 126609697687232 Salvando projeto: 23AP01 - 13 conceitos
+INFO 2026-03-08 09:15:56,119 views 116288 126609697687232 Salvando projeto: 25AP28 - 13 conceitos
+INFO 2026-03-08 09:15:57,914 views 116288 126609697687232 Salvando projeto: 25AP24 - 13 conceitos
+INFO 2026-03-08 09:15:59,874 views 116288 126609697687232 Salvando projeto: 25AP30 - 13 conceitos
+INFO 2026-03-08 09:16:02,087 views 116288 126609697687232 Salvando projeto: P26S01 - 13 conceitos
+INFO 2026-03-08 09:16:04,242 views 116288 126609697687232 Salvando projeto: P26S02 - 13 conceitos
+INFO 2026-03-08 09:16:06,390 views 116288 126609697687232 Processadas 2700 linhas...
+INFO 2026-03-08 09:16:06,396 views 116288 126609697687232 Salvando projeto: P26S03 - 13 conceitos
+INFO 2026-03-08 09:16:08,504 views 116288 126609697687232 Salvando projeto: P26S04 - 13 conceitos
+INFO 2026-03-08 09:16:10,498 views 116288 126609697687232 Salvando projeto: P26S05 - 13 conceitos
+INFO 2026-03-08 09:16:12,536 views 116288 126609697687232 Salvando projeto: P26S06 - 13 conceitos
+INFO 2026-03-08 09:16:14,459 views 116288 126609697687232 Salvando projeto: P26S07 - 13 conceitos
+INFO 2026-03-08 09:16:17,002 views 116288 126609697687232 Salvando projeto: P26S08 - 13 conceitos
+INFO 2026-03-08 09:16:19,492 views 116288 126609697687232 Salvando projeto: P26A01 - 13 conceitos
+INFO 2026-03-08 09:16:21,824 views 116288 126609697687232 Salvando projeto: P26A02 - 13 conceitos
+INFO 2026-03-08 09:16:24,210 views 116288 126609697687232 Processadas 2800 linhas...
+INFO 2026-03-08 09:16:24,219 views 116288 126609697687232 Salvando projeto: P26A03 - 13 conceitos
+INFO 2026-03-08 09:16:26,600 views 116288 126609697687232 Salvando projeto: P26A04 - 13 conceitos
+INFO 2026-03-08 09:16:28,139 views 116288 126609697687232 Salvando projeto: P26A05 - 13 conceitos
+INFO 2026-03-08 09:16:29,392 views 116288 126609697687232 Salvando projeto: P26A06 - 13 conceitos
+INFO 2026-03-08 09:16:30,620 views 116288 126609697687232 Salvando projeto: P26S09 - 13 conceitos
+INFO 2026-03-08 09:16:31,855 views 116288 126609697687232 Salvando projeto: P26A08 - 13 conceitos
+INFO 2026-03-08 09:16:33,075 views 116288 126609697687232 Salvando projeto: P26A09 - 13 conceitos
+INFO 2026-03-08 09:16:34,405 views 116288 126609697687232 Processadas 2900 linhas...
+INFO 2026-03-08 09:16:34,406 views 116288 126609697687232 Salvando projeto: P26A10 - 13 conceitos
+INFO 2026-03-08 09:16:35,742 views 116288 126609697687232 Salvando projeto: P26A11 - 13 conceitos
+INFO 2026-03-08 09:16:37,041 views 116288 126609697687232 Salvando projeto: 25AP32 - 13 conceitos
+INFO 2026-03-08 09:16:38,295 views 116288 126609697687232 Salvando projeto: 25AP34 - 13 conceitos
+INFO 2026-03-08 09:16:39,549 views 116288 126609697687232 Salvando projeto: P26A12 - 13 conceitos
+INFO 2026-03-08 09:16:40,749 views 116288 126609697687232 Salvando projeto: 25AP36 - 13 conceitos
+INFO 2026-03-08 09:16:41,983 views 116288 126609697687232 Salvando projeto: 25AP37 - 13 conceitos
+INFO 2026-03-08 09:16:43,226 views 116288 126609697687232 Processadas 3000 linhas...
+INFO 2026-03-08 09:16:43,230 views 116288 126609697687232 Salvando projeto: 25AP39 - 13 conceitos
+INFO 2026-03-08 09:16:44,513 views 116288 126609697687232 Salvando projeto: 25AP40 - 13 conceitos
+INFO 2026-03-08 09:16:45,769 views 116288 126609697687232 Salvando projeto: 8AP004 - 13 conceitos
+INFO 2026-03-08 09:16:46,962 views 116288 126609697687232 Salvando projeto: AP0073 - 13 conceitos
+INFO 2026-03-08 09:16:48,164 views 116288 126609697687232 Salvando projeto: IP0162 - 13 conceitos
+INFO 2026-03-08 09:16:49,397 views 116288 126609697687232 Processadas 3100 linhas...
+INFO 2026-03-08 09:16:49,406 views 116288 126609697687232 Salvando projeto: IP0261 - 13 conceitos
+INFO 2026-03-08 09:16:50,652 views 116288 126609697687232 Salvando projeto: AJUAAP - 13 conceitos
+INFO 2026-03-08 09:16:51,971 views 116288 126609697687232 Processadas 3200 linhas...
+INFO 2026-03-08 09:16:52,068 views 116288 126609697687232 Salvando projeto: AJSNBR - 13 conceitos
+INFO 2026-03-08 09:16:53,300 views 116288 126609697687232 Processadas 3300 linhas...
+INFO 2026-03-08 09:16:53,412 views 116288 126609697687232 Processadas 3400 linhas...
+INFO 2026-03-08 09:16:53,520 views 116288 126609697687232 Processadas 3500 linhas...
+INFO 2026-03-08 09:16:53,627 views 116288 126609697687232 Processadas 3600 linhas...
+INFO 2026-03-08 09:16:53,739 views 116288 126609697687232 Processadas 3700 linhas...
+INFO 2026-03-08 09:16:53,848 views 116288 126609697687232 Processadas 3800 linhas...
+INFO 2026-03-08 09:16:53,954 views 116288 126609697687232 Processadas 3900 linhas...
+INFO 2026-03-08 09:16:54,063 views 116288 126609697687232 Processadas 4000 linhas...
+INFO 2026-03-08 09:16:54,177 views 116288 126609697687232 Processadas 4100 linhas...
+INFO 2026-03-08 09:16:54,290 views 116288 126609697687232 Processadas 4200 linhas...
+INFO 2026-03-08 09:16:54,395 views 116288 126609697687232 Processadas 4300 linhas...
+INFO 2026-03-08 09:16:54,506 views 116288 126609697687232 Processadas 4400 linhas...
+INFO 2026-03-08 09:16:54,621 views 116288 126609697687232 Processadas 4500 linhas...
+INFO 2026-03-08 09:16:54,726 views 116288 126609697687232 Processadas 4600 linhas...
+INFO 2026-03-08 09:16:54,877 views 116288 126609697687232 Processadas 4700 linhas...
+INFO 2026-03-08 09:16:54,997 views 116288 126609697687232 Processadas 4800 linhas...
+INFO 2026-03-08 09:16:55,105 views 116288 126609697687232 Processadas 4900 linhas...
+INFO 2026-03-08 09:16:55,213 views 116288 126609697687232 Processadas 5000 linhas...
+INFO 2026-03-08 09:16:55,323 views 116288 126609697687232 Processadas 5100 linhas...
+INFO 2026-03-08 09:16:55,436 views 116288 126609697687232 Processadas 5200 linhas...
+INFO 2026-03-08 09:16:55,549 views 116288 126609697687232 Processadas 5300 linhas...
+INFO 2026-03-08 09:16:55,658 views 116288 126609697687232 Processadas 5400 linhas...
+INFO 2026-03-08 09:16:55,766 views 116288 126609697687232 Processadas 5500 linhas...
+INFO 2026-03-08 09:16:55,870 views 116288 126609697687232 Processadas 5600 linhas...
+INFO 2026-03-08 09:16:55,980 views 116288 126609697687232 Processadas 5700 linhas...
+INFO 2026-03-08 09:16:56,087 views 116288 126609697687232 Processadas 5800 linhas...
+INFO 2026-03-08 09:16:56,193 views 116288 126609697687232 Processadas 5900 linhas...
+INFO 2026-03-08 09:16:56,303 views 116288 126609697687232 Processadas 6000 linhas...
+INFO 2026-03-08 09:16:56,409 views 116288 126609697687232 Processadas 6100 linhas...
+INFO 2026-03-08 09:16:56,517 views 116288 126609697687232 Processadas 6200 linhas...
+INFO 2026-03-08 09:16:56,628 views 116288 126609697687232 Processadas 6300 linhas...
+INFO 2026-03-08 09:16:56,737 views 116288 126609697687232 Processadas 6400 linhas...
+INFO 2026-03-08 09:16:56,847 views 116288 126609697687232 Processadas 6500 linhas...
+INFO 2026-03-08 09:16:56,955 views 116288 126609697687232 Processadas 6600 linhas...
+INFO 2026-03-08 09:16:57,066 views 116288 126609697687232 Processadas 6700 linhas...
+INFO 2026-03-08 09:16:57,168 views 116288 126609697687232 Processadas 6800 linhas...
+INFO 2026-03-08 09:16:57,276 views 116288 126609697687232 Processadas 6900 linhas...
+INFO 2026-03-08 09:16:57,387 views 116288 126609697687232 Processadas 7000 linhas...
+INFO 2026-03-08 09:16:57,493 views 116288 126609697687232 Processadas 7100 linhas...
+INFO 2026-03-08 09:16:57,596 views 116288 126609697687232 Processadas 7200 linhas...
+INFO 2026-03-08 09:16:57,700 views 116288 126609697687232 Processadas 7300 linhas...
+INFO 2026-03-08 09:17:08,160 views 116288 126609697687232 Salvando último projeto: AJSABR - 13 conceitos
+INFO 2026-03-08 09:17:21,396 views 116288 126609697687232 === PROCESSAMENTO XLS CONCLUÍDO COM SUCESSO ===
+INFO 2026-03-08 09:17:21,396 views 116288 126609697687232 Total de linhas processadas: 7345
+INFO 2026-03-08 09:17:21,396 views 116288 126609697687232 Projetos processados: 195
+INFO 2026-03-08 09:17:21,396 views 116288 126609697687232 Projetos únicos encontrados: 194
+INFO 2026-03-08 09:17:21,397 views 116288 126609697687232 Conceitos mensais criados: 30420
+WARNING 2026-03-08 09:17:21,397 views 116288 126609697687232 Projetos com duplicatas pulados: 1
+INFO 2026-03-08 09:17:21,397 views 116288 126609697687232 Arquivo processado com sucesso! 195 projetos e 30420 registros de conceitos processados.
+INFO 2026-03-08 09:17:21,399 views 116288 126609697687232 Arquivo temporário removido com sucesso
+INFO 2026-03-08 09:17:21,400 views 116288 126609697687232 Processamento concluído com sucesso: Arquivo processado com sucesso! 195 projetos e 30420 registros de conceitos processados.
+INFO 2026-03-08 09:17:21,410 log 116288 126609697687232 "POST /upload/ HTTP/1.1" 200 120
+INFO 2026-03-08 09:17:28,003 log 116288 126609697687232 "GET /dashboard/ HTTP/1.1" 200 279043
+INFO 2026-03-09 06:55:28,019 autoreload 116288 126610541600896 /usr/lib/python3.12/lib-dynload/_lzma.cpython-312-x86_64-linux-gnu.so changed, reloading.

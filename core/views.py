@@ -129,6 +129,9 @@ def get_projetos_detalhes(category, ultimo_processamento):
         projetos = Projeto.objects.all()
 
     projetos_data = []
+    total_contratacao_ytd = 0
+    total_ingressos_ytd = 0
+    total_margen_ytd = 0
 
     for projeto in projetos:
         # Calcula valores YTD para cada projeto
@@ -174,6 +177,14 @@ def get_projetos_detalhes(category, ultimo_processamento):
             'ingresos_ytd_formatted': format_number(ingresos_ytd),
             'margen_ytd_formatted': format_number(margen_ytd),
         })
+        #total_contratacao_ytd += contratacion_ytd
+        #print(f"Contratação calculada agora : {total_contratacao_ytd}")
+        #projetos_data.append({
+        #    'total_contratacao_ytd': 0
+        #    'total_ingresso_ytd': format_number(total_ingresos_ytd =+ ingresos_ytd),
+        #    'total_margem_ytd': format_number(total_margen_ytd =+ margen_ytd),
+        #    'total_margem_percentual_ytd': f"{margen_percentual:.1f}%"
+        #})
 
     # Ordena por margem percentual (decrescente) por padrão
     projetos_data.sort(key=lambda x: x['margen_percentual'], reverse=True)
@@ -227,6 +238,8 @@ def get_dashboard_data(category):
                 conceito='ingresos',
                 mes__lte=ultimo_processamento.mes_fechado
             ).aggregate(total=Sum('valor_realizado'))['total'] or 0
+            if ingresos_ytd > 0:
+                print(f"Projeto {projeto.codigo} - Ingresos YTD: {ingresos_ytd}")
 
             # Margem realizada até o mês fechado
             margen_ytd = ConceitoMensal.objects.filter(
@@ -247,7 +260,7 @@ def get_dashboard_data(category):
             receita_total += ingresos_ytd
             margem_total += margen_ytd
             contratacoes_total += contratacion_ytd
-
+        print(f"No mercado {category} a receita Total calculada: {receita_total}, Margem Total: {margem_total}, Contratações Total: {contratacoes_total}")
         # Calcula margem média percentual
         margem_media_percentual = 0
         if receita_total > 0:
@@ -262,7 +275,7 @@ def get_dashboard_data(category):
                 conceito='ingresos',
                 mes=ultimo_processamento.mes_fechado
             ).aggregate(total=Sum('valor_realizado'))['total'] or 0
-
+            #TODO: Considerar coluna que indica se o projeto está ativo ou não, pois pode haver projetos com ingresos pontuais mas que não estão mais ativos
             if ingresos_ultimo_mes > 0:
                 projetos_ativos += 1
 
@@ -272,11 +285,11 @@ def get_dashboard_data(category):
         # Formata valores
         def format_currency(value):
             if abs(value) >= 1000000:
-                return f"R$ {value/1000000:.1f}M"
+                return f"{value/1000000:.1f}M"
             elif abs(value) >= 1000:
-                return f"R$ {value/1000:.0f}K"
+                return f"{value/1000:.0f}K"
             else:
-                return f"R$ {value:.0f}"
+                return f"{value:.0f}"
 
         # Calcula variações (comparado com mês anterior - simplificado)
         # Aqui seria implementada lógica de comparação com processamento anterior
@@ -481,7 +494,8 @@ def process_xls_file(file_path, mes_fechamento=2):
                 # Extrai dados básicos
                 codigo = str(row[col_mapping['codigo']]).strip() if pd.notna(row[col_mapping['codigo']]) else None
                 conceito_raw = str(row[col_mapping['conceito']]).strip() if pd.notna(row[col_mapping['conceito']]) else None
-
+                if codigo == "25AP31":
+                    print(f"Encontrado projeto 25AP31 na linha {idx + 1} com conceito '{conceito_raw}'")
                 # Se temos um código de projeto válido, é o início de um novo projeto
                 if codigo and codigo != 'nan' and conceito_raw == 'Carteira Operativa':
                     # Verificar se este projeto já foi processado neste arquivo
@@ -497,7 +511,7 @@ def process_xls_file(file_path, mes_fechamento=2):
                         _salvar_projeto_com_conceitos(current_project, project_data, processamento)
                         projetos_processados += 1
                         projetos_processados_neste_arquivo.add(current_project['codigo'])
-
+                    
                     # Inicia novo projeto
                     current_project = {
                         'codigo': codigo,
@@ -507,6 +521,7 @@ def process_xls_file(file_path, mes_fechamento=2):
                         'tipo_solucao': str(row[col_mapping['tipo_solucao']]).strip() if pd.notna(row[col_mapping['tipo_solucao']]) else '',
                         'responsavel_comercial': str(row[col_mapping['responsavel']]).strip() if pd.notna(row[col_mapping['responsavel']]) else '',
                     }
+
                     project_data = {}
                     logger.debug(f"Novo projeto iniciado: {codigo}")
 
