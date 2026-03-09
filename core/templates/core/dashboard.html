@@ -418,6 +418,36 @@
     color: #495057;
     font-weight: 600;
 }
+
+/* Estilos para ordenação de tabela */
+#projectsTable th {
+    position: relative;
+    user-select: none;
+}
+
+#projectsTable th.table-sorted-asc::after {
+    content: ' ▲';
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #198754;
+    font-size: 12px;
+}
+
+#projectsTable th.table-sorted-desc::after {
+    content: ' ▼';
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #198754;
+    font-size: 12px;
+}
+
+#projectsTable th:hover {
+    background-color: rgba(0,123,255,0.1);
+}
 </style>
 {% endblock %}
 
@@ -523,36 +553,105 @@ function setupSorting() {
     const headers = document.querySelectorAll('#projectsTable th');
     headers.forEach((header, index) => {
         header.style.cursor = 'pointer';
+        header.title = 'Clique para ordenar';
         header.addEventListener('click', () => {
-            sortTableByColumn(index);
+            // Verificar se esta coluna já está sendo ordenada
+            const isCurrentlyAsc = header.classList.contains('table-sorted-asc');
+            const isCurrentlyDesc = header.classList.contains('table-sorted-desc');
+
+            // Remover classes de todas as colunas
+            headers.forEach(h => h.classList.remove('table-sorted-asc', 'table-sorted-desc'));
+
+            // Determinar nova direção
+            if (isCurrentlyAsc) {
+                // Se estava ascendente, mudar para descendente
+                header.classList.add('table-sorted-desc');
+                sortTableByColumn(index, true);
+            } else {
+                // Se não estava ordenada ou estava descendente, ordenar ascendente
+                header.classList.add('table-sorted-asc');
+                sortTableByColumn(index, false);
+            }
         });
     });
 }
 
-function sortTableByColumn(columnIndex) {
+function parseNumericValue(value) {
+    if (!value || typeof value !== 'string') return 0;
+
+    // Remover espaços e caracteres não numéricos, exceto pontos, vírgulas e sinais
+    let cleanValue = value.replace(/[^\d.,-]/g, '');
+
+    // Verificar se é um número negativo
+    const isNegative = cleanValue.startsWith('-');
+    if (isNegative) {
+        cleanValue = cleanValue.substring(1);
+    }
+
+    let result;
+    // Se contém vírgula, assumir formato brasileiro (vírgula = decimal)
+    if (cleanValue.includes(',')) {
+        // Separar parte inteira e decimal
+        const parts = cleanValue.split(',');
+        if (parts.length === 2) {
+            // Remover pontos da parte inteira e juntar com decimal
+            const integerPart = parts[0].replace(/\./g, '');
+            result = parseFloat(`${integerPart}.${parts[1]}`);
+        } else {
+            result = parseFloat(cleanValue.replace(/\./g, '').replace(',', '.'));
+        }
+    } else {
+        // Formato padrão (remover pontos que são separadores de milhar)
+        result = parseFloat(cleanValue.replace(/\./g, ''));
+    }
+
+    return isNegative ? -result : result;
+}
+
+function sortTableByColumn(columnIndex, descending = false) {
     const tbody = document.getElementById('tableBody');
     const rows = Array.from(tbody.querySelectorAll('tr'));
 
     // Não ordenar linhas de "nenhum resultado"
     const dataRows = rows.filter(row => row.cells.length >= 9);
 
+    // Adicionar índice original para ordenação estável
+    dataRows.forEach((row, index) => {
+        row._originalIndex = index;
+    });
+
     dataRows.sort((a, b) => {
         const aValue = getCellValue(a.cells[columnIndex]);
         const bValue = getCellValue(b.cells[columnIndex]);
 
+        let comparison = 0;
+
         if (columnIndex >= 5 && columnIndex <= 7) { // Colunas numéricas (Contratação, Ingresso, Margem)
-            return parseFloat(aValue.replace(/[^\d.-]/g, '')) - parseFloat(bValue.replace(/[^\d.-]/g, ''));
+            const aNum = parseNumericValue(aValue);
+            const bNum = parseNumericValue(bValue);
+            comparison = aNum - bNum;
         } else if (columnIndex === 8) { // Margem %
-            const aPercent = parseFloat(aValue.replace('%', '').replace(',', '.'));
-            const bPercent = parseFloat(bValue.replace('%', '').replace(',', '.'));
-            return aPercent - bPercent;
+            const aNum = parseNumericValue(aValue);
+            const bNum = parseNumericValue(bValue);
+            comparison = aNum - bNum;
         } else {
-            return aValue.localeCompare(bValue);
+            comparison = aValue.localeCompare(bValue, 'pt-BR', { numeric: true, sensitivity: 'base' });
         }
+
+        // Inverter para ordenação descendente
+        if (descending) {
+            comparison = -comparison;
+        }
+
+        // Se valores são iguais, manter ordem original (stable sort)
+        return comparison !== 0 ? comparison : (a._originalIndex - b._originalIndex);
     });
 
-    // Reordenar as linhas
-    dataRows.forEach(row => tbody.appendChild(row));
+    // Limpar índices temporários e reordenar as linhas
+    dataRows.forEach(row => {
+        delete row._originalIndex;
+        tbody.appendChild(row);
+    });
 }
 
 function getCellValue(cell) {
