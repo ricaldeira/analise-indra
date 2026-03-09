@@ -306,10 +306,20 @@ def process_xls_file(file_path, mes_fechamento=2):
     logger.info(f"=== INÍCIO DO PROCESSAMENTO XLS: {file_path} (mês fechamento: {mes_fechamento}) ===")
 
     try:
-        # Lê apenas a aba FC
-        logger.info("Lendo aba FC do arquivo Excel...")
-        df = pd.read_excel(file_path, sheet_name='FC')
-        logger.info(f"Arquivo lido com sucesso. Dimensões: {df.shape[0]} linhas x {df.shape[1]} colunas")
+        # Usa a nova arquitetura refatorada
+        from .processors import XLSProcessor
+        processor = XLSProcessor(file_path, mes_fechamento)
+        result = processor.process()
+
+        # Converte resultado para o formato esperado pela interface
+        if result.successful > 0:
+            success_msg = f"Arquivo processado com sucesso! {result.successful} projetos processados com sucesso."
+            if result.failed > 0:
+                success_msg += f" {result.failed} projetos com falhas."
+            return True, success_msg
+        else:
+            error_msg = f"Processamento falhou: {', '.join(result.errors[:3])}"
+            return False, error_msg
 
         # Mapeamento das colunas conforme documentação
         col_mapping = {

@@ -3971,3 +3971,649 @@ INFO 2026-03-09 09:57:06,231 autoreload 1306292 134260564140160 /opt/analise-ind
 INFO 2026-03-09 09:57:08,095 autoreload 1306370 125769882009728 Watching for file changes with StatReloader
 INFO 2026-03-09 09:57:28,026 autoreload 1306370 125769882009728 /opt/analise-indra/core/views.py changed, reloading.
 INFO 2026-03-09 09:57:29,819 autoreload 1306447 124782087680128 Watching for file changes with StatReloader
+INFO 2026-03-09 10:15:09,754 views 1307975 136045695942784 === INÍCIO DO PROCESSAMENTO XLS: /opt/analise-indra/Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (mês fechamento: 2) ===
+ERROR 2026-03-09 10:15:09,766 views 1307975 136045695942784 Erro crítico no processamento XLS: Erro ao processar arquivo XLS: name 'Dict' is not defined
+Traceback (most recent call last):
+  File "/opt/analise-indra/core/views.py", line 310, in process_xls_file
+    from .processors import XLSProcessor
+  File "/opt/analise-indra/core/processors/__init__.py", line 12, in <module>
+    from .xls_processor import XLSProcessor
+  File "/opt/analise-indra/core/processors/xls_processor.py", line 11, in <module>
+    from .batch_saver import BatchSaver
+  File "/opt/analise-indra/core/processors/batch_saver.py", line 14, in <module>
+    class BatchSaver:
+  File "/opt/analise-indra/core/processors/batch_saver.py", line 61, in BatchSaver
+    def _save_batch(self, projects_batch: List[ProjectData], processamento: ProcessamentoXLS) -> Dict:
+                                                                                                 ^^^^
+NameError: name 'Dict' is not defined. Did you mean: 'dict'?
+INFO 2026-03-09 10:16:22,243 views 1308174 123271913439360 === INÍCIO DO PROCESSAMENTO XLS: /opt/analise-indra/Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (mês fechamento: 2) ===
+INFO 2026-03-09 10:16:22,247 xls_processor 1308174 123271913439360 === INÍCIO DO PROCESSAMENTO XLS: /opt/analise-indra/Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (mês fechamento: 2) ===
+INFO 2026-03-09 10:16:30,087 xls_processor 1308174 123271913439360 Dados carregados: 7380 linhas x 136 colunas
+INFO 2026-03-09 10:16:30,087 project_parser 1308174 123271913439360 Agrupando linhas por código de projeto...
+INFO 2026-03-09 10:16:30,443 project_parser 1308174 123271913439360 Encontrados 0 projetos válidos
+INFO 2026-03-09 10:16:30,443 xls_processor 1308174 123271913439360 Projetos encontrados: 0
+INFO 2026-03-09 10:16:30,601 xls_processor 1308174 123271913439360 Processamento criado: ID 16
+INFO 2026-03-09 10:16:30,601 xls_processor 1308174 123271913439360 Projetos validados e prontos para salvar: 0
+INFO 2026-03-09 10:16:30,601 batch_saver 1308174 123271913439360 Iniciando salvamento de 0 projetos
+INFO 2026-03-09 10:16:30,601 views 1308174 123271913439360 Iniciando atualização de agregados para processamento 16
+INFO 2026-03-09 10:16:30,608 batch_saver 1308174 123271913439360 Processamento concluído: 0 sucesso, 0 falhas
+INFO 2026-03-09 10:16:30,608 xls_processor 1308174 123271913439360 === PROCESSAMENTO XLS CONCLUÍDO ===
+INFO 2026-03-09 10:21:56,509 views 1308665 132102891208832 === INÍCIO DO PROCESSAMENTO XLS: /opt/analise-indra/Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (mês fechamento: 2) ===
+INFO 2026-03-09 10:21:56,517 xls_processor 1308665 132102891208832 === INÍCIO DO PROCESSAMENTO XLS: /opt/analise-indra/Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (mês fechamento: 2) ===
+INFO 2026-03-09 10:22:03,939 xls_processor 1308665 132102891208832 Dados carregados: 7380 linhas x 136 colunas
+ERROR 2026-03-09 10:22:03,939 xls_processor 1308665 132102891208832 Erro crítico no processamento: 'XLSProcessor' object has no attribute 'col_mapping_numeric'
+ERROR 2026-03-09 10:22:03,939 views 1308665 132102891208832 Erro crítico no processamento XLS: Erro ao processar arquivo XLS: Falha no processamento: 'XLSProcessor' object has no attribute 'col_mapping_numeric'
+Traceback (most recent call last):
+  File "/opt/analise-indra/core/processors/xls_processor.py", line 54, in process
+    project_groups = self.project_parser.group_by_projects(raw_data, self.col_mapping_numeric)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'XLSProcessor' object has no attribute 'col_mapping_numeric'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/analise-indra/core/views.py", line 312, in process_xls_file
+    result = processor.process()
+             ^^^^^^^^^^^^^^^^^^^
+  File "/opt/analise-indra/core/processors/xls_processor.py", line 109, in process
+    raise ProcessingError(f"Falha no processamento: {e}")
+core.processors.models.ProcessingError: Falha no processamento: 'XLSProcessor' object has no attribute 'col_mapping_numeric'
+INFO 2026-03-09 10:22:59,429 views 1308797 133599094501504 === INÍCIO DO PROCESSAMENTO XLS: /opt/analise-indra/Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (mês fechamento: 2) ===
+INFO 2026-03-09 10:22:59,435 xls_processor 1308797 133599094501504 === INÍCIO DO PROCESSAMENTO XLS: /opt/analise-indra/Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (mês fechamento: 2) ===
+INFO 2026-03-09 10:23:07,611 xls_processor 1308797 133599094501504 Dados carregados: 7380 linhas x 136 colunas
+INFO 2026-03-09 10:23:07,611 project_parser 1308797 133599094501504 Agrupando linhas por código de projeto...
+INFO 2026-03-09 10:23:08,281 project_parser 1308797 133599094501504 Encontrados 203 projetos válidos
+INFO 2026-03-09 10:23:08,281 xls_processor 1308797 133599094501504 Projetos encontrados: 203
+WARNING 2026-03-09 10:23:08,282 xls_processor 1308797 133599094501504 Problemas encontrados em 9 projetos:
+WARNING 2026-03-09 10:23:08,282 xls_processor 1308797 133599094501504   Fev: Sem linha 'Carteira Operativa'
+WARNING 2026-03-09 10:23:08,282 xls_processor 1308797 133599094501504   4350486.483792619: Apenas 1 linhas - poucos dados
+WARNING 2026-03-09 10:23:08,282 xls_processor 1308797 133599094501504   6542093.036697228: Sem linha 'Carteira Operativa'
+WARNING 2026-03-09 10:23:08,282 xls_processor 1308797 133599094501504   1159783.881788836: Sem linha 'Carteira Operativa'
+WARNING 2026-03-09 10:23:08,282 xls_processor 1308797 133599094501504   4350.486483792619: Sem linha 'Carteira Operativa'
+INFO 2026-03-09 10:23:08,294 xls_processor 1308797 133599094501504 Processamento criado: ID 17
+ERROR 2026-03-09 10:23:08,294 xls_processor 1308797 133599094501504 Projeto Fev inválido: Projeto Fev sem conceitos definidos
+WARNING 2026-03-09 10:23:08,295 xls_processor 1308797 133599094501504 Projeto 4350486.483792619 warnings: Projeto 4350486.483792619 tem poucos conceitos (1), Conceitos obrigatórios ausentes: ingresos, margen, contratacion
+WARNING 2026-03-09 10:23:08,295 xls_processor 1308797 133599094501504 Projeto 6542093.036697228 warnings: Projeto 6542093.036697228 tem poucos conceitos (1), Conceitos obrigatórios ausentes: ingresos, margen
+WARNING 2026-03-09 10:23:08,295 xls_processor 1308797 133599094501504 Projeto 1159783.881788836 warnings: Projeto 1159783.881788836 tem poucos conceitos (1), Conceitos obrigatórios ausentes: margen, contratacion
+WARNING 2026-03-09 10:23:08,295 xls_processor 1308797 133599094501504 Projeto 4350.486483792619 warnings: Projeto 4350.486483792619 tem poucos conceitos (1), Conceitos obrigatórios ausentes: ingresos, contratacion
+WARNING 2026-03-09 10:23:08,296 xls_processor 1308797 133599094501504 Projeto 6542.093036697229 warnings: Projeto 6542.093036697229 tem poucos conceitos (1), Conceitos obrigatórios ausentes: ingresos, margen, contratacion
+WARNING 2026-03-09 10:23:08,296 xls_processor 1308797 133599094501504 Projeto 1159.7838817888362 warnings: Projeto 1159.7838817888362 tem poucos conceitos (1), Conceitos obrigatórios ausentes: ingresos, margen, contratacion
+WARNING 2026-03-09 10:23:08,296 concept_parser 1308797 133599094501504 Valor inválido 'Enero' na coluna col_53, usando 0.0
+WARNING 2026-03-09 10:23:08,296 concept_parser 1308797 133599094501504 Valor inválido 'Enero' na coluna col_40, usando 0.0
+WARNING 2026-03-09 10:23:08,296 concept_parser 1308797 133599094501504 Valor inválido 'Febrero' na coluna col_54, usando 0.0
+WARNING 2026-03-09 10:23:08,296 concept_parser 1308797 133599094501504 Valor inválido 'Febrero' na coluna col_41, usando 0.0
+WARNING 2026-03-09 10:23:08,296 concept_parser 1308797 133599094501504 Valor inválido 'Marzo' na coluna col_55, usando 0.0
+WARNING 2026-03-09 10:23:08,296 concept_parser 1308797 133599094501504 Valor inválido 'Marzo' na coluna col_42, usando 0.0
+WARNING 2026-03-09 10:23:08,296 concept_parser 1308797 133599094501504 Valor inválido 'Abril' na coluna col_56, usando 0.0
+WARNING 2026-03-09 10:23:08,296 concept_parser 1308797 133599094501504 Valor inválido 'Abril' na coluna col_43, usando 0.0
+WARNING 2026-03-09 10:23:08,297 concept_parser 1308797 133599094501504 Valor inválido 'Mayo' na coluna col_57, usando 0.0
+WARNING 2026-03-09 10:23:08,297 concept_parser 1308797 133599094501504 Valor inválido 'Mayo' na coluna col_44, usando 0.0
+WARNING 2026-03-09 10:23:08,297 concept_parser 1308797 133599094501504 Valor inválido 'Junio' na coluna col_58, usando 0.0
+WARNING 2026-03-09 10:23:08,297 concept_parser 1308797 133599094501504 Valor inválido 'Junio' na coluna col_45, usando 0.0
+WARNING 2026-03-09 10:23:08,297 concept_parser 1308797 133599094501504 Valor inválido 'Julio' na coluna col_59, usando 0.0
+WARNING 2026-03-09 10:23:08,297 concept_parser 1308797 133599094501504 Valor inválido 'Julio' na coluna col_46, usando 0.0
+WARNING 2026-03-09 10:23:08,297 concept_parser 1308797 133599094501504 Valor inválido 'Agosto' na coluna col_60, usando 0.0
+WARNING 2026-03-09 10:23:08,297 concept_parser 1308797 133599094501504 Valor inválido 'Agosto' na coluna col_47, usando 0.0
+WARNING 2026-03-09 10:23:08,297 concept_parser 1308797 133599094501504 Valor inválido 'Septiembre' na coluna col_61, usando 0.0
+WARNING 2026-03-09 10:23:08,297 concept_parser 1308797 133599094501504 Valor inválido 'Septiembre' na coluna col_48, usando 0.0
+WARNING 2026-03-09 10:23:08,297 concept_parser 1308797 133599094501504 Valor inválido 'Octubre' na coluna col_62, usando 0.0
+WARNING 2026-03-09 10:23:08,297 concept_parser 1308797 133599094501504 Valor inválido 'Octubre' na coluna col_49, usando 0.0
+WARNING 2026-03-09 10:23:08,297 concept_parser 1308797 133599094501504 Valor inválido 'Noviembre' na coluna col_63, usando 0.0
+WARNING 2026-03-09 10:23:08,297 concept_parser 1308797 133599094501504 Valor inválido 'Noviembre' na coluna col_50, usando 0.0
+WARNING 2026-03-09 10:23:08,298 concept_parser 1308797 133599094501504 Valor inválido 'Diciembre' na coluna col_64, usando 0.0
+WARNING 2026-03-09 10:23:08,298 concept_parser 1308797 133599094501504 Valor inválido 'Diciembre' na coluna col_51, usando 0.0
+WARNING 2026-03-09 10:23:08,298 xls_processor 1308797 133599094501504 Projeto Proyecto (por índice) warnings: Projeto Proyecto (por índice) tem poucos conceitos (1), Conceitos obrigatórios ausentes: ingresos, margen, contratacion
+WARNING 2026-03-09 10:23:08,301 xls_processor 1308797 133599094501504 Projeto 20AP10 warnings: Valor negativo para margen mês 1: -768.0
+WARNING 2026-03-09 10:23:08,303 xls_processor 1308797 133599094501504 Projeto 25APMB warnings: Valor negativo para margen mês 1: -2861.0
+WARNING 2026-03-09 10:23:08,306 xls_processor 1308797 133599094501504 Projeto 22AP05 warnings: Valor negativo para margen mês 2: -0.0159
+WARNING 2026-03-09 10:23:08,311 xls_processor 1308797 133599094501504 Projeto 25AP03 warnings: Valor negativo para margen mês 1: -237.0
+WARNING 2026-03-09 10:23:08,313 xls_processor 1308797 133599094501504 Projeto 23AP06 warnings: Valor negativo para ingresos mês 9: -769930.958214395, Valor negativo para margen mês 1: -454353.0
+WARNING 2026-03-09 10:23:08,314 xls_processor 1308797 133599094501504 Projeto P26A13 warnings: Descrição vazia para projeto P26A13
+WARNING 2026-03-09 10:23:08,315 xls_processor 1308797 133599094501504 Projeto P26A14 warnings: Descrição vazia para projeto P26A14
+WARNING 2026-03-09 10:23:08,319 xls_processor 1308797 133599094501504 Projeto 23AP28 warnings: Valor negativo para ingresos mês 1: -12566.0, Valor negativo para ingresos mês 2: -36308.0
+WARNING 2026-03-09 10:23:08,361 xls_processor 1308797 133599094501504 Projeto 23AP37 warnings: Valor negativo para margen mês 1: -256.0
+WARNING 2026-03-09 10:23:08,366 xls_processor 1308797 133599094501504 Projeto 24AP18 warnings: Valor negativo para margen mês 1: -256.0
+WARNING 2026-03-09 10:23:08,370 xls_processor 1308797 133599094501504 Projeto 24AP28 warnings: Valor negativo para ingresos mês 3: -40811.32000000001, Valor negativo para margen mês 1: -78420.0
+WARNING 2026-03-09 10:23:08,377 xls_processor 1308797 133599094501504 Projeto 25AP07 warnings: Valor negativo para ingresos mês 1: -2732.0, Valor negativo para ingresos mês 2: -5464.2
+WARNING 2026-03-09 10:23:08,380 xls_processor 1308797 133599094501504 Projeto 25AP19 warnings: Valor negativo para margen mês 1: -681.0
+WARNING 2026-03-09 10:23:08,383 xls_processor 1308797 133599094501504 Projeto EYPAPP warnings: Valor negativo para margen mês 1: -218.0
+WARNING 2026-03-09 10:23:08,383 xls_processor 1308797 133599094501504 Projeto 26AP02 warnings: Valor negativo para margen mês 2: -0.0012265000004845206
+WARNING 2026-03-09 10:23:08,390 xls_processor 1308797 133599094501504 Projeto 25AP25 warnings: Valor negativo para margen mês 1: -3044.0
+WARNING 2026-03-09 10:23:08,396 xls_processor 1308797 133599094501504 Projeto 25S001 warnings: Valor negativo para margen mês 1: -3818.0
+WARNING 2026-03-09 10:23:08,404 xls_processor 1308797 133599094501504 Projeto 23AP01 warnings: Projeto 23AP01 tem poucos conceitos (1), Conceitos obrigatórios ausentes: ingresos, margen, contratacion
+INFO 2026-03-09 10:23:08,418 xls_processor 1308797 133599094501504 Projetos validados e prontos para salvar: 202
+INFO 2026-03-09 10:23:08,418 batch_saver 1308797 133599094501504 Iniciando salvamento de 202 projetos
+ERROR 2026-03-09 10:23:08,421 batch_saver 1308797 133599094501504 Erro salvando 4350486.483792619: NOT NULL constraint failed: core_projeto.mercado
+ERROR 2026-03-09 10:23:08,423 batch_saver 1308797 133599094501504 Erro salvando 6542093.036697228: NOT NULL constraint failed: core_projeto.mercado
+ERROR 2026-03-09 10:23:08,426 batch_saver 1308797 133599094501504 Erro salvando 1159783.881788836: NOT NULL constraint failed: core_projeto.mercado
+ERROR 2026-03-09 10:23:08,428 batch_saver 1308797 133599094501504 Erro salvando 4350.486483792619: NOT NULL constraint failed: core_projeto.mercado
+ERROR 2026-03-09 10:23:08,430 batch_saver 1308797 133599094501504 Erro salvando 6542.093036697229: NOT NULL constraint failed: core_projeto.mercado
+ERROR 2026-03-09 10:23:08,432 batch_saver 1308797 133599094501504 Erro salvando 1159.7838817888362: NOT NULL constraint failed: core_projeto.mercado
+ERROR 2026-03-09 10:23:08,449 batch_saver 1308797 133599094501504 Erro salvando 19AP03: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,450 batch_saver 1308797 133599094501504 Erro salvando 19AP04: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,450 batch_saver 1308797 133599094501504 Erro salvando 25AP38: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,452 batch_saver 1308797 133599094501504 Erro salvando 20AP04: ['o valor “Finalizado”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,453 batch_saver 1308797 133599094501504 Erro salvando 25AP02: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,453 batch_saver 1308797 133599094501504 Erro salvando 20AP09: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,454 batch_saver 1308797 133599094501504 Erro salvando 20AP10: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,455 batch_saver 1308797 133599094501504 Erro salvando 20AP14: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,456 batch_saver 1308797 133599094501504 Erro salvando 25APBR: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,457 batch_saver 1308797 133599094501504 Erro salvando 21AP12: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,458 batch_saver 1308797 133599094501504 Erro salvando 21AP13: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,459 batch_saver 1308797 133599094501504 Erro salvando 25APMB: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,460 batch_saver 1308797 133599094501504 Erro salvando 21AP15: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,462 batch_saver 1308797 133599094501504 Erro salvando 21AP16: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,463 batch_saver 1308797 133599094501504 Erro salvando 21AP17: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,464 batch_saver 1308797 133599094501504 Erro salvando 22AP02: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,465 batch_saver 1308797 133599094501504 Erro salvando 22AP03: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,466 batch_saver 1308797 133599094501504 Erro salvando 22AP04: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,467 batch_saver 1308797 133599094501504 Erro salvando 22AP05: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,467 batch_saver 1308797 133599094501504 Erro salvando 22AP07: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,468 batch_saver 1308797 133599094501504 Erro salvando 22AP08: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,469 batch_saver 1308797 133599094501504 Erro salvando 22AP09: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,470 batch_saver 1308797 133599094501504 Erro salvando 22AP10: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,472 batch_saver 1308797 133599094501504 Erro salvando 22AP11: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,473 batch_saver 1308797 133599094501504 Erro salvando 22AP15: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,474 batch_saver 1308797 133599094501504 Erro salvando 22AP16: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,475 batch_saver 1308797 133599094501504 Erro salvando 22AP18: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,476 batch_saver 1308797 133599094501504 Erro salvando 22AP20: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,477 batch_saver 1308797 133599094501504 Erro salvando 22AP21: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,478 batch_saver 1308797 133599094501504 Erro salvando 22AP22: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,479 batch_saver 1308797 133599094501504 Erro salvando 22AP24: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,480 batch_saver 1308797 133599094501504 Erro salvando 25AP03: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,481 batch_saver 1308797 133599094501504 Erro salvando 22AP26: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,482 batch_saver 1308797 133599094501504 Erro salvando 23AP03: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,483 batch_saver 1308797 133599094501504 Erro salvando 23AP06: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,484 batch_saver 1308797 133599094501504 Erro salvando 23AP08: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,485 batch_saver 1308797 133599094501504 Erro salvando 23AP09: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,486 batch_saver 1308797 133599094501504 Erro salvando P26A13: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,487 batch_saver 1308797 133599094501504 Erro salvando 23AP11: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,487 batch_saver 1308797 133599094501504 Erro salvando P26A14: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,488 batch_saver 1308797 133599094501504 Erro salvando 23AP13: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,489 batch_saver 1308797 133599094501504 Erro salvando 23AP14: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,490 batch_saver 1308797 133599094501504 Erro salvando 23AP17: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,492 batch_saver 1308797 133599094501504 Erro salvando 25AP18: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,492 batch_saver 1308797 133599094501504 Erro salvando 23AP19: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,493 batch_saver 1308797 133599094501504 Erro salvando 23AP28: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,494 batch_saver 1308797 133599094501504 Erro salvando 23AP29: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,495 batch_saver 1308797 133599094501504 Erro salvando 23AP30: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,496 batch_saver 1308797 133599094501504 Erro salvando 23AP32: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,497 batch_saver 1308797 133599094501504 Erro salvando 23AP33: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,498 batch_saver 1308797 133599094501504 Erro salvando 23AP34: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,498 batch_saver 1308797 133599094501504 Erro salvando 23AP35: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,498 batch_saver 1308797 133599094501504 Erro salvando 23AP36: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,500 batch_saver 1308797 133599094501504 Erro salvando 23AP37: ['o valor “Finalizado”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,501 batch_saver 1308797 133599094501504 Erro salvando 23AP38: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,501 batch_saver 1308797 133599094501504 Erro salvando 23AP39: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,502 batch_saver 1308797 133599094501504 Erro salvando 23CEDX: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,502 batch_saver 1308797 133599094501504 Erro salvando 24AP01: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,503 batch_saver 1308797 133599094501504 Erro salvando 24AP02: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,503 batch_saver 1308797 133599094501504 Erro salvando 24AP03: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,504 batch_saver 1308797 133599094501504 Erro salvando 24AP04: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,504 batch_saver 1308797 133599094501504 Erro salvando 24AP05: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,505 batch_saver 1308797 133599094501504 Erro salvando 24AP06: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,506 batch_saver 1308797 133599094501504 Erro salvando 24AP07: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,507 batch_saver 1308797 133599094501504 Erro salvando 24AP10: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,507 batch_saver 1308797 133599094501504 Erro salvando 24AP11: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,508 batch_saver 1308797 133599094501504 Erro salvando 24AP14: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,508 batch_saver 1308797 133599094501504 Erro salvando 24AP15: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,509 batch_saver 1308797 133599094501504 Erro salvando 24AP16: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,510 batch_saver 1308797 133599094501504 Erro salvando 24AP18: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,510 batch_saver 1308797 133599094501504 Erro salvando 24AP19: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,511 batch_saver 1308797 133599094501504 Erro salvando 24AP20: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,512 batch_saver 1308797 133599094501504 Erro salvando 24AP21: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,513 batch_saver 1308797 133599094501504 Erro salvando 24AP22: ['o valor “Finalizado”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,513 batch_saver 1308797 133599094501504 Erro salvando 24AP23: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,514 batch_saver 1308797 133599094501504 Erro salvando 24AP24: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,514 batch_saver 1308797 133599094501504 Erro salvando 24AP25: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,515 batch_saver 1308797 133599094501504 Erro salvando 24AP26: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,515 batch_saver 1308797 133599094501504 Erro salvando 24AP27: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,516 batch_saver 1308797 133599094501504 Erro salvando 24AP28: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,517 batch_saver 1308797 133599094501504 Erro salvando 24AP30: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,517 batch_saver 1308797 133599094501504 Erro salvando 24AP31: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,518 batch_saver 1308797 133599094501504 Erro salvando 24AP32: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,520 batch_saver 1308797 133599094501504 Erro salvando 24AP33: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,521 batch_saver 1308797 133599094501504 Erro salvando 24AP34: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,523 batch_saver 1308797 133599094501504 Erro salvando 24AP35: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,524 batch_saver 1308797 133599094501504 Erro salvando 24AP36: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,525 batch_saver 1308797 133599094501504 Erro salvando 25AP04: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,526 batch_saver 1308797 133599094501504 Erro salvando 25AP01: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,527 batch_saver 1308797 133599094501504 Erro salvando 5AP001: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,527 batch_saver 1308797 133599094501504 Erro salvando 25AP11: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,528 batch_saver 1308797 133599094501504 Erro salvando 5AP019: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,529 batch_saver 1308797 133599094501504 Erro salvando 25AP05: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,530 batch_saver 1308797 133599094501504 Erro salvando 5AP082: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,531 batch_saver 1308797 133599094501504 Erro salvando 25AP09: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,532 batch_saver 1308797 133599094501504 Erro salvando 25AP07: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,532 batch_saver 1308797 133599094501504 Erro salvando 25AP10: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,533 batch_saver 1308797 133599094501504 Erro salvando P26S10: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,534 batch_saver 1308797 133599094501504 Erro salvando 25AP23: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,535 batch_saver 1308797 133599094501504 Erro salvando 8AP006: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,536 batch_saver 1308797 133599094501504 Erro salvando 25AP35: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,536 batch_saver 1308797 133599094501504 Erro salvando 25AP19: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,537 batch_saver 1308797 133599094501504 Erro salvando 25AP20: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,539 batch_saver 1308797 133599094501504 Erro salvando 8AP016: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,540 batch_saver 1308797 133599094501504 Erro salvando 25AP21: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,541 batch_saver 1308797 133599094501504 Erro salvando 8AP019: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,542 batch_saver 1308797 133599094501504 Erro salvando 8ASIND: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,542 batch_saver 1308797 133599094501504 Erro salvando 25AP22: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,543 batch_saver 1308797 133599094501504 Erro salvando EYPAPP: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,544 batch_saver 1308797 133599094501504 Erro salvando 26AP01: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,545 batch_saver 1308797 133599094501504 Erro salvando 26AP02: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,546 batch_saver 1308797 133599094501504 Erro salvando 26AP03: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,546 batch_saver 1308797 133599094501504 Erro salvando 26AP04: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,548 batch_saver 1308797 133599094501504 Erro salvando 26AP05: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,549 batch_saver 1308797 133599094501504 Erro salvando P26S11: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,549 batch_saver 1308797 133599094501504 Erro salvando 25AP31: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,550 batch_saver 1308797 133599094501504 Erro salvando 25AP17: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,551 batch_saver 1308797 133599094501504 Erro salvando 25AP33: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,552 batch_saver 1308797 133599094501504 Erro salvando 21AP00: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,553 batch_saver 1308797 133599094501504 Erro salvando 22AP14: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,553 batch_saver 1308797 133599094501504 Erro salvando 22AP17: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,554 batch_saver 1308797 133599094501504 Erro salvando 22AP19: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,555 batch_saver 1308797 133599094501504 Erro salvando 22AP27: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,557 batch_saver 1308797 133599094501504 Erro salvando 24AP17: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,558 batch_saver 1308797 133599094501504 Erro salvando 25AP06: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,558 batch_saver 1308797 133599094501504 Erro salvando 21AP09: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,559 batch_saver 1308797 133599094501504 Erro salvando 22AP13: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,560 batch_saver 1308797 133599094501504 Erro salvando 25AP25: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,561 batch_saver 1308797 133599094501504 Erro salvando 23AP04: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,562 batch_saver 1308797 133599094501504 Erro salvando 23AP05: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,563 batch_saver 1308797 133599094501504 Erro salvando 23AP07: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,563 batch_saver 1308797 133599094501504 Erro salvando 25AP29: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,564 batch_saver 1308797 133599094501504 Erro salvando 23AP31: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,565 batch_saver 1308797 133599094501504 Erro salvando 24AP08: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,566 batch_saver 1308797 133599094501504 Erro salvando 24AP09: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,567 batch_saver 1308797 133599094501504 Erro salvando 24AP12: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,568 batch_saver 1308797 133599094501504 Erro salvando 24AP13: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,569 batch_saver 1308797 133599094501504 Erro salvando 25S001: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,569 batch_saver 1308797 133599094501504 Erro salvando 25AP26: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,570 batch_saver 1308797 133599094501504 Erro salvando 24AP29: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,571 batch_saver 1308797 133599094501504 Erro salvando 21AP03: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,571 batch_saver 1308797 133599094501504 Erro salvando 21AP14: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,572 batch_saver 1308797 133599094501504 Erro salvando 22AP25: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,574 batch_saver 1308797 133599094501504 Erro salvando 23AP10: ['o valor “Finalizado”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,575 batch_saver 1308797 133599094501504 Erro salvando 23AP12: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,575 batch_saver 1308797 133599094501504 Erro salvando 23AP18: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,576 batch_saver 1308797 133599094501504 Erro salvando 24APAP: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,577 batch_saver 1308797 133599094501504 Erro salvando 5AP015: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,577 batch_saver 1308797 133599094501504 Erro salvando 5AP035: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,578 batch_saver 1308797 133599094501504 Erro salvando 6AP001: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,578 batch_saver 1308797 133599094501504 Erro salvando 7AP001: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,579 batch_saver 1308797 133599094501504 Erro salvando 7AP002: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,579 batch_saver 1308797 133599094501504 Erro salvando 8AP003: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,581 batch_saver 1308797 133599094501504 Erro salvando 8AP008: ['o valor “Finalizado”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,581 batch_saver 1308797 133599094501504 Erro salvando 8AP012: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,582 batch_saver 1308797 133599094501504 Erro salvando 8AP017: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,582 batch_saver 1308797 133599094501504 Erro salvando AP0004: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,583 batch_saver 1308797 133599094501504 Erro salvando 25AP27: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,583 batch_saver 1308797 133599094501504 Erro salvando 23AP01: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,584 batch_saver 1308797 133599094501504 Erro salvando 25AP28: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,585 batch_saver 1308797 133599094501504 Erro salvando 25AP24: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,585 batch_saver 1308797 133599094501504 Erro salvando 25AP30: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,586 batch_saver 1308797 133599094501504 Erro salvando P26S01: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,587 batch_saver 1308797 133599094501504 Erro salvando P26S02: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,588 batch_saver 1308797 133599094501504 Erro salvando P26S03: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,588 batch_saver 1308797 133599094501504 Erro salvando P26S04: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,589 batch_saver 1308797 133599094501504 Erro salvando P26S05: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,590 batch_saver 1308797 133599094501504 Erro salvando P26S06: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,591 batch_saver 1308797 133599094501504 Erro salvando P26S07: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,591 batch_saver 1308797 133599094501504 Erro salvando P26S08: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,592 batch_saver 1308797 133599094501504 Erro salvando P26A01: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,592 batch_saver 1308797 133599094501504 Erro salvando P26A02: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,593 batch_saver 1308797 133599094501504 Erro salvando P26A03: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,594 batch_saver 1308797 133599094501504 Erro salvando P26A04: ['o valor “Cancelado”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,595 batch_saver 1308797 133599094501504 Erro salvando P26A05: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,595 batch_saver 1308797 133599094501504 Erro salvando P26A06: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,596 batch_saver 1308797 133599094501504 Erro salvando P26S09: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,596 batch_saver 1308797 133599094501504 Erro salvando P26A08: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,597 batch_saver 1308797 133599094501504 Erro salvando P26A09: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,597 batch_saver 1308797 133599094501504 Erro salvando P26A10: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,598 batch_saver 1308797 133599094501504 Erro salvando P26A11: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,598 batch_saver 1308797 133599094501504 Erro salvando 25AP32: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,599 batch_saver 1308797 133599094501504 Erro salvando 25AP34: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,600 batch_saver 1308797 133599094501504 Erro salvando P26A12: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,600 batch_saver 1308797 133599094501504 Erro salvando 25AP36: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,601 batch_saver 1308797 133599094501504 Erro salvando 25AP37: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,602 batch_saver 1308797 133599094501504 Erro salvando 25AP39: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,602 batch_saver 1308797 133599094501504 Erro salvando 25AP40: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,603 batch_saver 1308797 133599094501504 Erro salvando 8AP004: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,603 batch_saver 1308797 133599094501504 Erro salvando AP0073: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,604 batch_saver 1308797 133599094501504 Erro salvando IP0162: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,605 batch_saver 1308797 133599094501504 Erro salvando IP0261: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,605 batch_saver 1308797 133599094501504 Erro salvando AJUAAP: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:23:08,607 batch_saver 1308797 133599094501504 Erro salvando AJSNBR: ['o valor “Cancelado”  deve ser True ou False.']
+ERROR 2026-03-09 10:23:08,608 batch_saver 1308797 133599094501504 Erro salvando AJSABR: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+INFO 2026-03-09 10:23:08,608 views 1308797 133599094501504 Iniciando atualização de agregados para processamento 17
+INFO 2026-03-09 10:23:08,611 batch_saver 1308797 133599094501504 Processamento concluído: 1 sucesso, 201 falhas
+INFO 2026-03-09 10:23:08,612 batch_saver 1308797 133599094501504 Projetos processados: Proyecto (por índice)
+WARNING 2026-03-09 10:23:08,612 batch_saver 1308797 133599094501504 Erros encontrados: 201
+WARNING 2026-03-09 10:23:08,612 batch_saver 1308797 133599094501504   Erro salvando 4350486.483792619: NOT NULL constraint failed: core_projeto.mercado
+WARNING 2026-03-09 10:23:08,612 batch_saver 1308797 133599094501504   Erro salvando 6542093.036697228: NOT NULL constraint failed: core_projeto.mercado
+WARNING 2026-03-09 10:23:08,612 batch_saver 1308797 133599094501504   Erro salvando 1159783.881788836: NOT NULL constraint failed: core_projeto.mercado
+INFO 2026-03-09 10:23:08,612 xls_processor 1308797 133599094501504 === PROCESSAMENTO XLS CONCLUÍDO ===
+INFO 2026-03-09 10:53:50,296 autoreload 1311266 129352369508480 Watching for file changes with StatReloader
+INFO 2026-03-09 10:53:54,024 log 1311266 129351498483392 "GET /dashboard/ HTTP/1.1" 200 40475
+INFO 2026-03-09 10:53:58,802 log 1311266 129351498483392 "GET / HTTP/1.1" 200 13275
+INFO 2026-03-09 10:54:04,592 views 1311266 129351498483392 === INÍCIO DO PROCESSAMENTO DE UPLOAD ===
+INFO 2026-03-09 10:54:04,657 views 1311266 129351498483392 Arquivo recebido: Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (tamanho: 12295366 bytes, mês fechamento: 2)
+INFO 2026-03-09 10:54:04,658 views 1311266 129351498483392 Tipo de arquivo validado com sucesso
+INFO 2026-03-09 10:54:04,658 views 1311266 129351498483392 Salvando arquivo temporariamente em: /opt/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx
+INFO 2026-03-09 10:54:04,674 views 1311266 129351498483392 Arquivo salvo temporariamente. Tamanho final: 12295366 bytes
+INFO 2026-03-09 10:54:04,676 views 1311266 129351498483392 Iniciando processamento do arquivo XLS...
+INFO 2026-03-09 10:54:04,677 views 1311266 129351498483392 === INÍCIO DO PROCESSAMENTO XLS: /opt/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (mês fechamento: 2) ===
+INFO 2026-03-09 10:54:04,694 xls_processor 1311266 129351498483392 === INÍCIO DO PROCESSAMENTO XLS: /opt/analise-indra/media/temp_Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (mês fechamento: 2) ===
+INFO 2026-03-09 10:54:12,985 xls_processor 1311266 129351498483392 Dados carregados: 7380 linhas x 136 colunas
+INFO 2026-03-09 10:54:12,985 project_parser 1311266 129351498483392 Agrupando linhas por código de projeto...
+INFO 2026-03-09 10:54:13,765 project_parser 1311266 129351498483392 Encontrados 203 projetos válidos
+INFO 2026-03-09 10:54:13,766 xls_processor 1311266 129351498483392 Projetos encontrados: 203
+WARNING 2026-03-09 10:54:13,766 xls_processor 1311266 129351498483392 Problemas encontrados em 9 projetos:
+WARNING 2026-03-09 10:54:13,766 xls_processor 1311266 129351498483392   Fev: Sem linha 'Carteira Operativa'
+WARNING 2026-03-09 10:54:13,766 xls_processor 1311266 129351498483392   4350486.483792619: Apenas 1 linhas - poucos dados
+WARNING 2026-03-09 10:54:13,767 xls_processor 1311266 129351498483392   6542093.036697228: Sem linha 'Carteira Operativa'
+WARNING 2026-03-09 10:54:13,767 xls_processor 1311266 129351498483392   1159783.881788836: Sem linha 'Carteira Operativa'
+WARNING 2026-03-09 10:54:13,767 xls_processor 1311266 129351498483392   4350.486483792619: Sem linha 'Carteira Operativa'
+INFO 2026-03-09 10:54:13,774 xls_processor 1311266 129351498483392 Processamento criado: ID 18
+ERROR 2026-03-09 10:54:13,775 xls_processor 1311266 129351498483392 Projeto Fev inválido: Projeto Fev sem conceitos definidos
+WARNING 2026-03-09 10:54:13,775 xls_processor 1311266 129351498483392 Projeto 4350486.483792619 warnings: Projeto 4350486.483792619 tem poucos conceitos (1), Conceitos obrigatórios ausentes: ingresos, margen, contratacion
+WARNING 2026-03-09 10:54:13,776 xls_processor 1311266 129351498483392 Projeto 6542093.036697228 warnings: Projeto 6542093.036697228 tem poucos conceitos (1), Conceitos obrigatórios ausentes: ingresos, margen
+WARNING 2026-03-09 10:54:13,776 xls_processor 1311266 129351498483392 Projeto 1159783.881788836 warnings: Projeto 1159783.881788836 tem poucos conceitos (1), Conceitos obrigatórios ausentes: margen, contratacion
+WARNING 2026-03-09 10:54:13,777 xls_processor 1311266 129351498483392 Projeto 4350.486483792619 warnings: Projeto 4350.486483792619 tem poucos conceitos (1), Conceitos obrigatórios ausentes: ingresos, contratacion
+WARNING 2026-03-09 10:54:13,777 xls_processor 1311266 129351498483392 Projeto 6542.093036697229 warnings: Projeto 6542.093036697229 tem poucos conceitos (1), Conceitos obrigatórios ausentes: ingresos, margen, contratacion
+WARNING 2026-03-09 10:54:13,778 xls_processor 1311266 129351498483392 Projeto 1159.7838817888362 warnings: Projeto 1159.7838817888362 tem poucos conceitos (1), Conceitos obrigatórios ausentes: ingresos, margen, contratacion
+WARNING 2026-03-09 10:54:13,778 concept_parser 1311266 129351498483392 Valor inválido 'Enero' na coluna col_53, usando 0.0
+WARNING 2026-03-09 10:54:13,778 concept_parser 1311266 129351498483392 Valor inválido 'Enero' na coluna col_40, usando 0.0
+WARNING 2026-03-09 10:54:13,779 concept_parser 1311266 129351498483392 Valor inválido 'Febrero' na coluna col_54, usando 0.0
+WARNING 2026-03-09 10:54:13,779 concept_parser 1311266 129351498483392 Valor inválido 'Febrero' na coluna col_41, usando 0.0
+WARNING 2026-03-09 10:54:13,780 concept_parser 1311266 129351498483392 Valor inválido 'Marzo' na coluna col_55, usando 0.0
+WARNING 2026-03-09 10:54:13,780 concept_parser 1311266 129351498483392 Valor inválido 'Marzo' na coluna col_42, usando 0.0
+WARNING 2026-03-09 10:54:13,781 concept_parser 1311266 129351498483392 Valor inválido 'Abril' na coluna col_56, usando 0.0
+WARNING 2026-03-09 10:54:13,781 concept_parser 1311266 129351498483392 Valor inválido 'Abril' na coluna col_43, usando 0.0
+WARNING 2026-03-09 10:54:13,782 concept_parser 1311266 129351498483392 Valor inválido 'Mayo' na coluna col_57, usando 0.0
+WARNING 2026-03-09 10:54:13,782 concept_parser 1311266 129351498483392 Valor inválido 'Mayo' na coluna col_44, usando 0.0
+WARNING 2026-03-09 10:54:13,783 concept_parser 1311266 129351498483392 Valor inválido 'Junio' na coluna col_58, usando 0.0
+WARNING 2026-03-09 10:54:13,784 concept_parser 1311266 129351498483392 Valor inválido 'Junio' na coluna col_45, usando 0.0
+WARNING 2026-03-09 10:54:13,784 concept_parser 1311266 129351498483392 Valor inválido 'Julio' na coluna col_59, usando 0.0
+WARNING 2026-03-09 10:54:13,784 concept_parser 1311266 129351498483392 Valor inválido 'Julio' na coluna col_46, usando 0.0
+WARNING 2026-03-09 10:54:13,784 concept_parser 1311266 129351498483392 Valor inválido 'Agosto' na coluna col_60, usando 0.0
+WARNING 2026-03-09 10:54:13,785 concept_parser 1311266 129351498483392 Valor inválido 'Agosto' na coluna col_47, usando 0.0
+WARNING 2026-03-09 10:54:13,785 concept_parser 1311266 129351498483392 Valor inválido 'Septiembre' na coluna col_61, usando 0.0
+WARNING 2026-03-09 10:54:13,785 concept_parser 1311266 129351498483392 Valor inválido 'Septiembre' na coluna col_48, usando 0.0
+WARNING 2026-03-09 10:54:13,786 concept_parser 1311266 129351498483392 Valor inválido 'Octubre' na coluna col_62, usando 0.0
+WARNING 2026-03-09 10:54:13,786 concept_parser 1311266 129351498483392 Valor inválido 'Octubre' na coluna col_49, usando 0.0
+WARNING 2026-03-09 10:54:13,786 concept_parser 1311266 129351498483392 Valor inválido 'Noviembre' na coluna col_63, usando 0.0
+WARNING 2026-03-09 10:54:13,787 concept_parser 1311266 129351498483392 Valor inválido 'Noviembre' na coluna col_50, usando 0.0
+WARNING 2026-03-09 10:54:13,787 concept_parser 1311266 129351498483392 Valor inválido 'Diciembre' na coluna col_64, usando 0.0
+WARNING 2026-03-09 10:54:13,787 concept_parser 1311266 129351498483392 Valor inválido 'Diciembre' na coluna col_51, usando 0.0
+WARNING 2026-03-09 10:54:13,788 xls_processor 1311266 129351498483392 Projeto Proyecto (por índice) warnings: Projeto Proyecto (por índice) tem poucos conceitos (1), Conceitos obrigatórios ausentes: ingresos, margen, contratacion
+WARNING 2026-03-09 10:54:13,799 xls_processor 1311266 129351498483392 Projeto 20AP10 warnings: Valor negativo para margen mês 1: -768.0
+WARNING 2026-03-09 10:54:13,801 xls_processor 1311266 129351498483392 Projeto 25APMB warnings: Valor negativo para margen mês 1: -2861.0
+WARNING 2026-03-09 10:54:13,804 xls_processor 1311266 129351498483392 Projeto 22AP05 warnings: Valor negativo para margen mês 2: -0.0159
+WARNING 2026-03-09 10:54:13,809 xls_processor 1311266 129351498483392 Projeto 25AP03 warnings: Valor negativo para margen mês 1: -237.0
+WARNING 2026-03-09 10:54:13,810 xls_processor 1311266 129351498483392 Projeto 23AP06 warnings: Valor negativo para ingresos mês 9: -769930.958214395, Valor negativo para margen mês 1: -454353.0
+WARNING 2026-03-09 10:54:13,812 xls_processor 1311266 129351498483392 Projeto P26A13 warnings: Descrição vazia para projeto P26A13
+WARNING 2026-03-09 10:54:13,813 xls_processor 1311266 129351498483392 Projeto P26A14 warnings: Descrição vazia para projeto P26A14
+WARNING 2026-03-09 10:54:13,816 xls_processor 1311266 129351498483392 Projeto 23AP28 warnings: Valor negativo para ingresos mês 1: -12566.0, Valor negativo para ingresos mês 2: -36308.0
+WARNING 2026-03-09 10:54:13,820 xls_processor 1311266 129351498483392 Projeto 23AP37 warnings: Valor negativo para margen mês 1: -256.0
+WARNING 2026-03-09 10:54:13,876 xls_processor 1311266 129351498483392 Projeto 24AP18 warnings: Valor negativo para margen mês 1: -256.0
+WARNING 2026-03-09 10:54:13,880 xls_processor 1311266 129351498483392 Projeto 24AP28 warnings: Valor negativo para ingresos mês 3: -40811.32000000001, Valor negativo para margen mês 1: -78420.0
+WARNING 2026-03-09 10:54:13,886 xls_processor 1311266 129351498483392 Projeto 25AP07 warnings: Valor negativo para ingresos mês 1: -2732.0, Valor negativo para ingresos mês 2: -5464.2
+WARNING 2026-03-09 10:54:13,888 xls_processor 1311266 129351498483392 Projeto 25AP19 warnings: Valor negativo para margen mês 1: -681.0
+WARNING 2026-03-09 10:54:13,892 xls_processor 1311266 129351498483392 Projeto EYPAPP warnings: Valor negativo para margen mês 1: -218.0
+WARNING 2026-03-09 10:54:13,893 xls_processor 1311266 129351498483392 Projeto 26AP02 warnings: Valor negativo para margen mês 2: -0.0012265000004845206
+WARNING 2026-03-09 10:54:13,900 xls_processor 1311266 129351498483392 Projeto 25AP25 warnings: Valor negativo para margen mês 1: -3044.0
+WARNING 2026-03-09 10:54:13,904 xls_processor 1311266 129351498483392 Projeto 25S001 warnings: Valor negativo para margen mês 1: -3818.0
+WARNING 2026-03-09 10:54:13,911 xls_processor 1311266 129351498483392 Projeto 23AP01 warnings: Projeto 23AP01 tem poucos conceitos (1), Conceitos obrigatórios ausentes: ingresos, margen, contratacion
+INFO 2026-03-09 10:54:13,924 xls_processor 1311266 129351498483392 Projetos validados e prontos para salvar: 202
+INFO 2026-03-09 10:54:13,924 batch_saver 1311266 129351498483392 Iniciando salvamento de 202 projetos
+ERROR 2026-03-09 10:54:13,929 batch_saver 1311266 129351498483392 Erro salvando 4350486.483792619: NOT NULL constraint failed: core_projeto.mercado
+ERROR 2026-03-09 10:54:13,935 batch_saver 1311266 129351498483392 Erro salvando 6542093.036697228: NOT NULL constraint failed: core_projeto.mercado
+ERROR 2026-03-09 10:54:13,940 batch_saver 1311266 129351498483392 Erro salvando 1159783.881788836: NOT NULL constraint failed: core_projeto.mercado
+ERROR 2026-03-09 10:54:13,945 batch_saver 1311266 129351498483392 Erro salvando 4350.486483792619: NOT NULL constraint failed: core_projeto.mercado
+ERROR 2026-03-09 10:54:13,948 batch_saver 1311266 129351498483392 Erro salvando 6542.093036697229: NOT NULL constraint failed: core_projeto.mercado
+ERROR 2026-03-09 10:54:13,950 batch_saver 1311266 129351498483392 Erro salvando 1159.7838817888362: NOT NULL constraint failed: core_projeto.mercado
+ERROR 2026-03-09 10:54:13,981 batch_saver 1311266 129351498483392 Erro salvando 19AP03: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:13,981 batch_saver 1311266 129351498483392 Erro salvando 19AP04: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,982 batch_saver 1311266 129351498483392 Erro salvando 25AP38: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,984 batch_saver 1311266 129351498483392 Erro salvando 20AP04: ['o valor “Finalizado”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:13,985 batch_saver 1311266 129351498483392 Erro salvando 25AP02: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,986 batch_saver 1311266 129351498483392 Erro salvando 20AP09: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,986 batch_saver 1311266 129351498483392 Erro salvando 20AP10: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,987 batch_saver 1311266 129351498483392 Erro salvando 20AP14: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,988 batch_saver 1311266 129351498483392 Erro salvando 25APBR: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,989 batch_saver 1311266 129351498483392 Erro salvando 21AP12: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,989 batch_saver 1311266 129351498483392 Erro salvando 21AP13: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,990 batch_saver 1311266 129351498483392 Erro salvando 25APMB: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,991 batch_saver 1311266 129351498483392 Erro salvando 21AP15: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,992 batch_saver 1311266 129351498483392 Erro salvando 21AP16: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:13,993 batch_saver 1311266 129351498483392 Erro salvando 21AP17: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,994 batch_saver 1311266 129351498483392 Erro salvando 22AP02: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,995 batch_saver 1311266 129351498483392 Erro salvando 22AP03: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,996 batch_saver 1311266 129351498483392 Erro salvando 22AP04: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,997 batch_saver 1311266 129351498483392 Erro salvando 22AP05: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,998 batch_saver 1311266 129351498483392 Erro salvando 22AP07: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,998 batch_saver 1311266 129351498483392 Erro salvando 22AP08: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:13,999 batch_saver 1311266 129351498483392 Erro salvando 22AP09: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,000 batch_saver 1311266 129351498483392 Erro salvando 22AP10: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,002 batch_saver 1311266 129351498483392 Erro salvando 22AP11: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,003 batch_saver 1311266 129351498483392 Erro salvando 22AP15: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,004 batch_saver 1311266 129351498483392 Erro salvando 22AP16: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,005 batch_saver 1311266 129351498483392 Erro salvando 22AP18: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,006 batch_saver 1311266 129351498483392 Erro salvando 22AP20: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,007 batch_saver 1311266 129351498483392 Erro salvando 22AP21: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,007 batch_saver 1311266 129351498483392 Erro salvando 22AP22: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,008 batch_saver 1311266 129351498483392 Erro salvando 22AP24: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,009 batch_saver 1311266 129351498483392 Erro salvando 25AP03: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,010 batch_saver 1311266 129351498483392 Erro salvando 22AP26: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,012 batch_saver 1311266 129351498483392 Erro salvando 23AP03: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,013 batch_saver 1311266 129351498483392 Erro salvando 23AP06: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,013 batch_saver 1311266 129351498483392 Erro salvando 23AP08: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,014 batch_saver 1311266 129351498483392 Erro salvando 23AP09: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,015 batch_saver 1311266 129351498483392 Erro salvando P26A13: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,016 batch_saver 1311266 129351498483392 Erro salvando 23AP11: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,017 batch_saver 1311266 129351498483392 Erro salvando P26A14: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,017 batch_saver 1311266 129351498483392 Erro salvando 23AP13: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,018 batch_saver 1311266 129351498483392 Erro salvando 23AP14: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,019 batch_saver 1311266 129351498483392 Erro salvando 23AP17: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,020 batch_saver 1311266 129351498483392 Erro salvando 25AP18: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,021 batch_saver 1311266 129351498483392 Erro salvando 23AP19: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,022 batch_saver 1311266 129351498483392 Erro salvando 23AP28: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,023 batch_saver 1311266 129351498483392 Erro salvando 23AP29: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,024 batch_saver 1311266 129351498483392 Erro salvando 23AP30: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,024 batch_saver 1311266 129351498483392 Erro salvando 23AP32: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,025 batch_saver 1311266 129351498483392 Erro salvando 23AP33: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,026 batch_saver 1311266 129351498483392 Erro salvando 23AP34: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,027 batch_saver 1311266 129351498483392 Erro salvando 23AP35: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,027 batch_saver 1311266 129351498483392 Erro salvando 23AP36: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,029 batch_saver 1311266 129351498483392 Erro salvando 23AP37: ['o valor “Finalizado”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,030 batch_saver 1311266 129351498483392 Erro salvando 23AP38: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,031 batch_saver 1311266 129351498483392 Erro salvando 23AP39: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,032 batch_saver 1311266 129351498483392 Erro salvando 23CEDX: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,033 batch_saver 1311266 129351498483392 Erro salvando 24AP01: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,034 batch_saver 1311266 129351498483392 Erro salvando 24AP02: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,035 batch_saver 1311266 129351498483392 Erro salvando 24AP03: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,035 batch_saver 1311266 129351498483392 Erro salvando 24AP04: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,036 batch_saver 1311266 129351498483392 Erro salvando 24AP05: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,037 batch_saver 1311266 129351498483392 Erro salvando 24AP06: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,039 batch_saver 1311266 129351498483392 Erro salvando 24AP07: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,040 batch_saver 1311266 129351498483392 Erro salvando 24AP10: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,041 batch_saver 1311266 129351498483392 Erro salvando 24AP11: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,042 batch_saver 1311266 129351498483392 Erro salvando 24AP14: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,043 batch_saver 1311266 129351498483392 Erro salvando 24AP15: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,043 batch_saver 1311266 129351498483392 Erro salvando 24AP16: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,044 batch_saver 1311266 129351498483392 Erro salvando 24AP18: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,045 batch_saver 1311266 129351498483392 Erro salvando 24AP19: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,046 batch_saver 1311266 129351498483392 Erro salvando 24AP20: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,047 batch_saver 1311266 129351498483392 Erro salvando 24AP21: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,049 batch_saver 1311266 129351498483392 Erro salvando 24AP22: ['o valor “Finalizado”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,050 batch_saver 1311266 129351498483392 Erro salvando 24AP23: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,051 batch_saver 1311266 129351498483392 Erro salvando 24AP24: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,052 batch_saver 1311266 129351498483392 Erro salvando 24AP25: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,053 batch_saver 1311266 129351498483392 Erro salvando 24AP26: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,055 batch_saver 1311266 129351498483392 Erro salvando 24AP27: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,056 batch_saver 1311266 129351498483392 Erro salvando 24AP28: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,057 batch_saver 1311266 129351498483392 Erro salvando 24AP30: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,058 batch_saver 1311266 129351498483392 Erro salvando 24AP31: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,059 batch_saver 1311266 129351498483392 Erro salvando 24AP32: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,062 batch_saver 1311266 129351498483392 Erro salvando 24AP33: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,063 batch_saver 1311266 129351498483392 Erro salvando 24AP34: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,064 batch_saver 1311266 129351498483392 Erro salvando 24AP35: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,065 batch_saver 1311266 129351498483392 Erro salvando 24AP36: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,066 batch_saver 1311266 129351498483392 Erro salvando 25AP04: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,067 batch_saver 1311266 129351498483392 Erro salvando 25AP01: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,068 batch_saver 1311266 129351498483392 Erro salvando 5AP001: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,069 batch_saver 1311266 129351498483392 Erro salvando 25AP11: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,070 batch_saver 1311266 129351498483392 Erro salvando 5AP019: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,071 batch_saver 1311266 129351498483392 Erro salvando 25AP05: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,073 batch_saver 1311266 129351498483392 Erro salvando 5AP082: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,074 batch_saver 1311266 129351498483392 Erro salvando 25AP09: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,075 batch_saver 1311266 129351498483392 Erro salvando 25AP07: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,076 batch_saver 1311266 129351498483392 Erro salvando 25AP10: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,077 batch_saver 1311266 129351498483392 Erro salvando P26S10: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,078 batch_saver 1311266 129351498483392 Erro salvando 25AP23: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,079 batch_saver 1311266 129351498483392 Erro salvando 8AP006: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,080 batch_saver 1311266 129351498483392 Erro salvando 25AP35: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,081 batch_saver 1311266 129351498483392 Erro salvando 25AP19: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,081 batch_saver 1311266 129351498483392 Erro salvando 25AP20: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,083 batch_saver 1311266 129351498483392 Erro salvando 8AP016: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,084 batch_saver 1311266 129351498483392 Erro salvando 25AP21: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,085 batch_saver 1311266 129351498483392 Erro salvando 8AP019: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,086 batch_saver 1311266 129351498483392 Erro salvando 8ASIND: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,087 batch_saver 1311266 129351498483392 Erro salvando 25AP22: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,088 batch_saver 1311266 129351498483392 Erro salvando EYPAPP: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,088 batch_saver 1311266 129351498483392 Erro salvando 26AP01: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,089 batch_saver 1311266 129351498483392 Erro salvando 26AP02: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,090 batch_saver 1311266 129351498483392 Erro salvando 26AP03: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,091 batch_saver 1311266 129351498483392 Erro salvando 26AP04: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,093 batch_saver 1311266 129351498483392 Erro salvando 26AP05: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,093 batch_saver 1311266 129351498483392 Erro salvando P26S11: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,094 batch_saver 1311266 129351498483392 Erro salvando 25AP31: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,095 batch_saver 1311266 129351498483392 Erro salvando 25AP17: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,096 batch_saver 1311266 129351498483392 Erro salvando 25AP33: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,097 batch_saver 1311266 129351498483392 Erro salvando 21AP00: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,098 batch_saver 1311266 129351498483392 Erro salvando 22AP14: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,099 batch_saver 1311266 129351498483392 Erro salvando 22AP17: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,100 batch_saver 1311266 129351498483392 Erro salvando 22AP19: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,100 batch_saver 1311266 129351498483392 Erro salvando 22AP27: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,102 batch_saver 1311266 129351498483392 Erro salvando 24AP17: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,103 batch_saver 1311266 129351498483392 Erro salvando 25AP06: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,104 batch_saver 1311266 129351498483392 Erro salvando 21AP09: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,105 batch_saver 1311266 129351498483392 Erro salvando 22AP13: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,106 batch_saver 1311266 129351498483392 Erro salvando 25AP25: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,106 batch_saver 1311266 129351498483392 Erro salvando 23AP04: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,107 batch_saver 1311266 129351498483392 Erro salvando 23AP05: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,108 batch_saver 1311266 129351498483392 Erro salvando 23AP07: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,109 batch_saver 1311266 129351498483392 Erro salvando 25AP29: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,110 batch_saver 1311266 129351498483392 Erro salvando 23AP31: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,111 batch_saver 1311266 129351498483392 Erro salvando 24AP08: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,112 batch_saver 1311266 129351498483392 Erro salvando 24AP09: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,113 batch_saver 1311266 129351498483392 Erro salvando 24AP12: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,113 batch_saver 1311266 129351498483392 Erro salvando 24AP13: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,115 batch_saver 1311266 129351498483392 Erro salvando 25S001: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,116 batch_saver 1311266 129351498483392 Erro salvando 25AP26: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,117 batch_saver 1311266 129351498483392 Erro salvando 24AP29: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,118 batch_saver 1311266 129351498483392 Erro salvando 21AP03: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,118 batch_saver 1311266 129351498483392 Erro salvando 21AP14: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,119 batch_saver 1311266 129351498483392 Erro salvando 22AP25: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,121 batch_saver 1311266 129351498483392 Erro salvando 23AP10: ['o valor “Finalizado”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,122 batch_saver 1311266 129351498483392 Erro salvando 23AP12: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,124 batch_saver 1311266 129351498483392 Erro salvando 23AP18: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,125 batch_saver 1311266 129351498483392 Erro salvando 24APAP: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,125 batch_saver 1311266 129351498483392 Erro salvando 5AP015: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,126 batch_saver 1311266 129351498483392 Erro salvando 5AP035: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,127 batch_saver 1311266 129351498483392 Erro salvando 6AP001: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,128 batch_saver 1311266 129351498483392 Erro salvando 7AP001: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,129 batch_saver 1311266 129351498483392 Erro salvando 7AP002: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,130 batch_saver 1311266 129351498483392 Erro salvando 8AP003: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,131 batch_saver 1311266 129351498483392 Erro salvando 8AP008: ['o valor “Finalizado”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,132 batch_saver 1311266 129351498483392 Erro salvando 8AP012: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,133 batch_saver 1311266 129351498483392 Erro salvando 8AP017: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,134 batch_saver 1311266 129351498483392 Erro salvando AP0004: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,135 batch_saver 1311266 129351498483392 Erro salvando 25AP27: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,136 batch_saver 1311266 129351498483392 Erro salvando 23AP01: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,137 batch_saver 1311266 129351498483392 Erro salvando 25AP28: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,138 batch_saver 1311266 129351498483392 Erro salvando 25AP24: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,139 batch_saver 1311266 129351498483392 Erro salvando 25AP30: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,140 batch_saver 1311266 129351498483392 Erro salvando P26S01: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,142 batch_saver 1311266 129351498483392 Erro salvando P26S02: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,143 batch_saver 1311266 129351498483392 Erro salvando P26S03: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,144 batch_saver 1311266 129351498483392 Erro salvando P26S04: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,145 batch_saver 1311266 129351498483392 Erro salvando P26S05: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,146 batch_saver 1311266 129351498483392 Erro salvando P26S06: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,147 batch_saver 1311266 129351498483392 Erro salvando P26S07: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,148 batch_saver 1311266 129351498483392 Erro salvando P26S08: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,149 batch_saver 1311266 129351498483392 Erro salvando P26A01: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,150 batch_saver 1311266 129351498483392 Erro salvando P26A02: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,151 batch_saver 1311266 129351498483392 Erro salvando P26A03: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,154 batch_saver 1311266 129351498483392 Erro salvando P26A04: ['o valor “Cancelado”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,154 batch_saver 1311266 129351498483392 Erro salvando P26A05: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,155 batch_saver 1311266 129351498483392 Erro salvando P26A06: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,156 batch_saver 1311266 129351498483392 Erro salvando P26S09: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,158 batch_saver 1311266 129351498483392 Erro salvando P26A08: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,159 batch_saver 1311266 129351498483392 Erro salvando P26A09: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,160 batch_saver 1311266 129351498483392 Erro salvando P26A10: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,161 batch_saver 1311266 129351498483392 Erro salvando P26A11: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,162 batch_saver 1311266 129351498483392 Erro salvando 25AP32: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,163 batch_saver 1311266 129351498483392 Erro salvando 25AP34: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,165 batch_saver 1311266 129351498483392 Erro salvando P26A12: ['o valor “Activo”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,166 batch_saver 1311266 129351498483392 Erro salvando 25AP36: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,166 batch_saver 1311266 129351498483392 Erro salvando 25AP37: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,167 batch_saver 1311266 129351498483392 Erro salvando 25AP39: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,168 batch_saver 1311266 129351498483392 Erro salvando 25AP40: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,169 batch_saver 1311266 129351498483392 Erro salvando 8AP004: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,170 batch_saver 1311266 129351498483392 Erro salvando AP0073: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,171 batch_saver 1311266 129351498483392 Erro salvando IP0162: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,172 batch_saver 1311266 129351498483392 Erro salvando IP0261: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,173 batch_saver 1311266 129351498483392 Erro salvando AJUAAP: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+ERROR 2026-03-09 10:54:14,175 batch_saver 1311266 129351498483392 Erro salvando AJSNBR: ['o valor “Cancelado”  deve ser True ou False.']
+ERROR 2026-03-09 10:54:14,176 batch_saver 1311266 129351498483392 Erro salvando AJSABR: An error occurred in the current transaction. You can't execute queries until the end of the 'atomic' block.
+INFO 2026-03-09 10:54:14,177 views 1311266 129351498483392 Iniciando atualização de agregados para processamento 18
+INFO 2026-03-09 10:54:14,183 batch_saver 1311266 129351498483392 Processamento concluído: 1 sucesso, 201 falhas
+INFO 2026-03-09 10:54:14,183 batch_saver 1311266 129351498483392 Projetos processados: Proyecto (por índice)
+WARNING 2026-03-09 10:54:14,184 batch_saver 1311266 129351498483392 Erros encontrados: 201
+WARNING 2026-03-09 10:54:14,184 batch_saver 1311266 129351498483392   Erro salvando 4350486.483792619: NOT NULL constraint failed: core_projeto.mercado
+WARNING 2026-03-09 10:54:14,184 batch_saver 1311266 129351498483392   Erro salvando 6542093.036697228: NOT NULL constraint failed: core_projeto.mercado
+WARNING 2026-03-09 10:54:14,184 batch_saver 1311266 129351498483392   Erro salvando 1159783.881788836: NOT NULL constraint failed: core_projeto.mercado
+INFO 2026-03-09 10:54:14,185 xls_processor 1311266 129351498483392 === PROCESSAMENTO XLS CONCLUÍDO ===
+INFO 2026-03-09 10:54:14,187 views 1311266 129351498483392 Arquivo temporário removido com sucesso
+INFO 2026-03-09 10:54:14,187 views 1311266 129351498483392 Processamento concluído com sucesso: Arquivo processado com sucesso! 1 projetos processados com sucesso. 202 projetos com falhas.
+INFO 2026-03-09 10:54:14,189 log 1311266 129351498483392 "POST /upload/ HTTP/1.1" 200 124
+INFO 2026-03-09 10:54:18,215 log 1311266 129351498483392 "GET /dashboard/ HTTP/1.1" 200 40480
+INFO 2026-03-09 10:57:23,806 autoreload 1311266 129352369508480 /opt/analise-indra/core/processors/project_parser.py changed, reloading.
+INFO 2026-03-09 10:57:25,461 autoreload 1311775 127155541823616 Watching for file changes with StatReloader
+INFO 2026-03-09 11:00:55,458 views 1312192 126320795189376 === INÍCIO DO PROCESSAMENTO XLS: /opt/analise-indra/Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (mês fechamento: 2) ===
+INFO 2026-03-09 11:00:55,469 xls_processor 1312192 126320795189376 === INÍCIO DO PROCESSAMENTO XLS: /opt/analise-indra/Reporte de Operações_AAPPSanidad_FEV 26_Précierre.V2.xlsx (mês fechamento: 2) ===
+INFO 2026-03-09 11:01:03,396 xls_processor 1312192 126320795189376 Dados carregados: 7380 linhas x 136 colunas
+INFO 2026-03-09 11:01:03,396 project_parser 1312192 126320795189376 Agrupando linhas por código de projeto...
+INFO 2026-03-09 11:01:04,049 project_parser 1312192 126320795189376 Encontrados 203 projetos válidos
+INFO 2026-03-09 11:01:04,050 xls_processor 1312192 126320795189376 Projetos encontrados: 203
+WARNING 2026-03-09 11:01:04,051 xls_processor 1312192 126320795189376 Problemas encontrados em 2 projetos:
+WARNING 2026-03-09 11:01:04,051 xls_processor 1312192 126320795189376   Fev: Apenas 1 linhas - poucos dados
+WARNING 2026-03-09 11:01:04,051 xls_processor 1312192 126320795189376   23AP01: Apenas 1 linhas - poucos dados
+INFO 2026-03-09 11:01:04,063 xls_processor 1312192 126320795189376 Processamento criado: ID 19
+WARNING 2026-03-09 11:01:04,066 xls_processor 1312192 126320795189376 Projeto 20AP10 warnings: Valor negativo para margen mês 1: -768.0
+WARNING 2026-03-09 11:01:04,069 xls_processor 1312192 126320795189376 Projeto 25APMB warnings: Valor negativo para margen mês 1: -2861.0
+WARNING 2026-03-09 11:01:04,072 xls_processor 1312192 126320795189376 Projeto 22AP05 warnings: Valor negativo para margen mês 2: -0.0159
+WARNING 2026-03-09 11:01:04,077 xls_processor 1312192 126320795189376 Projeto 25AP03 warnings: Valor negativo para margen mês 1: -237.0
+WARNING 2026-03-09 11:01:04,079 xls_processor 1312192 126320795189376 Projeto 23AP06 warnings: Valor negativo para ingresos mês 9: -769930.958214395, Valor negativo para margen mês 1: -454353.0
+WARNING 2026-03-09 11:01:04,080 xls_processor 1312192 126320795189376 Projeto P26A13 warnings: Descrição vazia para projeto P26A13
+WARNING 2026-03-09 11:01:04,081 xls_processor 1312192 126320795189376 Projeto P26A14 warnings: Descrição vazia para projeto P26A14
+WARNING 2026-03-09 11:01:04,086 xls_processor 1312192 126320795189376 Projeto 23AP28 warnings: Valor negativo para ingresos mês 1: -12566.0, Valor negativo para ingresos mês 2: -36308.0
+WARNING 2026-03-09 11:01:04,135 xls_processor 1312192 126320795189376 Projeto 23AP37 warnings: Valor negativo para margen mês 1: -256.0
+WARNING 2026-03-09 11:01:04,142 xls_processor 1312192 126320795189376 Projeto 24AP18 warnings: Valor negativo para margen mês 1: -256.0
+WARNING 2026-03-09 11:01:04,146 xls_processor 1312192 126320795189376 Projeto 24AP28 warnings: Valor negativo para ingresos mês 3: -40811.32000000001, Valor negativo para margen mês 1: -78420.0
+WARNING 2026-03-09 11:01:04,153 xls_processor 1312192 126320795189376 Projeto 25AP07 warnings: Valor negativo para ingresos mês 1: -2732.0, Valor negativo para ingresos mês 2: -5464.2
+WARNING 2026-03-09 11:01:04,156 xls_processor 1312192 126320795189376 Projeto 25AP19 warnings: Valor negativo para margen mês 1: -681.0
+WARNING 2026-03-09 11:01:04,160 xls_processor 1312192 126320795189376 Projeto EYPAPP warnings: Valor negativo para margen mês 1: -218.0
+WARNING 2026-03-09 11:01:04,161 xls_processor 1312192 126320795189376 Projeto 26AP02 warnings: Valor negativo para margen mês 2: -0.0012265000004845206
+WARNING 2026-03-09 11:01:04,168 xls_processor 1312192 126320795189376 Projeto 25AP25 warnings: Valor negativo para margen mês 1: -3044.0
+WARNING 2026-03-09 11:01:04,172 xls_processor 1312192 126320795189376 Projeto 25S001 warnings: Valor negativo para margen mês 1: -3818.0
+INFO 2026-03-09 11:01:04,195 xls_processor 1312192 126320795189376 Projetos validados e prontos para salvar: 194
+INFO 2026-03-09 11:01:04,196 batch_saver 1312192 126320795189376 Iniciando salvamento de 194 projetos
+INFO 2026-03-09 11:01:39,067 views 1312192 126320795189376 Iniciando atualização de agregados para processamento 19
+INFO 2026-03-09 11:01:39,461 views 1312192 126320795189376 Atualizados agregados de 194 projetos
+INFO 2026-03-09 11:01:39,466 batch_saver 1312192 126320795189376 Processamento concluído: 194 sucesso, 0 falhas
+INFO 2026-03-09 11:01:39,466 batch_saver 1312192 126320795189376 Projetos processados: 19AP03, 19AP04, 25AP38, 20AP04, 25AP02...
+INFO 2026-03-09 11:01:39,466 xls_processor 1312192 126320795189376 === PROCESSAMENTO XLS CONCLUÍDO ===
+INFO 2026-03-09 11:04:33,610 autoreload 1312587 138182157947008 Watching for file changes with StatReloader
+INFO 2026-03-09 11:04:45,543 log 1312587 138181286557376 "GET /dashboard/ HTTP/1.1" 200 278874
