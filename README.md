@@ -5,7 +5,9 @@ Sistema web profissional para análise de projetos desenvolvido com Django, apre
 ## 🚀 Características
 
 - **Upload de Arquivos XLS/XLSX**: Interface intuitiva para upload e processamento de arquivos Excel
-- **Dashboard Analítico**: Visualização de dados com 3 abas principais (AAPP, Sanidad, Consolidado)
+- **Dashboard Analítico Vue.js**: Visualização de dados moderna com 3 abas principais (AAPP, Sanidad, Consolidado)
+- **Componentes Reativos**: Interface construída com Vue.js 3 + Pinia para experiência fluida
+- **Filtros e Ordenação**: Sistema avançado de filtros por margem e mercado com ordenação dinâmica
 - **Design Profissional**: Interface moderna com Bootstrap 5 e animações suaves
 - **Banco de Dados Relacional**: Modelos estruturados para projetos e conceitos
 - **Processamento Inteligente**: Engine para processamento automático de dados XLS
@@ -91,7 +93,8 @@ ERROR 2026-03-05 17:21:13 Constraint UNIQUE failed...
 ## 🛠️ Tecnologias Utilizadas
 
 - **Backend**: Django 6.0
-- **Frontend**: Bootstrap 5, HTML5, CSS3, JavaScript
+- **Frontend**: Vue.js 3 + Pinia, Bootstrap 5, HTML5, CSS3, JavaScript
+- **Build Tool**: Vite (desenvolvimento), Webpack (produção)
 - **Banco de Dados**: SQLite (desenvolvimento) / PostgreSQL (produção)
 - **Processamento XLS**: Pandas, OpenPyXL
 - **Ícones**: Bootstrap Icons
@@ -114,23 +117,32 @@ ERROR 2026-03-05 17:21:13 Constraint UNIQUE failed...
    venv\Scripts\activate     # Windows
    ```
 
-3. **Instale as dependências**:
+3. **Instale as dependências Python**:
    ```bash
    pip install django pandas openpyxl
    ```
 
-4. **Execute as migrações**:
+4. **Instale as dependências Node.js**:
+   ```bash
+   npm install
+   ```
+
+5. **Execute as migrações**:
    ```bash
    python manage.py makemigrations
    python manage.py migrate
    ```
 
-5. **Inicie o servidor**:
+6. **Inicie o servidor**:
    ```bash
+   # Opção 1: Apenas backend (Django)
    python manage.py runserver
+
+   # Opção 2: Desenvolvimento completo (Django + Vue.js)
+   npm run django:dev
    ```
 
-6. **Acesse a aplicação**:
+7. **Acesse a aplicação**:
    - Página inicial (Upload): http://localhost:8000/
    - Dashboard: http://localhost:8000/dashboard/
 
@@ -138,11 +150,23 @@ ERROR 2026-03-05 17:21:13 Constraint UNIQUE failed...
 
 ```
 analise-indra/
-├── analise_indra/          # Configurações do projeto Django
+├── frontend/              # Código fonte Vue.js
+│   └── src/
+│       ├── components/    # Componentes Vue reutilizáveis
+│       │   ├── MetricCard.vue      # Cards métricos
+│       │   ├── DashboardTabs.vue   # Sistema de abas
+│       │   └── ProjectTable.vue    # Tabela com filtros
+│       ├── stores/        # Stores Pinia (gerenciamento de estado)
+│       │   ├── dashboard.js        # Estado do dashboard
+│       │   └── projectTable.js     # Estado da tabela
+│       ├── DashboardApp.vue       # App principal Vue.js
+│       ├── main.js        # Configuração Vue + Pinia
+│       └── dashboard.js   # Ponto de entrada do dashboard
+├── analise_indra/         # Configurações do projeto Django
 │   ├── settings.py        # Configurações principais
 │   ├── urls.py           # URLs do projeto
 │   └── wsgi.py           # Configuração WSGI
-├── core/                  # App principal
+├── core/                  # App principal Django
 │   ├── migrations/       # Migrações do banco
 │   ├── templates/core/   # Templates HTML
 │   │   ├── base.html     # Template base
@@ -151,7 +175,7 @@ analise-indra/
 │   ├── models.py         # Modelos de dados
 │   ├── views.py          # Views e lógica
 │   └── urls.py           # URLs do app
-├── static/               # Arquivos estáticos
+├── static/               # Arquivos estáticos Django
 │   ├── css/
 │   │   └── style.css     # Estilos personalizados
 │   ├── js/
@@ -159,6 +183,8 @@ analise-indra/
 │   └── img/              # Imagens (se necessário)
 ├── media/                # Arquivos de mídia (uploads)
 ├── db.sqlite3           # Banco de dados SQLite
+├── package.json         # Configuração Node.js
+├── vite.config.js       # Configuração Vite
 ├── manage.py            # Script de gerenciamento Django
 └── README.md            # Esta documentação
 ```
@@ -205,8 +231,28 @@ PRJ002,Projeto Sanidad Beta,Sanidad,80000,95000,15000,15.79
 
 ## 🔧 Desenvolvimento
 
+### Workflow de Desenvolvimento
+
+#### Desenvolvimento Local
+1. **Clone e configure o ambiente** (veja seção de instalação)
+2. **Desenvolvimento Frontend**: `npm run dev` para hot reload do Vue.js
+3. **Desenvolvimento Backend**: `python manage.py runserver` para Django
+4. **Desenvolvimento Completo**: `npm run django:dev` para ambos simultaneamente
+
+#### Modificando Componentes Vue.js
+- Arquivos em `frontend/src/` são automaticamente compilados
+- Use `npm run build:watch` para desenvolvimento contínuo
+- Componentes são servidos via Django templates
+
+#### Adicionando Novos Componentes
+1. Crie o componente em `frontend/src/components/`
+2. Importe no componente pai apropriado
+3. Registre no `components` do componente pai
+4. Execute `npm run build` para gerar arquivos estáticos
+
 ### Comandos Úteis
 
+#### Django (Backend)
 ```bash
 # Criar superusuário
 python manage.py createsuperuser
@@ -221,25 +267,104 @@ python manage.py test
 python manage.py showmigrations
 ```
 
+#### Vue.js (Frontend)
+```bash
+# Instalar dependências
+npm install
+
+# Desenvolvimento (com hot reload)
+npm run dev
+
+# Build para produção
+npm run build
+
+# Build e watch (para desenvolvimento com Django)
+npm run build:watch
+
+# Desenvolvimento completo (Django + Vue.js)
+npm run django:dev
+
+# Lint do código
+npm run lint
+```
+
+## 🎯 Arquitetura Frontend
+
+### Vue.js + Pinia
+O frontend foi migrado para **Vue.js 3** com **Pinia** para gerenciamento de estado reativo:
+
+- **Componentes Reutilizáveis**: `MetricCard`, `DashboardTabs`, `ProjectTable`
+- **Estado Centralizado**: Stores Pinia para dashboard e tabela
+- **Reatividade Automática**: Atualização automática da UI baseada em estado
+- **Composition API**: Código mais organizado e reutilizável
+
+### Funcionalidades Vue.js Implementadas
+- ✅ **Cards Métricos Reativos**: Atualização automática por categoria
+- ✅ **Sistema de Abas**: Navegação fluida entre AAPP, Sanidad, Consolidado
+- ✅ **Tabela Interativa**: Filtros por margem e mercado, ordenação por coluna
+- ✅ **Cálculos Dinâmicos**: Totais atualizados automaticamente com filtros
+- ✅ **Estado Persistente**: Gerenciamento centralizado com Pinia
+
 ### Próximos Passos
 
 1. **Implementar API REST**: Para integração com outros sistemas
 2. **Adicionar Gráficos**: Charts.js para visualizações avançadas
 3. **Autenticação**: Sistema de login e permissões
-4. **Filtros Avançados**: Pesquisa e filtros no dashboard
-5. **Exportação**: Geração de relatórios em PDF/Excel
-6. **Notificações**: Sistema de alertas e notificações
+4. **Testes Unitários**: Cobertura completa para componentes Vue
+5. **TypeScript**: Migração gradual para melhor type safety
+6. **PWA**: Funcionalidades offline e notificações push
+7. **Exportação**: Geração de relatórios em PDF/Excel
+8. **Notificações**: Sistema de alertas e notificações
 
 ## 📝 Notas de Desenvolvimento
 
-- O dashboard atualmente mostra dados mockados
+- ✅ **Migração Vue.js Completa**: Frontend migrado para Vue.js 3 + Pinia
+- ✅ **Componentes Reutilizáveis**: Arquitetura modular e testável
+- ✅ **Estado Reativo**: Gerenciamento moderno com Pinia
+- ✅ **Filtros e Ordenação**: Funcionalidades avançadas implementadas
 - O processamento XLS está implementado mas pode ser expandido
 - A validação de dados pode ser aprimorada conforme necessidades específicas
 - Considerar implementação de cache para melhor performance
+- Arquivos estáticos precisam de configuração adequada em produção (Nginx/Apache)
 
 ## 📄 Licença
 
 Este projeto é propriedade da Análise Indra. Todos os direitos reservados.
+
+## 🔧 Troubleshooting
+
+### Problemas Comuns
+
+#### Vue.js não carrega no dashboard
+```bash
+# Execute o build do frontend
+npm run build
+
+# Colete arquivos estáticos
+python manage.py collectstatic --noinput
+
+# Reinicie o servidor Django
+python manage.py runserver
+```
+
+#### Arquivos estáticos não são servidos em desenvolvimento
+- Verifique se `DEBUG = True` no `settings.py`
+- Execute `python manage.py collectstatic` após builds
+- Para produção, configure um servidor web (Nginx/Apache) para servir arquivos estáticos
+
+#### Erro de dependências Node.js
+```bash
+# Limpe node_modules e reinstale
+rm -rf node_modules package-lock.json
+npm install
+```
+
+#### Hot reload não funciona
+```bash
+# Execute em terminais separados
+npm run build:watch    # Terminal 1
+python manage.py runserver  # Terminal 2
+```
 
 ## 👥 Contato
 

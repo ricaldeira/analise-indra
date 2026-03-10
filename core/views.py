@@ -9,10 +9,19 @@ from datetime import datetime
 from .models import Projeto, ConceitoMensal, ProcessamentoXLS
 import pandas as pd
 import os
+import json
 import logging
+from decimal import Decimal
 
 # Configure logger for this module
 logger = logging.getLogger('core')
+
+# Custom JSON encoder for Decimal objects
+class DecimalEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, Decimal):
+            return float(obj)
+        return super(DecimalEncoder, self).default(obj)
 
 def upload_page(request):
     """Página de upload de arquivos XLS"""
@@ -33,18 +42,11 @@ def upload_page(request):
     return render(request, 'core/upload.html', context)
 
 def dashboard(request):
-    """Dashboard principal com as 3 abas"""
+    """Dashboard principal - Vue.js frontend"""
     # Obtém informações do último processamento
     ultimo_processamento = ProcessamentoXLS.objects.order_by('-data_processamento').first()
 
-    aapp_data = get_dashboard_data('AAPP')
-    sanidad_data = get_dashboard_data('Sanidad')
-    consolidado_data = get_dashboard_data('Consolidado')
-
     context = {
-        'aapp_data': aapp_data,
-        'sanidad_data': sanidad_data,
-        'consolidado_data': consolidado_data,
         'ultimo_processamento': ultimo_processamento,
     }
     return render(request, 'core/dashboard.html', context)

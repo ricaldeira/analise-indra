@@ -1,0 +1,14 @@
+{
+  "frontend/src/dashboard.js": {
+    "file": "assets/dashboard-B19kJWw8.js",
+    "name": "dashboard",
+    "src": "frontend/src/dashboard.js",
+    "isEntry": true
+  },
+  "frontend/src/main.js": {
+    "file": "assets/main-CBgyJllh.js",
+    "name": "main",
+    "src": "frontend/src/main.js",
+    "isEntry": true
+  }
+}

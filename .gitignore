@@ -15,3 +15,5 @@ __pycache__/
 *.xls*
 *.xlsx*
 *.csv*
+node_modules/
+exemplo_dados.csv
